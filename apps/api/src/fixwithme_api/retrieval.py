@@ -29,6 +29,25 @@ POOL = 30
 Mode = Literal["hybrid", "vector", "keyword"]
 _WORD = re.compile(r"[\wऀ-ॿ]+")  # Devanagari vowel signs are not \w on their own
 
+# Filler words dropped from keyword queries. PGroonga's default score counts matches without
+# IDF, so with OR-joined terms these would rank long passages above relevant ones.
+_STOPWORDS = frozenset(
+    """a an the is are was were be been am do does did to of in on at for with from by and or
+    but not no it its this that these those i my me we our you your he she they them what which
+    who whom how why when where can could should would will shall may might must if then than
+    so as there here up down out about into over after before again just very also any some
+    instead using use get got has have had
+    hai hain tha thi the ka ki ke ko se me mein par pe aur ya bhi kya kaise kyu kyon nahi na
+    raha rahi rahe ho gaya gayi kar karna karta karti ek
+    है हैं था थी थे का की के को से में पर और या भी क्या कैसे क्यों नहीं ना रहा रही रहे हो गया गई कर करें एक""".split()
+)
+
+
+def query_terms(query: str) -> list[str]:
+    terms = _WORD.findall(query.lower())
+    kept = [t for t in terms if t not in _STOPWORDS]
+    return kept or terms  # an all-stopword query still searches something
+
 
 @dataclass
 class Passage:
@@ -115,7 +134,7 @@ class SupabaseBackend:
         self, query: str, vector: list[float] | None, product: str | None
     ) -> list[Passage]:
         body = {
-            "query_text": query,
+            "query_text": " ".join(query_terms(query)),
             "query_embedding": list(vector) if vector else [0.0] * DIMS,
             "product_filter": product,
             "pool": POOL,
@@ -184,7 +203,7 @@ class LocalBackend:
             for i, p in enumerate(self.passages)
             if product is None or p.product == product or p.product is None
         ]
-        terms = _WORD.findall(query.lower())
+        terms = query_terms(query)
         kw = sorted(((self._bm25(i, terms), i) for i in idx), reverse=True)
         kw_rank = {i: r for r, (s, i) in enumerate(kw[:POOL], 1) if s > 0}
         vec_rank = {}

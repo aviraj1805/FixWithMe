@@ -1,11 +1,12 @@
 {
  "backend": "local",
+ "product_filter": true,
  "n": 42,
  "results": {
   "keyword": {
-   "recall@1": 0.857,
+   "recall@1": 0.905,
    "recall@5": 1.0,
-   "mrr@10": 0.913,
+   "mrr@10": 0.946,
    "misses@5": []
   },
   "vector": {

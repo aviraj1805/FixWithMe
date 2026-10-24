@@ -4,9 +4,9 @@
  "n": 42,
  "results": {
   "keyword": {
-   "recall@1": 0.833,
+   "recall@1": 0.881,
    "recall@5": 1.0,
-   "mrr@10": 0.887,
+   "mrr@10": 0.931,
    "misses@5": []
   },
   "vector": {

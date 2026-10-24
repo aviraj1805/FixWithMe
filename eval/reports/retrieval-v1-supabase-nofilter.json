@@ -1,0 +1,28 @@
+{
+ "backend": "supabase",
+ "product_filter": false,
+ "n": 42,
+ "results": {
+  "keyword": {
+   "recall@1": 0.714,
+   "recall@5": 0.952,
+   "mrr@10": 0.814,
+   "misses@5": [
+    "what plug type is used in India",
+    "khilona chal nahi raha nayi battery bhi dali"
+   ]
+  },
+  "vector": {
+   "recall@1": 0.952,
+   "recall@5": 1.0,
+   "mrr@10": 0.964,
+   "misses@5": []
+  },
+  "hybrid": {
+   "recall@1": 0.929,
+   "recall@5": 1.0,
+   "mrr@10": 0.964,
+   "misses@5": []
+  }
+ }
+}
