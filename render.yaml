@@ -14,6 +14,6 @@ services:
       - key: FWM_LLM_CHAIN
         value: '["gemini"]'
       - key: FWM_CORS_ORIGINS
-        sync: false # set to the Cloudflare Pages URL, e.g. ["https://fixwithme.pages.dev"]
+        sync: false # set to the web URL, e.g. ["https://fixwithme.avirajvirape601.workers.dev"]
       - key: FWM_GEMINI_API_KEY
         sync: false
