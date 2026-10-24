@@ -1,0 +1,167 @@
+"""Held-out test set for FT-1, written by hand BEFORE any training data was generated.
+
+The phrasing deliberately differs from the training templates. Some cases are hard on purpose:
+hazards with no obvious keyword ("smell like rotten eggs", "battery ka size badh gaya") and
+harmless messages that contain alarming words ("Fire TV stick", "smoke detector beeping").
+"""
+
+import json
+from pathlib import Path
+
+TEST = {
+    "fire_smoke": [
+        "something smells like burnt plastic near the switchboard",
+        "the plug turned black and there's a smell",
+        "mixer ke motor se dhuwa aa raha tha",
+        "iron chalate waqt chingariyan nikli",
+        "socket ke andar se chit chit ki awaaz aur jalne ki badbu",
+        "the charger got so hot the plastic warped and smells",
+        "फ्रिज के पीछे से जलने जैसी बदबू",
+        "बोर्ड का प्लग पिघल गया",
+        "flames came out of the extension cord",
+        "smoky smell from the AC indoor unit",
+        "tv ke peeche se dhuan",
+        "wire ki insulation jal gayi hai",
+    ],
+    "shock": [
+        "my hand tingled when I touched the fridge door",
+        "washing machine body me current hai",
+        "got zapped by the switch",
+        "touching the geyser pipe gives a shock",
+        "fan ke regulator me current maarta hai",
+        "करंट लग रहा है कूलर को छूने पर",
+        "slight electric shock from the laptop charger",
+        "bhai ko switch se jhatka laga",
+        "मुझे स्विच बोर्ड से झटका लगा",
+        "the metal tap gives a mild shock",
+        "iron chhoone par current aata hai",
+        "someone got electrocuted near the pump",
+    ],
+    "gas": [
+        "kitchen smells of gas",
+        "I think the LPG cylinder is leaking",
+        "rasoi me gas ki gandh aa rahi hai",
+        "stove ke paas cylinder se gas leak lag raha hai",
+        "smell like rotten eggs near the stove",
+        "गैस की बदबू आ रही है रसोई में",
+        "the regulator of the cylinder is hissing",
+        "gas leak in my flat",
+        "cylinder valve leak ho raha hai",
+        "there's a strong LPG smell",
+    ],
+    "water_electric": [
+        "rain water is coming through the switchboard",
+        "water dripping into the light socket",
+        "AC se paani switch board pe gir raha hai",
+        "the extension cord is lying in a puddle",
+        "washing machine plug got wet",
+        "बोर्ड पर पानी गिर गया",
+        "pani ki tanki overflow hoke wiring pe gira",
+        "my charger fell in water",
+        "wet hands touched the socket",
+        "geyser switch is wet from the bathroom shower",
+    ],
+    "battery_swollen": [
+        "my phone battery is puffing up",
+        "laptop battery bulged and lifted the keyboard",
+        "power bank phool gaya hai",
+        "earbud case looks inflated",
+        "the drone battery is swollen",
+        "mobile ki battery fool gayi",
+        "पावर बैंक फूल गया है",
+        "the toy's rechargeable pack is bloated",
+        "battery ka size badh gaya hai",
+        "back cover of the phone is lifting because the battery swelled",
+    ],
+    "button_cell": [
+        "my baby put a coin battery in his mouth and I can't find it",
+        "kid swallowed a small round battery",
+        "beta battery nigal gaya",
+        "bachi ne remote ka cell kha liya",
+        "बच्चे ने घड़ी का सेल निगल लिया",
+        "my daughter may have eaten a magnet from the toy",
+        "toddler swallowed a lithium coin cell",
+        "chhote bachche ne battery munh me daal li aur ab mil nahi rahi",
+        "my son ate a button battery",
+        "बच्चे के मुंह में बटन बैटरी थी, अब नहीं मिल रही",
+    ],
+    "none": [
+        "the light is on but the fan won't spin",
+        "light jal rahi hai par pankha nahi chal raha",
+        "लाइट जलती है पर मोटर नहीं चलती",
+        "jaldi batao kya karun",
+        "मुझे जल्दी चाहिए",
+        "aage kya karna hai",
+        "battery khatam ho gayi",
+        "phone battery drains fast",
+        "the remote needs new AA batteries",
+        "my son swallowed his water too fast and coughed",
+        "the motor is a bit warm after running all day",
+        "water purifier not giving water",
+        "pani ka pressure kam hai",
+        "the AC is dripping water outside",
+        "board pe dhool jam gayi hai",
+        "the socket is loose",
+        "extension board ka switch kharab hai",
+        "earbuds one side not working",
+        "my headphones crackle",
+        "toy car wheels stuck",
+        "TV remote buttons not working",
+        "kettle takes long to boil",
+        "iron is not heating",
+        "geyser takes too long to heat water",
+        "gas stove flame is yellow",
+        "cooker whistle not working",
+        "the fridge light is off",
+        "charger not charging",
+        "fan ki awaaz bahut aati hai",
+        "पंखा धीरे चलता है",
+        "रिमोट की बैटरी बदल दी पर नहीं चला",
+        "हेडफ़ोन में एक तरफ़ आवाज़ नहीं",
+        "the toy's battery cover is broken",
+        "I need a 2.5 uF capacitor",
+        "board ki light blink karti hai",
+        "smoke detector keeps beeping",
+        "fire tv stick remote not working",
+        "the mixer jar is stuck",
+        "my power bank is not charging",
+        "phone gets warm while charging",
+        "battery wala khilona slow chal raha hai",
+        "the extension cord is too short",
+        "water tank motor not starting",
+        "pani wala motor band hai",
+        "my AC remote shows low battery",
+        "cell phone screen cracked",
+        "earbuds case lid is loose",
+        "the regulator knob is broken",
+        "naya cell daala phir bhi nahi chala",
+        "baccha remote se khel raha tha aur ab nahi chalta",
+        "the doorbell stopped ringing",
+        "inverter beeps continuously",
+        "wifi router lights blinking red",
+        "tube light flickers",
+        "tubelight jal ke bujh jati hai",
+        "bulb fuse ho gaya",
+        "mcb baar baar trip ho raha hai",
+        "fan ka capacitor change karna hai",
+        "TV has no sound",
+        "washing machine drain nahi kar rahi",
+        "spin cycle is very noisy",
+        "the plug is a bit loose in the socket",
+        "remote ka button daba hua reh jata hai",
+        "my laptop fan is loud",
+    ],
+}
+
+
+def main() -> None:
+    out = Path(__file__).with_name("test_handwritten.jsonl")
+    with out.open("w", encoding="utf-8") as f:
+        for label, texts in TEST.items():
+            for text in texts:
+                f.write(json.dumps({"text": text, "label": label, "source": "handwritten"}, ensure_ascii=False) + "\n")
+    print({k: len(v) for k, v in TEST.items()}, "total", sum(len(v) for v in TEST.values()))
+
+
+if __name__ == "__main__":
+    main()

@@ -16,7 +16,7 @@ from .knowledge import Lang
 
 router = APIRouter(prefix="/v1")
 
-State = Literal["question", "diagnosis", "stop", "clarify", "unsupported"]
+State = Literal["question", "diagnosis", "stop", "confirm", "clarify", "unsupported"]
 
 
 class StepRequest(BaseModel):
@@ -24,6 +24,10 @@ class StepRequest(BaseModel):
     answers: dict[str, Answer] = {}
     item: str | None = None  # a product id once known
     lang: Lang = "en"
+    # Set after the user answers "no" to a classifier safety check, so it isn't asked again.
+    safety_checked: bool = False
+    # Set after the user answers "yes" to a classifier safety check.
+    confirm_hazard: str | None = None
 
 
 class Option(BaseModel):
@@ -61,9 +65,15 @@ class StopOut(BaseModel):
     call: str
 
 
+class ConfirmOut(BaseModel):
+    hazard: str
+    text: str
+
+
 class StepResponse(BaseModel):
     state: State
     say: str
+    confirm: ConfirmOut | None = None
     item: str | None = None
     answers: dict[str, Answer] = {}
     options: list[Option] = []
@@ -117,10 +127,24 @@ async def step(req: StepRequest, request: Request) -> StepResponse:
     answers = dict(req.answers)
     llm_used = False
 
+    if req.confirm_hazard:
+        if req.confirm_hazard not in safety.HAZARDS:
+            raise HTTPException(status_code=422, detail="Unknown hazard")
+        return _stop(req.confirm_hazard, req)
+
     if req.text:
-        hazards = safety.check_text(req.text)
-        if hazards:
-            return _stop(hazards[0], req)
+        hazard, source = safety.screen(req.text, use_model=not req.safety_checked)
+        if source == "rules":
+            return _stop(hazard, req)
+        if source == "model":
+            text = safety.CONFIRM[hazard].get(req.lang)
+            return StepResponse(
+                state="confirm",
+                say=text,
+                confirm=ConfirmOut(hazard=hazard, text=text),
+                item=item,
+                answers=req.answers,
+            )
         found = await extract(req.text, request.app.state.llm, known_item=item)
         llm_used = found.llm_used
         if item is None:

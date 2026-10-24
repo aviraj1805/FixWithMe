@@ -13,8 +13,10 @@ export type Msg =
       id: number;
       from: "fixy";
       text: string;
-      kind: "intro" | "question" | "clarify" | "unsupported" | "diagnosis" | "error";
+      kind: "intro" | "question" | "confirm" | "clarify" | "unsupported" | "diagnosis" | "error";
       qid?: string;
+      hazard?: string;
+      sourceText?: string;
       options?: StepResponse["options"];
       diagnosis?: NonNullable<StepResponse["diagnosis"]>;
     };
@@ -27,7 +29,13 @@ export type Session = {
   tier: StepResponse["tier"];
 };
 
-type Body = { text?: string; answers: Answers; item: string | null };
+type Body = {
+  text?: string;
+  answers: Answers;
+  item: string | null;
+  safety_checked?: boolean;
+  confirm_hazard?: string;
+};
 
 let nextId = 1;
 export const newId = () => nextId++;
@@ -82,6 +90,8 @@ export function Chat({
         text: r.say,
         kind: r.state,
         qid: r.question?.id,
+        hazard: r.confirm?.hazard,
+        sourceText: body.text,
         options: r.options,
         diagnosis: r.diagnosis ?? undefined,
       });
@@ -106,6 +116,12 @@ export function Chat({
   function answer(qid: string, value: Answer, label: string) {
     push({ id: newId(), from: "user", text: label });
     void run({ answers: { ...session.answers, [qid]: value }, item: session.item });
+  }
+
+  function confirmSafety(m: Extract<Msg, { from: "fixy" }>, yes: boolean, label: string) {
+    push({ id: newId(), from: "user", text: label });
+    const base = { text: m.sourceText, answers: session.answers, item: session.item };
+    void run(yes ? { ...base, confirm_hazard: m.hazard } : { ...base, safety_checked: true });
   }
 
   function clarify(item: string | null, label: string) {
@@ -135,7 +151,7 @@ export function Chat({
             </div>
           ) : (
             <div key={m.id} className="space-y-3">
-              <FixySays mood={m.kind === "diagnosis" ? "cheer" : "idle"}>
+              <FixySays mood={m.kind === "diagnosis" ? "cheer" : m.kind === "confirm" ? "worried" : "idle"}>
                 <p className="text-[15px] leading-snug">{m.text}</p>
                 {m.diagnosis && (
                   <div className="mt-3 space-y-3">
@@ -162,6 +178,12 @@ export function Chat({
                       <Chip onClick={() => answer(m.qid!, "yes", t("yes", lang))}>{t("yes", lang)}</Chip>
                       <Chip onClick={() => answer(m.qid!, "no", t("no", lang))}>{t("no", lang)}</Chip>
                       <Chip onClick={() => answer(m.qid!, "unknown", t("notSure", lang))}>{t("notSure", lang)}</Chip>
+                    </>
+                  )}
+                  {m.kind === "confirm" && m.hazard && (
+                    <>
+                      <Chip onClick={() => confirmSafety(m, true, t("yes", lang))}>{t("yes", lang)}</Chip>
+                      <Chip onClick={() => confirmSafety(m, false, t("no", lang))}>{t("no", lang)}</Chip>
                     </>
                   )}
                   {m.kind === "clarify" && (

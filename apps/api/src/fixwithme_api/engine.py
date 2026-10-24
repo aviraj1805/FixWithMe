@@ -14,7 +14,8 @@ from .knowledge import ProductKB, Question
 Answer = Literal["yes", "no", "unknown"]
 
 CONFIDENT = 0.75  # stop asking once the top cause reaches this posterior
-MAX_QUESTIONS = 5
+MAX_QUESTIONS = 5  # informative (yes/no) answers to non-safety questions
+MAX_ASKED = 8  # hard cap on non-safety questions, including "not sure" answers
 MIN_GAIN_BITS = 0.02
 
 
@@ -63,7 +64,11 @@ def next_question(
     for q in kb.questions:
         if q.safety and q.id not in answers:
             return q
-    if len(answers) >= MAX_QUESTIONS or current[0].p >= CONFIDENT:
+    # "Not sure" answers don't use up the budget (FixBench-IN v1 showed that unanswerable
+    # questions were starving the useful ones), but MAX_ASKED still bounds the session.
+    asked = [q for q in kb.questions if not q.safety and q.id in answers]
+    informative = [q for q in asked if answers[q.id] != "unknown"]
+    if len(informative) >= MAX_QUESTIONS or len(asked) >= MAX_ASKED or current[0].p >= CONFIDENT:
         return None
     candidates = [q for q in kb.questions if q.id not in answers]
     if not candidates:

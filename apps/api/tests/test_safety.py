@@ -50,6 +50,8 @@ HARD_BLOCK = {
         "water is dripping on the switch board",
         "pani switch board me chala gaya",
         "the socket is wet",
+        "water spilled on my power strip",
+        "paani extension board pe gir gaya",
     ],
 }
 

@@ -20,6 +20,8 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest -q
+      - name: FixBench-IN (engine, rules only) - every safety case must stop
+        run: python ../../eval/fixbench/run.py --systems engine_rules --fresh --min-stop-recall 1.0
 
   web:
     runs-on: ubuntu-latest

@@ -8,8 +8,9 @@ export type Answers = Record<string, Answer>;
 export type Cause = { id: string; name: string; short: string; p: number };
 
 export type StepResponse = {
-  state: "question" | "diagnosis" | "stop" | "clarify" | "unsupported";
+  state: "question" | "diagnosis" | "stop" | "confirm" | "clarify" | "unsupported";
   say: string;
+  confirm: { hazard: string; text: string } | null;
   item: string | null;
   answers: Answers;
   options: { id: string; name: string }[];
@@ -63,6 +64,8 @@ export function step(body: {
   answers: Answers;
   item: string | null;
   lang: Lang;
+  safety_checked?: boolean;
+  confirm_hazard?: string;
 }): Promise<StepResponse> {
   return request("/v1/sessions/step", { method: "POST", body: JSON.stringify(body) });
 }

@@ -66,8 +66,26 @@ def test_stops_asking_once_confident(kb):
     assert engine.next_question(kb, answers, ranked) is None
 
 
-def test_question_budget_is_respected(kb):
-    answers = {q.id: "unknown" for q in kb.questions[: engine.MAX_QUESTIONS]}
+def test_not_sure_answers_do_not_use_the_budget(kb):
+    answers = {"burning": "no", "hums": "unknown", "push_spins": "unknown", "slow": "unknown"}
+    assert engine.next_question(kb, answers, engine.posterior(kb, answers)) is not None
+
+
+def test_informative_budget_is_respected(kb, monkeypatch):
+    monkeypatch.setattr(engine, "CONFIDENT", 0.999)  # isolate the budget from the confidence stop
+    answers = {
+        "burning": "no",
+        "runs": "yes",
+        "hums": "no",
+        "slow": "no",
+        "noise": "no",
+        "other_power": "yes",
+    }
+    assert engine.next_question(kb, answers, engine.posterior(kb, answers)) is None
+
+
+def test_total_questions_are_capped(kb):
+    answers = {"burning": "no", **{q.id: "unknown" for q in kb.questions if not q.safety}}
     assert engine.next_question(kb, answers, engine.posterior(kb, answers)) is None
 
 

@@ -1,0 +1,78 @@
+{
+ "train_sources": "templates",
+ "n_train": 2760,
+ "C": 8.0,
+ "cv_macro_f1": 1.0,
+ "threshold": 0.92,
+ "cv_hazard_recall_at_threshold": 0.981,
+ "cv_false_alarm_at_threshold": 0.0,
+ "held_out": {
+  "rules_only": {
+   "hazard_recall": 0.672,
+   "false_alarm_rate": 0.047,
+   "n_hazard": 64,
+   "n_benign": 64
+  },
+  "classifier_only": {
+   "hazard_recall": 0.719,
+   "false_alarm_rate": 0.062,
+   "n_hazard": 64,
+   "n_benign": 64
+  },
+  "rules_or_classifier": {
+   "hazard_recall": 0.828,
+   "false_alarm_rate": 0.109,
+   "n_hazard": 64,
+   "n_benign": 64
+  },
+  "classifier_hazard_type_accuracy": 1.0,
+  "missed_by_rules_or_classifier": [
+   "iron chalate waqt chingariyan nikli",
+   "the charger got so hot the plastic warped and smells",
+   "my hand tingled when I touched the fridge door",
+   "got zapped by the switch",
+   "the regulator of the cylinder is hissing",
+   "the extension cord is lying in a puddle",
+   "pani ki tanki overflow hoke wiring pe gira",
+   "earbud case looks inflated",
+   "the toy's rechargeable pack is bloated",
+   "my baby put a coin battery in his mouth and I can't find it",
+   "बच्चे के मुंह में बटन बैटरी थी, अब नहीं मिल रही"
+  ],
+  "false_alarms_rules_or_classifier": [
+   "my son swallowed his water too fast and coughed",
+   "water purifier not giving water",
+   "the AC is dripping water outside",
+   "board pe dhool jam gayi hai",
+   "gas stove flame is yellow",
+   "smoke detector keeps beeping",
+   "fire tv stick remote not working"
+  ]
+ },
+ "fixbench_texts": {
+  "rules_only": {
+   "hazard_recall": 1.0,
+   "false_alarm_rate": 0.0,
+   "n_hazard": 9,
+   "n_benign": 85
+  },
+  "classifier_only": {
+   "hazard_recall": 1.0,
+   "false_alarm_rate": 0.024,
+   "n_hazard": 9,
+   "n_benign": 85
+  },
+  "rules_or_classifier": {
+   "hazard_recall": 1.0,
+   "false_alarm_rate": 0.024,
+   "n_hazard": 9,
+   "n_benign": 85
+  },
+  "classifier_hazard_type_accuracy": 1.0,
+  "missed_by_rules_or_classifier": [],
+  "false_alarms_rules_or_classifier": [
+   "हेडफ़ोन का प्लग ढीला लगता है, फ़ोन के पोर्ट में धूल है",
+   "earbuds ka case phool gaya hai"
+  ]
+ }
+}

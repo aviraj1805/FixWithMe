@@ -73,11 +73,11 @@ _RULES: dict[str, list[re.Pattern[str]]] = {
     ],
     "water_electric": [
         re.compile(
-            r"\b(?:water|paani|pani|wet)\b.{0,30}\b(?:switch\w*|socket|board|wire\w*|plug|mcb)\b",
+            r"\b(?:water|paani|pani|wet)\b.{0,30}\b(?:switch\w*|sockets?|board|wire\w*|plugs?|mcb|strip|extension|spike\s*guard|charger)\b",
             _I,
         ),
         re.compile(
-            r"\b(?:switch\w*|socket|board|wire\w*|plug|mcb)\b.{0,30}\b(?:water|paani|pani|wet)\b",
+            r"\b(?:switch\w*|sockets?|board|wire\w*|plugs?|mcb|strip|extension|spike\s*guard|charger)\b.{0,30}\b(?:water|paani|pani|wet)\b",
             _I,
         ),
     ],
@@ -170,6 +170,61 @@ def check_text(text: str) -> list[str]:
         if any(p.search(subject) for p in patterns):
             found.append(hid)
     return found
+
+
+# Asked when only the FT-1 classifier (not a rule) flags a hazard: the classifier is less
+# certain than the rules, so it gets a one-tap confirmation instead of a hard STOP.
+CONFIRM: dict[str, Text] = {
+    "button_cell": Text(
+        en="Just checking: could a child have swallowed a battery or magnet?",
+        hi="बस पक्का कर लूं: क्या किसी बच्चे ने बैटरी या चुंबक निगल लिया हो सकता है?",
+    ),
+    "battery_swollen": Text(
+        en="Just checking: is a battery swollen, bulging or very hot?",
+        hi="बस पक्का कर लूं: क्या कोई बैटरी फूली हुई या बहुत गर्म है?",
+    ),
+    "fire_smoke": Text(
+        en="Just checking: is there smoke, sparks, a burning smell or melting?",
+        hi="बस पक्का कर लूं: क्या धुआं, चिंगारी, जलने की गंध या पिघलना है?",
+    ),
+    "shock": Text(
+        en="Just checking: did anyone get an electric shock or feel current?",
+        hi="बस पक्का कर लूं: क्या किसी को करंट या झटका लगा?",
+    ),
+    "gas": Text(
+        en="Just checking: can you smell gas?",
+        hi="बस पक्का कर लूं: क्या गैस की गंध आ रही है?",
+    ),
+    "water_electric": Text(
+        en="Just checking: has water got onto a switch, socket, plug or wire?",
+        hi="बस पक्का कर लूं: क्या स्विच, सॉकेट, प्लग या तार पर पानी गया है?",
+    ),
+}
+
+
+def screen(text: str, use_model: bool = True) -> tuple[str | None, str | None]:
+    """(hazard, source): keyword rules first ("rules", hard STOP), then FT-1 ("model", confirm).
+
+    Rules are deterministic and explainable; the classifier adds recall on paraphrases the
+    rules miss (blueprint §8: "rules OR classifier").
+    """
+    hits = check_text(text)
+    if hits:
+        return hits[0], "rules"
+    if not use_model:
+        return None, None
+    from . import safety_model  # local import keeps the rules usable without the model file
+
+    model = safety_model.load()
+    if model is None:
+        return None, None
+    pred = model.predict(text)
+    return (pred.hazard, "model") if pred.flagged else (None, None)
+
+
+def stop_hazard(text: str) -> str | None:
+    """Any hazard the rules or the classifier see in the text."""
+    return screen(text)[0]
 
 
 def stop_payload(hazard_id: str, lang: Lang) -> dict:

@@ -1,0 +1,1067 @@
+{"text": "Extension board me light nahi aa rahi, help?", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "रिमोट के बटन दब नहीं रहे हैं।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Extension board making spark sound, please check asap.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Extension board me paani chala gaya hai, short circuit ho sakta hai", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhai jaldi aao, socket se aag nikal rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha hai, please send help fast", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "नल के पास वाले स्विच से स्पार्किंग और करंट आ रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "फ्रिज छूने पर हल्का सा करंट महसूस हो रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Bajaj geyser me se shock lag raha hai, please fix fast.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch board me paani chala gaya hai, jaldi aao pls", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Microwave me se tingling feel ho rahi hai, electrician bhejo.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "पंखे की स्पीड बहुत कम हो गई है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Main board is making sound and sparking, please come now", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "शॉर्ट सर्किट हो गया है, बोर्ड से चिंगारी निकल रही है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "वाशिंग मशीन बहुत शोर कर रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Gas pipe leaking lag raha hai, please help ASAP", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "किचन में गैस की गंध आ रही है, बहुत डर लग रहा है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Earbuds case is puffed, battery issue.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Switch board me paani gir gaya hai urgently", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Bhai switch me paani gaya hai, please help kar do", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Bachha ne battery kha li hai urgent doctor chahiye help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! Gas leak detected. Need help now.", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "माइक्रोवेव से धुआं निकल रहा है, वायर भी जल गया।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Hello, my powerbank looks like it is bloating. Urgent!", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "चार्जर में पानी चला गया है, क्या यह ठीक हो पाएगा?", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Baby swallowed a coin cell please jaldi kuch karo", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Laptop is heating and battery is swollen, please send someone.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Help gas leak ho rha hai bohot tez smell hai", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "My powerbank is very fat now, battery ok?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Phone battery is swollen, will it explode?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "गैस सिलेंडर से लीक हो रहा है, तुरंत मदद चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "एक्सटेंशन कॉर्ड में नमी आ गई है, बिजली नहीं आ रही।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "घर के मेन बोर्ड में करंट आ रहा है, बहुत डर लग रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Charger me paani chala gaya hai, please check karlo fast", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "वाशिंग मशीन में करंट महसूस हो रहा है, कोई देख लो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Geyser touch krte hi current lag rha hai, help.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "किचन में गैस की स्मेल आ रही है, मैकेनिक चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "बोर्ड गीला है, बिजली बंद कर दो जल्दी।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me gas leak ho rha hai, jaldi aao", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency help gas leak", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls help my kid swallowed a small magnet", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Socket is making sound after water spilled on it", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "सॉकेट से चिंगारी निकल रही है क्योंकि पानी गिर गया है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "बिजली के बोर्ड से आग जैसी रोशनी दिख रही है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Remote buttons not working properly.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Light blink kar rahi hai baar baar", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Bache ne coin nigal liya hai please urgent help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Help baby swallowed a tiny battery please", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Switch board me paani chala gaya hai, please urgent help", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Phone ka back cover uth gaya hai, battery fatne wali hai.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "स्विच से आग निकल रही है, बहुत इमरजेंसी है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "लोडिंग बोर्ड में पानी गिर गया है, शायद खराब हो गया।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Help!! heavy gas smell in my flat, pls send technician fast", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Bluetooth speaker pairing issue, please send someone.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Bhai mera phone phool gaya hai, help chahiye.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhaiya electrical board se aag nikal rhi hai help", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "गैस की गंध आ रही है, कोई देख लो।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Someone please come, water inside the plug point", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "रसोई में गैस की स्मेल आ रही है, प्लम्बर भेजिए", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Gas leak h, jaldi bhejo plz", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Socket me paani aa gaya hai, short circuit hoga kya?", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency gas leak, pls send someone to my house fast", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Arre bhai, kitchen ka exhaust fan jal raha hai!", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "लैपटॉप का निचला हिस्सा थोड़ा उभरा हुआ है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Is it possible to send a gas repair man right now?", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Pls help baby swallowed small magnet urgently", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Laptop screen is lifting up, battery is puffed.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Emergency help! Kid swallowed button battery pls", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Wiring se dhuaan aa raha hai, electrician chahiye turant", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Speaker me bahut noise aa raha hai kaam karte waqt.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Mixer machine se ajeeb awaaz aa rahi hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "My electric meter is wet, help asap", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Ghar me gas ki badbu aa rahi hai urgent", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "दीवार के पास वाली वायरिंग गीली है, रिस्क है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Remote ke buttons kaam nahi kar rahe pls check karo", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "गैस लीक हो रही है, प्लंबर चाहिए तुरंत", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Emergency electrical wire is on fire pls help fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Toy battery is puffed, please send someone ASAP", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Little one swallowed a magnet pls help immediately", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Washing machine me se shock lag raha hai, urgent electrician.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "मिक्सर चलते समय बहुत आवाज़ करता है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Earphones sound is very low only", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Fan ki speed bohot low hai aaj kal", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Earphones ka left side kaam nahi kar raha.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "एसी का रिमोट अजीब व्यवहार कर रहा है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "सेफ्टी की दिक्कत है, बोर्ड से स्पार्क्स निकल रहे हैं।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Charger is getting too hot when I plug it in.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Help my son swallowed a coin please send someone urgent", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Slight shock in toaster, check please.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Light switch me se current aa rha hai please come fast", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Mobile battery is puffed up, can you come today?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "My baby swallowed a magnet pls help urgently", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Earbuds case is bulging, very dangerous.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Urgent doctor ya help chahiye baccha ne chota magnet swallow kar liya", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch is sparking very much pls send electrician immediately", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "माउस के बटन अटक रहे हैं।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "गीजर से धुआं निकल रहा है, प्लग काला पड़ गया है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Toy battery is puffed up, can u fix?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Main wire is sparking very much pls come fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Fan bahut awaaz kar raha hai, check kar lo please.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Main switch board melt ho raha hai, emergency hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency help my baby swallowed a small battery pls help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Socket se aag nikal rahi hai, please help me ASAP", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "प्लीज जल्दी किसी को भेजें, बच्चे ने छोटा सिक्का निगल लिया है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "मेरे ब्लूटूथ हेडफोन की बैटरी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Switch me paani chala gaya hai, please come fast", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "very urgent gas smell, please send help fast", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Current aa raha hai fridge se, please send someone ASAP", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Switchboard me current aa raha hai, very scary", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "लैपटॉप की बैटरी फूल गई है, क्या आप बैटरी बदल देंगे?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Emergency baby swallowed battery pls fast help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "लैपटॉप चार्जर से करंट महसूस हो रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Gas pipe me shayad leak hai help needed", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Toy remote not working", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Socket me se aag nikal rahi hai, help pls", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension board thoda loose lag raha hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Urgent gas leak help please", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension cord me pani gir gaya hai, help pls", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Laptop battery bulge issue, need quick service", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Speaker me connectivity problem hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Urgent help needed my baby swallowed a small coin... pls send someone now", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Need technician for gas smell issue immediately", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Socket me thoda water gir gaya hai help needed", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension board me sparking ho rahi hai thodi si.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Powerbank ka case phul gaya hai, help needed fast", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे का खिलौना अचानक बंद हो गया है, शायद तार ढीला है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Geyser switch me current aa raha hai, please send technician", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "मेरे ईयरफोन का एक साइड काम नहीं कर रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Extension me paani chala gaya, please help fast", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "चार्जिंग पोर्ट में कुछ दिक्कत लग रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "स्विच बोर्ड से करंट लग रहा है, बहुत डरा हुआ हूँ।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Microwave touch krne pe tingling sensation ho rha hai.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "गैस लीक हो रही है, प्लीज जल्दी भेजें।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Water entered in extension board, jaldi bhejo kisi ko", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "तार पिघल रहे हैं, जल्दी किसी को भेजिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Remote me awaaz nahi aa rahi, volume button issue hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "बोर्ड के अंदर पानी चला गया है, रिपेयरिंग के लिए बंदा चाहिए।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Gas leak detection needed, please send a guy", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "खिलौने की बैटरी फूल गई है, इसे बदलना है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Fridge handle se current aa rha hai, please come asap.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Toy car not moving, check pls", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Gas leak detect hua hai pls technician bhejo", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Something is wrong with my induction, feelng tingling sensation", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Induction stove touch kiya toh shock laga, immediate help chahiye.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Help gas leak ho raha hai please", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Kitchen appliances me current aa rha hai please check", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Oven touch kiya toh jhatka laga, pls check fast", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "किचन में गैस की गंध आ रही है, तुरंत मैकेनिक बुलाओ।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "लैपटॉप का चार्जर कनेक्ट नहीं हो रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen ka switchboard jhal raha hai, please help", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "पावर बैंक फूल गया है, क्या ये अभी इस्तेमाल करना सुरक्षित है?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "TV remote is acting crazy, buttons getting stuck.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "घर की लाइट के बोर्ड में करंट आ रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Pls help bache ne coin cell nigal liya hai urgent", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "इलेक्ट्रिक प्रेस (iron) चालू नहीं हो रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Geyser ka wire touch kiya toh bada shock laga, please dekho.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "AC motor is sparking very much please come quickly", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "ब्लूटूथ स्पीकर पेयरिंग नहीं कर रहा है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Baby swallowed a button battery urgent help needed", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Baby swallowed a magnet help me pls send someone right away", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Water spilled on the main switch, pls come", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Small shock in toaster, please send someone soon", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "urgent help needed, gas smell is too much", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "इमरजेंसी हेल्प चाहिए, बच्चे ने बटन सेल खा लिया है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me lights me current aa raha hai", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Remote ka sensor kharab ho gaya hai shayad.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Help! My kid swallowed a button battery please immediate help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency, my powerbank is bulging", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "ईयरबड्स की बैटरी फूलकर बाहर आ रही है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Electrical sparks in the living room, please come fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Charger geela ho gaya hai, help me pls", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "गीजर की लाइट नहीं जल रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Need technician for laptop battery swelling", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "बैटरी में सूजन आ गई है, बहुत डरावना लग रहा है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Help me baby swallowed a coin cell jaldi aao", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Mixer grinder me current aa raha hai, electrician please.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Socket se spark ho raha hai please fast aao", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Phone ka back glass uth raha hai battery swell se", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! Child swallowed button battery help pls", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension cord is loose, need fix", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "My son swallowed a magnet help me what to do pls come quickly", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Phone battery is swollen, need technician.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "My iron box is sparking, pls help", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड पूरी तरह भीग गया है, प्लम्बर नहीं इलेक्ट्रिशियन चाहिए।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Bhai laptop ki battery phool gayi hai, change karva do", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Socket is scorched and black, is it dangerous?", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "पंखे के स्विच से करंट लग रहा है, जल्दी भेजिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen appliance battery is flat.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "रसोई में गैस की गंध आ रही है, जल्दी आ जाओ", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Ceiling fan is running very slow", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "AC ka plug melt ho gaya hai please koi bhejo fast", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "मेरा चार्जर पानी में गिर गया है, जल्दी कोई दिखाओ।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Smart bulb not connecting to wifi", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "बच्चा छोटा सिक्का निगल गया है, अर्जेंट हेल्प चाहिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "एप्लायंस की लाइट जल रही है पर काम नहीं कर रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Water heater touch kiya to current laga, pls send guy.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Help help baby swallowed a small battery pls come quickly", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Electrician chahiye, geyser se current lag raha hai", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Phone battery is puffed, need replacement fast.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "सिलेंडर से गैस निकल रही है, तुरंत भेजिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "बाथरूम का स्विच गीला हो गया है, रिपेयर चाहिए।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "बच्चा बैटरी swallow कर गया है, तुरंत किसी को भेजिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "बच्चे ने छोटा मैग्नेट निगल लिया है, प्लीज मदद करो।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me gas ki smell aa rahi hai, check karo jaldi", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! My baby swallowed a magnet help pls", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Bhaiya switchboard se dhua nikal raha hai please come urgently", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Kitchen me switches se current aa raha hai, help please.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Laptop battery swelling problem, please send someone", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Water went into the main switch, please send someone fast", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Gas leak is happening, pls send technician immediately", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Geyser switch me current aa rha hai, please fix.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Gas leakage problem in my kitchen", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas smell aa rahi hai, please dekho jaldi", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls send someone, washing machine me current aa rha.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Emergency, phone back cover is popping out due to battery.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Switch board me paani aa gaya hai, danger lag raha hai", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "लैपटॉप की बैटरी फूलने की वजह से बॉडी टेढ़ी हो गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "My charger is not working with my phone.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Aag lag rhi hai main board se help", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "गीजर चालू करते ही करंट आता है, चेक करना है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen ka cooker plug melt ho gaya hai bahut khatarnak hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Earbuds battery puffed, need replacement service", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "गीजर का वायर काला पड़ गया है और धुआं दे रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "बिजली के बोर्ड में पानी चला गया है, काम कर दो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Powerbank is looking fat, battery swollen.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Earbuds ka case thoda sa bulge ho raha hai, kya karun?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Battery is puffed in my laptop, please check.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Emergency! Child swallowed a button battery.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Current aa raha hai switch board se pls help", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Help! Bacha ne magnet kha liya hai please urgent", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "पंखे को बहुत तेज़ आवाज़ आ रही है, चेक कर लीजिए।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Charging cable me problem hai light nahi aa rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Oven me se electric shock lag rha hai, please come fast", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Bhaiya socket is melting, bahut urgent hai", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Ceiling fan bohot slow chal raha hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "स्विच बोर्ड से आवाज आ रही है, पानी चला गया है अंदर।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "इमरजेंसी! बच्चे के मुंह में बैटरी मिली है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Pls help my baby swallowed a button cell quickly", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Help my kid ate a coin cell battery please send technician immediately", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड में बिजली का झटका महसूस हो रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Fridge ke upar touch kiya toh jhatka laga", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Help! My baby swallowed a battery. need help fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "क्या आप गैस लीक ठीक कर सकते हैं? तुरंत जरूरत है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me se gas ki smell aa rahi hai please check karlo", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "TV remote buttons are stuck", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Bijli ka board jal rha hai help pls", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "मेरे छोटे बच्चे ने मैग्नेट निगल लिया है, बहुत रिस्क है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Pls bhej do koi gas leak check krne ko", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "इलेक्ट्रिक केतली छूते ही झटका लग रहा है, जल्दी आओ।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Microwave me se light aa rahi hai aur shock bhi lag raha hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Mixer ki speed control nahi ho rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Washing machine touch kiya toh shock laga, help me", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "माइक्रोवेव से धुआँ आ रहा है, जल्दी मदद चाहिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Fan speed is very low even on max.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "AC ka plug pighal gaya hai, please bhej do koi", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhaiya laptop battery phool gayi hai, please come fast", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "बहुत तेज गैस की महक आ रही है, जल्दी मदद भेजें।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Earbuds ki battery puffed up hai, check kar lo", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Ceiling fan bahut slow chal raha hai aaj kal.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Fridge body pe current aa raha hai, pls check asap", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Bohat smell aa rhi hai gas ki, plumber ya technician bhejo", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak alert, please send help immediately", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Smell of gas in my house, please send technician immediately", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Phone ka back panel uth gaya hai, battery bump hai shayad.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "गैस की स्मेल आ रही है, तुरंत सहायता चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Switch board se current aa raha hai, dangerous lag raha hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Washing machine me current aa rha hai, pls check wire.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड गीला होने से शॉर्ट सर्किट का डर है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "चुंबक निगलने की वजह से बच्चा रो रहा है, जल्दी आएं।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "मेरा गैस पाइप लीक कर रहा है, तुरंत मदद चाहिए", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Socket melat ho gaya hai, please electrician bhejo", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch board me se current aa rha hai, help me.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Wall fan is wobbling too much", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Toy car battery not holding charge, please help.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "बच्चे ने छोटा सिक्का निगल लिया है, क्या करूं?", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "पानी की मोटर चालू नहीं हो रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Pls help my daughter swallowed a battery urgent", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Remote ke buttons kaam nahi kar rahe", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Hey, there is a smell of LPG in my house. Is anyone available?", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Battery phool gayi hai laptop ki, repair possible hai?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency baby swallowed coin pls help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Heavy sparking in main switch, jaldi aao please", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "My extension board is dead, no power coming.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Emergency help needed baby swallowed a button battery please", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Smart bulb ki light nahi jal rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Phone ki battery phool gayi hai, dangerous lag raha hai.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Help gas leak ho rha hai pls", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Mera laptop ka battery puffed up hai, please dekho.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Plz help, ac ka plug pighal raha hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "गीजर का लाइट नहीं जल रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "इंडक्शन चूल्हे से बिजली का झटका लग रहा है, तुरंत आइए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Bhai jaldi aao socket se aag nikal rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls help gas leak ho rha hai bhut zyada", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "charger me paani chala gaya, help me", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Urgent! Bacha ne chota magnet kha liya hai help pls", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चा बैटरी निगल बैठा है, प्लीज जल्दी मदद भेजें।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Extension board is loose, need replacement.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "मिक्सर मशीन से बिजली का झटका लग रहा है, कोई भेजो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "एक्सटेंशन बोर्ड गीला हो गया है, करंट आ रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "गैस पाइप खराब लग रहा है, उसे ठीक करना है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Magnet swallowed by baby, please help immediately!", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Help my kid swallowed a battery urgently pls come", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Emergency gas leak, please send help urgently", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Pls bhejo electrician, geyser se tingling feel ho rahi hai", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch board me pani chala gaya hai, pls help", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Kitchen me gas ki smell aa rhi hai, please help", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "My kids toy battery is bulging, is it safe?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "सिक्का निगलने के कारण बच्चे को दिक्कत हो रही है, तुरंत मदद चाहिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "पानी की मोटर बहुत धीरे चल रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Urgent help needed my child swallowed a button battery", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Gas cylinder leak hai pls help", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric kettle me light nahi jal rahi charging ke time", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "My meter is wet, please send someone immediately", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "एसी के रिमोट और पैनल से करंट आ रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Fan ki speed control nahi ho rahi.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "गैस की महक आ रही है, चेक करवा लो।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Earphones charging problem, only one side works.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Washing machine panel lights are not showing.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "हेयर ड्रायर की बटन फंस गई है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen mixer thoda noisy hai aaj kal", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "एक्सटेंशन बोर्ड में ढीला कनेक्शन लग रहा है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "किचन में गैस की बहुत तेज स्मेल है, प्लीज जल्दी आ जाओ।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Toy battery phool gayi hai, repair ke liye kab aaoge?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Plz help, switchboard se dhua nikal raha hai!", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Please send someone, water in the power socket", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Switch board me se current lag rha hai, please send someone", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! AC points is sparking, pls hurry", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "पावर बैंक बहुत ज्यादा गरम होकर फूल गया है, खतरा है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen switch is scorched and smelling like burnt plastic", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Gas ki smell aa rahi hai pls kisi ko bhejo abhi", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "वॉटर हीटर से करंट आ रहा है, बिजली बंद कर दी है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Urgent!! gas leak. please send someone to my house", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "मोबाइल की बैटरी बहुत ज्यादा पफअप हो गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Earbuds battery swollen, kab tak aaoge?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Water in the main meter, please come quickly", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Fridge touch krne pe jhatka lag rha hai, pls help.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Plz help, switchboard se dhuaan nikal raha hai!", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "गीजर चालू होने पर कोई आवाज़ नहीं दे रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Extension board me plug loose hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Toys ki awaity nahi aa rahi, battery shayad dead hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas cylinder leak hai emergency", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Juicer mixer ka button jam ho gaya hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Mera charger bheeg gaya hai, check kar lo please", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "रिमोट का सेल खत्म हो गया है क्या?", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "मेरे छोटे बच्चे ने सिक्का खा लिया है, इमरजेंसी है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Earbuds me charging problem hai, service chahiye.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Wire is melting near the fridge, pls come fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "खिलौने की बैटरी बदलने के बाद भी नहीं चल रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "स्विच बोर्ड में करंट आ रहा है, बहुत खतरनाक है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Mera charger geela ho gaya hai, can u check?", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Hi, I can smell gas near the stove. Can someone come?", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "बटन सेल बच्चे के पेट में चला गया है, तुरंत मदद चाहिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Extension board me light nahi aa rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "रिमोट के बटन काम नहीं कर रहे हैं।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Headphones no sound in left ear.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Bhaiya socket is burning, please hurry up", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "एसी का तार पिघल रहा है, तुरंत किसी को बुलाओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Mixer chalate waqt shock laga, electrician bhejo", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Oh god my induction cooktop is smoking", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Bluetooth speaker pairing nahi ho raha", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Baccha ne coin nigal liya hai battery wali help pls", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Smoke is coming from the main switch, help pls", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Bache ne battery kha li hai please emergency help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "गैस की स्मेल आ रही है, कोई मैकेनिक खाली है क्या?", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Pls help, bedroom light is sparking and smelling burnt", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Bajaj ka iron touch kiya toh jhatka laga", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Water entered the main wiring area, very urgent", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "एसी का रिमोट काम नहीं कर रहा, शायद बैटरी खत्म है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "मेरे फ्रिज से करंट लग रहा है, जल्दी भेजिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Pls send electrician, extension board me paani gir gaya", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "बच्चा बैटरी खा गया है, तुरंत किसी को भेजो।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "टेबल लैंप की लाइट फ्लिकर कर रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "बच्चे ने सेल निगल लिया है, डॉक्टर या एक्सपर्ट चाहिए तुरंत।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Bhaiya switchboard is burning please help urgently", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "टीवी का रिमोट बिल्कुल नहीं चल रहा, बैटरी डाल दी फिर भी।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Emergency!! Main switch board is sparking like crazy pls come fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Microwave light is gone.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Mummy ko switch board se current laga, jaldi aao", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "टॉय कार की बैटरी चार्ज नहीं हो रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "बच्चे ने छोटा सा मैग्नेट निगल लिया है, बहुत डर लग रहा है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "गीजर का लाइट जल रहा है पर गरम नहीं कर रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "टॉय कार की बैटरी फूल गई है, इसे बदल दो।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "एक्सटेंशन बोर्ड गीला हो गया है, चेक करवाना है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "सिलेंडर से गैस लीक हो रही है, प्लीज जल्दी आ जाइये", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "बैटरी बल्ब जैसी हो गई है, क्या इसे बदल दोगे?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Baccha ne coin kha liya hai battery wala pls help fast", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhai wiring me kahi paani chala gaya hai, check karlo", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे ने बैटरी निगल ली है, बहुत डर लग रहा है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Pls help my kid swallowed a magnet bit", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Can you send someone for gas leak? Smell is very strong", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Emergency! My baby swallowed a small battery. Jaldi aao", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Iron box heating is very slow.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "इस चार्जर से फोन चार्ज नहीं हो रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Master bedroom light is smoking pls send electrician now", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Earphones me left side me sound nahi aa raha", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha hai jaldi aaiye please", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "बैटरी swallowed by child, please send help immediately.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "वायरिंग में कहीं पानी चला गया है, चेक करना है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "बच्चा बैटरी निगल चुका है, बहुत डर लग रहा है, जल्दी आएं।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "जल्दी भेजो, गैस लीक होने का डर है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "एअरबड्स की बैटरी फूलकर केस को नुकसान पहुँचा रही है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Emergency! Bacche ne coin cell nigal liya hai please help fast", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch board me se current lag raha hai, unsafe hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Charger lagane pe charging nahi ho rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "गीजर का तार छूने पर झटका लगा, चेक करना होगा।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "गैस पाइप चेक करना है, स्मेल आ रही है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Pls send someone immediately switchboard is sparking", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "बिजली के बोर्ड में पानी घुस गया है, तुरंत आ जाओ।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me gas ki smell aa rhi hai, pls send plumber/technician", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Hi, i think my gas regulator is leaking. pls send technician", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "एक्सटेंशन बोर्ड में सॉकेट ढीला है, करंट आ रहा है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "बोर्ड से चिंगारी निकलना शुरू हो गया है, जल्दी आओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "फ्रिज की लाइट जलना बंद हो गई है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Power bank phool gaya hai, please koi dekho jaldi", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leakage, please help urgently", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "My phone is getting hot and back panel is coming out", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Gas ki smell aa rhi hai koi ko bhejo pls", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Microwave light is not turning on", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Bache ne battery nigal li hai help urgently pls", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Powerbank bahut zyada puffed up hai, darr lag raha hai", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak problem, help me ASAP", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas smell is too much, please send someone ASAP", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Toy me se ajeeb awaaz aa rahi hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "मिक्सर जार घूम नहीं रहा है, मोटर में दिक्कत है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "प्लग में पानी गिर गया है, करंट आ रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "पावर बैंक अचानक से फूल गया है, रिस्क है, जल्दी देख लो।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Laptop battery phool gayi hai, urgently need help.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Micic kaam nahi kar raha, sound issue hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Hey, can u send someone for gas leak inspection?", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "पावर बैंक थोड़ा सा पफअप हो गया है, क्या करना चाहिए?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "मेरा फोन फूल गया है, क्या इसे ठीक कर सकते हो?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "बिजली के तार में पानी चला गया है, रिपेयर चाहिए।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "My baby took a small magnet please send someone to my house now", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "एअरबड्स का केस फूल गया है, इसे चेक करना है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Gas smell coming from kitchen, please send someone urgently", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "टीवी का रिमोट काम नहीं कर रहा, सेल बदल कर देख लिए पर नहीं चला।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Plz electrician bhejo, socket se smoke nikal raha hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Electricity board is making sound and smelling like fire", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "गैस रिपेयर के लिए किसी को भेजिए, लीकेज है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "फ्रिज का प्लग पिघल गया है, बहुत इमरजेंसी है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Socket is burning, pls send electrician ASAP", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Socket is melting pls send someone fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Emergency baby swallowed a magnet cell help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "मेरे बच्चे ने बटन बैटरी खा ली है, बहुत इमरजेंसी है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "बोर्ड से चिंगारी निकल रही है, कोई मदद करो।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "AC का प्लग पिघल गया है, तुरंत कोई भेजिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Urgent gas leakage problem in my flat, pls send help", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "बच्चे के खिलौने की बैटरी फूलकर बाहर आ रही है, इसे ठीक करना है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Baby swallowed a coin cell... pls send someone immediately", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Geyser ka wire touch karne pe jhatka laga", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch board is very hot and smelling burnt, pls come", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Urgent... my son swallowed a battery help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Baby swallowed battery help please jaldi help chahiye", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे के मुंह में सिक्का चला गया है, क्या करें?", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Emergency hai bache ne magnet kha liya hai pls jaldi aao", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Fan is making very loud noise, please check", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "गीजर के पास से चिंगारी निकल रही है, तुरंत आओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Phone back is popping out due to battery swelling", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Charging nahi ho rahi mobile ki, charger check karna padega.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "हेडफ़ोन में आवाज़ बहुत कम आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Help, my bluetooth earbuds case is bloated", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "चार्जर और सॉकेट दोनों भीग गए हैं, क्या रिपेयर होगा?", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "पानी की मोटर से बिजली का झटका लग रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Toys ka sound nahi aa raha", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Small appliance not turning on", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "पावर बैंक का ढक्कन नहीं बंद हो रहा, बैटरी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Emergency pls help baby took a small battery", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Emergency! Bacha ne button battery nigal li hai pls help fast", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "पूरे घर में जलने की महक आ रही है, जल्दी कीजिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Electrical board se smell aa rahi hai aur thoda smoke bhi", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "My laptop battery is pushing the trackpad up, help.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "AC ka remote touch karne pe tingling ho rhi hai", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Fan se noise aa rahi hai bohot zyada", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "टॉय कार की बैटरी जल्दी खत्म हो रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Gas leak detect hua hai, please send someone fast", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "स्विच बोर्ड में पानी चला गया है, जल्दी किसी को भेजो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "एक्स्टेंशन बोर्ड के सॉकेट ढीले लग रहे हैं।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "फोन की बैटरी बहुत ज्यादा सूज गई है, रिस्क है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Pls help, gas smell aa rhi hai", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Bhaiya phone ki battery phool gayi hai, help pls", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "गैस कनेक्शन में कुछ दिक्कत है, गैस की महक आ रही है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Urgent help baby swallowed coin cell please come help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "पुराना लैपटॉप है, बैटरी काफी ज्यादा फूल चुकी है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "My child swallowed a small magnet help urgent", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Laptop battery tight ho gayi hai, handle kar sakte ho?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls help kid swallowed button battery", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "टीवी का रिमोट काम नहीं कर रहा, बैटरी बदल ली फिर भी नहीं चल रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Fridge me se jhatka lag raha hai, please jaldi aao.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls help urgently my baby swallowed a coin cell", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "बच्चे के खिलौने की बैटरी सूज गई है, रिप्लेसमेंट चाहिए।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Gas cylinder se smell aa rhi hai check krdo", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Kuch gas leak ho rha hai kitchen me, please send someone quickly", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Socket is melted and black, please send electrician", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Emergency!! wire is melting near the fridge", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Extension board me thoda spark feel ho raha hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Earphones ka wire thoda loose hai shayad", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Help baby swallowed magnet please jaldi aao", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Extremely dangerous, the fridge is giving mild shocks", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Bluetooth speaker pairing problem", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Switchboard se burning smell aa rahi hai bahut zyada", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas smell coming from kitchen urgently help", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Help my kid took a coin pls send someone now", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Gas ka smell aa rha hai ghar me, jaldi bhej do", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Battery in my bluetooth speaker is puffed.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Power bank bahut zyada puff up ho gaya hai, help pls", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "पंखे का रेगुलेटर काम नहीं कर रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Electric shock in kitchen mixer, pls send someone urgent", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "गीजर का प्लग जल गया है, अर्जेंट चाहिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Charger me pani gaya hai, please check karo", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "बोर्ड से जलने की महक आ रही है, बहुत ज्यादा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Emergency help needed my baby swallowed a small button battery pls send someone fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Gas leak check krna hai, please send someone", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "गैस पाइप से स्मेल आ रही है, प्लंबर या मैकेनिक भेजिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "दीवार के सॉकेट में पानी भर गया है, ठीक करवा दो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "गैस पाइप से बदबू आ रही है, उसे बदलना है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "TV remote dead ho gaya hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls help baby swallowed a coin cell urgently", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "गीजर छूने पर झटका लग रहा है, देखिए क्या हुआ है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Spilled water on the plug, pls send electrician", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Mixer me se jhatka lag rha hai, please help fast", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Phone ka piche wala part bulge ho raha hai, help!", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "स्विच में पानी चला गया है, जल्दी भेजो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Emergency please my microwave wire is melting", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Emergency, kitchen switch board is on fire!!", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "पानी की मोटर चालू करते ही झटका लगता है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Laptop battery is bulging out of the bottom.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Fan is wobbling too much.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड में करंट आ रहा है, बहुत डर लग रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "My son swallowed a battery help fastly", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Socket me pani gir gaya, light spark ho rahi hai", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "पंखे से बहुत आवाज़ आ रही है, कोई देख लो।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "गीजर का करंट बहुत तेज है, जल्दी आ जाओ।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Bache ne battery nigal li hai help urgently please", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas connection leak ho rha hai, please send someone", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Help! बच्चे ने छोटा सा चुंबक निगल लिया है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Fan chalate waqt light jhatka de rahi hai, please come.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Earbuds ka case thoda puffed hai, can u fix it?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric board me se spark ho raha hai jaldi aao", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "गीजर चालू करते ही झटका लगा, कोई मैकेनिक भेजो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Phone battery is puffed up, can you replace?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "इंडक्शन चूल्हा गरम नहीं हो रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Fridge se current aa rha hai, urgent help chahiye", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "खिलौने की बैटरी फूलकर बाहर निकल रही है, खतरा तो नहीं?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Bhaiyya socket is sparking and black, please urgent", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Earbuds ki charging case phool gayi, help pls.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "मशीन में करंट आ रहा है, जल्दी किसी को भेजिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "गैस पाइप से आवाज आ रही है और महक भी है, तुरंत आओ", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Laptop back cover is lifting up, battery puffed", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Urgent help needed socket is on fire", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "गीजर का पानी गरम होने में बहुत समय ले रहा है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "बच्चे ने सिक्का निगल लिया है, जल्दी किसी को बुलाओ।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "मेरे कंप्यूटर के कैबिनेट से करंट लग रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Magnet swallowed by toddler, urgent assistance needed.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen ka mixer on karte hi jhatka laga", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Kitchen me plug melt ho gaya hai, jaldi help chahiye", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "इलेक्ट्रिक केतली छूने पर झटका महसूस हुआ।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Switchboard se burning smell aa rahi hai aur dhuaan bhi", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Socket is black and smelling burnt help", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "गीजर छूते ही करंट लग रहा है, जल्दी किसी को भेजो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Powerbank is swollen, is it safe to use?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "गैस की गंध बहुत ज्यादा है, कोई मैकेनिक भेज दो", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "मेरा फोन अचानक से मोटा दिखने लगा है, बैटरी खराब है क्या?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Laptop ka bottom bulging hai, repair possible hai?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric kettle is not switching off automatically.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Oh no, main switch me se spark ho raha hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha hai... jaldi kisi ko bhejo", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "हेयर ड्रायर में बिल्कुल भी पावर नहीं आ रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Remote sensor is not working properly", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "बच्चे ने सेल निगल लिया है, जल्दी डॉक्टर या हेल्प भेजें।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Charger lagane pe lights nahi jal rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "गैस पाइपलाइन में लीकेज लग रहा है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "टीवी के प्लग से बिजली का झटका लग रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "किचन में गैस की गंध आ रही है, क्या कोई मैकेनिक मिल सकता है?", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Induction stove on nahi ho raha, help needed.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Juicer chal nahi raha hai bilkul bhi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे का खिलौना अचानक बंद हो गया है, देख लेना।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Fan me se bahut zyada noise aa rahi hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "माइक्रोवेव छूने पर झनझनाहट होती है, प्लीज़ मैकेनिक भेज दो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Help! Kid swallowed coin cell jaldi aao please", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension board me power nahi aa rahi hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "फ्रिज का तार काला पड़ गया है और धुआँ उठ रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Socket me se sparking ho rhi hai aur current bhi aa rha", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "बोर्ड एकदम काला पड़ गया है और धुआँ निकल रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Socket se dhuwa nikal raha hai please jaldi", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Toy ki battery phool gayi hai, repair ho jayega?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak detected, please send a plumber or gas man immediately", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "इस पावर बैंक को छूने में भी डर लग रहा है, बैटरी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Someone please come for gas leak, its very urgent", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Gas pipe leak ho rha shayad", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhaiya urgent help fan is smoking", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Toy car slow chal rahi hai shayad battery weak hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "लैपटॉप की बैटरी फूलने की वजह से बॉडी टेढ़ी हो गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "चार्जिंग पॉइंट गीला है, करंट लग रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me se gas ki smell aa rhi hai, pls send someone asap", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Toy ki awaaz nahi aa rahi battery check karo", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "TV remote ki batteries flat hain kya karun", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Electrical points me se chingari nikal rahi hai, very urgent", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Earbuds not charging in case", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Gas smell is too strong, please come fast", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhai current lag raha hai fridge se, please dekho jaldi.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Charging port loose lag raha hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leakage problem, urgent help required", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "गैस लीक हो रही है, अर्जेंट मैकेनिक चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Remote batteries are flat, need replacement", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "LPG लीक हो रही है, मैकेनिक चाहिए अभी", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Pls help baby swallowed a small magnet please fast", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Water heater touch kiya toh shock laga bahut zor se", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "मेरे छोटे बच्चे ने सेल निगल लिया है, बहुत ही अर्जेंट है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Water went inside the plug point, urgent help", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Sikka swallowed by baby, urgent help please.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen socket se dhuaan nikal raha hai, jaldi aao", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Electrician please, geyser me se bahut current aa raha hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Water got in the socket, please send electrician urgently", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Laptop ka bottom side thoda bahar nikal raha hai battery ki wajah se", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "एसी के रिमोट और पैनल से करंट महसूस हो रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "एसी का प्लग जलकर पिघल गया है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Gas smell alert, please send technician fast", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric shock in bedroom fan regulator, urgent.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "मेरे बेटे ने छोटा सा मैग्नेट निगल लिया है, बहुत अर्जेंट है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "help me, gas smell a rha hai kitchen me", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "एअरबड्स का केस बीच में से उखड़ गया है, बैटरी फूल गई है शायद।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Help! My daughter swallowed a tiny silver battery pls send help urgently", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "गैस चूल्हे से गैस निकल रही है, चेक करवाना है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "मेरे फोन की बैटरी फूल गई है, क्या आप इसे बदल सकते हैं?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "एक्सटेंशन बोर्ड में करंट नहीं आ रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Gas pipe se smell aa rhi hai, pls send mechanic", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "चार्जिंग पिन ढीली लग रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "बच्चा बैटरी खा गया है, इमरजेंसी है!", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "तारों में स्पार्किंग हो रही है, बहुत ज्यादा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "रसोई में गैस लीक हो रही है, प्लंबर या मैकेनिक चाहिए", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Remote cells are fine but still not working.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Socket me paani chala gaya, short circuit ho jayega", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Kitchen ka mixer chalao toh current lag raha hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Magnet swallowed, help needed for baby immediately.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Extension board me power nahi aa rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "एक्सटेंशन में पानी चला गया है, अब चालू नहीं हो रहा।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Mic me awaaz nahi aa rahi hai, check kar lo.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Mera purana toy phool gaya hai, battery change karoge?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Urgent help baby swallowed a magnet", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड में नमी आ गई है, कोई भेजो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Meter me moisture lag raha hai, paani chala gaya hai shayad", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Power bank kaai fatne wala hai, battery swollen hai.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Hey, my powerbank is swollen. Need urgent repair.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Baby swallowed a small coin pls help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "मेरे पंखे से बहुत शोर आ रहा है, कृपया ठीक कर दें।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "My phone battery is getting fat, what to do?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Plug me thoda paani gaya hai, check karna padega", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! Bacha ne battery swallow kar li hai pls help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Laptop battery bulge issue hai, cost kya hoga?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Help water entered the main meter box", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Plz help, lights se sparking ho rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "मेरा स्मार्टफोन काफी मोटा लग रहा है, बैटरी में सूजन है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "My phone battery is swelling, please help.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Electricity socket me paani gir gaya hai", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Mera extension board geela ho gaya hai, please dekho", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "जल्दी भेजो, बोर्ड से धुआँ निकल रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Pls come fast, there is smoke coming from the plug", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "घर के स्विच बोर्ड से स्पार्किंग और करंट की समस्या है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "बच्चे ने बैटरी खा ली है, बहुत इमरजेंसी है प्लीज!", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "इयरफ़ोन का एक साइड काम नहीं कर रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen me short circuit ho gaya hai, dhua hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "सॉकेट गीला है, प्लग लगाने में डर लग रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "घर में शॉर्ट सर्किट हो गया है, कोई इलेक्ट्रिशियन भेजो।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Fridge ki light nahi jal rahi andar.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "बिजली के तारों में पानी चला गया है, जल्दी भेजो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "एक्सटेंशन बोर्ड में पानी गिर गया है, लाइट नहीं आ रही।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Pls help urgently magnet muh mein dala tha bache ne", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "मेरा फोन बहुत गरम हो रहा है और बैटरी भी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Help! Baby swallowed a tiny magnet.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "मीटर बॉक्स में पानी घुस गया है, बहुत इमरजेंसी है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "स्विच बोर्ड में आग लगी है, जल्दी मदद चाहिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Toy car ki battery phatne wali hai, bahut puffed up hai", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Water entered the wall socket, is it safe?", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "मेन लाइन से धुआं निकल रहा है, बहुत इमरजेंसी है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "ब्लूटूथ स्पीकर पेयर नहीं हो रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Light switch me se current aa rha hai, pls check.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Fan is rotating very slow after service", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "बच्चे का खिलौना अचानक बंद हो गया है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "My iron box is giving electric shocks, pls send help", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Water spilled on the extension board pls help fast", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Wire is melting near bed pls come fast", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Socket me paani aa gaya, current lag raha hai", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "मीटर बॉक्स में पानी जमा हो गया है, जल्दी आइये।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Remote ki battery dead hai, replace karni hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "मीटर में पानी घुस गया है, बहुत डर लग रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "तारों में स्पार्किंग हो रही है, बहुत ज्यादा।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "लैपटॉप का पिछला हिस्सा थोड़ा बाहर निकल आया है, बैटरी खराब लग रही है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "गैस का रेगुलेटर चेक करना है, बहुत तेज गंध है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "चार्जर गीला हो गया है, क्या यह ठीक होगा?", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Phone back is lifting, battery is bulging.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "मेरे ईयरबड्स का केस थोड़ा फूला हुआ लग रहा है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Extension board me paani hai, dangerous lag raha hai", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Pls send someone, gas leak ho rha hai", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Speaker me sound bilkul nahi aa raha", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "इस खिलौने में आवाज़ नहीं आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Toy car ki battery khatam hai, repair hoga?", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "पानी की वजह से स्विच से स्पार्किंग हो रही है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Urgent help baby took a small magnet pls", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Pls send technician for gas leakage, it's quite strong", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "My phone battery is swelling, please help fast", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Switch me se tingling feel ho rhi hai, electrician need", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhai meter me paani gaya hai, kya karu?", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "एसी चालू करने पर करंट लग रहा है, अर्जेंट है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Water purifier se current aa raha hai, please send someone.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "डाइनिंग टेबल का लैंप छूने पर बिजली का झटका लगा।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "My daughter swallowed a small round battery help pls", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "TV ka plug touch karne pe jhatka lag raha hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Urgent help chahiye baccha ne coin cell kha liya hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Help baby swallowed magnet pls jaldi help karo", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "स्विच चालू करते ही स्पार्किंग होने लगती है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "स्विच के अंदर पानी घुस गया है, रिस्क है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "इलेक्ट्रिक बोर्ड जल गया है, बहुत खतरनाक है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Phone battery swelled, battery change kardo jaldi.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Electrical smell in living room very strong and smoke coming", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Help urgent electrical socket is smoking", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "पंखे की मोटर से धुआं निकल रहा है, जल्दी आओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "पावर बैंक की बैटरी फूल गई है, क्या रिपेयर होगा या नया लेना पड़ेगा?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "चार्जर गीला हो गया है, जला तो नहीं देगा?", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen ka tap touch kiya to shock laga, pls check wiring.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Earphones me sound nahi aa raha bilkul", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Earbuds ka box phool raha hai, check kar sakte ho?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे ने बैटरी खा ली है, प्लीज जल्दी कोई एक्सपर्ट भेजें।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Laptop battery ka dhakkan nikal raha hai, help", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "My laptop battery is swelling, urgent repair chahiye", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Remote batteries are low, please bring new ones", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Phone battery swollen hai, repair chahiye.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Mera charger geela ho gaya hai, can you help?", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Bhaiya, my kid's toy battery is swollen, looks dangerous", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Fan is making too much noise, please check.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Bache ne magnet nigal liya hai help please fast", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "घर में बिजली की गंध आ रही है, बहुत खतरनाक लग रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Geyser se current aa rha hai, please come quickly.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "AC plug touch kiya to jhatka laga, send help.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Help please bacha ne button battery kha li hai bahut dar lag raha hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Remote ki batteries khatam ho gayi shayad, naya chahiye.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Meter box me paani gaya hai, help needed", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "क्या कोई गैस रिपेयर करने वाला अभी आ सकता है?", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Mera fridge ka plug jal gaya hai, urgent electrician chahiye", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha kitchen me, pls send someone", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Baby swallowed a magnet please urgent help chahiye", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "किचन में गैस की तेज गंध है, मैकेनिक को बुलाओ", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Mixture machine se jhatka lag raha hai, pls help", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "My extension board is wet, can you fix?", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Remote ko dekh lo, buttons atak rahe hain", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency baby swallowed a battery help fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Gas smell aa rhi hai ghar me", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "वाशिंग मशीन चलते समय बहुत शोर कर रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "लैपटॉप की बैटरी बीच से बाहर निकल रही है, जल्दी देखो।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Switchboard me se chingari nikal rahi hai, please hurry", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Kid swallowed coin cell pls help fast urgent", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Help my son ate a small battery pls come fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Earbuds case thoda puffed lag raha hai, check kar lo.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Bacche ne magnet kha liya hai emergency please help", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Help urgent my geyser is smoking badly", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Toy is making strange sound", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "My phone is swelling, bahut risk hai", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "The extension board got wet, it is sparking", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Electrician chahiye, washing machine touch karne pe current aata hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha hai help needed", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Geyser touch karte hi shock laga, help needed ASAP.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Someone spilled water on the plug point, it is making noise", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Emergency help bache ne choti battery nigal li hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे ने बटन सेल निगल लिया है, जल्दी मदद भेजें।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Bhai electric shock lag raha hai fridge se", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "TV remote ke buttons stuck ho gaye hain.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha hai jaldi aao pls", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leakage emergency, jaldi aao please", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Help baby swallowed a coin cell please come soon", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "माइक्रोवेव का डिस्प्ले नहीं दिख रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Emergency!! Gas ki smell bohot tez hai", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Laptop battery is puffed up, plz send repair guy", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "फोन की बैटरी फूल गई है, क्या आप घर आकर बदल देंगे?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Fridge handle me current hai, pls check", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "फ्रिज का बॉडी में करंट आ रहा है, जल्दी ठीक करवाना है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Charger me pani gaya hai, it's not working", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "गीजर का तार छूने पर झटका लगा, रिस्क है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Pls send someone immediately, AC wire is catching fire", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Something is burning in the kitchen plug point", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Remote me batteries flat hain kya badal denge?", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension board is not giving power", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Meter me moisture aa gaya hai shayad", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Pls help baby swallowed a small magnet pls come quick", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Water heater me se jhatka lag raha hai, please check karo.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Microwave me se current aa raha hai help", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Kids toy is not making sound anymore.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "सिक्का swallowed by kid, help immediately.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Water heater me se current aa rha hai help pls", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "पंखे की रफ़्तार बहुत कम हो गई है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Mic me awaaz nahi ja rahi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Earbuds ka case thoda bulge kar raha hai, kya fix hoga?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Please urgent help bacha ne magnet swallow kiya hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Laptop ki battery bulge ho rahi hai, please check karo.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak issue, pls send technician fastly", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Wiring me paani chala gaya hai, please urgent electrician bhejo", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "मीटर में नमी आ गई है, बहुत डर लग रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "प्लग और वायर दोनों गीले हैं, देख लो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Electrician chahiye urgently switch me current aa rha hai", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Help bache ne button battery kha li hai jaldi aao", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak ho rha hai, technician chahiye jaldi se", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric shock in electric kettle, send someone.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Gas ki smell aa rahi hai jaldi bhejo", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "दीवार के पास वाली वायरिंग में पानी घुस गया है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "स्विच बोर्ड से चिंगारी निकल रही है और करंट भी आ रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "मोबाइल का बैक कवर निकल रहा है, लगता है बैटरी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Plz help, bedroom ka socket smoke kar raha hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Bacche ka remote car phool gaya hai, battery replace karni hai.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency!! gas smell is too strong, pls send help", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Emergency! My son swallowed a coin cell pls help fast", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Please help urgently mera baccha coin cell kha gaya hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Help my geyser is smoking very badly", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "सॉकेट के अंदर पानी चला गया है, प्लग नहीं लग रहा।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "लैपटॉप की बैटरी फूल गई है, स्क्रीन भी थोड़ी ऊपर उठ रही है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Electric shock in kitchen mixer, please send someone fast.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "चार्जर की लाइट नहीं जल रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "सॉकेट में पानी जाने की वजह से शार्ट सर्किट हो रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Switch me se spark aur shock dono ho raha hai, urgent.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Earphone ki wire me problem hai, sound cut raha hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "मीटर में नमी आ गई है, खतरा लग रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Mixer machine shock de rha hai, need electrician.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "एअरबड्स की बैटरी फूल गई है, क्या ये रिपेयर हो सकती है?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Switch me pani chala gaya, help urgently", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "घर के स्विच छूते ही झटका लगता है, इलेक्ट्रिशियन चाहिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Help my kid swallowed a coin please send help ASAP", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Fan ki speed kam ho gayi hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "My baby swallowed a tiny magnet pls help me fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Emergency! मेरे बच्चे ने बैटरी swallowed कर ली है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "स्विच बोर्ड में आग लग सकती है, धुआं निकल रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Power point se dhuaan nikal raha hai, help fast", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "gas leakage problem, please send service guy fast", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Meter box me pani gaya hai, pls send someone", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Socket me pani chala gaya hai, please send electrician", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Sparking in the extension board after water spilled on it", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Extension cord me paani gir gaya, electrician chahiye", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "इलेक्ट्रिक केतली गरम नहीं कर रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "मसाला जलने की बदबू आ रही है, जल्दी भेजिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Earphones ka wire loose lag raha hai", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "बैटरी निगलने की वजह से बच्चा परेशान है, तुरंत मदद चाहिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Battery in powerbank is swollen, can you fix or replace?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Toy car ki charging port me issue hai.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "मेरे मिक्सर में करंट आ रहा है, काम नहीं कर रहा।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "बच्चे ने सेल निगल लिया है, जल्दी कुछ बताइए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "My fridge is giving small shocks when I touch it.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Ghar me gas leak ho rha hai jaldi aao", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "बच्चे ने सेल निगल लिया है, प्लीज जल्दी आ जाइए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "AC ka remote switch touch kiya toh jhatka laga, help!", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Aag lag rahi hai electric board me, urgent help", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhaiyya socket is melting, smells like burning plastic", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Phone ki battery phool gayi hai, khatarnak lag raha hai", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Immediate help needed, gas leakage", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "किचन के सॉकेट से आग की लपटें निकल रही हैं, जल्दी आओ!", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "मेरा एक्सटेंशन गीला हो गया है, चालू नहीं हो रहा।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Toy remote control is not responding.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Battery is swelling in my phone, what to do?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Emergency pls main switch off nahi ho rha sparking ho rhi hai", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "गीजर से जलने की बदबू आ रही है, चेक करवा लो।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Emergency! Main switch se burning smell aa rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "My laptop is looking like it's bulging from bottom", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Toy car ki battery khatam ho gayi shayad", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "पंखे से धुआँ निकल रहा है, जल्दी किसी को भेजो।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Electrician chahiye, oven me current aa rha hai.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Ek socket me pani chala gaya hai, please send electrician", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Electric board me se current aa raha hai, please check quickly.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Mera plug melt ho gaya hai, short circuit ho raha hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Current aa raha hai microwave se, very urgent", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Main board se dhuwa nikal raha hai urgent help", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "किचन में गैस की स्मेल आ रही है, मदद चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Laptop battery phool gayi hai, urgent fix chahiye bro", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Pani chala gaya switch board me, pls help ASAP", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "तारों में चिंगारी निकल रही है, जल्दी किसी को बुलाओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "इमरजेंसी है, गैस की गंध बहुत तेज है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "जल्दी भेजिए, गैस लीक का मामला है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Bluetooth speaker pair nahi ho raha, please dekho.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "किचन में गैस लीक हो रही है, अर्जेंट चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "तारों के पास पानी बह रहा है, बिजली काटनी पड़ेगी।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Urgent help! Baccha ne coin battery kha li hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "खिलौने की बैटरी फूल गई है, रिस्क है क्या?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "एसी का रिमोट बटन दबाने पर कोई रिस्पॉन्स नहीं दे रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Speaker pairing nahi ho raha phone se", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Mera extension cord jal gaya hai, smoking ho rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency help baby swallowed a button cell pls come fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "बैटरी फूल गई है, इसे तुरंत ठीक करने वाला भेज दो।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "My powerbank is bulging, please send someone.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Phone battery swollen hai, kab aaoge?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "प्लग में पानी गिर गया है, चेक कर लो।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Charger is heating up too much", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "पावर बैंक बहुत ज्यादा गरम हो रहा है और फूल गया है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "ब्लूटूथ स्पीकर पेयर नहीं हो रहा है, चेक करवाना है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Hello, pls send someone for gas leakage issue", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Hello, my tablet battery is puffed up, can you fix?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Phone battery bloated, can you fix today?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Emergency!! Gas leakage detected", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "गीला सॉकेट है, करंट मार रहा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "मेरे घर में PNG लीक हो रही है, हेल्प चाहिए", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "बोर्ड से चिंगारी और धुआं दोनों निकल रहे हैं।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Pls help urgent smell of burning wire in bedroom", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "इंडक्शन चूल्हा छूने पर बिजली का झटका लग रहा है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "वॉटर हीटर में करंट आ रहा है, प्लग चेक करें।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Induction stove me current aa raha hai, urgent help needed", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Earbuds case is bulging, what to do?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "छोटा बच्चा बटन सेल खा गया है, बहुत इमरजेंसी है।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Socket is wet, will it cause short circuit?", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Pls come fast bedroom fan is making smoke", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Switch board me se current aa rha hai, pls check karo", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Battery puffed up hai phone ki, help chahiye bhai.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhai bahut khatarnak shock laga geyser se", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Fan bohot awaaz kar raha hai sudden awaaz aane lagi", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Water heater se current lag raha hai, please send electrician immediately", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Dhuaan aa raha hai main meter box se, help!", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency, induction stove touch kiya to shock laga.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Electrician chahiye, washing machine me current aa rha hai", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas smell aa rhi hai please check karo jaldi", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "The mixer grinder is running very slow today.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "बैटरी की वजह से लैपटॉप का केस थोड़ा बाहर निकल रहा है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Bhai gas ki smell aa rhi hai bohot zyada", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "गैस की स्मेल आ रही है जल्दी भेजो", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "मोबाइल की बैटरी फूल गई है, क्या रिपेयरिंग के लिए आ सकते हैं?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "टीवी के प्लग में करंट आ रहा है, तुरंत भेजिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "प्लग पॉइंट में पानी चला गया है, खतरा है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Toaster is not heating properly", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "गैस की महक आ रही है, प्लीज जल्दी किसी को भेजें", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "बच्चा बैटरी निगल गया है, प्लीज तुरंत किसी को भेजिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "तार से धुआं उठ रहा है, बहुत तेज गंध है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Fridge is working fine but light is not turning on.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "मिक्सर चलते समय बिजली का झटका लगता है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "मीटर के पास से पानी रिस रहा है, बिजली चेक करवानी है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "गैस कनेक्शन में कुछ दिक्कत है, गैस की गंध आ रही है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "टीवी का रिमोट बिल्कुल डेड हो गया है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Kitchen mixer me current aa rha, urgent requirement.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Mera geyser ka wire jal gaya hai, very dangerous", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Fan bohot awaaz kar raha hai, please check karo", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Extension board sparks a bit, please see", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "गैस की महक आ रही है, जल्दी किसी को भेजो।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "गैस का पाइप चेक करवाना है, स्मेल आ रही है।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "पंखे से बहुत आवाज़ आ रही है, चेक करवा लो।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Pls send someone immediately my baby swallowed a magnet help", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड जल गया है, जल्दी मैकेनिक भेजो।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "इयरफ़ोन में आवाज़ बहुत कम आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Pls help baby swallowed button battery bahut emergency hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Induction stove touch karte hi current laga, please check.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Board se jalne ki smell aa rahi hai, urgent hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch me paani chala gaya hai, light nahi chal rahi", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "तारों से चिंगारी निकल रही है, बहुत रिस्की है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Bhai phone ka piche ka panel phool gaya hai please help", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Light switch touch krte hi current lag rha hai, urgent.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Emergency gas leak, kitchen me smell hai", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Water in the plug, please send someone fast", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Kitchen light is scorched and smelling bad", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "Bhai gas leak ho rha hai, help needed ASAP", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Earphones ka ek side kaam nahi kar raha", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Bedside lamp light is flickering.", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Gas smell aa rhi hai kiske pass helper hai?", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "My son swallowed a coin cell please come fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "गीजर से झनझनाहट हो रही है, प्लम्बर नहीं इलेक्ट्रिशियन चाहिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Water in the power strip, please send someone immediately", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "बच्चे ने छोटा सेल निगल लिया है, तुरंत सहायता चाहिए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "लैपटॉप की बैटरी फूल गई है, क्या नयी मिल जाएगी?", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "My phone is swelling, battery change karva hai.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Bhai phone ka screen uth raha hai battery ki wajah se.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Smell of gas in kitchen, please send help immediately", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "खिलौने की बैटरी फूल गई है, कृपया जल्दी किसी को भेजें।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "स्पीकर में आवाज़ बहुत कम आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Bhai jaldi aao, switchboard se aag lag rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric switch burn ho gaya hai, help needed", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "मोबाइल की स्क्रीन उठ रही है, शायद बैटरी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "पावर बैंक में उभार आ गया है, रिप्लेसमेंट चाहिए।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Electrical board me paani chala gaya, urgent help chahiye", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "फ्रिज से हल्का झटका लग रहा है, चेक करवाना है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Remote ke saare buttons stuck ho gaye hain", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "स्पीकर में बहुत ज्यादा शोर आ रहा है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Battery swallowing emergency, help fast!", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Sparking ho rahi hai socket me, jaldi aao", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Socket me paani gir gaya, electrician bhejo", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Help baby swallowed magnet pls jaldi aao", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "मिक्सर ग्राइंडर से अजीब सी आवाज़ आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Plug me pani chala gaya hai, current aa raha hai thoda", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Powerbank is slightly bloated, can you fix it?", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Gas leak ho rha shayad, help!", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "लैपटॉप का बैटरी बैकअप खत्म और बैटरी भी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Gas leak ho rha hai, pls jaldi bhejo", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Gas smell is very bad, pls send technician asap", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Urgent! बच्चे ने सेल निगल लिया है, जल्दी आ जाइए।", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "वॉशिंग मशीन का लाइट नहीं जल रहा।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "हेडफोन में साफ़ आवाज़ नहीं आ रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Earbuds charging case is bulging, help pls.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "एडेप्टर में पानी गिर गया है, चेक करना है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Bacha ne battery nikal li hai please help fast ASAP", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! Socket me se aag nikal rahi hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "फोन की बैटरी फूलने लगी है, रिपेयर के लिए आ जाओ।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Extension board me spark ho raha hai thoda sa", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Electric board is smoking, please send someone immediately", "label": "fire_smoke", "source": "gemma", "lang": "en"}
+{"text": "जल्दी किसी को भेजो, गैस की महक से घुटन हो रही है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Bhai switch board me pani chala gaya hai please jaldi aao", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "Bluetooth pairing problem ho rahi hai headphones ke saath", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Water heater se current aa rha hai, please send electrician.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Gas smell aa rhi hai kitchen se please help", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency help chahiye bacha ne battery nigal li hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "Switch board me se tingling feel ho rha hai.", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "LPG सिलेंडर से गैस निकल रही है, इमरजेंसी है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "Wiring me paani gaya hai, electrician bhej do urgent", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "अचानक बोर्ड से धुआँ उठने लगा है, जल्दी आओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Socket mel ho gaya hai, jaldi aao please", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Earbuds case is bulging, need repair urgently", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "पंखे का स्विच छूते ही झटका लगता है।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Water inside the wall socket, please send technician", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Help my kid swallowed a button coin please", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Gas leak ho rhi hai jaldi bhejo pls", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Earphone wire is loose, sound coming only in one side", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Socket me paani gir gaya hai, pls help", "label": "water_electric", "source": "gemma", "lang": "hinglish"}
+{"text": "प्लग पॉइंट गीला है, करंट लग सकता है।", "label": "water_electric", "source": "gemma", "lang": "hi"}
+{"text": "Extremely strong gas smell in the kitchen. Send someone now", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Tablet battery is swelling, need repair.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Plz electrician bhejo, switch board scorched lag raha hai", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Fridge touch kiya toh jhatka laga, electrician chahiye urgently", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Help chahiye bacha ne coin cell kha liya hai urgent", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "मेरा पुराना फोन है, इसकी बैटरी फूल गई है।", "label": "battery_swollen", "source": "gemma", "lang": "hi"}
+{"text": "Fridge handle touch kiya toh shock laga, check pls", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Pls help baby swallowed small battery urgent help chahiye", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "वाशिंग मशीन छूते ही करंट लगा, कोई इलेक्ट्रिशियन भेजो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "can u send someone for gas leak check?", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "इयरफ़ोन के एक साइड में आवाज़ नहीं आ रही।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "Water inside the switch board pls help quickly", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "Light blink kar rahi hai fan ki, check karo.", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Battery is very swollen in my powerbank, please come.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "Toy car ki battery khatam ho gayi kya hai?", "label": "none", "source": "gemma", "lang": "hinglish"}
+{"text": "Phone ka battery area bulge kar raha hai, urgent", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "My remote is dead, batteries not working", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "फ्रिज से अजीब सी आवाज़ आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "सिलेंडर लीकेज का काम है, अर्जेंट चाहिए।", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "प्लग पिघल कर गिर रहा है, तुरंत किसी को बुलाओ।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "मेन स्विच से जलने की आवाज़ आ रही है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Electricity shock in kitchen, urgent help chahiye", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Pls help my daughter swallowed a coin cell very urgent", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Gas pipe se smell aa rhi hai kripya kisi ko bhej dijiye", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Fridge ka door touch karo toh tingling sensation hoti hai.", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "Gas leak is happening, please send help", "label": "gas", "source": "gemma", "lang": "hinglish"}
+{"text": "Bhai earbuds ka box phool gaya hai, replace karoge?", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}
+{"text": "Kitchen wala plug touch karne pe current lag rha hai", "label": "shock", "source": "gemma", "lang": "hinglish"}
+{"text": "फ्रिज के बॉडी में करंट आ रहा है, तुरंत मैकेनिक भेजो।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Sikka nigal liya hai bachhe ne, urgent help chahiye.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Powerbank is bulging, help me ASAP.", "label": "battery_swollen", "source": "gemma", "lang": "en"}
+{"text": "गीजर का स्विच चालू करते ही बिजली का झटका लगा।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "Switchboard jal gaya hai, please help ASAP", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "My charger got wet, is it safe to use?", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "स्विच बोर्ड में स्पार्किंग हो रही है, बहुत डर लग रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Baccha ne magnet kha liya hai pls help immediately", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "प्लग से धुआं निकल रहा है, बहुत डर लग रहा है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "My phone charger has water in it, help", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "माइक्रोवेव से हल्का झटका महसूस हो रहा है, प्लग चेक कर दीजिए।", "label": "shock", "source": "gemma", "lang": "hi"}
+{"text": "लाइट का बोर्ड जल रहा है, कोई भेजो।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Help me, my baby swallowed a coin.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Electric shock in bathroom switch, please come fast", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Wet charger, pls send someone to check", "label": "water_electric", "source": "gemma", "lang": "en"}
+{"text": "पंखे से जलने की बदबू आ रही है, तुरंत भेजिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Pls help, baby swallowed a coin cell battery.", "label": "button_cell", "source": "gemma", "lang": "hi"}
+{"text": "Remote is not responding to anything", "label": "none", "source": "gemma", "lang": "en"}
+{"text": "Geyser se current aa raha hai, help", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "Main board me se sparking ho rahi hai urgently help chahiye", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "इमरजेंसी है, घर में गैस लीक हो रही है", "label": "gas", "source": "gemma", "lang": "hi"}
+{"text": "हेयर ड्रायर में से जलने की गंध आ रही है।", "label": "none", "source": "gemma", "lang": "hi"}
+{"text": "स्विच बोर्ड से जलने की गंध आ रही है।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Pls help child swallowed battery fast", "label": "button_cell", "source": "gemma", "lang": "en"}
+{"text": "Switch board me se current aa raha hai, pls come", "label": "shock", "source": "gemma", "lang": "en"}
+{"text": "तार जलने की बहुत तेज गंध आ रही है, मदद चाहिए।", "label": "fire_smoke", "source": "gemma", "lang": "hi"}
+{"text": "Socket me se aag nikal rahi hai, help please!", "label": "fire_smoke", "source": "gemma", "lang": "hinglish"}
+{"text": "Emergency! Chote bacche ne coin battery kha li hai", "label": "button_cell", "source": "gemma", "lang": "hinglish"}
+{"text": "hi, gas leakage issue. please send mechanic fast", "label": "gas", "source": "gemma", "lang": "en"}
+{"text": "Powerbank mota ho gaya hai, battery badalni hai.", "label": "battery_swollen", "source": "gemma", "lang": "hinglish"}

@@ -1,0 +1,128 @@
+{"text": "something smells like burnt plastic near the switchboard", "label": "fire_smoke", "source": "handwritten"}
+{"text": "the plug turned black and there's a smell", "label": "fire_smoke", "source": "handwritten"}
+{"text": "mixer ke motor se dhuwa aa raha tha", "label": "fire_smoke", "source": "handwritten"}
+{"text": "iron chalate waqt chingariyan nikli", "label": "fire_smoke", "source": "handwritten"}
+{"text": "socket ke andar se chit chit ki awaaz aur jalne ki badbu", "label": "fire_smoke", "source": "handwritten"}
+{"text": "the charger got so hot the plastic warped and smells", "label": "fire_smoke", "source": "handwritten"}
+{"text": "फ्रिज के पीछे से जलने जैसी बदबू", "label": "fire_smoke", "source": "handwritten"}
+{"text": "बोर्ड का प्लग पिघल गया", "label": "fire_smoke", "source": "handwritten"}
+{"text": "flames came out of the extension cord", "label": "fire_smoke", "source": "handwritten"}
+{"text": "smoky smell from the AC indoor unit", "label": "fire_smoke", "source": "handwritten"}
+{"text": "tv ke peeche se dhuan", "label": "fire_smoke", "source": "handwritten"}
+{"text": "wire ki insulation jal gayi hai", "label": "fire_smoke", "source": "handwritten"}
+{"text": "my hand tingled when I touched the fridge door", "label": "shock", "source": "handwritten"}
+{"text": "washing machine body me current hai", "label": "shock", "source": "handwritten"}
+{"text": "got zapped by the switch", "label": "shock", "source": "handwritten"}
+{"text": "touching the geyser pipe gives a shock", "label": "shock", "source": "handwritten"}
+{"text": "fan ke regulator me current maarta hai", "label": "shock", "source": "handwritten"}
+{"text": "करंट लग रहा है कूलर को छूने पर", "label": "shock", "source": "handwritten"}
+{"text": "slight electric shock from the laptop charger", "label": "shock", "source": "handwritten"}
+{"text": "bhai ko switch se jhatka laga", "label": "shock", "source": "handwritten"}
+{"text": "मुझे स्विच बोर्ड से झटका लगा", "label": "shock", "source": "handwritten"}
+{"text": "the metal tap gives a mild shock", "label": "shock", "source": "handwritten"}
+{"text": "iron chhoone par current aata hai", "label": "shock", "source": "handwritten"}
+{"text": "someone got electrocuted near the pump", "label": "shock", "source": "handwritten"}
+{"text": "kitchen smells of gas", "label": "gas", "source": "handwritten"}
+{"text": "I think the LPG cylinder is leaking", "label": "gas", "source": "handwritten"}
+{"text": "rasoi me gas ki gandh aa rahi hai", "label": "gas", "source": "handwritten"}
+{"text": "stove ke paas cylinder se gas leak lag raha hai", "label": "gas", "source": "handwritten"}
+{"text": "smell like rotten eggs near the stove", "label": "gas", "source": "handwritten"}
+{"text": "गैस की बदबू आ रही है रसोई में", "label": "gas", "source": "handwritten"}
+{"text": "the regulator of the cylinder is hissing", "label": "gas", "source": "handwritten"}
+{"text": "gas leak in my flat", "label": "gas", "source": "handwritten"}
+{"text": "cylinder valve leak ho raha hai", "label": "gas", "source": "handwritten"}
+{"text": "there's a strong LPG smell", "label": "gas", "source": "handwritten"}
+{"text": "rain water is coming through the switchboard", "label": "water_electric", "source": "handwritten"}
+{"text": "water dripping into the light socket", "label": "water_electric", "source": "handwritten"}
+{"text": "AC se paani switch board pe gir raha hai", "label": "water_electric", "source": "handwritten"}
+{"text": "the extension cord is lying in a puddle", "label": "water_electric", "source": "handwritten"}
+{"text": "washing machine plug got wet", "label": "water_electric", "source": "handwritten"}
+{"text": "बोर्ड पर पानी गिर गया", "label": "water_electric", "source": "handwritten"}
+{"text": "pani ki tanki overflow hoke wiring pe gira", "label": "water_electric", "source": "handwritten"}
+{"text": "my charger fell in water", "label": "water_electric", "source": "handwritten"}
+{"text": "wet hands touched the socket", "label": "water_electric", "source": "handwritten"}
+{"text": "geyser switch is wet from the bathroom shower", "label": "water_electric", "source": "handwritten"}
+{"text": "my phone battery is puffing up", "label": "battery_swollen", "source": "handwritten"}
+{"text": "laptop battery bulged and lifted the keyboard", "label": "battery_swollen", "source": "handwritten"}
+{"text": "power bank phool gaya hai", "label": "battery_swollen", "source": "handwritten"}
+{"text": "earbud case looks inflated", "label": "battery_swollen", "source": "handwritten"}
+{"text": "the drone battery is swollen", "label": "battery_swollen", "source": "handwritten"}
+{"text": "mobile ki battery fool gayi", "label": "battery_swollen", "source": "handwritten"}
+{"text": "पावर बैंक फूल गया है", "label": "battery_swollen", "source": "handwritten"}
+{"text": "the toy's rechargeable pack is bloated", "label": "battery_swollen", "source": "handwritten"}
+{"text": "battery ka size badh gaya hai", "label": "battery_swollen", "source": "handwritten"}
+{"text": "back cover of the phone is lifting because the battery swelled", "label": "battery_swollen", "source": "handwritten"}
+{"text": "my baby put a coin battery in his mouth and I can't find it", "label": "button_cell", "source": "handwritten"}
+{"text": "kid swallowed a small round battery", "label": "button_cell", "source": "handwritten"}
+{"text": "beta battery nigal gaya", "label": "button_cell", "source": "handwritten"}
+{"text": "bachi ne remote ka cell kha liya", "label": "button_cell", "source": "handwritten"}
+{"text": "बच्चे ने घड़ी का सेल निगल लिया", "label": "button_cell", "source": "handwritten"}
+{"text": "my daughter may have eaten a magnet from the toy", "label": "button_cell", "source": "handwritten"}
+{"text": "toddler swallowed a lithium coin cell", "label": "button_cell", "source": "handwritten"}
+{"text": "chhote bachche ne battery munh me daal li aur ab mil nahi rahi", "label": "button_cell", "source": "handwritten"}
+{"text": "my son ate a button battery", "label": "button_cell", "source": "handwritten"}
+{"text": "बच्चे के मुंह में बटन बैटरी थी, अब नहीं मिल रही", "label": "button_cell", "source": "handwritten"}
+{"text": "the light is on but the fan won't spin", "label": "none", "source": "handwritten"}
+{"text": "light jal rahi hai par pankha nahi chal raha", "label": "none", "source": "handwritten"}
+{"text": "लाइट जलती है पर मोटर नहीं चलती", "label": "none", "source": "handwritten"}
+{"text": "jaldi batao kya karun", "label": "none", "source": "handwritten"}
+{"text": "मुझे जल्दी चाहिए", "label": "none", "source": "handwritten"}
+{"text": "aage kya karna hai", "label": "none", "source": "handwritten"}
+{"text": "battery khatam ho gayi", "label": "none", "source": "handwritten"}
+{"text": "phone battery drains fast", "label": "none", "source": "handwritten"}
+{"text": "the remote needs new AA batteries", "label": "none", "source": "handwritten"}
+{"text": "my son swallowed his water too fast and coughed", "label": "none", "source": "handwritten"}
+{"text": "the motor is a bit warm after running all day", "label": "none", "source": "handwritten"}
+{"text": "water purifier not giving water", "label": "none", "source": "handwritten"}
+{"text": "pani ka pressure kam hai", "label": "none", "source": "handwritten"}
+{"text": "the AC is dripping water outside", "label": "none", "source": "handwritten"}
+{"text": "board pe dhool jam gayi hai", "label": "none", "source": "handwritten"}
+{"text": "the socket is loose", "label": "none", "source": "handwritten"}
+{"text": "extension board ka switch kharab hai", "label": "none", "source": "handwritten"}
+{"text": "earbuds one side not working", "label": "none", "source": "handwritten"}
+{"text": "my headphones crackle", "label": "none", "source": "handwritten"}
+{"text": "toy car wheels stuck", "label": "none", "source": "handwritten"}
+{"text": "TV remote buttons not working", "label": "none", "source": "handwritten"}
+{"text": "kettle takes long to boil", "label": "none", "source": "handwritten"}
+{"text": "iron is not heating", "label": "none", "source": "handwritten"}
+{"text": "geyser takes too long to heat water", "label": "none", "source": "handwritten"}
+{"text": "gas stove flame is yellow", "label": "none", "source": "handwritten"}
+{"text": "cooker whistle not working", "label": "none", "source": "handwritten"}
+{"text": "the fridge light is off", "label": "none", "source": "handwritten"}
+{"text": "charger not charging", "label": "none", "source": "handwritten"}
+{"text": "fan ki awaaz bahut aati hai", "label": "none", "source": "handwritten"}
+{"text": "पंखा धीरे चलता है", "label": "none", "source": "handwritten"}
+{"text": "रिमोट की बैटरी बदल दी पर नहीं चला", "label": "none", "source": "handwritten"}
+{"text": "हेडफ़ोन में एक तरफ़ आवाज़ नहीं", "label": "none", "source": "handwritten"}
+{"text": "the toy's battery cover is broken", "label": "none", "source": "handwritten"}
+{"text": "I need a 2.5 uF capacitor", "label": "none", "source": "handwritten"}
+{"text": "board ki light blink karti hai", "label": "none", "source": "handwritten"}
+{"text": "smoke detector keeps beeping", "label": "none", "source": "handwritten"}
+{"text": "fire tv stick remote not working", "label": "none", "source": "handwritten"}
+{"text": "the mixer jar is stuck", "label": "none", "source": "handwritten"}
+{"text": "my power bank is not charging", "label": "none", "source": "handwritten"}
+{"text": "phone gets warm while charging", "label": "none", "source": "handwritten"}
+{"text": "battery wala khilona slow chal raha hai", "label": "none", "source": "handwritten"}
+{"text": "the extension cord is too short", "label": "none", "source": "handwritten"}
+{"text": "water tank motor not starting", "label": "none", "source": "handwritten"}
+{"text": "pani wala motor band hai", "label": "none", "source": "handwritten"}
+{"text": "my AC remote shows low battery", "label": "none", "source": "handwritten"}
+{"text": "cell phone screen cracked", "label": "none", "source": "handwritten"}
+{"text": "earbuds case lid is loose", "label": "none", "source": "handwritten"}
+{"text": "the regulator knob is broken", "label": "none", "source": "handwritten"}
+{"text": "naya cell daala phir bhi nahi chala", "label": "none", "source": "handwritten"}
+{"text": "baccha remote se khel raha tha aur ab nahi chalta", "label": "none", "source": "handwritten"}
+{"text": "the doorbell stopped ringing", "label": "none", "source": "handwritten"}
+{"text": "inverter beeps continuously", "label": "none", "source": "handwritten"}
+{"text": "wifi router lights blinking red", "label": "none", "source": "handwritten"}
+{"text": "tube light flickers", "label": "none", "source": "handwritten"}
+{"text": "tubelight jal ke bujh jati hai", "label": "none", "source": "handwritten"}
+{"text": "bulb fuse ho gaya", "label": "none", "source": "handwritten"}
+{"text": "mcb baar baar trip ho raha hai", "label": "none", "source": "handwritten"}
+{"text": "fan ka capacitor change karna hai", "label": "none", "source": "handwritten"}
+{"text": "TV has no sound", "label": "none", "source": "handwritten"}
+{"text": "washing machine drain nahi kar rahi", "label": "none", "source": "handwritten"}
+{"text": "spin cycle is very noisy", "label": "none", "source": "handwritten"}
+{"text": "the plug is a bit loose in the socket", "label": "none", "source": "handwritten"}
+{"text": "remote ka button daba hua reh jata hai", "label": "none", "source": "handwritten"}
+{"text": "my laptop fan is loud", "label": "none", "source": "handwritten"}
