@@ -117,7 +117,8 @@ class WebAnswerer:
             thinking_config=types.ThinkingConfig(thinking_level="minimal"),
             temperature=0.2,
         )
-        for model in self.models:
+        # Each model gets two tries: Gemma sometimes skips the search or returns a 500.
+        for model in (m for m in self.models for _ in range(2)):
             try:
                 resp = await asyncio.wait_for(
                     self._client.aio.models.generate_content(
@@ -130,7 +131,7 @@ class WebAnswerer:
                 continue
             gm = resp.candidates[0].grounding_metadata if resp.candidates else None
             if not gm or not gm.grounding_chunks:
-                return None  # an ungrounded reply is never shown
+                continue  # an ungrounded reply is never shown; try again
             chunks = [
                 WebSource(title=c.web.title or "web", url=c.web.uri)
                 for c in gm.grounding_chunks
