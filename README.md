@@ -2,7 +2,7 @@
 
 An AI repair assistant for Indian households. It diagnoses faults in everyday items (fans, extension boards, headphones, toys, appliances, plumbing), guides you through safe repairs, finds the right parts, and tells you plainly when to call a professional.
 
-The full plan is in [docs/blueprint.md](docs/blueprint.md). Platform limits we have verified are in [docs/constraints.md](docs/constraints.md).
+The full plan is in [docs/blueprint.md](docs/blueprint.md); the design system and prototype are described in [docs/design.md](docs/design.md). Platform limits we have verified are in [docs/constraints.md](docs/constraints.md).
 
 ## Repository layout
 
