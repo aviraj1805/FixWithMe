@@ -51,6 +51,23 @@ const STRINGS = {
     hi: "अभी मैं छत के पंखे, एक्सटेंशन बोर्ड, ईयरफ़ोन, और खिलौने या रिमोट में मदद कर सकता हूँ। जल्द और भी!",
   },
   noneOfThese: { en: "None of these", hi: "इनमें से कोई नहीं" },
+  askAnyway: { en: "Ask anyway", hi: "फिर भी पूछें" },
+  askFollowUp: { en: "Ask a follow-up question", hi: "कोई और सवाल पूछें" },
+  fromSources: { en: "From sources", hi: "स्रोतों से" },
+  checked: { en: "Checked", hi: "जांचा गया" },
+  checkedHint: {
+    en: "A second AI model checked each point against its source.",
+    hi: "दूसरे AI मॉडल ने हर बात को उसके स्रोत से मिलाकर जांचा।",
+  },
+  notChecked: { en: "Not checked", hi: "जांचा नहीं गया" },
+  notCheckedHint: {
+    en: "Based on the sources below, but the second check didn't run. Use with care.",
+    hi: "नीचे दिए स्रोतों पर आधारित, पर दूसरी जांच नहीं हुई। सावधानी से इस्तेमाल करें।",
+  },
+  aiSuggestion: { en: "AI suggestion", hi: "AI सुझाव" },
+  unverified: { en: "Unverified", hi: "जांचा नहीं गया" },
+  searchingWeb: { en: "Searching the web…", hi: "वेब पर खोज रहा हूँ…" },
+  openGuide: { en: "Open the full guide", hi: "पूरी गाइड खोलें" },
   language: { en: "Switch to Hindi", hi: "Switch to English" },
 } as const;
 

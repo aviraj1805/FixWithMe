@@ -1,5 +1,5 @@
 from .base import LLMError, LLMProvider, LLMRateLimited, LLMRequest, LLMResult, LLMUnavailable
-from .factory import build_llm
+from .factory import build_llm, build_verifier
 from .router import FallbackRouter
 
 __all__ = [
@@ -11,4 +11,5 @@ __all__ = [
     "LLMResult",
     "LLMUnavailable",
     "build_llm",
+    "build_verifier",
 ]

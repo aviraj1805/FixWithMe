@@ -35,3 +35,22 @@ def build_llm(settings: Settings) -> FallbackRouter:
     if not providers:
         raise ValueError("No LLM provider configured; set FWM_GEMINI_API_KEY or include 'ollama'")
     return FallbackRouter(providers)
+
+
+def build_verifier(settings: Settings) -> FallbackRouter | None:
+    """Claim verifier: a different model family from the drafter (Gemma 4 via the Gemini API)."""
+    if not settings.gemini_api_key or not settings.verifier_models:
+        return None
+    from .gemini import GeminiProvider
+
+    return FallbackRouter(
+        [
+            GeminiProvider(
+                settings.gemini_api_key,
+                model,
+                timeout_s=settings.gemini_timeout_s,
+                thinking_level=settings.verifier_thinking_level,
+            )
+            for model in settings.verifier_models
+        ]
+    )

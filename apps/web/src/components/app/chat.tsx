@@ -4,7 +4,7 @@ import { type FormEvent, useEffect, useRef, useState } from "react";
 import { Fixy } from "@/components/fixy/fixy";
 import { Icon } from "@/components/ui/icons";
 import { Badge, Chip, FixySays, PrimaryButton, TopBar } from "@/components/ui/parts";
-import { type Answer, type Answers, type StepResponse, step } from "@/lib/api";
+import { type Answer, type Answers, type AskResponse, type StepResponse, ask, step } from "@/lib/api";
 import { type Lang, t } from "@/lib/i18n";
 
 export type Msg =
@@ -13,12 +13,15 @@ export type Msg =
       id: number;
       from: "fixy";
       text: string;
-      kind: "intro" | "question" | "confirm" | "clarify" | "unsupported" | "diagnosis" | "error";
+      kind: "intro" | "question" | "confirm" | "clarify" | "unsupported" | "diagnosis" | "answer" | "abstain" | "error";
+      via?: "ask";
+      web?: boolean;
       qid?: string;
       hazard?: string;
       sourceText?: string;
       options?: StepResponse["options"];
       diagnosis?: NonNullable<StepResponse["diagnosis"]>;
+      answer?: AskResponse;
     };
 
 export type Session = {
@@ -27,12 +30,21 @@ export type Session = {
   item: string | null;
   causes: StepResponse["causes"];
   tier: StepResponse["tier"];
+  mode: "diagnose" | "ask"; // after a diagnosis (or "Ask anyway"), typed text becomes a question
 };
 
 type Body = {
   text?: string;
   answers: Answers;
   item: string | null;
+  safety_checked?: boolean;
+  confirm_hazard?: string;
+};
+
+type AskBody = {
+  question: string;
+  item: string | null;
+  web?: boolean; // "Ask anyway" for an unsupported item: allow a web-grounded suggestion
   safety_checked?: boolean;
   confirm_hazard?: string;
 };
@@ -47,6 +59,7 @@ export function Chat({
   onBack,
   onStop,
   onGuide,
+  onOpenGuide,
 }: {
   lang: Lang;
   session: Session;
@@ -54,11 +67,13 @@ export function Chat({
   onBack: () => void;
   onStop: (stop: NonNullable<StepResponse["stop"]>) => void;
   onGuide: (diagnosis: NonNullable<StepResponse["diagnosis"]>) => void;
+  onOpenGuide: (item: string, procedureId: string) => void;
 }) {
   const [text, setText] = useState("");
   const [pending, setPending] = useState(false);
-  const [slow, setSlow] = useState(false);
+  const [slow, setSlow] = useState<string | null>(null);
   const [lastBody, setLastBody] = useState<Body | null>(null);
+  const [lastAsk, setLastAsk] = useState<AskBody | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -70,7 +85,7 @@ export function Chat({
   async function run(body: Body) {
     setPending(true);
     setLastBody(body);
-    const slowTimer = setTimeout(() => setSlow(true), 4000);
+    const slowTimer = setTimeout(() => setSlow(t("wakingUp", lang)), 4000);
     try {
       const r = await step({ ...body, lang });
       setSession((s) => ({
@@ -79,6 +94,7 @@ export function Chat({
         item: r.item ?? s.item,
         causes: r.causes.length ? r.causes : s.causes,
         tier: r.tier ?? s.tier,
+        mode: r.state === "diagnosis" ? "ask" : s.mode,
       }));
       if (r.state === "stop") {
         if (r.stop) onStop(r.stop);
@@ -100,7 +116,37 @@ export function Chat({
     } finally {
       clearTimeout(slowTimer);
       setPending(false);
-      setSlow(false);
+      setSlow(null);
+    }
+  }
+
+  async function runAsk(body: AskBody) {
+    setPending(true);
+    setLastAsk(body);
+    const slowTimer = setTimeout(() => setSlow(t(body.web ? "searchingWeb" : "wakingUp", lang)), 4000);
+    try {
+      const r = await ask({ ...body, lang });
+      if (r.state === "stop") {
+        if (r.stop) onStop(r.stop);
+        return;
+      }
+      push({
+        id: newId(),
+        from: "fixy",
+        text: r.say,
+        kind: r.state,
+        via: "ask",
+        hazard: r.confirm?.hazard,
+        sourceText: body.question,
+        answer: r.state === "answer" ? r : undefined,
+        web: body.web,
+      });
+    } catch {
+      push({ id: newId(), from: "fixy", text: t("offline", lang), kind: "error", via: "ask" });
+    } finally {
+      clearTimeout(slowTimer);
+      setPending(false);
+      setSlow(null);
     }
   }
 
@@ -110,7 +156,15 @@ export function Chat({
     if (!value || pending) return;
     setText("");
     push({ id: newId(), from: "user", text: value });
-    void run({ text: value, answers: session.answers, item: session.item });
+    if (session.mode === "ask") void runAsk({ question: value, item: session.item, web: session.item === null });
+    else void run({ text: value, answers: session.answers, item: session.item });
+  }
+
+  function askAnyway(m: Extract<Msg, { from: "fixy" }>) {
+    const question = m.sourceText ?? session.messages.find((x) => x.from === "user")?.text;
+    push({ id: newId(), from: "user", text: t("askAnyway", lang) });
+    setSession((s) => ({ ...s, mode: "ask", item: null }));
+    if (question) void runAsk({ question, item: null, web: true });
   }
 
   function answer(qid: string, value: Answer, label: string) {
@@ -120,6 +174,12 @@ export function Chat({
 
   function confirmSafety(m: Extract<Msg, { from: "fixy" }>, yes: boolean, label: string) {
     push({ id: newId(), from: "user", text: label });
+    if (m.via === "ask") {
+      const question = m.sourceText ?? "";
+      const base = { question, item: session.item, web: m.web };
+      void runAsk(yes ? { ...base, confirm_hazard: m.hazard } : { ...base, safety_checked: true });
+      return;
+    }
     const base = { text: m.sourceText, answers: session.answers, item: session.item };
     void run(yes ? { ...base, confirm_hazard: m.hazard } : { ...base, safety_checked: true });
   }
@@ -152,7 +212,11 @@ export function Chat({
           ) : (
             <div key={m.id} className="space-y-3">
               <FixySays mood={m.kind === "diagnosis" ? "cheer" : m.kind === "confirm" ? "worried" : "idle"}>
-                <p className="text-[15px] leading-snug">{m.text}</p>
+                {m.answer ? (
+                  <AnswerCard lang={lang} answer={m.answer} onOpenGuide={onOpenGuide} />
+                ) : (
+                  <p className="text-[15px] leading-snug">{m.text}</p>
+                )}
                 {m.diagnosis && (
                   <div className="mt-3 space-y-3">
                     <div className="flex flex-wrap gap-2">
@@ -196,10 +260,18 @@ export function Chat({
                       <Chip onClick={() => clarify(null, t("noneOfThese", lang))}>{t("noneOfThese", lang)}</Chip>
                     </>
                   )}
-                  {m.kind === "error" && lastBody && (
+                  {m.kind === "error" && m.via !== "ask" && lastBody && (
                     <Chip onClick={() => void run(lastBody)}>{t("retry", lang)}</Chip>
                   )}
-                  {m.kind === "unsupported" && <Chip onClick={onBack}>{t("startOver", lang)}</Chip>}
+                  {m.kind === "error" && m.via === "ask" && lastAsk && (
+                    <Chip onClick={() => void runAsk(lastAsk)}>{t("retry", lang)}</Chip>
+                  )}
+                  {m.kind === "unsupported" && (
+                    <>
+                      <Chip onClick={() => askAnyway(m)}>{t("askAnyway", lang)}</Chip>
+                      <Chip onClick={onBack}>{t("startOver", lang)}</Chip>
+                    </>
+                  )}
                 </div>
               )}
             </div>
@@ -214,7 +286,7 @@ export function Chat({
                   <span key={i} className="typing-dot size-2 rounded-full bg-muted" style={{ animationDelay: `${i * 0.15}s` }} />
                 ))}
               </span>
-              {slow && <p className="mt-2 text-xs text-muted">{t("wakingUp", lang)}</p>}
+              {slow && <p className="mt-2 text-xs text-muted">{slow}</p>}
             </div>
           </div>
         )}
@@ -234,7 +306,13 @@ export function Chat({
           value={text}
           onChange={(e) => setText(e.target.value)}
           maxLength={1000}
-          placeholder={session.messages.length <= 1 ? t("placeholder", lang) : t("message", lang)}
+          placeholder={
+            session.messages.length <= 1
+              ? t("placeholder", lang)
+              : session.mode === "ask"
+                ? t("askFollowUp", lang)
+                : t("message", lang)
+          }
           aria-label={t("message", lang)}
           className="min-h-12 min-w-0 flex-1 rounded-full border border-line bg-surface px-5 text-[15px] outline-none focus:border-brand"
         />
@@ -247,6 +325,95 @@ export function Chat({
           <Icon name="send" size={20} />
         </button>
       </form>
+    </div>
+  );
+}
+
+function AnswerCard({
+  lang,
+  answer,
+  onOpenGuide,
+}: {
+  lang: Lang;
+  answer: AskResponse;
+  onOpenGuide: (item: string, procedureId: string) => void;
+}) {
+  const index = new Map(answer.sources.map((src, i) => [src.id, i + 1]));
+  return (
+    <div className="space-y-3">
+      <ul className="space-y-2">
+        {answer.claims.map((c) => (
+          <li key={c.text} className="text-[15px] leading-snug">
+            {c.text}
+            {[...c.sources].sort((a, b) => (index.get(a) ?? 0) - (index.get(b) ?? 0)).map((id) => (
+              <sup key={id} className="ml-0.5 text-xs font-semibold text-brand">
+                [{index.get(id)}]
+              </sup>
+            ))}
+          </li>
+        ))}
+      </ul>
+      {answer.caution && (
+        <p className="flex gap-2 rounded-xl bg-[var(--color-status-caution-bg)] px-3 py-2 text-sm text-[var(--color-status-caution-fg)]">
+          <Icon name="shield" size={16} /> {answer.caution}
+        </p>
+      )}
+      <div className="flex flex-wrap gap-2">
+        {answer.tier === "curated" ? (
+          <Badge tone="curated" title={t("curatedHint", lang)}>
+            {t("curated", lang)}
+          </Badge>
+        ) : answer.tier === "web" ? (
+          <Badge tone="ai">{t("aiSuggestion", lang)}</Badge>
+        ) : (
+          <Badge tone="ai">{t("fromSources", lang)}</Badge>
+        )}
+        {answer.tier === "web" ? (
+          <Badge tone="caution">{t("unverified", lang)}</Badge>
+        ) : answer.verified ? (
+          <Badge tone="verified" title={t("checkedHint", lang)}>
+            {t("checked", lang)}
+          </Badge>
+        ) : (
+          <Badge tone="caution" title={t("notCheckedHint", lang)}>
+            {t("notChecked", lang)}
+          </Badge>
+        )}
+      </div>
+      <ol className="space-y-1 text-xs text-muted">
+        {answer.sources.map((src, i) => (
+          <li key={src.id}>
+            [{i + 1}]{" "}
+            {src.url ? (
+              <a href={src.url} target="_blank" rel="noopener noreferrer" className="underline">
+                {src.title}
+              </a>
+            ) : (
+              src.title
+            )}
+            {src.source_type === "wikipedia" && ` · ${src.license}`}
+          </li>
+        ))}
+      </ol>
+      {answer.search_html && (
+        // Google's grounding terms require showing its search suggestions as returned; a sandboxed
+        // frame keeps that HTML away from the app while its links still open in a new tab.
+        <iframe
+          title="Google Search suggestions"
+          srcDoc={answer.search_html}
+          sandbox="allow-popups allow-popups-to-escape-sandbox"
+          className="h-16 w-full rounded-xl border-0"
+        />
+      )}
+      {answer.guides.map((g) => (
+        <PrimaryButton
+          key={`${g.item}:${g.procedure_id}`}
+          className="w-full"
+          onClick={() => onOpenGuide(g.item, g.procedure_id)}
+        >
+          {t("openGuide", lang)}
+        </PrimaryButton>
+      ))}
     </div>
   );
 }

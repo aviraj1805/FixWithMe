@@ -49,6 +49,20 @@ export type Procedure = {
   sources: SourceRef[];
 };
 
+export type AskResponse = {
+  state: "answer" | "abstain" | "stop" | "confirm";
+  say: string;
+  claims: { text: string; sources: string[] }[];
+  sources: { id: string; title: string; url: string | null; license: string; source_type: string }[];
+  tier: "curated" | "sourced" | "web" | null;
+  guides: { item: string; procedure_id: string; safety_level: number }[];
+  caution: string | null;
+  verified: boolean;
+  stop: StepResponse["stop"];
+  confirm: StepResponse["confirm"];
+  search_html: string | null;
+};
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API_URL}${path}`, {
     ...init,
@@ -68,6 +82,18 @@ export function step(body: {
   confirm_hazard?: string;
 }): Promise<StepResponse> {
   return request("/v1/sessions/step", { method: "POST", body: JSON.stringify(body) });
+}
+
+/** Free-form question, answered only from cited sources; abstains when they don't cover it. */
+export function ask(body: {
+  question: string;
+  item: string | null;
+  lang: Lang;
+  safety_checked?: boolean;
+  confirm_hazard?: string;
+  web?: boolean;
+}): Promise<AskResponse> {
+  return request("/v1/ask", { method: "POST", body: JSON.stringify(body) });
 }
 
 export function getProcedure(item: string, id: string, lang: Lang): Promise<Procedure> {

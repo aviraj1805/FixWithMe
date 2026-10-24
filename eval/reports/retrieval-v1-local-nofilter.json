@@ -1,0 +1,25 @@
+{
+ "backend": "local",
+ "product_filter": false,
+ "n": 42,
+ "results": {
+  "keyword": {
+   "recall@1": 0.833,
+   "recall@5": 1.0,
+   "mrr@10": 0.887,
+   "misses@5": []
+  },
+  "vector": {
+   "recall@1": 0.952,
+   "recall@5": 1.0,
+   "mrr@10": 0.964,
+   "misses@5": []
+  },
+  "hybrid": {
+   "recall@1": 0.929,
+   "recall@5": 1.0,
+   "mrr@10": 0.964,
+   "misses@5": []
+  }
+ }
+}

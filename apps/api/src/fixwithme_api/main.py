@@ -4,10 +4,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from . import __version__, diagnose, knowledge, safety
+from . import __version__, ask, diagnose, knowledge, safety
 from .config import Settings, get_settings
-from .llm import build_llm
+from .llm import build_llm, build_verifier
 from .outcomes import OutcomeStore
+from .retrieval import build_retriever
+from .web import WebAnswerer
 
 log = logging.getLogger(__name__)
 
@@ -16,6 +18,8 @@ class Health(BaseModel):
     status: str
     version: str
     llm_provider: str
+    retrieval: bool
+    verifier: bool
     products: list[str]
 
 
@@ -28,6 +32,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     except ValueError:
         log.warning("no LLM provider configured; running in engine-only mode")
         app.state.llm = None
+    app.state.verifier = build_verifier(settings)
+    app.state.retriever = build_retriever(settings)
+    app.state.web = (
+        WebAnswerer(settings.gemini_api_key, settings.web_models)
+        if settings.gemini_api_key and settings.web_models and "gemini" in settings.llm_chain
+        else None
+    )
     app.state.outcomes = OutcomeStore(settings)
     for product in knowledge.available():  # fail fast on an invalid knowledge file
         for q in knowledge.load(product).questions:
@@ -45,10 +56,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     async def health() -> Health:
         provider = app.state.llm.providers[0].name if app.state.llm else "none"
         return Health(
-            status="ok", version=__version__, llm_provider=provider, products=knowledge.available()
+            status="ok",
+            version=__version__,
+            llm_provider=provider,
+            retrieval=app.state.retriever.enabled,
+            verifier=app.state.verifier is not None,
+            products=knowledge.available(),
         )
 
     app.include_router(diagnose.router)
+    app.include_router(ask.router)
     return app
 
 

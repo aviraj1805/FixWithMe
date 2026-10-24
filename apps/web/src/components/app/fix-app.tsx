@@ -13,7 +13,7 @@ type View =
   | { name: "welcome" }
   | { name: "home" }
   | { name: "chat" }
-  | { name: "guide"; item: string; diagnosis: Diagnosis }
+  | { name: "guide"; item: string; procedureId: string; diagnosis: Diagnosis | null }
   | { name: "stop"; stop: NonNullable<StepResponse["stop"]> }
   | { name: "done"; resolved: boolean; tip: string | null };
 
@@ -23,6 +23,7 @@ const freshSession = (lang: Lang): Session => ({
   item: null,
   causes: [],
   tier: null,
+  mode: "diagnose",
 });
 
 export function FixApp() {
@@ -46,18 +47,20 @@ export function FixApp() {
     setView({ name: "chat" });
   }
 
-  async function finish(item: string, diagnosis: Diagnosis, resolved: boolean | null) {
+  async function finish(item: string, procedureId: string, diagnosis: Diagnosis | null, resolved: boolean | null) {
     if (resolved === null) {
       goHome();
       return;
     }
     const answers: Answers = session.answers;
-    sendOutcome({ item, cause_id: diagnosis.cause_id, procedure_id: diagnosis.procedure_id, resolved, answers, lang }).catch(
-      () => {},
-    );
+    if (diagnosis) {
+      sendOutcome({ item, cause_id: diagnosis.cause_id, procedure_id: diagnosis.procedure_id, resolved, answers, lang }).catch(
+        () => {},
+      );
+    }
     let tip: string | null = null;
     if (resolved) {
-      tip = await getProcedure(item, diagnosis.procedure_id, lang)
+      tip = await getProcedure(item, procedureId, lang)
         .then((p: Procedure) => p.prevent)
         .catch(() => null);
     }
@@ -80,7 +83,11 @@ export function FixApp() {
             setSession={setSession}
             onBack={goHome}
             onStop={(stop) => setView({ name: "stop", stop })}
-            onGuide={(diagnosis) => session.item && setView({ name: "guide", item: session.item, diagnosis })}
+            onGuide={(diagnosis) =>
+              session.item &&
+              setView({ name: "guide", item: session.item, procedureId: diagnosis.procedure_id, diagnosis })
+            }
+            onOpenGuide={(item, procedureId) => setView({ name: "guide", item, procedureId, diagnosis: null })}
           />
         </div>
       )}
@@ -88,9 +95,9 @@ export function FixApp() {
         <Guide
           lang={lang}
           item={view.item}
-          procedureId={view.diagnosis.procedure_id}
+          procedureId={view.procedureId}
           onBack={() => setView({ name: "chat" })}
-          onDone={(resolved) => void finish(view.item, view.diagnosis, resolved)}
+          onDone={(resolved) => void finish(view.item, view.procedureId, view.diagnosis, resolved)}
         />
       )}
       {view.name === "stop" && <Stop lang={lang} stop={view.stop} onBack={goHome} />}

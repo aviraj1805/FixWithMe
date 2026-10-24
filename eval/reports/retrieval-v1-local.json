@@ -1,0 +1,24 @@
+{
+ "backend": "local",
+ "n": 42,
+ "results": {
+  "keyword": {
+   "recall@1": 0.857,
+   "recall@5": 1.0,
+   "mrr@10": 0.913,
+   "misses@5": []
+  },
+  "vector": {
+   "recall@1": 0.952,
+   "recall@5": 1.0,
+   "mrr@10": 0.964,
+   "misses@5": []
+  },
+  "hybrid": {
+   "recall@1": 0.952,
+   "recall@5": 1.0,
+   "mrr@10": 0.976,
+   "misses@5": []
+  }
+ }
+}

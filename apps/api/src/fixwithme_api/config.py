@@ -34,6 +34,22 @@ class Settings(BaseSettings):
 
     llm_timeout_s: float = 30.0
 
+    # Verifier for answer claims: a different model family from the drafting model (Gemma 4), with
+    # an older Flash-Lite as backup because Gemma returned occasional 500s on 2026-10-24.
+    verifier_models: list[str] = Field(
+        default_factory=lambda: ["gemma-4-26b-a4b-it", "gemini-3.1-flash-lite"]
+    )
+    verifier_thinking_level: str | None = "minimal"
+
+    # Tier C web-grounded suggestions. Google Search grounding was free on Gemma 4 but not on
+    # Flash-Lite (checked 2026-10-24). Empty list disables it.
+    web_models: list[str] = Field(default_factory=lambda: ["gemma-4-26b-a4b-it"])
+
+    # Retrieval: "supabase" (pgvector + PGroonga RPC), "local" (in-memory from corpus files), "off".
+    retrieval: Literal["supabase", "local", "off"] = "supabase"
+    retrieval_corpus: str | None = None  # local backend: ingest/corpus.jsonl
+    retrieval_embeddings: str | None = None  # local backend: ingest/raw/embeddings.json
+
     # Supabase PostgREST for anonymous outcomes. The publishable key only allows inserts (RLS).
     supabase_url: str | None = None
     supabase_key: str | None = None
