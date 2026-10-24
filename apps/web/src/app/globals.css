@@ -1,32 +1,164 @@
 @import "tailwindcss";
 
-/* Placeholder tokens for R0. The full design system is defined in the R0.5 design sprint. */
+/* Design tokens mirror the Figma variables (docs/design.md). Light = "Color", dark = "Color · Dark". */
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #64748b;
-  --primary: #0f766e;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-primary: var(--primary);
-  --font-sans: var(--font-inter), var(--font-devanagari), system-ui, sans-serif;
+  --color-bg-canvas: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #f1f5f9;
+  --color-bg-inverse: #0f172a;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-inverse: #ffffff;
+  --color-text-on-brand: #ffffff;
+  --color-text-on-accent: #0f172a;
+  --color-brand-primary: #0f766e;
+  --color-brand-pressed: #115e59;
+  --color-brand-subtle: #f0fdfa;
+  --color-accent-primary: #fbbf24;
+  --color-border-default: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-icon-default: #334155;
+  --color-icon-muted: #94a3b8;
+  --color-status-verified-fg: #15803d;
+  --color-status-verified-bg: #f0fdf4;
+  --color-status-likely-fg: #1d4ed8;
+  --color-status-likely-bg: #eff6ff;
+  --color-status-ai-fg: #475569;
+  --color-status-ai-bg: #f1f5f9;
+  --color-status-caution-fg: #b45309;
+  --color-status-caution-bg: #fffbeb;
+  --color-status-stop-fg: #b91c1c;
+  --color-status-stop-bg: #fef2f2;
+  --color-status-stop-solid: #dc2626;
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow-md: 0 4px 12px rgb(15 23 42 / 0.08);
+  --shadow-lg: 0 12px 32px rgb(15 23 42 / 0.14);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1220;
-    --foreground: #e2e8f0;
-    --muted: #94a3b8;
-    --primary: #2dd4bf;
+    --color-bg-canvas: #0b1220;
+    --color-bg-surface: #0f172a;
+    --color-bg-subtle: #1e293b;
+    --color-bg-inverse: #f8fafc;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-text-inverse: #0b1220;
+    --color-text-on-brand: #0b1220;
+    --color-brand-primary: #2dd4bf;
+    --color-brand-pressed: #5eead4;
+    --color-brand-subtle: #042f2e;
+    --color-border-default: #334155;
+    --color-border-strong: #475569;
+    --color-icon-default: #cbd5e1;
+    --color-icon-muted: #64748b;
+    --color-status-verified-fg: #4ade80;
+    --color-status-verified-bg: #14532d;
+    --color-status-likely-fg: #60a5fa;
+    --color-status-likely-bg: #1e3a8a;
+    --color-status-ai-fg: #cbd5e1;
+    --color-status-ai-bg: #1e293b;
+    --color-status-caution-fg: #fbbf24;
+    --color-status-caution-bg: #78350f;
+    --color-status-stop-fg: #f87171;
+    --color-status-stop-bg: #7f1d1d;
   }
 }
 
+@theme inline {
+  --color-canvas: var(--color-bg-canvas);
+  --color-surface: var(--color-bg-surface);
+  --color-subtle: var(--color-bg-subtle);
+  --color-ink: var(--color-text-primary);
+  --color-muted: var(--color-text-secondary);
+  --color-brand: var(--color-brand-primary);
+  --color-brand-pressed: var(--color-brand-pressed);
+  --color-brand-subtle: var(--color-brand-subtle);
+  --color-on-brand: var(--color-text-on-brand);
+  --color-accent: var(--color-accent-primary);
+  --color-line: var(--color-border-default);
+  --color-line-strong: var(--color-border-strong);
+  --color-stop: var(--color-status-stop-solid);
+  --font-sans: var(--font-inter), var(--font-devanagari), system-ui, sans-serif;
+  --shadow-soft: var(--shadow-md);
+  --shadow-lift: var(--shadow-lg);
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
   font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+:lang(hi) {
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Fixy motion ---------- */
+@keyframes fixy-wave {
+  0%, 100% { transform: rotate(var(--wave-a)); }
+  50% { transform: rotate(var(--wave-b)); }
+}
+@keyframes fixy-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+@keyframes fixy-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes fixy-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+
+.fixy-arm {
+  transform-box: view-box;
+  transition: transform 300ms ease;
+}
+.fixy-arm.is-waving {
+  animation: fixy-wave 0.9s ease-in-out infinite;
+}
+.fixy-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fixy-blink 3.4s infinite;
+}
+.fixy-body {
+  animation: fixy-bob 3s ease-in-out infinite;
+}
+.fixy-antenna {
+  animation: fixy-pulse 2.2s ease-in-out infinite;
+}
+.rise-in {
+  animation: rise-in 280ms ease-out both;
+}
+.typing-dot {
+  animation: typing 1.1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fixy-arm.is-waving,
+  .fixy-eyes,
+  .fixy-body,
+  .fixy-antenna,
+  .rise-in,
+  .typing-dot {
+    animation: none;
+  }
 }

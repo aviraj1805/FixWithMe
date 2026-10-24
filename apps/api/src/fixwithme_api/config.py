@@ -34,6 +34,10 @@ class Settings(BaseSettings):
 
     llm_timeout_s: float = 30.0
 
+    # Supabase PostgREST for anonymous outcomes. The publishable key only allows inserts (RLS).
+    supabase_url: str | None = None
+    supabase_key: str | None = None
+
 
 @lru_cache
 def get_settings() -> Settings:

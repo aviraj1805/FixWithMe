@@ -1,0 +1,230 @@
+# Ceiling fan: curated fault knowledge (Tier A, draft).
+#
+# review_status "draft" means every fact below is taken from a cited source, but no repair
+# technician has reviewed it yet; the app labels it "Curated" until review, not "Verified".
+#
+# Likelihoods are hand-set priors P(answer = yes | cause). They are starting beliefs for the
+# Bayesian engine, to be calibrated against FixBench-IN (R2) and real outcomes (R9).
+
+id: ceiling_fan
+version: 0.1.0
+review_status: draft
+names: {en: Ceiling fan, hi: छत का पंखा}
+
+sources:
+  hunker_hum:
+    title: "My Ceiling Fan Hums But Doesn't Work (Hunker)"
+    url: https://www.hunker.com/13414340/my-ceiling-fan-hums-but-doesnt-work/
+    accessed: 2026-10-24
+  bajaj_capacitor:
+    title: "What is a Fan Capacitor (Bajaj Finserv)"
+    url: https://www.bajajfinserv.in/what-is-fan-capacitor
+    accessed: 2026-10-24
+  wiki_ceiling_fan:
+    title: "Ceiling fan (Wikipedia)"
+    url: https://en.wikipedia.org/wiki/Ceiling_fan
+    accessed: 2026-10-24
+  odg_discharge:
+    title: "How to Safely Discharge a Capacitor (ODG Electronics)"
+    url: https://www.origin-ic.com/blog/how-to-safely-discharge-a-capacitor-a-complete-guide/47575
+    accessed: 2026-10-24
+  se_short_cap:
+    title: "Shorting an AC capacitor before removal (DIY Stack Exchange)"
+    url: https://diy.stackexchange.com/questions/146431/do-you-remove-an-ac-capacitor-from-the-circuit-before-or-after-you-short-it-out
+    accessed: 2026-10-24
+  cea_2023:
+    title: "CEA Safety Regulations 2023: licensed contractors for installation work (Rajya Sabha answer)"
+    url: https://rsdebate.nic.in/bitstream/123456789/758570/1/PQ_267_10022025_U794_p451_p451.pdf
+    accessed: 2026-10-24
+
+causes:
+  - id: capacitor_weak
+    name: {en: Weak or failed capacitor, hi: कमज़ोर या खराब कैपेसिटर}
+    short: {en: capacitor, hi: कैपेसिटर}
+    prior: 0.40
+    procedure: replace_capacitor
+    sources: [hunker_hum, bajaj_capacitor, wiki_ceiling_fan]
+  - id: no_power
+    name: {en: No power reaching the fan, hi: पंखे तक बिजली नहीं पहुँच रही}
+    short: {en: power supply, hi: बिजली सप्लाई}
+    prior: 0.20
+    procedure: check_power
+    sources: [cea_2023]
+  - id: regulator_faulty
+    name: {en: Faulty speed regulator, hi: खराब स्पीड रेगुलेटर}
+    short: {en: regulator, hi: रेगुलेटर}
+    prior: 0.15
+    procedure: check_regulator
+    sources: [wiki_ceiling_fan]
+  - id: bearing_stiff
+    name: {en: Stiff or worn bearings, hi: जाम या घिसे हुए बेयरिंग}
+    short: {en: bearings, hi: बेयरिंग}
+    prior: 0.15
+    procedure: refer_bearing
+    sources: [hunker_hum, wiki_ceiling_fan]
+  - id: winding_fault
+    name: {en: Motor winding fault, hi: मोटर वाइंडिंग की खराबी}
+    short: {en: motor winding, hi: मोटर वाइंडिंग}
+    prior: 0.10
+    procedure: refer_winding
+    sources: [bajaj_capacitor]
+
+# Asked in this order of priority: safety questions first, then by expected information gain.
+questions:
+  - id: burning
+    safety: true            # "yes" stops the session and shows the STOP screen
+    text:
+      en: Any burning smell or smoke, or is the motor very hot?
+      hi: क्या जलने की गंध या धुआं है, या मोटर बहुत गर्म है?
+    p_yes: {capacitor_weak: 0.10, no_power: 0.01, regulator_faulty: 0.05, bearing_stiff: 0.15, winding_fault: 0.85}
+  - id: runs
+    text:
+      en: When it's switched on, does it spin at all?
+      hi: चालू करने पर क्या पंखा थोड़ा भी घूमता है?
+    p_yes: {capacitor_weak: 0.35, no_power: 0.01, regulator_faulty: 0.80, bearing_stiff: 0.40, winding_fault: 0.30}
+  - id: hums
+    text:
+      en: When it's switched on, do you hear a hum?
+      hi: चालू करने पर क्या गुनगुनाने (हम) की आवाज़ आती है?
+    p_yes: {capacitor_weak: 0.90, no_power: 0.02, regulator_faulty: 0.40, bearing_stiff: 0.70, winding_fault: 0.40}
+  - id: push_spins
+    text:
+      en: Switch it off, then push a blade gently. Does it turn freely?
+      hi: पंखा बंद करके ब्लेड को हल्के से धकेलें। क्या वह आसानी से घूमता है?
+    p_yes: {capacitor_weak: 0.90, no_power: 0.90, regulator_faulty: 0.85, bearing_stiff: 0.10, winding_fault: 0.60}
+  - id: slow
+    text:
+      en: Does it spin, but slower than it used to?
+      hi: क्या पंखा घूमता है, पर पहले से धीमा?
+    p_yes: {capacitor_weak: 0.60, no_power: 0.02, regulator_faulty: 0.50, bearing_stiff: 0.50, winding_fault: 0.40}
+  - id: speed_change
+    text:
+      en: Does changing the regulator speed make any difference?
+      hi: क्या रेगुलेटर की स्पीड बदलने से कोई फ़र्क पड़ता है?
+    p_yes: {capacitor_weak: 0.70, no_power: 0.02, regulator_faulty: 0.10, bearing_stiff: 0.60, winding_fault: 0.40}
+  - id: other_power
+    text:
+      en: Do the lights in that room work?
+      hi: क्या उसी कमरे की लाइट चलती है?
+    p_yes: {capacitor_weak: 0.97, no_power: 0.30, regulator_faulty: 0.95, bearing_stiff: 0.97, winding_fault: 0.95}
+  - id: noise
+    text:
+      en: Do you hear grinding or rattling?
+      hi: क्या घिसने या खड़खड़ाने की आवाज़ आती है?
+    p_yes: {capacitor_weak: 0.10, no_power: 0.01, regulator_faulty: 0.05, bearing_stiff: 0.70, winding_fault: 0.20}
+
+procedures:
+  replace_capacitor:
+    title: {en: Replace the fan capacitor, hi: पंखे का कैपेसिटर बदलें}
+    safety_level: 2          # isolate power + PPE; only shown for curated (Tier A/B) knowledge
+    minutes: 30
+    difficulty: {en: Easy–medium, hi: आसान–मध्यम}
+    cost_inr: {min: 50, max: 250, basis: estimate}
+    tools:
+      en: [Insulated screwdriver, Line tester, Insulation tape, Stable ladder, New capacitor (same µF and voltage)]
+      hi: [इंसुलेटेड पेचकस, लाइन टेस्टर, इंसुलेशन टेप, मज़बूत सीढ़ी, नया कैपेसिटर (वही µF और वोल्टेज)]
+    part_spec:
+      kind: fan run capacitor
+      match: Same µF and voltage as printed on the old one. Ceiling fans usually use 1.5–4 µF.
+      sources: [bajaj_capacitor, hunker_hum]
+    steps:
+      - text:
+          en: Switch off the fan and the MCB for that room. Check with a line tester that the fan wires are dead.
+          hi: पंखा और उस कमरे का MCB बंद करें। लाइन टेस्टर से जांचें कि पंखे के तारों में करंट नहीं है।
+        caution: {en: Never work on a fan with the power on., hi: बिजली चालू रहते पंखे पर कभी काम न करें।}
+        sources: [hunker_hum]
+      - text:
+          en: Climb a stable ladder and open the top cover (canopy) to find the capacitor, a small box with two wires.
+          hi: मज़बूत सीढ़ी पर चढ़ें और ऊपर का कवर (कैनोपी) खोलें। कैपेसिटर दो तारों वाला एक छोटा डिब्बा होता है।
+        sources: [hunker_hum]
+      - text:
+          en: Photograph the capacitor's label and its wiring. Note the µF and voltage printed on it.
+          hi: कैपेसिटर के लेबल और तारों की फ़ोटो लें। उस पर छपे µF और वोल्टेज नोट करें।
+        sources: [bajaj_capacitor, hunker_hum]
+      - text:
+          en: Discharge it. Touch its two terminals together with an insulated screwdriver for a few seconds.
+          hi: इसे डिस्चार्ज करें। इंसुलेटेड पेचकस से इसके दोनों टर्मिनल कुछ सेकंड के लिए आपस में छुआएं।
+        caution: {en: A capacitor can hold charge even with the power off., hi: बिजली बंद होने पर भी कैपेसिटर में चार्ज रह सकता है।}
+        sources: [odg_discharge, se_short_cap]
+      - text:
+          en: Remove the old capacitor and connect the new one exactly the same way. Tape every joint.
+          hi: पुराना कैपेसिटर हटाएं और नया बिल्कुल उसी तरह जोड़ें। हर जोड़ पर टेप लगाएं।
+        sources: [hunker_hum]
+      - text:
+          en: Close the cover, switch the MCB on, and test every speed.
+          hi: कवर बंद करें, MCB चालू करें, और हर स्पीड पर चलाकर देखें।
+        sources: [hunker_hum]
+    verify:
+      en: The fan starts by itself and reaches full speed.
+      hi: पंखा अपने-आप चालू होता है और पूरी स्पीड पकड़ता है।
+    prevent:
+      en: Always use the same µF rating. The wrong one can make a fan slow or overheat.
+      hi: हमेशा वही µF रेटिंग लगाएं। गलत रेटिंग से पंखा धीमा या गर्म हो सकता है।
+    prevent_sources: [bajaj_capacitor]
+
+  check_power:
+    title: {en: Check the power supply, hi: बिजली सप्लाई जांचें}
+    safety_level: 1
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Check the MCB for that room. If it has tripped, switch it back on once.
+          hi: उस कमरे का MCB देखें। अगर गिरा हुआ है, तो एक बार वापस चालू करें।
+        caution: {en: If it trips again, stop and call an electrician., hi: अगर फिर से गिरे, तो रुकें और इलेक्ट्रीशियन को बुलाएं।}
+        sources: [cea_2023]
+      - text:
+          en: Make sure the fan switch is on and the regulator is not at zero.
+          hi: पक्का करें कि पंखे का स्विच चालू है और रेगुलेटर ज़ीरो पर नहीं है।
+        sources: []
+      - text:
+          en: Still nothing, and other switches are dead too? It's a wiring or supply problem. Call an electrician.
+          hi: फिर भी कुछ नहीं, और दूसरे स्विच भी बंद हैं? यह वायरिंग या सप्लाई की समस्या है। इलेक्ट्रीशियन को बुलाएं।
+        sources: [cea_2023]
+    verify: {en: The fan starts when switched on., hi: स्विच चालू करने पर पंखा चलता है।}
+    prevent: {en: A breaker that trips often needs an electrician's check., hi: बार-बार गिरने वाले MCB की इलेक्ट्रीशियन से जांच कराएं।}
+    prevent_sources: [cea_2023]
+
+  check_regulator:
+    title: {en: Check the speed regulator, hi: स्पीड रेगुलेटर जांचें}
+    safety_level: 1
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Turn the regulator slowly from 1 to full speed. Watch the fan.
+          hi: रेगुलेटर को 1 से पूरी स्पीड तक धीरे-धीरे घुमाएं। पंखे को देखें।
+        sources: [wiki_ceiling_fan]
+      - text:
+          en: Works only at full speed, or the speed never changes? The regulator is likely faulty.
+          hi: सिर्फ़ पूरी स्पीड पर चलता है, या स्पीड बदलती ही नहीं? तो रेगुलेटर शायद खराब है।
+        sources: [wiki_ceiling_fan]
+      - text:
+          en: Replacing a regulator means opening the switchboard. Ask an electrician.
+          hi: रेगुलेटर बदलने के लिए स्विचबोर्ड खोलना पड़ता है। इलेक्ट्रीशियन से करवाएं।
+        sources: [cea_2023]
+    verify: {en: The fan speed changes with the regulator., hi: रेगुलेटर घुमाने पर पंखे की स्पीड बदलती है।}
+    prevent: {en: Electronic regulators can hum slightly. That's normal., hi: इलेक्ट्रॉनिक रेगुलेटर से हल्की आवाज़ आना सामान्य है।}
+    prevent_sources: [wiki_ceiling_fan]
+
+  refer_bearing:
+    title: {en: Bearings need a technician, hi: बेयरिंग के लिए मिस्त्री चाहिए}
+    safety_level: 3          # professional only: no DIY steps are shown
+    professional: {en: Fan technician, hi: पंखा मिस्त्री}
+    reason:
+      en: Stiff or grinding bearings mean taking the fan down and replacing them.
+      hi: जाम या घिसते बेयरिंग के लिए पंखा उतारकर बेयरिंग बदलने पड़ते हैं।
+    sources: [hunker_hum]
+
+  refer_winding:
+    title: {en: Motor needs a technician, hi: मोटर के लिए मिस्त्री चाहिए}
+    safety_level: 3
+    professional: {en: Fan technician or electrician, hi: पंखा मिस्त्री या इलेक्ट्रीशियन}
+    reason:
+      en: A winding fault needs the motor rewound or replaced. Don't keep using it.
+      hi: वाइंडिंग खराब होने पर मोटर की दोबारा वाइंडिंग या बदलाव चाहिए। इसे चलाते न रहें।
+    sources: [bajaj_capacitor]
