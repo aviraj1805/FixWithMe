@@ -15,18 +15,19 @@ export type Msg =
       text: string;
       kind: "intro" | "question" | "clarify" | "unsupported" | "diagnosis" | "error";
       qid?: string;
+      options?: StepResponse["options"];
       diagnosis?: NonNullable<StepResponse["diagnosis"]>;
     };
 
 export type Session = {
   messages: Msg[];
   answers: Answers;
-  item: "ceiling_fan" | null;
+  item: string | null;
   causes: StepResponse["causes"];
   tier: StepResponse["tier"];
 };
 
-type Body = { text?: string; answers: Answers; item: "ceiling_fan" | null };
+type Body = { text?: string; answers: Answers; item: string | null };
 
 let nextId = 1;
 export const newId = () => nextId++;
@@ -81,6 +82,7 @@ export function Chat({
         text: r.say,
         kind: r.state,
         qid: r.question?.id,
+        options: r.options,
         diagnosis: r.diagnosis ?? undefined,
       });
     } catch {
@@ -106,9 +108,9 @@ export function Chat({
     void run({ answers: { ...session.answers, [qid]: value }, item: session.item });
   }
 
-  function clarify(isFan: boolean, label: string) {
+  function clarify(item: string | null, label: string) {
     push({ id: newId(), from: "user", text: label });
-    if (isFan) void run({ answers: session.answers, item: "ceiling_fan" });
+    if (item) void run({ answers: session.answers, item });
     else push({ id: newId(), from: "fixy", text: t("onlyFans", lang), kind: "unsupported" });
   }
 
@@ -164,8 +166,12 @@ export function Chat({
                   )}
                   {m.kind === "clarify" && (
                     <>
-                      <Chip onClick={() => clarify(true, t("yes", lang))}>{t("yes", lang)}</Chip>
-                      <Chip onClick={() => clarify(false, t("no", lang))}>{t("no", lang)}</Chip>
+                      {m.options?.map((o) => (
+                        <Chip key={o.id} onClick={() => clarify(o.id, o.name)}>
+                          {o.name}
+                        </Chip>
+                      ))}
+                      <Chip onClick={() => clarify(null, t("noneOfThese", lang))}>{t("noneOfThese", lang)}</Chip>
                     </>
                   )}
                   {m.kind === "error" && lastBody && (

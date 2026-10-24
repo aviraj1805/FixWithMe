@@ -11,12 +11,10 @@ from pydantic import BaseModel, Field
 
 from . import engine, knowledge, safety
 from .engine import Answer
-from .extract import extract
+from .extract import OTHER, extract
 from .knowledge import Lang
 
 router = APIRouter(prefix="/v1")
-
-PRODUCT = "ceiling_fan"  # R1 supports one product family
 
 State = Literal["question", "diagnosis", "stop", "clarify", "unsupported"]
 
@@ -24,8 +22,13 @@ State = Literal["question", "diagnosis", "stop", "clarify", "unsupported"]
 class StepRequest(BaseModel):
     text: Annotated[str, Field(max_length=1000)] | None = None
     answers: dict[str, Answer] = {}
-    item: Literal["ceiling_fan"] | None = None
+    item: str | None = None  # a product id once known
     lang: Lang = "en"
+
+
+class Option(BaseModel):
+    id: str
+    name: str
 
 
 class CauseOut(BaseModel):
@@ -61,8 +64,9 @@ class StopOut(BaseModel):
 class StepResponse(BaseModel):
     state: State
     say: str
-    item: Literal["ceiling_fan"] | None = None
+    item: str | None = None
     answers: dict[str, Answer] = {}
+    options: list[Option] = []
     causes: list[CauseOut] = []
     question: QuestionOut | None = None
     diagnosis: DiagnosisOut | None = None
@@ -72,58 +76,85 @@ class StepResponse(BaseModel):
 
 
 _SAY = {
-    "clarify": {"en": "Is it a ceiling fan?", "hi": "क्या यह छत का पंखा है?"},
+    "clarify": {"en": "Which one is it?", "hi": "यह कौन-सा है?"},
     "unsupported": {
-        "en": "For now I can only fix ceiling fans. More soon!",
-        "hi": "अभी मैं सिर्फ़ छत के पंखे ठीक कर सकता हूँ। जल्द और भी!",
+        "en": "For now I can help with ceiling fans, extension boards, earphones, and toys or remotes. More soon!",
+        "hi": "अभी मैं छत के पंखे, एक्सटेंशन बोर्ड, ईयरफ़ोन, और खिलौने या रिमोट में मदद कर सकता हूँ। जल्द और भी!",
     },
-    "likely": {"en": "Most likely the {x}.", "hi": "सबसे ज़्यादा संभावना: {x}।"},
-    "possible": {"en": "It might be the {x}.", "hi": "शायद {x} की समस्या है।"},
+    "likely": {"en": "Most likely: {x}.", "hi": "सबसे ज़्यादा संभावना: {x}।"},
+    "possible": {"en": "It might be: {x}.", "hi": "शायद: {x}।"},
     "uncertain": {
-        "en": "I'm not sure yet. The {x} is my best guess.",
+        "en": "I'm not sure yet. Best guess: {x}.",
         "hi": "अभी पक्का नहीं। मेरा अनुमान: {x}।",
     },
 }
 
 
-def _stop(hazard_id: str, req: StepRequest) -> StepResponse:
+def _stop(
+    hazard_id: str, req: StepRequest, answers: dict[str, Answer] | None = None
+) -> StepResponse:
     payload = safety.stop_payload(hazard_id, req.lang)
     return StepResponse(
-        state="stop", say=payload["title"], stop=StopOut(**payload), answers=req.answers
+        state="stop", say=payload["title"], stop=StopOut(**payload), answers=answers or req.answers
     )
+
+
+def _kb(item: str) -> knowledge.ProductKB:
+    if item not in knowledge.available():
+        raise HTTPException(status_code=422, detail=f"Unknown item {item!r}")
+    return knowledge.load(item)
+
+
+def _options(ids: list[str], lang: Lang) -> list[Option]:
+    return [Option(id=i, name=knowledge.load(i).names.get(lang)) for i in ids]
 
 
 @router.post("/sessions/step", response_model=StepResponse)
 async def step(req: StepRequest, request: Request) -> StepResponse:
-    kb = knowledge.load(PRODUCT)
-    answers = dict(req.answers)
     item = req.item
+    if item is not None:
+        _kb(item)
+    answers = dict(req.answers)
     llm_used = False
 
     if req.text:
         hazards = safety.check_text(req.text)
         if hazards:
             return _stop(hazards[0], req)
-        found = await extract(req.text, kb, request.app.state.llm)
+        found = await extract(req.text, request.app.state.llm, known_item=item)
         llm_used = found.llm_used
-        for qid, ans in found.answers.items():
-            answers.setdefault(qid, ans)
         if item is None:
-            if found.item == "other_item":
+            if found.item == OTHER:
                 return StepResponse(
                     state="unsupported", say=_SAY["unsupported"][req.lang], llm_used=llm_used
                 )
-            if found.item == "ceiling_fan":
-                item = "ceiling_fan"
+            if found.item in knowledge.available():
+                item = found.item
+            else:
+                ids = found.candidates or knowledge.available()
+                return StepResponse(
+                    state="clarify",
+                    say=_SAY["clarify"][req.lang],
+                    options=_options(ids, req.lang),
+                    llm_used=llm_used,
+                )
+        for qid, ans in found.answers.items():
+            answers.setdefault(qid, ans)
 
     if item is None:
         return StepResponse(
-            state="clarify", say=_SAY["clarify"][req.lang], answers=answers, llm_used=llm_used
+            state="clarify",
+            say=_SAY["clarify"][req.lang],
+            options=_options(knowledge.available(), req.lang),
+            answers=answers,
+            llm_used=llm_used,
         )
 
+    kb = knowledge.load(item)
+    answers = {k: v for k, v in answers.items() if kb.question(k) is not None}
     for q in kb.questions:
         if q.safety and answers.get(q.id) == "yes":
-            return _stop("fire_smoke", req.model_copy(update={"answers": answers}))
+            return _stop(q.hazard or "fire_smoke", req, answers)
 
     ranked = engine.posterior(kb, answers)
     causes = [
@@ -165,9 +196,9 @@ async def step(req: StepRequest, request: Request) -> StepResponse:
     )
 
 
-@router.get("/procedures/{procedure_id}")
-async def procedure(procedure_id: str, lang: Lang = "en") -> dict:
-    kb = knowledge.load(PRODUCT)
+@router.get("/procedures/{item}/{procedure_id}")
+async def procedure(item: str, procedure_id: str, lang: Lang = "en") -> dict:
+    kb = _kb(item)
     proc = kb.procedures.get(procedure_id)
     if proc is None:
         raise HTTPException(status_code=404, detail="Unknown procedure")
@@ -203,6 +234,7 @@ async def procedure(procedure_id: str, lang: Lang = "en") -> dict:
 
 
 class OutcomeIn(BaseModel):
+    item: str
     cause_id: str
     procedure_id: str
     resolved: bool
@@ -212,7 +244,7 @@ class OutcomeIn(BaseModel):
 
 @router.post("/outcomes")
 async def outcome(body: OutcomeIn, request: Request) -> dict:
-    kb = knowledge.load(PRODUCT)
+    kb = _kb(body.item)
     if body.procedure_id not in kb.procedures or body.cause_id not in {c.id for c in kb.causes}:
         raise HTTPException(status_code=422, detail="Unknown cause or procedure")
     valid = {q.id for q in kb.questions}

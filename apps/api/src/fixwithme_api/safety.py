@@ -22,7 +22,22 @@ _I = re.IGNORECASE
 
 _WS = r"(?<![ऀ-ॿ])"  # start of a Devanagari word
 
+_BATTERY = r"\b(?:batter(?:y|ies)|cells?|coin\s*cells?|magnets?)\b"
+_SWALLOW = r"\b(?:swallow\w*|gulp\w*|nigal\w*|kha\s+(?:li|liya|gaya|gayi|liyi))\b"
+_SWELL = r"\b(?:swollen|swell\w*|bulg\w*|puff(?:ed|y|ing)?|bloat\w*|phool\w*|fool\s*ga\w*)\b"
+
+# Order matters: the first matching hazard decides the STOP screen, most urgent first.
 _RULES: dict[str, list[re.Pattern[str]]] = {
+    "button_cell": [
+        re.compile(_SWALLOW + r".{0,40}" + _BATTERY, _I),
+        re.compile(_BATTERY + r".{0,40}" + _SWALLOW, _I),
+        re.compile(r"(?:बैटरी|सेल).{0,30}निगल|निगल.{0,30}(?:बैटरी|सेल)"),
+    ],
+    "battery_swollen": [
+        re.compile(_SWELL + r".{0,30}\bbatter(?:y|ies)\b", _I),
+        re.compile(r"\bbatter(?:y|ies)\b.{0,30}" + _SWELL, _I),
+        re.compile(r"बैटरी.{0,20}फूल|फूली.{0,20}बैटरी"),
+    ],
     "fire_smoke": [
         re.compile(r"\bburn(?:ing|t|s|ed)?\b", _I),
         re.compile(r"\bsmok(?:e|ing|ey|y)\b", _I),
@@ -70,6 +85,30 @@ _RULES: dict[str, list[re.Pattern[str]]] = {
 
 _CALL = Text(en="Smoke, fire or someone hurt? Call 112", hi="धुआं, आग या कोई घायल? 112 पर कॉल करें")
 HAZARDS: dict[str, Hazard] = {
+    # ANSES: call emergency services immediately, even without symptoms; say a button battery
+    # was swallowed; every minute counts.
+    "button_cell": Hazard(
+        "button_cell",
+        Text(en="Emergency! Get help now.", hi="आपातकाल! तुरंत मदद लें।"),
+        (
+            Text(
+                en="Call 112 now, even with no symptoms", hi="अभी 112 पर कॉल करें, भले कोई लक्षण न हो"
+            ),
+            Text(en="Say a button battery was swallowed", hi="बताएं कि बटन बैटरी निगली गई है"),
+            Text(en="Go to the nearest hospital", hi="सबसे पास के अस्पताल जाएं"),
+        ),
+    ),
+    # University of Reading: never puncture it; stop using and charging it; if it smokes, don't
+    # touch it and call the fire service.
+    "battery_swollen": Hazard(
+        "battery_swollen",
+        Text(en="Stop! Swollen battery.", hi="रुकें! बैटरी फूली हुई है।"),
+        (
+            Text(en="Don't charge or use it", hi="इसे चार्ज या इस्तेमाल न करें"),
+            Text(en="Never press or puncture it", hi="इसे कभी दबाएं या छेदें नहीं"),
+            Text(en="Smoking? Don't touch it. Call 112", hi="धुआं निकले? न छुएं। 112 पर कॉल करें"),
+        ),
+    ),
     "fire_smoke": Hazard(
         "fire_smoke",
         Text(en="Stop! Power off.", hi="रुकें! बिजली बंद करें।"),
@@ -109,9 +148,28 @@ HAZARDS: dict[str, Hazard] = {
 }
 
 
+# In Hindi and Hinglish a light "jalti hai" when it is on, so "jal..." next to a light word is
+# not about burning. These phrases are blanked before the fire rules run.
+_LIGHT_ON = [
+    re.compile(
+        r"\b(?:lights?|bulbs?|leds?|lamps?|indicators?|batti|tubelight)\b(?:\s+\w+){0,2}\s+jal\w*",
+        _I,
+    ),
+    re.compile(r"(?:लाइट|बत्ती|बल्ब|एलईडी)(?:\s+\S+){0,2}\s+जल\S*"),
+]
+
+
 def check_text(text: str) -> list[str]:
     """Return the ids of every hazard the text mentions, in a stable order."""
-    return [hid for hid, patterns in _RULES.items() if any(p.search(text) for p in patterns)]
+    fire_text = text
+    for pattern in _LIGHT_ON:
+        fire_text = pattern.sub(" ", fire_text)
+    found = []
+    for hid, patterns in _RULES.items():
+        subject = fire_text if hid == "fire_smoke" else text
+        if any(p.search(subject) for p in patterns):
+            found.append(hid)
+    return found
 
 
 def stop_payload(hazard_id: str, lang: Lang) -> dict:

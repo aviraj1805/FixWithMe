@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from . import __version__, diagnose, knowledge
+from . import __version__, diagnose, knowledge, safety
 from .config import Settings, get_settings
 from .llm import build_llm
 from .outcomes import OutcomeStore
@@ -29,8 +29,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         log.warning("no LLM provider configured; running in engine-only mode")
         app.state.llm = None
     app.state.outcomes = OutcomeStore(settings)
-    for product in knowledge.available():
-        knowledge.load(product)  # fail fast on an invalid knowledge file
+    for product in knowledge.available():  # fail fast on an invalid knowledge file
+        for q in knowledge.load(product).questions:
+            if q.hazard and q.hazard not in safety.HAZARDS:
+                raise ValueError(f"{product}/{q.id}: unknown hazard {q.hazard}")
 
     app.add_middleware(
         CORSMiddleware,

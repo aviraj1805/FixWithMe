@@ -1,6 +1,6 @@
 # Knowledge graph
 
-Curated, cited repair knowledge per product: `causes → questions (likelihoods) → procedures (steps, cautions, sources)`.
+Curated, cited repair knowledge per product: `causes → questions (likelihoods) → procedures (steps, cautions, sources)`. Every cause points at a shared component in `components.yaml` (22 so far), so new products reuse the same parts.
 
 The files live in [`apps/api/src/fixwithme_api/knowledge/`](../apps/api/src/fixwithme_api/knowledge/), so they ship inside the API's Docker image (the Render build context is `apps/api`). Each file is validated when the API starts:
 
@@ -16,5 +16,8 @@ Every DIY step at safety level 2 or above must cite a source; a test enforces th
 | Product | File | Status |
 |---|---|---|
 | Ceiling fan | `ceiling_fan.yaml` | draft (R1) |
+| Extension board | `extension_board.yaml` | draft (R2) |
+| Headphones and earbuds | `headphones.yaml` | draft (R2) |
+| Toys and remotes | `battery_toy.yaml` | draft (R2) |
 
 The likelihoods are hand-set starting beliefs. They will be calibrated against FixBench-IN (R2) and real outcomes (R9).

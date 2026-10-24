@@ -5,7 +5,7 @@ import pytest
 import yaml
 from pydantic import ValidationError
 
-from fixwithme_api import knowledge, pii
+from fixwithme_api import knowledge, pii, safety
 from fixwithme_api.extract import extract
 from fixwithme_api.llm import FallbackRouter, LLMRequest, LLMResult, LLMUnavailable
 from fixwithme_api.llm.fake import FakeProvider
@@ -54,10 +54,21 @@ def test_kb_rejects_diy_steps_on_professional_only_procedures():
         knowledge.ProductKB.model_validate(raw)
 
 
-def test_every_diy_step_cites_a_source_except_trivial_checks(kb):
+@pytest.mark.parametrize("product", knowledge.available())
+def test_every_product_is_consistent(product):
+    kb = knowledge.load(product)
+    assert kb.tier == "curated"
+    assert kb.questions[0].safety, "a safety question must come first"
+    for q in kb.questions:
+        if q.safety:
+            assert q.hazard in safety.HAZARDS
+    for c in kb.causes:
+        assert c.component in knowledge.components().components
     for pid, proc in kb.procedures.items():
-        if proc.safety_level >= 2:
+        if proc.safety_level >= 2:  # risky steps must cite a source
             assert all(step.sources for step in proc.steps), pid
+        for step in proc.steps:
+            assert len(step.text.en) <= 140, f"{pid}: keep steps short"
 
 
 # ---------- PII ----------
@@ -78,13 +89,13 @@ def test_scrub_keeps_ratings():
 
 
 def test_rules_only_extraction(kb):
-    out = run(extract("mera pankha hum karta hai par bahut dheere chalta hai", kb, None))
+    out = run(extract("mera pankha hum karta hai par bahut dheere chalta hai", None))
     assert out.item == "ceiling_fan" and not out.llm_used
     assert out.answers == {"hums": "yes", "slow": "yes"}
 
 
 def test_rules_mark_other_fans_as_unsupported(kb):
-    assert run(extract("my table fan is not working", kb, None)).item == "other_item"
+    assert run(extract("my table fan is not working", None)).item == "other_item"
 
 
 class RecordingProvider(FakeProvider):
@@ -93,12 +104,24 @@ class RecordingProvider(FakeProvider):
 
 def test_llm_answers_merge_over_rules_and_prompt_is_scrubbed(kb):
     reply = json.dumps(
-        {"item": "ceiling_fan", "answers": {"push_spins": "yes", "slow": "no", "bogus": "yes"}}
+        {
+            "item": "ceiling_fan",
+            "answers": {
+                "ceiling_fan.push_spins": "yes",
+                "ceiling_fan.slow": "no",
+                "ceiling_fan.bogus": "yes",
+                "headphones.wiggle": "yes",
+            },
+        }
     )
     fake = RecordingProvider(reply=reply)
-    out = run(extract("fan hums, slow. call 9876543210", kb, FallbackRouter([fake])))
+    out = run(extract("fan hums, slow. call 9876543210", FallbackRouter([fake])))
     assert out.llm_used
-    assert out.answers == {"hums": "yes", "slow": "no", "push_spins": "yes"}  # bogus id dropped
+    assert out.answers == {
+        "hums": "yes",
+        "slow": "no",
+        "push_spins": "yes",
+    }  # bogus and other-product ids dropped
     assert "9876543210" not in fake.calls[0].prompt
 
 
@@ -111,17 +134,17 @@ class Broken:
 
 
 def test_llm_failure_falls_back_to_rules(kb):
-    out = run(extract("ceiling fan hums", kb, FallbackRouter([Broken()])))
+    out = run(extract("ceiling fan hums", FallbackRouter([Broken()])))
     assert out.item == "ceiling_fan" and out.answers == {"hums": "yes"} and not out.llm_used
 
 
 def test_non_json_llm_reply_falls_back_to_rules(kb):
-    out = run(extract("ceiling fan hums", kb, FallbackRouter([FakeProvider(reply="not json")])))
+    out = run(extract("ceiling fan hums", FallbackRouter([FakeProvider(reply="not json")])))
     assert out.answers == {"hums": "yes"} and not out.llm_used
 
 
 def test_push_then_starts_word_order(kb):
-    out = run(extract("it hums, and if I push the blades it starts", kb, None))
+    out = run(extract("my fan hums, and if I push the blades it starts", None))
     assert out.answers["push_spins"] == "yes"
 
 
@@ -134,10 +157,22 @@ class Exploding:
 
 
 def test_unexpected_llm_errors_fall_back_to_rules(kb):
-    out = run(extract("ceiling fan hums", kb, FallbackRouter([Exploding()])))
+    out = run(extract("ceiling fan hums", FallbackRouter([Exploding()])))
     assert out.answers == {"hums": "yes"} and not out.llm_used
 
 
 def test_non_object_json_falls_back_to_rules(kb):
-    out = run(extract("ceiling fan hums", kb, FallbackRouter([FakeProvider(reply="[1, 2]")])))
+    out = run(extract("ceiling fan hums", FallbackRouter([FakeProvider(reply="[1, 2]")])))
     assert out.answers == {"hums": "yes"} and not out.llm_used
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "remote wali car nahi chal rahi",
+        "my remote control car won't move",
+        "remote ki gaadi band hai",
+    ],
+)
+def test_remote_control_toys_are_not_tv_remotes(text):
+    assert run(extract(text, None)).answers.get("is_remote") == "no"

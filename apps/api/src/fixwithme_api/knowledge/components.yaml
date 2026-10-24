@@ -1,0 +1,26 @@
+# Shared component index. Every cause in a product file points at one of these components.
+# Many products fail through the same parts (cords, contacts, batteries, switches), so new
+# product families reuse these entries, and later releases map unknown items onto them (Tier B).
+components:
+  run_capacitor: {name: {en: Run capacitor, hi: रन कैपेसिटर}, kind: electrical}
+  fan_bearing: {name: {en: Fan bearings, hi: पंखे के बेयरिंग}, kind: mechanical}
+  speed_regulator: {name: {en: Speed regulator, hi: स्पीड रेगुलेटर}, kind: electrical}
+  motor_winding: {name: {en: Motor winding, hi: मोटर वाइंडिंग}, kind: electrical}
+  supply_circuit: {name: {en: Room supply and MCB, hi: कमरे की सप्लाई और MCB}, kind: electrical}
+  wall_socket: {name: {en: Wall socket, hi: दीवार का सॉकेट}, kind: electrical}
+  board_breaker: {name: {en: Overload breaker, hi: ओवरलोड ब्रेकर}, kind: electrical}
+  board_switch: {name: {en: Board switch, hi: बोर्ड का स्विच}, kind: electrical}
+  socket_contacts: {name: {en: Socket contacts, hi: सॉकेट के कॉन्टैक्ट}, kind: electrical}
+  power_cord: {name: {en: Power cord and plug, hi: पावर तार और प्लग}, kind: electrical}
+  audio_source: {name: {en: Phone or audio source, hi: फ़ोन या ऑडियो सोर्स}, kind: electronic}
+  audio_jack: {name: {en: Audio jack and plug, hi: ऑडियो जैक और प्लग}, kind: electronic}
+  audio_cable: {name: {en: Headphone cable, hi: हेडफ़ोन का तार}, kind: electronic}
+  audio_driver: {name: {en: Speaker driver, hi: स्पीकर ड्राइवर}, kind: electronic}
+  bluetooth_link: {name: {en: Bluetooth pairing, hi: ब्लूटूथ पेयरिंग}, kind: electronic}
+  charging_contacts: {name: {en: Charging contacts, hi: चार्जिंग कॉन्टैक्ट}, kind: electronic}
+  primary_battery: {name: {en: Batteries, hi: बैटरी}, kind: battery}
+  battery_contacts: {name: {en: Battery springs and contacts, hi: बैटरी के स्प्रिंग और कॉन्टैक्ट}, kind: battery}
+  ir_emitter: {name: {en: Remote's infrared light, hi: रिमोट की इंफ्रारेड लाइट}, kind: electronic}
+  internal_wiring: {name: {en: Inside wires and solder joints, hi: अंदर के तार और सोल्डर जोड़}, kind: electronic}
+  drive_train: {name: {en: Wheels, gears and motor, hi: पहिए, गियर और मोटर}, kind: mechanical}
+  toy_switch: {name: {en: On/off switch, hi: ऑन/ऑफ़ स्विच}, kind: electronic}

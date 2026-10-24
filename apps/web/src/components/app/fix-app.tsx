@@ -13,7 +13,7 @@ type View =
   | { name: "welcome" }
   | { name: "home" }
   | { name: "chat" }
-  | { name: "guide"; diagnosis: Diagnosis }
+  | { name: "guide"; item: string; diagnosis: Diagnosis }
   | { name: "stop"; stop: NonNullable<StepResponse["stop"]> }
   | { name: "done"; resolved: boolean; tip: string | null };
 
@@ -46,18 +46,18 @@ export function FixApp() {
     setView({ name: "chat" });
   }
 
-  async function finish(diagnosis: Diagnosis, resolved: boolean | null) {
+  async function finish(item: string, diagnosis: Diagnosis, resolved: boolean | null) {
     if (resolved === null) {
       goHome();
       return;
     }
     const answers: Answers = session.answers;
-    sendOutcome({ cause_id: diagnosis.cause_id, procedure_id: diagnosis.procedure_id, resolved, answers, lang }).catch(
+    sendOutcome({ item, cause_id: diagnosis.cause_id, procedure_id: diagnosis.procedure_id, resolved, answers, lang }).catch(
       () => {},
     );
     let tip: string | null = null;
     if (resolved) {
-      tip = await getProcedure(diagnosis.procedure_id, lang)
+      tip = await getProcedure(item, diagnosis.procedure_id, lang)
         .then((p: Procedure) => p.prevent)
         .catch(() => null);
     }
@@ -80,16 +80,17 @@ export function FixApp() {
             setSession={setSession}
             onBack={goHome}
             onStop={(stop) => setView({ name: "stop", stop })}
-            onGuide={(diagnosis) => setView({ name: "guide", diagnosis })}
+            onGuide={(diagnosis) => session.item && setView({ name: "guide", item: session.item, diagnosis })}
           />
         </div>
       )}
       {view.name === "guide" && (
         <Guide
           lang={lang}
+          item={view.item}
           procedureId={view.diagnosis.procedure_id}
           onBack={() => setView({ name: "chat" })}
-          onDone={(resolved) => void finish(view.diagnosis, resolved)}
+          onDone={(resolved) => void finish(view.item, view.diagnosis, resolved)}
         />
       )}
       {view.name === "stop" && <Stop lang={lang} stop={view.stop} onBack={goHome} />}

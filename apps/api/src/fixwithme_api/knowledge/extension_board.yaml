@@ -1,0 +1,190 @@
+# Extension board / power strip: curated fault knowledge (Tier A, draft). See ceiling_fan.yaml
+# for what "draft" and the likelihood numbers mean. Repairs inside a board are mains work, so the
+# guidance is reset, test, or replace; opening the board is never suggested.
+
+id: extension_board
+version: 0.1.0
+review_status: draft
+names: {en: Extension board, hi: एक्सटेंशन बोर्ड}
+aliases:
+  - '\bextension\s*(?:board|cord|box)?\b'
+  - '\b(?:power|plug|spike)\s*(?:strip|board|guard|bar)\b'
+  - '\bmulti\s*(?:plug|socket|board)\b'
+  - 'एक्सटेंशन'
+
+sources:
+  ucop_strip:
+    title: "Surge Protector and Power Strip Safety (University of California)"
+    url: https://www.ucop.edu/risk-services/_files/bsas/safetymeetings/powerstripsafety.pdf
+    accessed: 2026-10-24
+  cea_2023:
+    title: "CEA Safety Regulations 2023: licensed contractors for installation work (Rajya Sabha answer)"
+    url: https://rsdebate.nic.in/bitstream/123456789/758570/1/PQ_267_10022025_U794_p451_p451.pdf
+    accessed: 2026-10-24
+
+causes:
+  - id: overload_tripped
+    component: board_breaker
+    name: {en: Overload breaker tripped, hi: ओवरलोड ब्रेकर ट्रिप हो गया}
+    short: {en: overload breaker, hi: ओवरलोड ब्रेकर}
+    prior: 0.25
+    procedure: reset_overload
+    sources: [ucop_strip]
+  - id: wall_socket_dead
+    component: wall_socket
+    name: {en: No power at the wall socket, hi: दीवार के सॉकेट में बिजली नहीं}
+    short: {en: wall socket, hi: दीवार का सॉकेट}
+    prior: 0.20
+    procedure: check_wall_socket
+    sources: [cea_2023]
+  - id: cord_damaged
+    component: power_cord
+    name: {en: Damaged cord or plug, hi: खराब तार या प्लग}
+    short: {en: cord or plug, hi: तार या प्लग}
+    prior: 0.20
+    procedure: replace_board
+    sources: [ucop_strip]
+  - id: board_switch_faulty
+    component: board_switch
+    name: {en: Faulty board switch, hi: बोर्ड का खराब स्विच}
+    short: {en: board switch, hi: बोर्ड का स्विच}
+    prior: 0.20
+    procedure: replace_board
+    sources: [ucop_strip]
+  - id: socket_loose
+    component: socket_contacts
+    name: {en: Loose or worn socket, hi: ढीला या घिसा सॉकेट}
+    short: {en: loose socket, hi: ढीला सॉकेट}
+    prior: 0.15
+    procedure: replace_board
+    sources: [ucop_strip]
+
+questions:
+  - id: burnt
+    safety: true
+    hazard: fire_smoke
+    text:
+      en: Any burn marks, melted plastic, or a burning smell?
+      hi: क्या जलने के निशान, पिघला प्लास्टिक, या जलने की गंध है?
+    p_yes: {overload_tripped: 0.10, wall_socket_dead: 0.03, cord_damaged: 0.20, board_switch_faulty: 0.10, socket_loose: 0.25}
+  - id: hot
+    safety: true
+    hazard: fire_smoke
+    text:
+      en: Is the board hot to touch?
+      hi: क्या बोर्ड छूने पर गर्म है?
+    p_yes: {overload_tripped: 0.15, wall_socket_dead: 0.02, cord_damaged: 0.10, board_switch_faulty: 0.10, socket_loose: 0.15}
+  - id: wall_works
+    text:
+      en: Does a phone charger work when plugged straight into the wall socket?
+      hi: क्या फ़ोन चार्जर सीधे दीवार के सॉकेट में लगाने पर चलता है?
+    p_yes: {overload_tripped: 0.97, wall_socket_dead: 0.03, cord_damaged: 0.97, board_switch_faulty: 0.97, socket_loose: 0.97}
+  - id: reset_popped
+    text:
+      en: Does the board have a reset or overload button that has popped out?
+      hi: क्या बोर्ड पर रीसेट या ओवरलोड बटन है जो बाहर निकल आया है?
+    p_yes: {overload_tripped: 0.75, wall_socket_dead: 0.05, cord_damaged: 0.05, board_switch_faulty: 0.05, socket_loose: 0.05}
+  - id: heavy_load
+    text:
+      en: Was something heavy plugged in, like a heater, iron or kettle?
+      hi: क्या कोई भारी चीज़ लगी थी, जैसे हीटर, प्रेस या केतली?
+    p_yes: {overload_tripped: 0.70, wall_socket_dead: 0.20, cord_damaged: 0.20, board_switch_faulty: 0.20, socket_loose: 0.25}
+  - id: light_on
+    text:
+      en: Does the board's light come on?
+      hi: क्या बोर्ड की लाइट जलती है?
+    p_yes: {overload_tripped: 0.10, wall_socket_dead: 0.03, cord_damaged: 0.30, board_switch_faulty: 0.30, socket_loose: 0.90}
+  - id: some_sockets
+    text:
+      en: Do some sockets on the board work, but not others?
+      hi: क्या बोर्ड के कुछ सॉकेट चलते हैं, पर कुछ नहीं?
+    p_yes: {overload_tripped: 0.05, wall_socket_dead: 0.02, cord_damaged: 0.05, board_switch_faulty: 0.05, socket_loose: 0.80}
+  - id: switch_loose
+    text:
+      en: Does the board's switch feel loose, or not click?
+      hi: क्या बोर्ड का स्विच ढीला लगता है, या क्लिक नहीं करता?
+    p_yes: {overload_tripped: 0.05, wall_socket_dead: 0.03, cord_damaged: 0.05, board_switch_faulty: 0.70, socket_loose: 0.05}
+  - id: wiggle
+    text:
+      en: Does it work if you move the cord or the plug?
+      hi: क्या तार या प्लग हिलाने पर चलता है?
+    p_yes: {overload_tripped: 0.05, wall_socket_dead: 0.05, cord_damaged: 0.65, board_switch_faulty: 0.25, socket_loose: 0.50}
+
+procedures:
+  reset_overload:
+    title: {en: Reset the overload breaker, hi: ओवरलोड ब्रेकर रीसेट करें}
+    safety_level: 1
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Switch off and unplug everything from the board.
+          hi: बोर्ड से सब कुछ बंद करके निकाल दें।
+        sources: [ucop_strip]
+      - text:
+          en: Press the reset button once, or switch the board off and on.
+          hi: रीसेट बटन एक बार दबाएं, या बोर्ड का स्विच बंद करके फिर चालू करें।
+        sources: [ucop_strip]
+      - text:
+          en: Plug devices back one at a time. Don't run a heater, iron and kettle together.
+          hi: एक-एक करके चीज़ें वापस लगाएं। हीटर, प्रेस और केतली एक साथ न चलाएं।
+        caution: {en: If it trips again or won't reset, replace the board., hi: अगर फिर से ट्रिप हो या रीसेट न हो, तो बोर्ड बदल दें।}
+        sources: [ucop_strip]
+    verify: {en: Every socket works with your devices plugged in., hi: सामान लगाने पर हर सॉकेट चलता है।}
+    prevent: {en: Never plug one board into another., hi: एक बोर्ड को दूसरे बोर्ड में कभी न लगाएं।}
+    prevent_sources: [ucop_strip]
+
+  check_wall_socket:
+    title: {en: Check the wall socket, hi: दीवार का सॉकेट जांचें}
+    safety_level: 1
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Plug a phone charger straight into the wall socket and switch it on.
+          hi: फ़ोन चार्जर सीधे दीवार के सॉकेट में लगाकर स्विच चालू करें।
+        sources: []
+      - text:
+          en: Nothing? Check the MCB for that room. If it has tripped, switch it on once.
+          hi: कुछ नहीं? उस कमरे का MCB देखें। गिरा हो तो एक बार चालू करें।
+        caution: {en: If the MCB trips again, stop and call an electrician., hi: MCB फिर गिरे तो रुकें और इलेक्ट्रीशियन को बुलाएं।}
+        sources: [cea_2023]
+      - text:
+          en: MCB is fine but the socket is dead? The wall wiring needs an electrician.
+          hi: MCB ठीक है पर सॉकेट बंद है? दीवार की वायरिंग के लिए इलेक्ट्रीशियन बुलाएं।
+        sources: [cea_2023]
+    verify: {en: The charger works in the wall socket., hi: चार्जर दीवार के सॉकेट में चलता है।}
+    prevent: {en: A socket that often stops working should be checked by an electrician., hi: बार-बार बंद होने वाले सॉकेट की जांच इलेक्ट्रीशियन से कराएं।}
+    prevent_sources: [cea_2023]
+
+  replace_board:
+    title: {en: Replace the board, hi: बोर्ड बदलें}
+    safety_level: 1
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 150, max: 600, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Unplug it from the wall and stop using it.
+          hi: इसे दीवार से निकालें और इस्तेमाल बंद करें।
+        sources: [ucop_strip]
+      - text:
+          en: Don't open or repair it. A damaged or faulty board should be replaced.
+          hi: इसे खोलें या ठीक न करें। खराब बोर्ड को बदल देना चाहिए।
+        sources: [ucop_strip]
+      - text:
+          en: Buy one with a built-in circuit breaker.
+          hi: ऐसा बोर्ड खरीदें जिसमें सर्किट ब्रेकर लगा हो।
+        sources: [ucop_strip]
+      - text:
+          en: Plug it straight into the wall, never into another board.
+          hi: इसे सीधे दीवार में लगाएं, कभी दूसरे बोर्ड में नहीं।
+        sources: [ucop_strip]
+    verify: {en: The new board powers your devices., hi: नया बोर्ड आपका सामान चलाता है।}
+    prevent: {en: A board that feels hot is overloaded. Unplug and replace it., hi: गर्म बोर्ड ओवरलोड है। उसे निकालकर बदल दें।}
+    prevent_sources: [ucop_strip]

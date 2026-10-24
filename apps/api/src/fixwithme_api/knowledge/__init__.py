@@ -1,6 +1,7 @@
 """Curated product knowledge (Tier A), loaded from YAML and validated on startup."""
 
 import math
+import re
 from datetime import date
 from functools import lru_cache
 from pathlib import Path
@@ -35,8 +36,18 @@ class Source(BaseModel):
     accessed: date
 
 
+class Component(BaseModel):
+    name: Text
+    kind: Literal["electrical", "electronic", "mechanical", "battery"]
+
+
+class ComponentIndex(BaseModel):
+    components: dict[str, Component]
+
+
 class Cause(BaseModel):
     id: str
+    component: str
     name: Text
     short: Text
     prior: float = Field(gt=0, lt=1)
@@ -49,6 +60,13 @@ class Question(BaseModel):
     text: Text
     p_yes: dict[str, float]
     safety: bool = False
+    hazard: str | None = None  # which STOP screen a "yes" leads to
+
+    @model_validator(mode="after")
+    def _safety_needs_hazard(self) -> "Question":
+        if self.safety and not self.hazard:
+            raise ValueError(f"{self.id}: safety questions must name a hazard")
+        return self
 
 
 class Step(BaseModel):
@@ -107,6 +125,8 @@ class ProductKB(BaseModel):
     version: str
     review_status: Literal["draft", "reviewed"]
     names: Text
+    aliases: list[str]  # regexes that identify the product in user text
+    excludes: list[str] = []  # regexes for look-alike items this file does not cover
     sources: dict[str, Source]
     causes: list[Cause]
     questions: list[Question]
@@ -131,6 +151,8 @@ class ProductKB(BaseModel):
         missing = used - set(self.sources)
         if missing:
             raise ValueError(f"{self.id}: undefined sources {sorted(missing)}")
+        for pattern in self.aliases + self.excludes:
+            re.compile(pattern)
         return self
 
     @property
@@ -143,13 +165,44 @@ class ProductKB(BaseModel):
     def question(self, question_id: str) -> Question | None:
         return next((q for q in self.questions if q.id == question_id), None)
 
+    def mentions(self, text: str) -> bool:
+        return any(re.search(p, text, re.IGNORECASE) for p in self.aliases)
+
+    def excluded(self, text: str) -> bool:
+        return any(re.search(p, text, re.IGNORECASE) for p in self.excludes)
+
+
+def _read(path: Path) -> dict:
+    with path.open(encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+@lru_cache
+def components() -> ComponentIndex:
+    return ComponentIndex.model_validate(_read(KNOWLEDGE_DIR / "components.yaml"))
+
 
 @lru_cache
 def load(product_id: str) -> ProductKB:
-    path = KNOWLEDGE_DIR / f"{product_id}.yaml"
-    with path.open(encoding="utf-8") as f:
-        return ProductKB.model_validate(yaml.safe_load(f))
+    kb = ProductKB.model_validate(_read(KNOWLEDGE_DIR / f"{product_id}.yaml"))
+    unknown = {c.component for c in kb.causes} - set(components().components)
+    if unknown:
+        raise ValueError(f"{product_id}: causes reference unknown components {sorted(unknown)}")
+    return kb
 
 
 def available() -> list[str]:
-    return sorted(p.stem for p in KNOWLEDGE_DIR.glob("*.yaml"))
+    return sorted(p.stem for p in KNOWLEDGE_DIR.glob("*.yaml") if p.stem != "components")
+
+
+def detect(text: str) -> tuple[list[str], bool]:
+    """Products whose aliases match the text, and whether a look-alike was excluded."""
+    matched, excluded = [], False
+    for pid in available():
+        kb = load(pid)
+        if kb.mentions(text):
+            if kb.excluded(text):
+                excluded = True
+            else:
+                matched.append(pid)
+    return matched, excluded

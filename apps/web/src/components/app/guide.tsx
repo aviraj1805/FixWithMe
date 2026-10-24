@@ -40,11 +40,13 @@ function TierBadge({ tier, lang }: { tier: Procedure["tier"]; lang: Lang }) {
 
 export function Guide({
   lang,
+  item,
   procedureId,
   onBack,
   onDone,
 }: {
   lang: Lang;
+  item: string;
   procedureId: string;
   onBack: () => void;
   onDone: (resolved: boolean | null) => void;
@@ -56,13 +58,13 @@ export function Guide({
 
   useEffect(() => {
     let alive = true;
-    getProcedure(procedureId, lang)
+    getProcedure(item, procedureId, lang)
       .then((p) => alive && setProc(p))
       .catch(() => alive && setFailed(true));
     return () => {
       alive = false;
     };
-  }, [procedureId, lang, attempt]);
+  }, [item, procedureId, lang, attempt]);
 
   if (!proc) {
     return (

@@ -10,8 +10,9 @@ export type Cause = { id: string; name: string; short: string; p: number };
 export type StepResponse = {
   state: "question" | "diagnosis" | "stop" | "clarify" | "unsupported";
   say: string;
-  item: "ceiling_fan" | null;
+  item: string | null;
   answers: Answers;
+  options: { id: string; name: string }[];
   causes: Cause[];
   question: { id: string; text: string; safety: boolean } | null;
   diagnosis: {
@@ -60,17 +61,18 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 export function step(body: {
   text?: string;
   answers: Answers;
-  item: "ceiling_fan" | null;
+  item: string | null;
   lang: Lang;
 }): Promise<StepResponse> {
   return request("/v1/sessions/step", { method: "POST", body: JSON.stringify(body) });
 }
 
-export function getProcedure(id: string, lang: Lang): Promise<Procedure> {
-  return request(`/v1/procedures/${encodeURIComponent(id)}?lang=${lang}`);
+export function getProcedure(item: string, id: string, lang: Lang): Promise<Procedure> {
+  return request(`/v1/procedures/${encodeURIComponent(item)}/${encodeURIComponent(id)}?lang=${lang}`);
 }
 
 export function sendOutcome(body: {
+  item: string;
   cause_id: string;
   procedure_id: string;
   resolved: boolean;

@@ -10,6 +10,13 @@ id: ceiling_fan
 version: 0.1.0
 review_status: draft
 names: {en: Ceiling fan, hi: छत का पंखा}
+aliases:
+  - '\bfans?\b'
+  - '\bpankh[aeo]\w*'
+  - 'पंख[ाे]'
+# Other fans have different motors and failure modes; they are not covered by this file.
+excludes:
+  - '\b(?:table|pedestal|wall|exhaust|tower|stand)\s+fans?\b'
 
 sources:
   hunker_hum:
@@ -39,30 +46,35 @@ sources:
 
 causes:
   - id: capacitor_weak
+    component: run_capacitor
     name: {en: Weak or failed capacitor, hi: कमज़ोर या खराब कैपेसिटर}
     short: {en: capacitor, hi: कैपेसिटर}
     prior: 0.40
     procedure: replace_capacitor
     sources: [hunker_hum, bajaj_capacitor, wiki_ceiling_fan]
   - id: no_power
+    component: supply_circuit
     name: {en: No power reaching the fan, hi: पंखे तक बिजली नहीं पहुँच रही}
     short: {en: power supply, hi: बिजली सप्लाई}
     prior: 0.20
     procedure: check_power
     sources: [cea_2023]
   - id: regulator_faulty
+    component: speed_regulator
     name: {en: Faulty speed regulator, hi: खराब स्पीड रेगुलेटर}
     short: {en: regulator, hi: रेगुलेटर}
     prior: 0.15
     procedure: check_regulator
     sources: [wiki_ceiling_fan]
   - id: bearing_stiff
+    component: fan_bearing
     name: {en: Stiff or worn bearings, hi: जाम या घिसे हुए बेयरिंग}
     short: {en: bearings, hi: बेयरिंग}
     prior: 0.15
     procedure: refer_bearing
     sources: [hunker_hum, wiki_ceiling_fan]
   - id: winding_fault
+    component: motor_winding
     name: {en: Motor winding fault, hi: मोटर वाइंडिंग की खराबी}
     short: {en: motor winding, hi: मोटर वाइंडिंग}
     prior: 0.10
@@ -73,6 +85,7 @@ causes:
 questions:
   - id: burning
     safety: true            # "yes" stops the session and shows the STOP screen
+    hazard: fire_smoke
     text:
       en: Any burning smell or smoke, or is the motor very hot?
       hi: क्या जलने की गंध या धुआं है, या मोटर बहुत गर्म है?

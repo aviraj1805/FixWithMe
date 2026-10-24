@@ -6,7 +6,11 @@ import { Badge, PrimaryButton } from "@/components/ui/parts";
 import type { Cause, StepResponse } from "@/lib/api";
 import { type Lang, t } from "@/lib/i18n";
 
-const ACTION_ICONS: IconName[] = ["power", "x", "phone"];
+const ACTION_ICONS: Record<string, IconName[]> = {
+  button_cell: ["phone", "alert", "shield"],
+  gas: ["x", "shield", "phone"],
+};
+const DEFAULT_ICONS: IconName[] = ["power", "x", "phone"];
 
 export function Stop({
   lang,
@@ -25,7 +29,7 @@ export function Stop({
         {stop.actions.map((a, i) => (
           <li key={a} className="flex items-center gap-3">
             <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[var(--color-status-stop-bg)] text-[var(--color-status-stop-fg)]">
-              <Icon name={ACTION_ICONS[i] ?? "alert"} size={18} />
+              <Icon name={(ACTION_ICONS[stop.hazard] ?? DEFAULT_ICONS)[i] ?? "alert"} size={18} />
             </span>
             <span className="text-[15px] font-semibold">{a}</span>
           </li>

@@ -1,0 +1,267 @@
+# Headphones and earbuds (wired and Bluetooth): curated fault knowledge (Tier A, draft).
+# See ceiling_fan.yaml for what "draft" and the likelihood numbers mean.
+
+id: headphones
+version: 0.1.0
+review_status: draft
+names: {en: Headphones and earbuds, hi: हेडफ़ोन और ईयरबड्स}
+aliases:
+  - '\b(?:head\s*phones?|ear\s*phones?|ear\s*buds?|headsets?|neckbands?|airpods?|tws)\b'
+  - '\b(?:buds|handsfree|hands\s*free)\b'
+  - 'हेडफ़ोन|हेडफोन|ईयरफ़ोन|ईयरफोन|ईयरबड'
+
+sources:
+  anker_headphones:
+    title: "Why Is Only One Side of My Headphones Working? (Anker)"
+    url: https://www.anker.com/uk/blogs/headphones/why-is-only-one-side-of-my-headphones-working
+    accessed: 2026-10-24
+  anker_earbuds:
+    title: "Only One Earbud Working? (Anker)"
+    url: https://www.anker.com/uk/blogs/earbuds/only-one-earbud-working
+    accessed: 2026-10-24
+  reading_swollen:
+    title: "I have a swollen lithium-ion battery, what should I do? (University of Reading)"
+    url: https://www.reading.ac.uk/health-safety-services/fire-safety/lithium-battery-information/i-have-a-swollen-lithium-ion-battery-what-should-i-do
+    accessed: 2026-10-24
+
+causes:
+  - id: source_device
+    component: audio_source
+    name: {en: Phone or its settings, hi: फ़ोन या उसकी सेटिंग}
+    short: {en: phone, hi: फ़ोन}
+    prior: 0.20
+    procedure: check_device
+    sources: [anker_headphones]
+  - id: jack_dirty
+    component: audio_jack
+    name: {en: Dirt in the jack or plug, hi: जैक या प्लग में गंदगी}
+    short: {en: dirty jack, hi: गंदा जैक}
+    prior: 0.15
+    procedure: clean_jack
+    sources: [anker_headphones]
+  - id: cable_break
+    component: audio_cable
+    name: {en: Broken wire in the cable, hi: तार के अंदर टूटा वायर}
+    short: {en: cable, hi: तार}
+    prior: 0.20
+    procedure: cable_replace
+    sources: [anker_headphones]
+  - id: pairing_glitch
+    component: bluetooth_link
+    name: {en: Bluetooth pairing glitch, hi: ब्लूटूथ पेयरिंग की गड़बड़ी}
+    short: {en: pairing, hi: पेयरिंग}
+    prior: 0.20
+    procedure: reset_earbuds
+    sources: [anker_earbuds]
+  - id: not_charging
+    component: charging_contacts
+    name: {en: Dirty charging contacts or flat battery, hi: गंदे चार्जिंग कॉन्टैक्ट या खाली बैटरी}
+    short: {en: charging contacts or battery, hi: चार्जिंग कॉन्टैक्ट या बैटरी}
+    prior: 0.15
+    procedure: clean_contacts_charge
+    sources: [anker_earbuds]
+  - id: driver_failed
+    component: audio_driver
+    name: {en: Speaker inside has failed, hi: अंदर का स्पीकर खराब}
+    short: {en: speaker driver, hi: स्पीकर}
+    prior: 0.10
+    procedure: replace_headphones
+    sources: [anker_headphones]
+
+questions:
+  - id: swollen
+    safety: true
+    hazard: battery_swollen
+    text:
+      en: Is the case or an earbud swollen, cracked or very hot?
+      hi: क्या केस या ईयरबड फूला हुआ, टूटा या बहुत गर्म है?
+    p_yes: {source_device: 0.01, jack_dirty: 0.01, cable_break: 0.01, pairing_glitch: 0.01, not_charging: 0.04, driver_failed: 0.02}
+  - id: wireless
+    text:
+      en: Are they wireless (Bluetooth)?
+      hi: क्या ये वायरलेस (ब्लूटूथ) हैं?
+    p_yes: {source_device: 0.50, jack_dirty: 0.02, cable_break: 0.03, pairing_glitch: 0.97, not_charging: 0.97, driver_failed: 0.50}
+  - id: other_device
+    text:
+      en: On another phone, is the problem still there?
+      hi: दूसरे फ़ोन पर भी वही समस्या है?
+    p_yes: {source_device: 0.05, jack_dirty: 0.40, cable_break: 0.95, pairing_glitch: 0.60, not_charging: 0.90, driver_failed: 0.95}
+  - id: wiggle
+    text:
+      en: Does the sound cut in and out when you bend the cable?
+      hi: क्या तार मोड़ने पर आवाज़ आती-जाती है?
+    p_yes: {source_device: 0.05, jack_dirty: 0.35, cable_break: 0.85, pairing_glitch: 0.02, not_charging: 0.02, driver_failed: 0.05}
+  - id: lint
+    text:
+      en: Is there lint or dirt in the phone's port or on the plug?
+      hi: क्या फ़ोन के पोर्ट या प्लग पर धूल या गंदगी है?
+    p_yes: {source_device: 0.10, jack_dirty: 0.75, cable_break: 0.10, pairing_glitch: 0.05, not_charging: 0.10, driver_failed: 0.10}
+  - id: lights_up
+    text:
+      en: Does the silent earbud light up or charge in its case?
+      hi: क्या बंद ईयरबड केस में जलता या चार्ज होता है?
+    p_yes: {source_device: 0.90, jack_dirty: 0.90, cable_break: 0.90, pairing_glitch: 0.90, not_charging: 0.15, driver_failed: 0.85}
+  - id: one_side
+    text:
+      en: Is only one side silent?
+      hi: क्या सिर्फ़ एक तरफ़ आवाज़ नहीं आती?
+    p_yes: {source_device: 0.50, jack_dirty: 0.60, cable_break: 0.80, pairing_glitch: 0.75, not_charging: 0.75, driver_failed: 0.80}
+
+procedures:
+  check_device:
+    title: {en: Check your phone, hi: अपना फ़ोन जांचें}
+    safety_level: 0
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Try the headphones on another phone or laptop. Both sides work? Your phone is the problem.
+          hi: हेडफ़ोन दूसरे फ़ोन या लैपटॉप पर चलाकर देखें। दोनों तरफ़ चलें? तो समस्या आपके फ़ोन में है।
+        sources: [anker_headphones]
+      - text:
+          en: In your phone's sound or accessibility settings, check the left–right balance is in the middle and mono audio is off.
+          hi: फ़ोन की साउंड या एक्सेसिबिलिटी सेटिंग में देखें कि बाएं–दाएं बैलेंस बीच में है और मोनो ऑडियो बंद है।
+        sources: []
+      - text:
+          en: Restart your phone and try again.
+          hi: फ़ोन रीस्टार्ट करके फिर से देखें।
+        sources: []
+    verify: {en: Both sides play clearly., hi: दोनों तरफ़ साफ़ आवाज़ आती है।}
+    prevent: {en: Keep your phone's audio port free of dust., hi: फ़ोन के ऑडियो पोर्ट को धूल से बचाएं।}
+    prevent_sources: [anker_headphones]
+
+  clean_jack:
+    title: {en: Clean the jack and plug, hi: जैक और प्लग साफ़ करें}
+    safety_level: 0
+    minutes: 10
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 50, basis: estimate}
+    tools:
+      en: [Wooden or plastic toothpick, Torch, Isopropyl alcohol, Soft cloth]
+      hi: [लकड़ी या प्लास्टिक की टूथपिक, टॉर्च, आइसोप्रोपिल अल्कोहल, मुलायम कपड़ा]
+    steps:
+      - text:
+          en: Switch the phone off. Shine a light into the port to spot lint.
+          hi: फ़ोन बंद करें। पोर्ट में टॉर्च डालकर धूल देखें।
+        sources: [anker_headphones]
+      - text:
+          en: Gently loosen the lint with a wooden or plastic toothpick.
+          hi: लकड़ी या प्लास्टिक की टूथपिक से धूल धीरे से निकालें।
+        caution: {en: No metal tools, and never put liquid in the port., hi: धातु की चीज़ें नहीं, और पोर्ट में कभी तरल न डालें।}
+        sources: [anker_headphones]
+      - text:
+          en: Wipe the metal plug with a cloth lightly dampened with isopropyl alcohol.
+          hi: धातु के प्लग को आइसोप्रोपिल अल्कोहल से हल्का गीले कपड़े से पोंछें।
+        sources: [anker_headphones]
+      - text:
+          en: Let it dry completely, then push the plug in until it clicks.
+          hi: पूरी तरह सूखने दें, फिर प्लग को क्लिक होने तक अंदर डालें।
+        sources: [anker_headphones]
+    verify: {en: Both sides play without crackling., hi: दोनों तरफ़ बिना खरखराहट के आवाज़ आती है।}
+    prevent: {en: Keep the plug and port clean and dry., hi: प्लग और पोर्ट को साफ़ और सूखा रखें।}
+    prevent_sources: [anker_headphones]
+
+  cable_replace:
+    title: {en: Fix or replace the cable, hi: तार ठीक कराएं या बदलें}
+    safety_level: 1
+    minutes: 10
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 100, max: 500, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Play music and bend the cable along its length. The spot where sound cuts out is the break.
+          hi: गाना चलाकर तार को पूरी लंबाई में मोड़ें। जहाँ आवाज़ कटे, वहीं तार टूटा है।
+        sources: [anker_headphones]
+      - text:
+          en: Does the cable unplug from the headphones? Swap in a new one.
+          hi: क्या तार हेडफ़ोन से निकलता है? नया तार लगा दें।
+        sources: [anker_headphones]
+      - text:
+          en: Fixed cable? A repair shop can re-solder it, but replacing older headphones is often more practical.
+          hi: तार जुड़ा हुआ है? रिपेयर की दुकान इसे सोल्डर कर सकती है, पर पुराने हेडफ़ोन बदलना अक्सर बेहतर है।
+        sources: [anker_headphones]
+    verify: {en: Sound stays on when you bend the cable., hi: तार मोड़ने पर भी आवाज़ बनी रहती है।}
+    prevent: {en: Pull by the plug, not the cable, and don't wrap it tightly., hi: तार नहीं, प्लग पकड़कर निकालें, और तार को कसकर न लपेटें।}
+    prevent_sources: [anker_headphones]
+
+  reset_earbuds:
+    title: {en: Reset and re-pair the earbuds, hi: ईयरबड्स रीसेट और फिर से पेयर करें}
+    safety_level: 0
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Put both earbuds in the case, check they sit on the pins, and close the lid for 10 seconds.
+          hi: दोनों ईयरबड केस में रखें, देखें कि पिन पर बैठे हैं, और ढक्कन 10 सेकंड बंद रखें।
+        sources: [anker_earbuds]
+      - text:
+          en: On your phone, forget the earbuds in Bluetooth settings.
+          hi: फ़ोन की ब्लूटूथ सेटिंग में ईयरबड्स को "फ़ॉरगेट" करें।
+        sources: [anker_earbuds]
+      - text:
+          en: Take both out at the same time and pair them again.
+          hi: दोनों को एक साथ निकालें और फिर से पेयर करें।
+        sources: [anker_earbuds]
+      - text:
+          en: Still one-sided? Do a factory reset. On many models you hold the touch buttons for about 15 seconds; check your manual.
+          hi: अब भी एक तरफ़? फ़ैक्टरी रीसेट करें। कई मॉडल में टच बटन लगभग 15 सेकंड दबाने होते हैं; मैनुअल देखें।
+        sources: [anker_earbuds]
+    verify: {en: Both earbuds play together., hi: दोनों ईयरबड साथ में बजते हैं।}
+    prevent: {en: Take both earbuds out together when you start., hi: शुरू करते समय दोनों ईयरबड एक साथ निकालें।}
+    prevent_sources: [anker_earbuds]
+
+  clean_contacts_charge:
+    title: {en: Clean the contacts and charge, hi: कॉन्टैक्ट साफ़ करें और चार्ज करें}
+    safety_level: 0
+    minutes: 120
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 50, basis: estimate}
+    tools:
+      en: [Isopropyl alcohol (90% or more), Cotton swab or microfibre cloth, Dry toothbrush]
+      hi: [आइसोप्रोपिल अल्कोहल (90% या ज़्यादा), रुई या माइक्रोफ़ाइबर कपड़ा, सूखा टूथब्रश]
+    steps:
+      - text:
+          en: Clean the gold pins on the earbuds and in the case with isopropyl alcohol on a swab.
+          hi: ईयरबड और केस के सुनहरे पिन को रुई पर आइसोप्रोपिल अल्कोहल लगाकर साफ़ करें।
+        caution: {en: Don't use water., hi: पानी का इस्तेमाल न करें।}
+        sources: [anker_earbuds]
+      - text:
+          en: Brush the speaker mesh gently with a dry toothbrush.
+          hi: स्पीकर की जाली को सूखे टूथब्रश से धीरे से साफ़ करें।
+        sources: [anker_earbuds]
+      - text:
+          en: Put both earbuds in the case and charge it from a wall socket for about 2 hours.
+          hi: दोनों ईयरबड केस में रखें और लगभग 2 घंटे दीवार के सॉकेट से चार्ज करें।
+        sources: [anker_earbuds]
+    verify: {en: The earbud lights up and plays sound., hi: ईयरबड जलता है और आवाज़ देता है।}
+    prevent: {en: Wipe sweat and earwax off the pins now and then., hi: पिन से पसीना और कान का मैल समय-समय पर पोंछें।}
+    prevent_sources: [anker_earbuds]
+
+  replace_headphones:
+    title: {en: Replace or claim warranty, hi: बदलें या वारंटी लें}
+    safety_level: 0
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 300, max: 3000, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Still silent after every check? The speaker or inside wiring has likely failed.
+          hi: सब जांचने के बाद भी आवाज़ नहीं? अंदर का स्पीकर या वायरिंग शायद खराब है।
+        sources: [anker_headphones]
+      - text:
+          en: Check your warranty card or bill. Under warranty, ask the brand for a replacement.
+          hi: वारंटी कार्ड या बिल देखें। वारंटी में हो तो ब्रांड से बदलवाएं।
+        sources: []
+      - text:
+          en: Otherwise, replacing is usually more practical than repair.
+          hi: वरना, ठीक कराने से बदलना आमतौर पर बेहतर है।
+        sources: [anker_headphones]
+    verify: {en: Your new pair plays on both sides., hi: नए हेडफ़ोन दोनों तरफ़ बजते हैं।}
+    prevent: {en: Pull by the plug, not the cable., hi: तार नहीं, प्लग पकड़कर निकालें।}
+    prevent_sources: [anker_headphones]

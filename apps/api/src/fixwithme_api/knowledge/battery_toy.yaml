@@ -1,0 +1,227 @@
+# Battery-powered toys and TV/AC remotes: curated fault knowledge (Tier A, draft).
+# See ceiling_fan.yaml for what "draft" and the likelihood numbers mean. Children are often
+# nearby, so both battery safety questions come first.
+
+id: battery_toy
+version: 0.1.0
+review_status: draft
+names: {en: Toy or remote, hi: खिलौना या रिमोट}
+aliases:
+  - '\b(?:toys?|khilona\w*|remote\s*car|rc\s*car|doll|robot\s*toy)\b'
+  - '\b(?:remote|remote\s*control)\b'
+  - 'खिलौन|रिमोट'
+
+sources:
+  bobvila_corrosion:
+    title: "How to Clean Battery Corrosion in 4 Steps (Bob Vila)"
+    url: https://www.bobvila.com/articles/how-to-clean-battery-corrosion/
+    accessed: 2026-10-24
+  cambridge_remote:
+    title: "Why isn't my remote control working? (Cambridge Audio)"
+    url: https://www.cambridgeaudio.com/usa/en/faqs/why-isnt-my-tv2-remote-control-working
+    accessed: 2026-10-24
+  anses_button:
+    title: "Button batteries: ingestion by young children can have serious consequences (ANSES)"
+    url: https://www.anses.fr/en/content/button-batteries-ingestion-young-children-can-have-serious-consequences
+    accessed: 2026-10-24
+  reading_swollen:
+    title: "I have a swollen lithium-ion battery, what should I do? (University of Reading)"
+    url: https://www.reading.ac.uk/health-safety-services/fire-safety/lithium-battery-information/i-have-a-swollen-lithium-ion-battery-what-should-i-do
+    accessed: 2026-10-24
+
+causes:
+  - id: batteries_dead
+    component: primary_battery
+    name: {en: Flat or wrongly fitted batteries, hi: खाली या उल्टी लगी बैटरी}
+    short: {en: batteries, hi: बैटरी}
+    prior: 0.35
+    procedure: replace_batteries
+    sources: [cambridge_remote]
+  - id: contacts_corroded
+    component: battery_contacts
+    name: {en: Corroded battery contacts, hi: बैटरी कॉन्टैक्ट पर जंग}
+    short: {en: battery contacts, hi: बैटरी कॉन्टैक्ट}
+    prior: 0.20
+    procedure: clean_corrosion
+    sources: [bobvila_corrosion]
+  - id: remote_faulty
+    component: ir_emitter
+    name: {en: Remote not sending a signal, hi: रिमोट सिग्नल नहीं भेज रहा}
+    short: {en: remote's signal, hi: रिमोट का सिग्नल}
+    prior: 0.10
+    procedure: test_remote_ir
+    sources: [cambridge_remote]
+  - id: drive_jammed
+    component: drive_train
+    name: {en: Wheels or gears jammed, hi: पहिए या गियर फंसे हुए}
+    short: {en: jammed wheels, hi: फंसे पहिए}
+    prior: 0.15
+    procedure: clear_jam
+    sources: []
+  - id: wire_loose
+    component: internal_wiring
+    name: {en: Loose wire or switch inside, hi: अंदर ढीला तार या स्विच}
+    short: {en: inside wiring, hi: अंदर की वायरिंग}
+    prior: 0.20
+    procedure: refer_electronics
+    sources: []
+
+questions:
+  - id: swallowed
+    safety: true
+    hazard: button_cell
+    text:
+      en: Could a child have swallowed a battery?
+      hi: क्या किसी बच्चे ने बैटरी निगल ली हो सकती है?
+    p_yes: {batteries_dead: 0.01, contacts_corroded: 0.01, remote_faulty: 0.01, drive_jammed: 0.01, wire_loose: 0.01}
+  - id: swollen
+    safety: true
+    hazard: battery_swollen
+    text:
+      en: Is any rechargeable battery swollen or hot?
+      hi: क्या कोई रिचार्जेबल बैटरी फूली हुई या गर्म है?
+    p_yes: {batteries_dead: 0.02, contacts_corroded: 0.02, remote_faulty: 0.01, drive_jammed: 0.02, wire_loose: 0.03}
+  - id: is_remote
+    text:
+      en: Is it a TV or AC remote (not a remote-control toy)?
+      hi: क्या यह टीवी या एसी का रिमोट है (रिमोट वाला खिलौना नहीं)?
+    p_yes: {batteries_dead: 0.35, contacts_corroded: 0.35, remote_faulty: 0.97, drive_jammed: 0.01, wire_loose: 0.20}
+  - id: fresh_tried
+    text:
+      en: Did you try fresh batteries, fitted the right way round?
+      hi: क्या आपने नई बैटरी, सही दिशा में लगाकर देखी?
+    p_yes: {batteries_dead: 0.10, contacts_corroded: 0.60, remote_faulty: 0.70, drive_jammed: 0.60, wire_loose: 0.65}
+  - id: crust
+    text:
+      en: Any white or green crust on the battery springs?
+      hi: क्या बैटरी के स्प्रिंग पर सफ़ेद या हरी परत जमी है?
+    p_yes: {batteries_dead: 0.10, contacts_corroded: 0.90, remote_faulty: 0.05, drive_jammed: 0.05, wire_loose: 0.05}
+  - id: lights_no_move
+    text:
+      en: Do the lights or sounds work, but it won't move?
+      hi: क्या लाइट या आवाज़ चलती है, पर यह हिलता नहीं?
+    p_yes: {batteries_dead: 0.30, contacts_corroded: 0.10, remote_faulty: 0.05, drive_jammed: 0.85, wire_loose: 0.25}
+  - id: camera_light
+    text:
+      en: Point the remote at your phone camera and press a button. Do you see a light on the screen?
+      hi: रिमोट को फ़ोन के कैमरे की ओर करके बटन दबाएं। क्या स्क्रीन पर रोशनी दिखती है?
+    p_yes: {batteries_dead: 0.15, contacts_corroded: 0.25, remote_faulty: 0.05, drive_jammed: 0.50, wire_loose: 0.40}
+  - id: tap_works
+    text:
+      en: Does it work sometimes if you tap or shake it?
+      hi: क्या थपथपाने या हिलाने पर कभी-कभी चलता है?
+    p_yes: {batteries_dead: 0.20, contacts_corroded: 0.45, remote_faulty: 0.15, drive_jammed: 0.20, wire_loose: 0.75}
+
+procedures:
+  replace_batteries:
+    title: {en: Fit fresh batteries, hi: नई बैटरी लगाएं}
+    safety_level: 0
+    minutes: 5
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 20, max: 150, basis: estimate}
+    tools: {en: [Fresh batteries of the same type, Small screwdriver], hi: [उसी तरह की नई बैटरी, छोटा पेचकस]}
+    steps:
+      - text:
+          en: Take out the old batteries and replace all of them at once.
+          hi: पुरानी बैटरी निकालें और सब एक साथ बदलें।
+        sources: [cambridge_remote]
+      - text:
+          en: Match the + and – marks inside the compartment.
+          hi: खाने के अंदर बने + और – निशान से मिलाकर लगाएं।
+        sources: []
+      - text:
+          en: Close the battery cover fully, and screw it shut if it has a screw.
+          hi: बैटरी का ढक्कन पूरा बंद करें, पेंच हो तो कस दें।
+        caution: {en: Keep button batteries away from children, including used ones., hi: बटन बैटरी बच्चों से दूर रखें, पुरानी भी।}
+        sources: [anses_button]
+    verify: {en: It switches on and works normally., hi: यह चालू होकर ठीक से चलता है।}
+    prevent: {en: Remove batteries from toys you won't use for a while., hi: जो खिलौने कुछ समय इस्तेमाल न हों, उनसे बैटरी निकाल दें।}
+    prevent_sources: [bobvila_corrosion]
+
+  clean_corrosion:
+    title: {en: Clean the battery contacts, hi: बैटरी कॉन्टैक्ट साफ़ करें}
+    safety_level: 1
+    minutes: 15
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 50, basis: estimate}
+    tools:
+      en: [Gloves, Safety glasses, Vinegar or lemon juice, Cotton swabs, Old toothbrush, Rubbing alcohol]
+      hi: [दस्ताने, सेफ़्टी चश्मा, सिरका या नींबू का रस, रुई, पुराना टूथब्रश, रबिंग अल्कोहल]
+    steps:
+      - text:
+          en: Take the batteries out. Put on gloves and glasses, and spread newspaper.
+          hi: बैटरी निकालें। दस्ताने और चश्मा पहनें, नीचे अख़बार बिछाएं।
+        caution: {en: Keep the residue away from your eyes and skin., hi: यह परत आंखों और त्वचा से दूर रखें।}
+        sources: [bobvila_corrosion]
+      - text:
+          en: Dab vinegar or lemon juice on the crust with a cotton swab. Wait a minute, then wipe it off.
+          hi: रुई से सिरका या नींबू का रस परत पर लगाएं। एक मिनट रुककर पोंछ दें।
+        sources: [bobvila_corrosion]
+      - text:
+          en: Scrub stubborn spots with an old toothbrush.
+          hi: ज़िद्दी दाग़ पुराने टूथब्रश से रगड़ें।
+        sources: [bobvila_corrosion]
+      - text:
+          en: Wipe with rubbing alcohol and let it dry completely before fitting fresh batteries.
+          hi: रबिंग अल्कोहल से पोंछें और नई बैटरी लगाने से पहले पूरी तरह सूखने दें।
+        sources: [bobvila_corrosion]
+    verify: {en: It works with fresh batteries., hi: नई बैटरी से यह चलता है।}
+    prevent: {en: Take batteries out of anything stored for a long time., hi: लंबे समय तक रखी चीज़ों से बैटरी निकाल दें।}
+    prevent_sources: [bobvila_corrosion]
+
+  test_remote_ir:
+    title: {en: Test the remote with your phone camera, hi: फ़ोन कैमरे से रिमोट जांचें}
+    safety_level: 0
+    minutes: 2
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [], hi: []}
+    steps:
+      - text:
+          en: Open your phone camera and point the remote's front at the lens.
+          hi: फ़ोन का कैमरा खोलें और रिमोट का आगे का हिस्सा लेंस की ओर करें।
+        sources: [cambridge_remote]
+      - text:
+          en: Press and hold a button. A light on the screen means the remote works. Check the TV instead.
+          hi: एक बटन दबाकर रखें। स्क्रीन पर रोशनी दिखे तो रिमोट ठीक है। टीवी की जांच करें।
+        sources: [cambridge_remote]
+      - text:
+          en: No light, even with fresh batteries? The remote is faulty. Replace it.
+          hi: नई बैटरी से भी रोशनी नहीं? रिमोट खराब है। इसे बदल दें।
+        sources: [cambridge_remote]
+    verify: {en: You see a light when you press a button., hi: बटन दबाने पर रोशनी दिखती है।}
+    prevent: {en: Test each button this way to find a dead one., hi: हर बटन ऐसे ही जांचकर खराब बटन पहचानें।}
+    prevent_sources: [cambridge_remote]
+
+  clear_jam:
+    title: {en: Clear the wheels and gears, hi: पहिए और गियर साफ़ करें}
+    safety_level: 1
+    minutes: 10
+    difficulty: {en: Easy, hi: आसान}
+    cost_inr: {min: 0, max: 0, basis: estimate}
+    tools: {en: [Tweezers, Small scissors], hi: [चिमटी, छोटी कैंची]}
+    steps:
+      - text:
+          en: Switch it off and take the batteries out.
+          hi: इसे बंद करें और बैटरी निकाल दें।
+        sources: []
+      - text:
+          en: Pull hair, thread or carpet fluff off the wheels and axles with tweezers.
+          hi: चिमटी से पहियों और धुरी में फंसे बाल, धागे या रोएं निकालें।
+        sources: []
+      - text:
+          en: Turn the wheels by hand. They should move freely before you fit the batteries back.
+          hi: पहियों को हाथ से घुमाएं। बैटरी लगाने से पहले ये आसानी से घूमने चाहिए।
+        sources: []
+    verify: {en: It moves again., hi: यह फिर से चलता है।}
+    prevent: {en: Run it on hard floors rather than carpets., hi: इसे कालीन की जगह सख़्त फ़र्श पर चलाएं।}
+    prevent_sources: []
+
+  refer_electronics:
+    title: {en: Needs a small electronics repair, hi: छोटी इलेक्ट्रॉनिक रिपेयर चाहिए}
+    safety_level: 3
+    professional: {en: Electronics or toy repair shop, hi: इलेक्ट्रॉनिक या खिलौना रिपेयर की दुकान}
+    reason:
+      en: A loose wire or worn switch inside needs opening up and soldering.
+      hi: अंदर का ढीला तार या घिसा स्विच खोलकर सोल्डर करना पड़ता है।
+    sources: []

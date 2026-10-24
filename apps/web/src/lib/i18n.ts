@@ -47,9 +47,10 @@ const STRINGS = {
   goBack: { en: "Go back", hi: "वापस जाएं" },
   tip: { en: "Tip", hi: "सुझाव" },
   onlyFans: {
-    en: "For now I can only fix ceiling fans. More soon!",
-    hi: "अभी मैं सिर्फ़ छत के पंखे ठीक कर सकता हूँ। जल्द और भी!",
+    en: "For now I can help with ceiling fans, extension boards, earphones, and toys or remotes. More soon!",
+    hi: "अभी मैं छत के पंखे, एक्सटेंशन बोर्ड, ईयरफ़ोन, और खिलौने या रिमोट में मदद कर सकता हूँ। जल्द और भी!",
   },
+  noneOfThese: { en: "None of these", hi: "इनमें से कोई नहीं" },
   language: { en: "Switch to Hindi", hi: "Switch to English" },
 } as const;
 
