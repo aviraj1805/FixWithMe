@@ -1,0 +1,334 @@
+[
+ {
+  "system": "gemini_text",
+  "cases_scored": 94,
+  "top1": 0.813,
+  "top3": 0.907,
+  "stop_recall": 0.846,
+  "hazard_match": 0.846,
+  "false_stop_rate": 0.049,
+  "out_of_scope_ok": 1.0,
+  "n": {
+   "cause": 75,
+   "stop": 13,
+   "out_of_scope": 6
+  },
+  "missed_stops": [
+   "fan-20",
+   "toy-22"
+  ],
+  "by_lang": {
+   "en": {
+    "top1": 0.744,
+    "n": 39
+   },
+   "hi": {
+    "top1": 0.867,
+    "n": 15
+   },
+   "hinglish": {
+    "top1": 0.905,
+    "n": 21
+   }
+  },
+  "by_tag": {
+   "atypical": {
+    "top1": 0.857,
+    "n": 7
+   },
+   "hard": {
+    "top1": 0.5,
+    "n": 10
+   },
+   "typical": {
+    "top1": 0.862,
+    "n": 58
+   }
+  },
+  "by_product": {
+   "battery_toy": {
+    "top1": 0.833,
+    "n": 18
+   },
+   "ceiling_fan": {
+    "top1": 0.833,
+    "n": 18
+   },
+   "extension_board": {
+    "top1": 0.684,
+    "n": 19
+   },
+   "headphones": {
+    "top1": 0.9,
+    "n": 20
+   }
+  },
+  "mean_latency_s": 5.1
+ },
+ {
+  "system": "gemini_facts",
+  "cases_scored": 94,
+  "top1": 0.853,
+  "top3": 0.893,
+  "stop_recall": 1.0,
+  "hazard_match": 1.0,
+  "false_stop_rate": 0.0,
+  "out_of_scope_ok": 1.0,
+  "n": {
+   "cause": 75,
+   "stop": 13,
+   "out_of_scope": 6
+  },
+  "missed_stops": [],
+  "by_lang": {
+   "en": {
+    "top1": 0.846,
+    "n": 39
+   },
+   "hi": {
+    "top1": 0.8,
+    "n": 15
+   },
+   "hinglish": {
+    "top1": 0.905,
+    "n": 21
+   }
+  },
+  "by_tag": {
+   "atypical": {
+    "top1": 1.0,
+    "n": 7
+   },
+   "hard": {
+    "top1": 0.7,
+    "n": 10
+   },
+   "typical": {
+    "top1": 0.862,
+    "n": 58
+   }
+  },
+  "by_product": {
+   "battery_toy": {
+    "top1": 0.556,
+    "n": 18
+   },
+   "ceiling_fan": {
+    "top1": 0.889,
+    "n": 18
+   },
+   "extension_board": {
+    "top1": 0.947,
+    "n": 19
+   },
+   "headphones": {
+    "top1": 1.0,
+    "n": 20
+   }
+  },
+  "mean_latency_s": 5.64
+ },
+ {
+  "system": "engine_rules_before_fix",
+  "cases_scored": 94,
+  "top1": 0.827,
+  "top3": 0.933,
+  "stop_recall": 0.923,
+  "hazard_match": 0.923,
+  "false_stop_rate": 0.0,
+  "out_of_scope_ok": 1.0,
+  "n": {
+   "cause": 75,
+   "stop": 13,
+   "out_of_scope": 6
+  },
+  "missed_stops": [
+   "eb-22"
+  ],
+  "by_lang": {
+   "en": {
+    "top1": 0.821,
+    "n": 39
+   },
+   "hi": {
+    "top1": 0.8,
+    "n": 15
+   },
+   "hinglish": {
+    "top1": 0.857,
+    "n": 21
+   }
+  },
+  "by_tag": {
+   "atypical": {
+    "top1": 1.0,
+    "n": 7
+   },
+   "hard": {
+    "top1": 0.6,
+    "n": 10
+   },
+   "typical": {
+    "top1": 0.845,
+    "n": 58
+   }
+  },
+  "by_product": {
+   "battery_toy": {
+    "top1": 0.889,
+    "n": 18
+   },
+   "ceiling_fan": {
+    "top1": 0.889,
+    "n": 18
+   },
+   "extension_board": {
+    "top1": 0.789,
+    "n": 19
+   },
+   "headphones": {
+    "top1": 0.75,
+    "n": 20
+   }
+  },
+  "avg_questions": 2.88,
+  "safety_checks_on_non_safety_cases": 0.0,
+  "brier_top1": 0.146,
+  "mean_confidence": 0.685,
+  "mean_latency_s": 0.03
+ },
+ {
+  "system": "engine_rules",
+  "cases_scored": 94,
+  "top1": 0.92,
+  "top3": 0.96,
+  "stop_recall": 1.0,
+  "hazard_match": 1.0,
+  "false_stop_rate": 0.0,
+  "out_of_scope_ok": 1.0,
+  "n": {
+   "cause": 75,
+   "stop": 13,
+   "out_of_scope": 6
+  },
+  "missed_stops": [],
+  "by_lang": {
+   "en": {
+    "top1": 0.872,
+    "n": 39
+   },
+   "hi": {
+    "top1": 1.0,
+    "n": 15
+   },
+   "hinglish": {
+    "top1": 0.952,
+    "n": 21
+   }
+  },
+  "by_tag": {
+   "atypical": {
+    "top1": 1.0,
+    "n": 7
+   },
+   "hard": {
+    "top1": 0.6,
+    "n": 10
+   },
+   "typical": {
+    "top1": 0.966,
+    "n": 58
+   }
+  },
+  "by_product": {
+   "battery_toy": {
+    "top1": 1.0,
+    "n": 18
+   },
+   "ceiling_fan": {
+    "top1": 0.889,
+    "n": 18
+   },
+   "extension_board": {
+    "top1": 1.0,
+    "n": 19
+   },
+   "headphones": {
+    "top1": 0.8,
+    "n": 20
+   }
+  },
+  "avg_questions": 3.73,
+  "safety_checks_on_non_safety_cases": 0.012,
+  "brier_top1": 0.105,
+  "mean_confidence": 0.763,
+  "mean_latency_s": 0.04
+ },
+ {
+  "system": "engine_gemini",
+  "cases_scored": 94,
+  "top1": 0.907,
+  "top3": 0.96,
+  "stop_recall": 1.0,
+  "hazard_match": 1.0,
+  "false_stop_rate": 0.0,
+  "out_of_scope_ok": 1.0,
+  "n": {
+   "cause": 75,
+   "stop": 13,
+   "out_of_scope": 6
+  },
+  "missed_stops": [],
+  "by_lang": {
+   "en": {
+    "top1": 0.846,
+    "n": 39
+   },
+   "hi": {
+    "top1": 1.0,
+    "n": 15
+   },
+   "hinglish": {
+    "top1": 0.952,
+    "n": 21
+   }
+  },
+  "by_tag": {
+   "atypical": {
+    "top1": 1.0,
+    "n": 7
+   },
+   "hard": {
+    "top1": 0.5,
+    "n": 10
+   },
+   "typical": {
+    "top1": 0.966,
+    "n": 58
+   }
+  },
+  "by_product": {
+   "battery_toy": {
+    "top1": 1.0,
+    "n": 18
+   },
+   "ceiling_fan": {
+    "top1": 0.889,
+    "n": 18
+   },
+   "extension_board": {
+    "top1": 0.947,
+    "n": 19
+   },
+   "headphones": {
+    "top1": 0.8,
+    "n": 20
+   }
+  },
+  "avg_questions": 3.43,
+  "safety_checks_on_non_safety_cases": 0.012,
+  "brier_top1": 0.107,
+  "mean_confidence": 0.767,
+  "mean_latency_s": 3.93
+ }
+]

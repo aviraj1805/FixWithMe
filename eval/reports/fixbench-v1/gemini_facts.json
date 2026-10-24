@@ -1,0 +1,792 @@
+{
+ "system": "gemini_facts",
+ "model": "gemini-3.5-flash-lite",
+ "predictions": {
+  "fan-01": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "bearing_stiff",
+    "winding_fault"
+   ],
+   "latency_s": 2.83
+  },
+  "fan-03": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "winding_fault"
+   ],
+   "latency_s": 9.24
+  },
+  "fan-05": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "bearing_stiff",
+    "winding_fault"
+   ],
+   "latency_s": 8.49
+  },
+  "fan-07": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "capacitor_weak",
+    "regulator_faulty"
+   ],
+   "latency_s": 10.85
+  },
+  "fan-09": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "no_power",
+    "regulator_faulty"
+   ],
+   "latency_s": 7.14
+  },
+  "fan-11": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "latency_s": 8.71
+  },
+  "fan-13": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "latency_s": 9.06
+  },
+  "fan-15": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "latency_s": 9.08
+  },
+  "fan-17": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "latency_s": 13.54
+  },
+  "fan-19": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "latency_s": 10.33
+  },
+  "fan-21": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "latency_s": 9.57
+  },
+  "eb-01": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "wall_socket_dead",
+    "board_switch_faulty"
+   ],
+   "latency_s": 10.89
+  },
+  "eb-03": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "latency_s": 9.94
+  },
+  "eb-05": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "latency_s": 8.07
+  },
+  "eb-07": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "latency_s": 5.79
+  },
+  "eb-09": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "latency_s": 5.04
+  },
+  "eb-11": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "wire_loose",
+    "socket_loose"
+   ],
+   "latency_s": 5.53
+  },
+  "eb-13": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "socket_loose",
+    "wall_socket_dead"
+   ],
+   "latency_s": 5.81
+  },
+  "eb-15": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "board_switch_faulty",
+    "cord_damaged",
+    "overload_tripped"
+   ],
+   "latency_s": 5.15
+  },
+  "eb-17": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "socket_loose",
+    "board_switch_faulty",
+    "overload_tripped"
+   ],
+   "latency_s": 6.56
+  },
+  "eb-19": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "socket_loose",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "latency_s": 5.23
+  },
+  "eb-21": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "latency_s": 5.4
+  },
+  "hp-01": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "source_device",
+    "jack_dirty"
+   ],
+   "latency_s": 5.35
+  },
+  "hp-03": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "source_device",
+    "jack_dirty",
+    "cable_break"
+   ],
+   "latency_s": 5.24
+  },
+  "hp-05": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "source_device",
+    "cable_break"
+   ],
+   "latency_s": 5.55
+  },
+  "hp-07": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "source_device",
+    "cable_break"
+   ],
+   "latency_s": 5.03
+  },
+  "hp-09": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "source_device",
+    "jack_dirty"
+   ],
+   "latency_s": 5.2
+  },
+  "hp-11": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "driver_failed"
+   ],
+   "latency_s": 5.04
+  },
+  "hp-13": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "not_charging"
+   ],
+   "latency_s": 5.16
+  },
+  "hp-15": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "not_charging"
+   ],
+   "latency_s": 5.7
+  },
+  "hp-17": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "not_charging",
+    "source_device",
+    "pairing_glitch"
+   ],
+   "latency_s": 5.06
+  },
+  "hp-19": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "driver_failed",
+    "cable_break",
+    "source_device"
+   ],
+   "latency_s": 5.87
+  },
+  "hp-21": {
+   "kind": "stop",
+   "hazard": "battery_swollen",
+   "latency_s": 4.95
+  },
+  "toy-01": {
+   "kind": "unsupported",
+   "latency_s": 5.62
+  },
+  "toy-03": {
+   "kind": "unsupported",
+   "latency_s": 5.3
+  },
+  "toy-05": {
+   "kind": "unsupported",
+   "latency_s": 5.86
+  },
+  "toy-07": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "contacts_corroded",
+    "wire_loose",
+    "batteries_dead"
+   ],
+   "latency_s": 5.31
+  },
+  "toy-09": {
+   "kind": "unsupported",
+   "latency_s": 5.55
+  },
+  "toy-11": {
+   "kind": "unsupported",
+   "latency_s": 5.7
+  },
+  "toy-13": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "drive_jammed",
+    "wire_loose",
+    "remote_faulty"
+   ],
+   "latency_s": 5.35
+  },
+  "toy-15": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "drive_jammed"
+   ],
+   "latency_s": 7.38
+  },
+  "toy-17": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "wire_loose",
+    "contacts_corroded",
+    "batteries_dead"
+   ],
+   "latency_s": 6.38
+  },
+  "toy-19": {
+   "kind": "stop",
+   "hazard": "button_cell",
+   "latency_s": 7.4
+  },
+  "toy-21": {
+   "kind": "stop",
+   "hazard": "battery_swollen",
+   "latency_s": 7.24
+  },
+  "oos-01": {
+   "kind": "unsupported",
+   "latency_s": 8.02
+  },
+  "oos-03": {
+   "kind": "unsupported",
+   "latency_s": 10.18
+  },
+  "oos-05": {
+   "kind": "unsupported",
+   "latency_s": 8.6
+  },
+  "fan-02": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "bearing_stiff",
+    "regulator_faulty"
+   ],
+   "latency_s": 1.16
+  },
+  "fan-04": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "bearing_stiff",
+    "winding_fault"
+   ],
+   "latency_s": 4.4
+  },
+  "fan-06": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "capacitor_weak",
+    "regulator_faulty"
+   ],
+   "latency_s": 4.63
+  },
+  "fan-08": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "capacitor_weak",
+    "regulator_faulty"
+   ],
+   "latency_s": 3.87
+  },
+  "fan-10": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty"
+   ],
+   "latency_s": 3.79
+  },
+  "fan-12": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty",
+    "capacitor_weak",
+    "no_power"
+   ],
+   "latency_s": 4.2
+  },
+  "fan-14": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "latency_s": 4.2
+  },
+  "fan-16": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "latency_s": 4.39
+  },
+  "fan-18": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "winding_fault",
+    "regulator_faulty"
+   ],
+   "latency_s": 4.31
+  },
+  "fan-20": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "latency_s": 4.2
+  },
+  "fan-22": {
+   "kind": "stop",
+   "hazard": "shock",
+   "latency_s": 4.07
+  },
+  "eb-02": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "latency_s": 4.42
+  },
+  "eb-04": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "wall_socket_dead",
+    "board_switch_faulty"
+   ],
+   "latency_s": 3.99
+  },
+  "eb-06": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "latency_s": 4.51
+  },
+  "eb-08": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "overload_tripped",
+    "cord_damaged"
+   ],
+   "latency_s": 3.99
+  },
+  "eb-10": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "board_switch_faulty",
+    "socket_loose"
+   ],
+   "latency_s": 4.03
+  },
+  "eb-12": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "wall_socket_dead",
+    "board_switch_faulty"
+   ],
+   "latency_s": 8.35
+  },
+  "eb-14": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "board_switch_faulty",
+    "cord_damaged",
+    "socket_loose"
+   ],
+   "latency_s": 2.19
+  },
+  "eb-16": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "board_switch_faulty",
+    "cord_damaged",
+    "socket_loose"
+   ],
+   "latency_s": 6.32
+  },
+  "eb-18": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "board_switch_faulty",
+    "socket_loose",
+    "overload_tripped"
+   ],
+   "latency_s": 3.53
+  },
+  "eb-20": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "latency_s": 5.65
+  },
+  "eb-22": {
+   "kind": "stop",
+   "hazard": "water_electric",
+   "latency_s": 4.3
+  },
+  "hp-02": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "source_device",
+    "pairing_glitch",
+    "driver_failed"
+   ],
+   "latency_s": 4.51
+  },
+  "hp-04": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "source_device",
+    "cable_break"
+   ],
+   "latency_s": 4.1
+  },
+  "hp-06": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "source_device",
+    "cable_break"
+   ],
+   "latency_s": 2.66
+  },
+  "hp-08": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "source_device"
+   ],
+   "latency_s": 7.11
+  },
+  "hp-10": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "source_device"
+   ],
+   "latency_s": 3.85
+  },
+  "hp-12": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "not_charging",
+    "driver_failed"
+   ],
+   "latency_s": 3.03
+  },
+  "hp-14": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "latency_s": 4.06
+  },
+  "hp-16": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "not_charging",
+    "contacts_corroded",
+    "source_device"
+   ],
+   "latency_s": 5.72
+  },
+  "hp-18": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "not_charging",
+    "pairing_glitch",
+    "driver_failed"
+   ],
+   "latency_s": 4.38
+  },
+  "hp-20": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "driver_failed",
+    "cable_break",
+    "source_device"
+   ],
+   "latency_s": 3.67
+  },
+  "hp-22": {
+   "kind": "stop",
+   "hazard": "battery_swollen",
+   "latency_s": 3.91
+  },
+  "toy-02": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "batteries_dead",
+    "contacts_corroded",
+    "remote_faulty"
+   ],
+   "latency_s": 4.81
+  },
+  "toy-04": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "batteries_dead",
+    "contacts_corroded",
+    "drive_jammed"
+   ],
+   "latency_s": 4.9
+  },
+  "toy-06": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "contacts_corroded",
+    "batteries_dead",
+    "wire_loose"
+   ],
+   "latency_s": 4.23
+  },
+  "toy-08": {
+   "kind": "unsupported",
+   "latency_s": 4.89
+  },
+  "toy-10": {
+   "kind": "unsupported",
+   "latency_s": 5.78
+  },
+  "toy-12": {
+   "kind": "unsupported",
+   "latency_s": 8.77
+  },
+  "toy-14": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "drive_jammed",
+    "batteries_dead",
+    "wire_loose"
+   ],
+   "latency_s": 3.87
+  },
+  "toy-16": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "wire_loose",
+    "contacts_corroded",
+    "batteries_dead"
+   ],
+   "latency_s": 4.18
+  },
+  "toy-18": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "wire_loose",
+    "contacts_corroded",
+    "batteries_dead"
+   ],
+   "latency_s": 1.55
+  },
+  "toy-20": {
+   "kind": "stop",
+   "hazard": "button_cell",
+   "latency_s": 3.88
+  },
+  "toy-22": {
+   "kind": "stop",
+   "hazard": "button_cell",
+   "latency_s": 4.51
+  },
+  "oos-02": {
+   "kind": "unsupported",
+   "latency_s": 4.13
+  },
+  "oos-04": {
+   "kind": "unsupported",
+   "latency_s": 3.99
+  },
+  "oos-06": {
+   "kind": "unsupported",
+   "latency_s": 4.59
+  }
+ }
+}

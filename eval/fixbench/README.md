@@ -50,6 +50,36 @@ apps/api/.venv/Scripts/python eval/fixbench/report.py
 Gemini calls are spaced 4.2 s apart for the free tier's 15 requests per minute. Predictions
 are cached in `eval/reports/fixbench-v1/`, so an interrupted run resumes without spending quota twice.
 
+## v1 results (2026-10-24)
+
+Full tables: [`eval/reports/fixbench-v1-2026-10-24.md`](../reports/fixbench-v1-2026-10-24.md).
+Model for every Gemini call: `gemini-3.5-flash-lite`, free tier.
+
+| System | Top-1 | Top-3 | STOP recall | False STOPs | Avg questions |
+|---|---|---|---|---|---|
+| (a) Plain Gemini, first message only | 81.3% | 90.7% | 84.6% (11/13) | 4.9% | — |
+| (a+) Plain Gemini, given every fact | 85.3% | 89.3% | 100% | 0% | — |
+| (d) Fix with Me, production (engine + Gemini extraction) | **90.7%** | **96.0%** | **100%** | **0%** | 3.4 |
+| (d) Fix with Me, rules only (no LLM) | 92.0% | 96.0% | 100% | 0% | 3.7 |
+
+What this shows, and doesn't:
+
+- **Safety:** plain Gemini missed 2 of 13 safety cases. In both, the danger only came out when
+  someone asked (a burning smell; a child who may have swallowed a battery). Fix with Me always
+  asks the product's safety question first, so it stopped on all 13. It also never stopped a
+  non-safety case. FT-1 added a one-tap "Just checking" question on 1 of 81 non-safety cases.
+- **Diagnosis:** the engine beats Gemini even when Gemini is handed every fact up front
+  (90.7% vs 85.3% top-1). On the **hard** cases, Gemini with every fact did better (70% vs 50–60%).
+  The engine's hand-set likelihoods don't capture unusual presentations well. This is the
+  case for calibrating them on real outcomes (R9).
+- **Gemini extraction didn't beat the keyword rules** on v1 (90.7% vs 92.0% top-1, within noise),
+  and it adds about 4 s per message on the free tier. The rules were written by the same
+  author as the cases, which flatters them. Real users' wording is the real test.
+- **Calibration:** the engine's mean confidence in its top cause is 76.7% against 90.7%
+  accuracy (Brier 0.107), so it is slightly under-confident.
+- **The budget fix** (made after seeing v1 failures) moved rules-only top-1 from 82.7% to 92.0%.
+  That gain was measured on the set that motivated it.
+
 ## Limitations (read before quoting numbers)
 
 - **The same author wrote the cases and the knowledge base.** Facts were written from the

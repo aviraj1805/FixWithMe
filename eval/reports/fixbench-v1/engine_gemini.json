@@ -1,0 +1,1277 @@
+{
+ "system": "engine_gemini",
+ "model": "gemini-3.5-flash-lite",
+ "predictions": {
+  "fan-01": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.93,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 3.25
+  },
+  "fan-02": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.923,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.03
+  },
+  "fan-03": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.9,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.46
+  },
+  "fan-04": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.923,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.93
+  },
+  "fan-05": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "no_power",
+    "regulator_faulty"
+   ],
+   "p_top": 0.693,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.75
+  },
+  "fan-06": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "regulator_faulty",
+    "capacitor_weak"
+   ],
+   "p_top": 0.981,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.66
+  },
+  "fan-07": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "capacitor_weak",
+    "bearing_stiff"
+   ],
+   "p_top": 0.924,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.39
+  },
+  "fan-08": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "regulator_faulty",
+    "capacitor_weak"
+   ],
+   "p_top": 0.981,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 3.02
+  },
+  "fan-09": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "no_power",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.769,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.42
+  },
+  "fan-10": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty",
+    "capacitor_weak",
+    "no_power"
+   ],
+   "p_top": 0.782,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.02
+  },
+  "fan-11": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty",
+    "bearing_stiff",
+    "capacitor_weak"
+   ],
+   "p_top": 0.821,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.79
+  },
+  "fan-12": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "regulator_faulty",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "p_top": 0.711,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.64
+  },
+  "fan-13": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.917,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.44
+  },
+  "fan-14": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "p_top": 0.93,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.95
+  },
+  "fan-15": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "winding_fault"
+   ],
+   "p_top": 0.93,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.61
+  },
+  "fan-16": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "regulator_faulty"
+   ],
+   "p_top": 0.66,
+   "questions": 5,
+   "turns": 7,
+   "confirms": 1,
+   "llm_used": false,
+   "latency_s": 0.82
+  },
+  "fan-17": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "bearing_stiff",
+    "capacitor_weak",
+    "regulator_faulty"
+   ],
+   "p_top": 0.924,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.95
+  },
+  "fan-18": {
+   "kind": "cause",
+   "product": "ceiling_fan",
+   "causes": [
+    "capacitor_weak",
+    "regulator_faulty",
+    "bearing_stiff"
+   ],
+   "p_top": 0.853,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.45
+  },
+  "fan-19": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "fan-20": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "latency_s": 9.05
+  },
+  "fan-21": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "fan-22": {
+   "kind": "stop",
+   "hazard": "shock",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "eb-01": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "p_top": 0.959,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.05
+  },
+  "eb-02": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.856,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.76
+  },
+  "eb-03": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "p_top": 0.959,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.64
+  },
+  "eb-04": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "cord_damaged",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.856,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 8.16
+  },
+  "eb-05": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "p_top": 0.876,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.26
+  },
+  "eb-06": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "overload_tripped",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.938,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 10.3
+  },
+  "eb-07": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "overload_tripped",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.912,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.06
+  },
+  "eb-08": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "overload_tripped",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.912,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 9.87
+  },
+  "eb-09": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "wall_socket_dead",
+    "overload_tripped",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.912,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.05
+  },
+  "eb-10": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "board_switch_faulty",
+    "socket_loose"
+   ],
+   "p_top": 0.785,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.29
+  },
+  "eb-11": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "board_switch_faulty",
+    "overload_tripped"
+   ],
+   "p_top": 0.631,
+   "questions": 9,
+   "turns": 11,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.16
+  },
+  "eb-12": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "overload_tripped",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.531,
+   "questions": 8,
+   "turns": 9,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 9.2
+  },
+  "eb-13": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "cord_damaged",
+    "board_switch_faulty",
+    "overload_tripped"
+   ],
+   "p_top": 0.609,
+   "questions": 9,
+   "turns": 11,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.11
+  },
+  "eb-14": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "board_switch_faulty",
+    "overload_tripped",
+    "cord_damaged"
+   ],
+   "p_top": 0.806,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.23
+  },
+  "eb-15": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "board_switch_faulty",
+    "overload_tripped",
+    "cord_damaged"
+   ],
+   "p_top": 0.839,
+   "questions": 5,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.14
+  },
+  "eb-16": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "overload_tripped",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "p_top": 0.533,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 10.37
+  },
+  "eb-17": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "socket_loose",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "p_top": 0.924,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.05
+  },
+  "eb-18": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "socket_loose",
+    "board_switch_faulty",
+    "cord_damaged"
+   ],
+   "p_top": 0.924,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.86
+  },
+  "eb-19": {
+   "kind": "cause",
+   "product": "extension_board",
+   "causes": [
+    "socket_loose",
+    "overload_tripped",
+    "board_switch_faulty"
+   ],
+   "p_top": 0.754,
+   "questions": 6,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.59
+  },
+  "eb-20": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "eb-21": {
+   "kind": "stop",
+   "hazard": "fire_smoke",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 7.76
+  },
+  "eb-22": {
+   "kind": "stop",
+   "hazard": "water_electric",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "hp-01": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "source_device",
+    "jack_dirty",
+    "pairing_glitch"
+   ],
+   "p_top": 0.799,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.6
+  },
+  "hp-02": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "p_top": 0.526,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.14
+  },
+  "hp-03": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "source_device",
+    "jack_dirty",
+    "driver_failed"
+   ],
+   "p_top": 0.533,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.27
+  },
+  "hp-04": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "cable_break",
+    "source_device"
+   ],
+   "p_top": 0.939,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.67
+  },
+  "hp-05": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "cable_break",
+    "source_device"
+   ],
+   "p_top": 0.725,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.76
+  },
+  "hp-06": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "source_device",
+    "jack_dirty",
+    "pairing_glitch"
+   ],
+   "p_top": 0.585,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.65
+  },
+  "hp-07": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "jack_dirty",
+    "cable_break",
+    "source_device"
+   ],
+   "p_top": 0.759,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.73
+  },
+  "hp-08": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "source_device"
+   ],
+   "p_top": 0.788,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.45
+  },
+  "hp-09": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "driver_failed"
+   ],
+   "p_top": 0.87,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 3.0
+  },
+  "hp-10": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "driver_failed",
+    "jack_dirty"
+   ],
+   "p_top": 0.726,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.92
+  },
+  "hp-11": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "source_device"
+   ],
+   "p_top": 0.788,
+   "questions": 4,
+   "turns": 5,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.5
+  },
+  "hp-12": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "p_top": 0.566,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.38
+  },
+  "hp-13": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "p_top": 0.566,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 3.03
+  },
+  "hp-14": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "p_top": 0.526,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.68
+  },
+  "hp-15": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "p_top": 0.566,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.75
+  },
+  "hp-16": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "not_charging",
+    "pairing_glitch",
+    "driver_failed"
+   ],
+   "p_top": 0.775,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 5.31
+  },
+  "hp-17": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "not_charging",
+    "pairing_glitch",
+    "source_device"
+   ],
+   "p_top": 0.761,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 3.07
+  },
+  "hp-18": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "pairing_glitch",
+    "source_device",
+    "driver_failed"
+   ],
+   "p_top": 0.566,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.17
+  },
+  "hp-19": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "cable_break",
+    "jack_dirty",
+    "source_device"
+   ],
+   "p_top": 0.788,
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 2.23
+  },
+  "hp-20": {
+   "kind": "cause",
+   "product": "headphones",
+   "causes": [
+    "driver_failed",
+    "jack_dirty",
+    "cable_break"
+   ],
+   "p_top": 0.403,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 8.38
+  },
+  "hp-21": {
+   "kind": "stop",
+   "hazard": "battery_swollen",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "hp-22": {
+   "kind": "stop",
+   "hazard": "battery_swollen",
+   "questions": 0,
+   "turns": 2,
+   "confirms": 1,
+   "latency_s": 0.02
+  },
+  "toy-01": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "batteries_dead",
+    "remote_faulty",
+    "wire_loose"
+   ],
+   "p_top": 0.723,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.07
+  },
+  "toy-02": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "batteries_dead",
+    "wire_loose",
+    "drive_jammed"
+   ],
+   "p_top": 0.707,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.94
+  },
+  "toy-03": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "batteries_dead",
+    "remote_faulty",
+    "wire_loose"
+   ],
+   "p_top": 0.691,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.5
+  },
+  "toy-04": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "batteries_dead",
+    "wire_loose",
+    "drive_jammed"
+   ],
+   "p_top": 0.838,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.78
+  },
+  "toy-05": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "contacts_corroded",
+    "remote_faulty",
+    "wire_loose"
+   ],
+   "p_top": 0.863,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.59
+  },
+  "toy-06": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "contacts_corroded",
+    "batteries_dead",
+    "wire_loose"
+   ],
+   "p_top": 0.758,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 8.6
+  },
+  "toy-07": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "contacts_corroded",
+    "batteries_dead",
+    "wire_loose"
+   ],
+   "p_top": 0.754,
+   "questions": 3,
+   "turns": 4,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.04
+  },
+  "toy-08": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "contacts_corroded",
+    "batteries_dead",
+    "remote_faulty"
+   ],
+   "p_top": 0.766,
+   "questions": 2,
+   "turns": 3,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 8.46
+  },
+  "toy-09": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "remote_faulty",
+    "wire_loose",
+    "batteries_dead"
+   ],
+   "p_top": 0.692,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.06
+  },
+  "toy-10": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "remote_faulty",
+    "wire_loose",
+    "batteries_dead"
+   ],
+   "p_top": 0.692,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 7.37
+  },
+  "toy-11": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "remote_faulty",
+    "batteries_dead",
+    "wire_loose"
+   ],
+   "p_top": 0.755,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.04
+  },
+  "toy-12": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "remote_faulty",
+    "contacts_corroded",
+    "wire_loose"
+   ],
+   "p_top": 0.53,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 6.66
+  },
+  "toy-13": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "drive_jammed",
+    "wire_loose",
+    "batteries_dead"
+   ],
+   "p_top": 0.696,
+   "questions": 8,
+   "turns": 9,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 1.78
+  },
+  "toy-14": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "drive_jammed",
+    "batteries_dead",
+    "wire_loose"
+   ],
+   "p_top": 0.511,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 9.23
+  },
+  "toy-15": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "drive_jammed",
+    "wire_loose",
+    "batteries_dead"
+   ],
+   "p_top": 0.696,
+   "questions": 7,
+   "turns": 8,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.07
+  },
+  "toy-16": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "wire_loose",
+    "drive_jammed",
+    "batteries_dead"
+   ],
+   "p_top": 0.747,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 11.29
+  },
+  "toy-17": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "wire_loose",
+    "drive_jammed",
+    "batteries_dead"
+   ],
+   "p_top": 0.747,
+   "questions": 5,
+   "turns": 6,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 0.06
+  },
+  "toy-18": {
+   "kind": "cause",
+   "product": "battery_toy",
+   "causes": [
+    "wire_loose",
+    "drive_jammed",
+    "batteries_dead"
+   ],
+   "p_top": 0.747,
+   "questions": 6,
+   "turns": 7,
+   "confirms": 0,
+   "llm_used": false,
+   "latency_s": 9.16
+  },
+  "toy-19": {
+   "kind": "stop",
+   "hazard": "button_cell",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "toy-20": {
+   "kind": "stop",
+   "hazard": "button_cell",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "toy-21": {
+   "kind": "stop",
+   "hazard": "battery_swollen",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.01
+  },
+  "toy-22": {
+   "kind": "stop",
+   "hazard": "button_cell",
+   "questions": 1,
+   "turns": 2,
+   "confirms": 0,
+   "latency_s": 0.02
+  },
+  "oos-01": {
+   "kind": "unsupported",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 7.59
+  },
+  "oos-02": {
+   "kind": "unsupported",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 0.82
+  },
+  "oos-03": {
+   "kind": "unsupported",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 8.8
+  },
+  "oos-04": {
+   "kind": "unsupported",
+   "questions": 0,
+   "turns": 2,
+   "confirms": 0,
+   "latency_s": 0.02
+  },
+  "oos-05": {
+   "kind": "unsupported",
+   "questions": 0,
+   "turns": 1,
+   "confirms": 0,
+   "latency_s": 15.75
+  },
+  "oos-06": {
+   "kind": "unsupported",
+   "questions": 0,
+   "turns": 2,
+   "confirms": 0,
+   "latency_s": 0.02
+  }
+ }
+}
