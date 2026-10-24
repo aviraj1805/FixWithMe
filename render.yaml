@@ -4,6 +4,7 @@ services:
     name: fixwithme-api
     runtime: docker
     plan: free
+    region: singapore
     rootDir: apps/api
     dockerfilePath: ./Dockerfile
     healthCheckPath: /health

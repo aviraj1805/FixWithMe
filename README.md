@@ -39,3 +39,13 @@ pnpm build   # static export to apps/web/out
 ```
 
 Set `NEXT_PUBLIC_API_URL` to point the web app at a deployed API.
+
+## Deployments
+
+| Part | Where | URL |
+|---|---|---|
+| API | Render (free, Singapore), auto-deploys from `main` | https://fixwithme-api.onrender.com |
+| Web | Cloudflare Pages, auto-deploys from `main` | https://fixwithme.pages.dev |
+| Database | Supabase project `fixwithme` (free, Mumbai `ap-south-1`) | https://hphjixlvvpdvvadyhsrc.supabase.co |
+
+The API sleeps after 15 minutes idle and takes about a minute to wake up.
