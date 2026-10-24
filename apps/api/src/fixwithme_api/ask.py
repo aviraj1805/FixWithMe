@@ -101,6 +101,10 @@ async def ask(req: AskRequest, request: Request) -> AskResponse:
         return AskResponse(state="stop", say=payload["title"], stop=StopOut(**payload))
 
     hazard, source = safety.screen(req.question, use_model=not req.safety_checked)
+    if source == "rules" and not req.safety_checked and safety.informational(req.question):
+        source = "model"  # a general question, not a report: ask "Just checking" once
+    elif source == "rules" and req.safety_checked and safety.informational(req.question):
+        source = None  # the user said it isn't happening to them
     if source == "rules":
         payload = safety.stop_payload(hazard, req.lang)
         return AskResponse(state="stop", say=payload["title"], stop=StopOut(**payload))

@@ -168,6 +168,10 @@ procedures:
     safety_level: 1
     minutes: 10
     difficulty: {en: Easy, hi: आसान}
+    part_spec:
+      kind: replacement headphone cable 3.5 mm
+      match: "Same plug type and length as the old cable (usually 3.5 mm)."
+      sources: [anker_headphones]
     cost_inr: {min: 100, max: 500, basis: estimate}
     tools: {en: [], hi: []}
     steps:
@@ -247,6 +251,10 @@ procedures:
     safety_level: 0
     minutes: 5
     difficulty: {en: Easy, hi: आसान}
+    part_spec:
+      kind: wired earphones with mic
+      match: "Any pair that fits your phone: 3.5 mm, USB-C or Bluetooth."
+      sources: [anker_earbuds]
     cost_inr: {min: 300, max: 3000, basis: estimate}
     tools: {en: [], hi: []}
     steps:

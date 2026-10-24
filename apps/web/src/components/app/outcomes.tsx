@@ -3,7 +3,7 @@
 import { Fixy } from "@/components/fixy/fixy";
 import { Icon, type IconName } from "@/components/ui/icons";
 import { Badge, PrimaryButton } from "@/components/ui/parts";
-import type { Cause, StepResponse } from "@/lib/api";
+import { type Cause, type StepResponse, mapsSearch } from "@/lib/api";
 import { type Lang, t } from "@/lib/i18n";
 
 const ACTION_ICONS: Record<string, IconName[]> = {
@@ -41,6 +41,14 @@ export function Stop({
           className="flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-white text-[15px] font-semibold text-[#B91C1C]"
         >
           <Icon name="phone" size={18} /> {t("call112", lang)}
+        </a>
+        <a
+          href={mapsSearch(t("findElectrician", lang))}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="min-h-11 px-4 pt-3 text-sm font-semibold underline"
+        >
+          {t("findElectrician", lang)}
         </a>
         <button type="button" onClick={onBack} className="min-h-11 px-4 text-sm font-medium underline">
           {t("goBack", lang)}

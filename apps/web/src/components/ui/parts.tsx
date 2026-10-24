@@ -45,6 +45,19 @@ export function FixySays({ mood = "idle", children }: { mood?: Mood; children: R
   );
 }
 
+export function LinkChip({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 text-sm font-medium"
+    >
+      {children}
+    </a>
+  );
+}
+
 export function Chip({
   children,
   onClick,

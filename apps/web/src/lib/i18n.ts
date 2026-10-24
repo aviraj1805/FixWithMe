@@ -82,6 +82,19 @@ const STRINGS = {
   unverified: { en: "Unverified", hi: "जांचा नहीं गया" },
   searchingWeb: { en: "Searching the web…", hi: "वेब पर खोज रहा हूँ…" },
   openGuide: { en: "Open the full guide", hi: "पूरी गाइड खोलें" },
+  buyPart: { en: "Buy the part", hi: "पार्ट खरीदें" },
+  buyNote: {
+    en: "Search results open on the store. Check the spec matches before you buy.",
+    hi: "दुकान पर खोज के नतीजे खुलेंगे। खरीदने से पहले स्पेसिफ़िकेशन मिलाएं।",
+  },
+  findShop: { en: "Find a repair shop", hi: "रिपेयर की दुकान खोजें" },
+  shopQuery: { en: "repair shop near me", hi: "repair shop near me" },
+  findElectrician: { en: "Find an electrician nearby", hi: "पास में इलेक्ट्रीशियन खोजें" },
+  tooMany: {
+    en: "Lots of questions right now! Please try again in a minute.",
+    hi: "अभी बहुत सवाल आ रहे हैं! एक मिनट बाद फिर कोशिश करें।",
+  },
+  privacy: { en: "Privacy & terms", hi: "गोपनीयता और शर्तें" },
   language: { en: "Switch to Hindi", hi: "Switch to English" },
 } as const;
 

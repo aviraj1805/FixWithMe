@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Fixy } from "@/components/fixy/fixy";
 import { Icon, type IconName } from "@/components/ui/icons";
@@ -85,7 +86,10 @@ export function Home({
 
   return (
     <div className="flex flex-1 flex-col">
-      <div className="flex justify-end px-4 pt-3">
+      <div className="flex items-center justify-between px-4 pt-3">
+        <Link href="/privacy/" className="min-h-11 px-2 pt-3 text-sm text-muted underline">
+          {t("privacy", lang)}
+        </Link>
         <button
           type="button"
           onClick={onLang}

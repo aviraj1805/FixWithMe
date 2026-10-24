@@ -42,6 +42,7 @@ export type Procedure = {
   cost_inr: { min: number; max: number; basis: "estimate" } | null;
   tools: string[];
   steps: { text: string; caution: string | null; sources: SourceRef[] }[];
+  part_spec: { kind: string; match: string; sources: string[] } | null;
   verify: string | null;
   prevent: string | null;
   professional: string | null;
@@ -63,13 +64,25 @@ export type AskResponse = {
   search_html: string | null;
 };
 
+export class ApiError extends Error {
+  constructor(
+    public status: number,
+    message: string,
+  ) {
+    super(message);
+  }
+}
+
+export const mapsSearch = (query: string) =>
+  `https://www.google.com/maps/search/${encodeURIComponent(query)}`;
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API_URL}${path}`, {
     ...init,
     headers: { "Content-Type": "application/json", ...init?.headers },
     cache: "no-store",
   });
-  if (!res.ok) throw new Error(`${path} failed: ${res.status}`);
+  if (!res.ok) throw new ApiError(res.status, `${path} failed: ${res.status}`);
   return res.json() as Promise<T>;
 }
 

@@ -166,6 +166,10 @@ procedures:
     safety_level: 1
     minutes: 5
     difficulty: {en: Easy, hi: आसान}
+    part_spec:
+      kind: extension board with circuit breaker
+      match: "ISI-marked, with a built-in circuit breaker and enough sockets for your devices."
+      sources: [ucop_strip]
     cost_inr: {min: 150, max: 600, basis: estimate}
     tools: {en: [], hi: []}
     steps:

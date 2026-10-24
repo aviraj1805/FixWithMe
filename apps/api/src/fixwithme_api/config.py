@@ -50,6 +50,10 @@ class Settings(BaseSettings):
     retrieval_corpus: str | None = None  # local backend: ingest/corpus.jsonl
     retrieval_embeddings: str | None = None  # local backend: ingest/raw/embeddings.json
 
+    # Per-IP limits on POST /v1/* (protects the shared free Gemini quota). 0 disables.
+    rate_per_minute: int = 20
+    rate_per_day: int = 300
+
     # Supabase PostgREST for anonymous outcomes. The publishable key only allows inserts (RLS).
     supabase_url: str | None = None
     supabase_key: str | None = None

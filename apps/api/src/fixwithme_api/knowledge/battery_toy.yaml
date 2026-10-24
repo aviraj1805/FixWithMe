@@ -118,6 +118,10 @@ procedures:
     safety_level: 0
     minutes: 5
     difficulty: {en: Easy, hi: आसान}
+    part_spec:
+      kind: AA AAA alkaline batteries
+      match: "Same size as the old ones (AA, AAA or the button-cell code printed on it). Replace all at once."
+      sources: [cambridge_remote]
     cost_inr: {min: 20, max: 150, basis: estimate}
     tools: {en: [Fresh batteries of the same type, Small screwdriver], hi: [उसी तरह की नई बैटरी, छोटा पेचकस]}
     steps:

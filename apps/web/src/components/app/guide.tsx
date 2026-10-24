@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Fixy } from "@/components/fixy/fixy";
 import { Icon } from "@/components/ui/icons";
 import { Badge, Chip, FixySays, PrimaryButton, TopBar } from "@/components/ui/parts";
-import { type Procedure, type SourceRef, getProcedure } from "@/lib/api";
+import { type Procedure, type SourceRef, getProcedure, mapsSearch } from "@/lib/api";
 import { type Lang, t } from "@/lib/i18n";
 
 function Sources({ sources, lang }: { sources: SourceRef[]; lang: Lang }) {
@@ -35,6 +35,36 @@ function TierBadge({ tier, lang }: { tier: Procedure["tier"]; lang: Lang }) {
     <Badge tone="curated" title={t("curatedHint", lang)}>
       <Icon name="shield" size={14} /> {t("curated", lang)}
     </Badge>
+  );
+}
+
+function BuyPart({ spec, lang }: { spec: NonNullable<Procedure["part_spec"]>; lang: Lang }) {
+  const q = encodeURIComponent(spec.kind);
+  const stores = [
+    { name: "Amazon", href: `https://www.amazon.in/s?k=${q}` },
+    { name: "Flipkart", href: `https://www.flipkart.com/search?q=${q}` },
+  ];
+  return (
+    <div className="space-y-2">
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted">{t("buyPart", lang)}</p>
+      <p className="text-[15px]">
+        <span className="font-semibold">{spec.kind}</span> · {spec.match}
+      </p>
+      <div className="flex gap-2">
+        {stores.map((s) => (
+          <a
+            key={s.name}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 text-sm font-medium"
+          >
+            {s.name} ↗
+          </a>
+        ))}
+      </div>
+      <p className="text-xs text-muted">{t("buyNote", lang)}</p>
+    </div>
   );
 }
 
@@ -98,6 +128,14 @@ export function Guide({
             </Badge>
             <TierBadge tier={proc.tier} lang={lang} />
           </div>
+          <a
+            href={mapsSearch(t("shopQuery", lang))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[15px] font-semibold text-brand underline"
+          >
+            {t("findShop", lang)}
+          </a>
           <Sources sources={proc.sources} lang={lang} />
         </div>
         <div className="p-4">
@@ -160,6 +198,7 @@ export function Guide({
               </ul>
             </div>
           )}
+          {proc.part_spec && <BuyPart spec={proc.part_spec} lang={lang} />}
           <Sources sources={proc.sources} lang={lang} />
         </div>
       )}

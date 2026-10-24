@@ -3,8 +3,8 @@
 import { type FormEvent, useEffect, useRef, useState } from "react";
 import { Fixy } from "@/components/fixy/fixy";
 import { Icon } from "@/components/ui/icons";
-import { Badge, Chip, FixySays, PrimaryButton, TopBar } from "@/components/ui/parts";
-import { type Answer, type Answers, type AskResponse, type StepResponse, ask, step } from "@/lib/api";
+import { Badge, Chip, FixySays, LinkChip, PrimaryButton, TopBar } from "@/components/ui/parts";
+import { type Answer, type Answers, ApiError, type AskResponse, type StepResponse, ask, mapsSearch, step } from "@/lib/api";
 import { type Lang, t } from "@/lib/i18n";
 import { listen } from "@/lib/media";
 
@@ -31,7 +31,7 @@ export type Session = {
   item: string | null;
   causes: StepResponse["causes"];
   tier: StepResponse["tier"];
-  mode: "diagnose" | "ask"; // after a diagnosis (or "Ask anyway"), typed text becomes a question
+  mode: "diagnose" | "ask"; // after a diagnosis or for an unsupported item, typed text is a question
   listenNow?: boolean; // opened with "Talk": start the mic once
   photoPending?: boolean; // a photo is being identified
   start?: { text: string; item: string | null }; // first message from a photo, sent once
@@ -48,7 +48,7 @@ type Body = {
 type AskBody = {
   question: string;
   item: string | null;
-  web?: boolean; // "Ask anyway" for an unsupported item: allow a web-grounded suggestion
+  web?: boolean; // unsupported item: allow a web-grounded suggestion
   safety_checked?: boolean;
   confirm_hazard?: string;
 };
@@ -92,6 +92,7 @@ export function Chat({
     setPending(true);
     setLastBody(body);
     const slowTimer = setTimeout(() => setSlow(t("wakingUp", lang)), 4000);
+    let follow: AskBody | null = null;
     try {
       const r = await step({ ...body, lang });
       setSession((s) => ({
@@ -117,13 +118,22 @@ export function Chat({
         options: r.options,
         diagnosis: r.diagnosis ?? undefined,
       });
-    } catch {
-      push({ id: newId(), from: "fixy", text: t("offline", lang), kind: "error" });
+      if (r.state === "unsupported" && body.text) follow = { question: body.text, item: null, web: true };
+    } catch (err) {
+      push({ id: newId(), from: "fixy", text: errorText(err), kind: "error" });
     } finally {
       clearTimeout(slowTimer);
       setPending(false);
       setSlow(null);
     }
+    if (follow) {
+      setSession((s) => ({ ...s, mode: "ask", item: null }));
+      void runAsk(follow);
+    }
+  }
+
+  function errorText(err: unknown) {
+    return err instanceof ApiError && err.status === 429 ? t("tooMany", lang) : t("offline", lang);
   }
 
   async function runAsk(body: AskBody) {
@@ -147,8 +157,8 @@ export function Chat({
         answer: r.state === "answer" ? r : undefined,
         web: body.web,
       });
-    } catch {
-      push({ id: newId(), from: "fixy", text: t("offline", lang), kind: "error", via: "ask" });
+    } catch (err) {
+      push({ id: newId(), from: "fixy", text: errorText(err), kind: "error", via: "ask" });
     } finally {
       clearTimeout(slowTimer);
       setPending(false);
@@ -196,13 +206,6 @@ export function Chat({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session.listenNow, session.start]);
 
-  function askAnyway(m: Extract<Msg, { from: "fixy" }>) {
-    const question = m.sourceText ?? session.messages.find((x) => x.from === "user")?.text;
-    push({ id: newId(), from: "user", text: t("askAnyway", lang) });
-    setSession((s) => ({ ...s, mode: "ask", item: null }));
-    if (question) void runAsk({ question, item: null, web: true });
-  }
-
   function answer(qid: string, value: Answer, label: string) {
     push({ id: newId(), from: "user", text: label });
     void run({ answers: { ...session.answers, [qid]: value }, item: session.item });
@@ -223,7 +226,14 @@ export function Chat({
   function clarify(item: string | null, label: string) {
     push({ id: newId(), from: "user", text: label });
     if (item) void run({ answers: session.answers, item });
-    else push({ id: newId(), from: "fixy", text: t("onlyFans", lang), kind: "unsupported" });
+    else {
+      push({ id: newId(), from: "fixy", text: t("onlyFans", lang), kind: "unsupported" });
+      const question = session.messages.find((x) => x.from === "user")?.text;
+      if (question) {
+        setSession((s) => ({ ...s, mode: "ask", item: null }));
+        void runAsk({ question, item: null, web: true });
+      }
+    }
   }
 
   const last = session.messages[session.messages.length - 1];
@@ -302,9 +312,12 @@ export function Chat({
                   {m.kind === "error" && m.via === "ask" && lastAsk && (
                     <Chip onClick={() => void runAsk(lastAsk)}>{t("retry", lang)}</Chip>
                   )}
+                  {m.kind === "abstain" && (
+                    <LinkChip href={mapsSearch(t("shopQuery", lang))}>{t("findShop", lang)}</LinkChip>
+                  )}
                   {m.kind === "unsupported" && (
                     <>
-                      <Chip onClick={() => askAnyway(m)}>{t("askAnyway", lang)}</Chip>
+                      <LinkChip href={mapsSearch(t("shopQuery", lang))}>{t("findShop", lang)}</LinkChip>
                       <Chip onClick={onBack}>{t("startOver", lang)}</Chip>
                     </>
                   )}
@@ -462,6 +475,9 @@ function AnswerCard({
           sandbox="allow-popups allow-popups-to-escape-sandbox"
           className="h-16 w-full rounded-xl border-0"
         />
+      )}
+      {answer.tier === "web" && (
+        <LinkChip href={mapsSearch(t("shopQuery", lang))}>{t("findShop", lang)}</LinkChip>
       )}
       {answer.guides.map((g) => (
         <PrimaryButton

@@ -235,3 +235,27 @@ def stop_payload(hazard_id: str, lang: Lang) -> dict:
         "actions": [a.get(lang) for a in h.actions],
         "call": "112",
     }
+
+
+# A general knowledge question ("why do lithium batteries swell?") is not a report of danger
+# happening now. On /v1/ask such questions get the one-tap "Just checking" prompt instead of a
+# hard STOP. Anything personal ("my", "I") or active ("leaking", "smoking", "smell") still stops.
+# FixBench-IN QA v1: 5 of 8 harmless factual questions were hard-stopped before this.
+_QUESTION = re.compile(
+    r"^\s*(?:why|what|which|when|how\s+(?:does|do|fast|much|long|is|are|can|many)|is\s+it\s+true|"
+    r"explain|kyu|kyon|kya\s+hota|क्यों|क्या\s+होता)\b",
+    re.IGNORECASE,
+)
+_PERSONAL = re.compile(
+    r"\b(?:my|mine|our|ours|i|i'm|i've|me|we|us|mera|meri|mere|hamara|humara|mujhe|abhi)\b"
+    r"|right\s+now|मेरा|मेरी|मेरे|हमारा|मुझे|अभी",
+    re.IGNORECASE,
+)
+_ACTIVE = re.compile(
+    r"\b(?:leak\w*|smok\w*|spark\w*|burning|smell\w*|on\s+fire|swallow\w*|stuck|trapped)\b",
+    re.IGNORECASE,
+)
+
+
+def informational(text: str) -> bool:
+    return bool(_QUESTION.search(text)) and not _PERSONAL.search(text) and not _ACTIVE.search(text)

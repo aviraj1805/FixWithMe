@@ -357,3 +357,43 @@ def test_web_with_no_grounded_claims_abstains(retriever):
     client = make_client(retriever, None)
     client.app.state.web = FakeWeb(WebAnswer())
     assert ask(client, question="mixer grinder jar leaking", web=True)["state"] == "abstain"
+
+
+# ---------------------------------------------------------------- general questions vs reports
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Why do lithium-ion batteries swell or catch fire?",
+        "What is the let-go threshold in an electric shock?",
+        "Why can a capacitor still give a shock after the power is off?",
+    ],
+)
+def test_general_hazard_question_asks_once_then_answers(retriever, text):
+    client = make_client(retriever, DRAFT, ["supported", "supported"])
+    assert ask(client, question=text)["state"] == "confirm"
+    assert ask(client, question=text, safety_checked=True)["state"] in ("answer", "abstain")
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "My earbud battery has swollen up, can I keep charging it?",
+        "How do I fix a leaking LPG pipe at home?",
+        "Why is my fan smoking?",
+        "What should I do, I got a shock from the switch",
+    ],
+)
+def test_personal_or_active_hazard_still_stops(retriever, text):
+    client = make_client(retriever, DRAFT, ["supported"])
+    assert ask(client, question=text)["state"] == "stop"
+    assert ask(client, question=text, safety_checked=True)["state"] == "stop"
+
+
+def test_rate_limit_returns_429():
+    app = create_app(Settings(env="prod", llm_chain=["fake"], retrieval="off", rate_per_minute=2))
+    c = TestClient(app)
+    codes = [c.post("/v1/ask", json={"question": "fan hum"}).status_code for _ in range(3)]
+    assert codes[:2] == [200, 200] and codes[2] == 429
+    assert c.get("/health").status_code == 200  # GETs are not limited
