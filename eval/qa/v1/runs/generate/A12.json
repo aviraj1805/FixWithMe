@@ -1,0 +1,52 @@
+{
+ "id": "A12",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:replace_board:en",
+  "kb:extension_board:cause:cord_damaged:en",
+  "kb:extension_board:cause:board_switch_faulty:en",
+  "kb:extension_board:procedure:reset_overload:en",
+  "kb:extension_board:cause:socket_loose:en"
+ ],
+ "retrieval_ms": 4603,
+ "closed_book": {
+  "claims": [
+   "Replace a damaged extension board instead of repairing it to ensure safety against short circuits.",
+   "Extension boards are inexpensive to buy new, making replacement a safer and more practical choice in Indian households."
+  ],
+  "error": null,
+  "ms": 5581
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "A damaged or faulty extension board should not be repaired and must be replaced.",
+    "sources": [
+     "kb:extension_board:procedure:replace_board:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4469
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "A damaged or faulty extension board should not be repaired and must be replaced.",
+    "sources": [
+     "kb:extension_board:procedure:replace_board:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 6039
+ }
+}

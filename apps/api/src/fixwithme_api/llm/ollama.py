@@ -18,7 +18,12 @@ class OllamaProvider:
         messages = []
         if request.system:
             messages.append({"role": "system", "content": request.system})
-        messages.append({"role": "user", "content": request.prompt})
+        user: dict = {"role": "user", "content": request.prompt}
+        if request.images:
+            import base64
+
+            user["images"] = [base64.b64encode(data).decode() for data, _ in request.images]
+        messages.append(user)
 
         payload: dict = {
             "model": self.model,

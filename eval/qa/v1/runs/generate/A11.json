@@ -1,0 +1,55 @@
+{
+ "id": "A11",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:replace_board:en",
+  "kb:extension_board:procedure:reset_overload:en",
+  "wiki:en:1381432836:8",
+  "kb:extension_board:cause:cord_damaged:en",
+  "wiki:en:1374902512:0"
+ ],
+ "retrieval_ms": 1133,
+ "closed_book": {
+  "claims": [
+   "Plugging one extension board into another is unsafe.",
+   "It can overload the circuit and cause a fire.",
+   "Always plug appliances directly into a fixed wall socket."
+  ],
+  "error": null,
+  "ms": 5647
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Never plug one extension board into another.",
+    "sources": [
+     "kb:extension_board:procedure:replace_board:en",
+     "kb:extension_board:procedure:reset_overload:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5733
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Never plug one extension board into another.",
+    "sources": [
+     "kb:extension_board:procedure:replace_board:en",
+     "kb:extension_board:procedure:reset_overload:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7024
+ }
+}

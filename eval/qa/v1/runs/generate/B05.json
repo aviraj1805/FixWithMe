@@ -1,0 +1,37 @@
+{
+ "id": "B05",
+ "gate": {
+  "hazard": "shock",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1381365577:8",
+  "wiki:en:1357326269:6",
+  "wiki:en:1381365577:0",
+  "wiki:en:1381365577:2",
+  "wiki:en:1356624256:0"
+ ],
+ "retrieval_ms": 853,
+ "closed_book": {
+  "claims": [
+   "A capacitor stores electrical energy in an electrostatic field even after the power supply is disconnected.",
+   "It retains this charge until it is safely discharged through a load or a resistor.",
+   "Touching the terminals of a charged capacitor can complete the circuit through your body, causing a shock."
+  ],
+  "error": null,
+  "ms": 6152
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4753
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 4753
+ }
+}

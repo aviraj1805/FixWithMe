@@ -1,0 +1,53 @@
+{
+ "id": "A17",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:check_wall_socket:en",
+  "kb:extension_board:cause:wall_socket_dead:en",
+  "wiki:en:1374902512:6",
+  "wiki:en:1374902512:13",
+  "wiki:en:1381262947:0"
+ ],
+ "retrieval_ms": 952,
+ "closed_book": {
+  "claims": [
+   "Plug a working lamp or phone charger into the socket to test for power.",
+   "Check if the wall switch controlling the socket is turned on.",
+   "Look for any tripped circuit breakers in your main electrical panel."
+  ],
+  "error": null,
+  "ms": 5648
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "To check if a wall socket is working, plug a phone charger straight into it and switch it on.",
+    "sources": [
+     "kb:extension_board:procedure:check_wall_socket:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7062
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "To check if a wall socket is working, plug a phone charger straight into it and switch it on.",
+    "sources": [
+     "kb:extension_board:procedure:check_wall_socket:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8311
+ }
+}

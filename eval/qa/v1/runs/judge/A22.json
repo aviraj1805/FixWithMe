@@ -1,0 +1,40 @@
+{
+ "id": "A22",
+ "labels": {
+  "Clean the charging contacts on the earbud and inside the case using a cotton swab and a little rubbing alcohol.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Ensure the charging case is sufficiently charged by plugging it into a working power source.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Check for any debris or dirt obstructing the charging port of the case.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Reset the earbuds according to the manufacturer instructions if cleaning does not work.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Clean the gold pins on the earbuds and in the case with isopropyl alcohol on a swab.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Brush the speaker mesh gently with a dry toothbrush.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Put both earbuds in the case and charge it from a wall socket for about 2 hours.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

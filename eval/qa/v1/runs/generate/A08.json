@@ -1,0 +1,55 @@
+{
+ "id": "A08",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1378275539:3",
+  "wiki:en:1378275539:1",
+  "wiki:en:1378275539:4",
+  "wiki:en:1378275539:5",
+  "wiki:en:1378275539:2"
+ ],
+ "retrieval_ms": 812,
+ "closed_book": {
+  "claims": [
+   "The reverse direction switch changes the rotation of the fan blades to push air upward or downward.",
+   "Running the fan in reverse at low speed during winter helps circulate warm air trapped near the ceiling down into the room.",
+   "In summer, setting the fan to spin forward creates a cooling breeze by pushing air straight down."
+  ],
+  "error": null,
+  "ms": 4306
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Ceiling fans have a reverse direction switch to help in both heating and cooling a room.",
+    "sources": [
+     "wiki:en:1378275539:3",
+     "wiki:en:1378275539:1"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7087
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Ceiling fans have a reverse direction switch to help in both heating and cooling a room.",
+    "sources": [
+     "wiki:en:1378275539:3",
+     "wiki:en:1378275539:1"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8598
+ }
+}

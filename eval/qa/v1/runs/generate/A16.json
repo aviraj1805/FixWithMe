@@ -1,0 +1,66 @@
+{
+ "id": "A16",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1373727450:5",
+  "wiki:en:1373727450:1",
+  "wiki:en:1373727450:3",
+  "wiki:en:1373727450:7",
+  "wiki:en:1373727450:6"
+ ],
+ "retrieval_ms": 1034,
+ "closed_book": {
+  "claims": [
+   "A fuse contains a thin wire that melts when excessive electric current passes through it.",
+   "When the wire melts, it breaks the circuit and stops the flow of electricity.",
+   "This protects household appliances from damage caused by power surges or short circuits."
+  ],
+  "error": null,
+  "ms": 7022
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "A fuse is an automatic means of removing power from a faulty system by melting when excess current or a short circuit occurs.",
+    "sources": [
+     "wiki:en:1373727450:1"
+    ]
+   },
+   {
+    "text": "The speed at which a fuse blows depends on the amount of current flowing through it and the material it is made of.",
+    "sources": [
+     "wiki:en:1373727450:5"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6127
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "A fuse is an automatic means of removing power from a faulty system by melting when excess current or a short circuit occurs.",
+    "sources": [
+     "wiki:en:1373727450:1"
+    ]
+   },
+   {
+    "text": "The speed at which a fuse blows depends on the amount of current flowing through it and the material it is made of.",
+    "sources": [
+     "wiki:en:1373727450:5"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7882
+ }
+}

@@ -10,6 +10,8 @@ class LLMRequest:
     json_schema: dict[str, Any] | None = None
     temperature: float = 0.2
     max_output_tokens: int = 1024
+    # (bytes, mime type) pairs sent before the prompt, e.g. a downscaled JPEG from the camera.
+    images: tuple[tuple[bytes, str], ...] = ()
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,10 @@
+{
+ "id": "A24",
+ "labels": {
+  "The 3.5 mm size was originally designed in the 1950s as a two-conductor connector for earpieces on transistor radios.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

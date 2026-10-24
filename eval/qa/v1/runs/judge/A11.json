@@ -1,0 +1,25 @@
+{
+ "id": "A11",
+ "labels": {
+  "Plugging one extension board into another is unsafe.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It can overload the circuit and cause a fire.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Always plug appliances directly into a fixed wall socket.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "Never plug one extension board into another.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "A06",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:check_regulator:en",
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:cause:regulator_faulty:en",
+  "wiki:en:1378275539:3",
+  "kb:ceiling_fan:procedure:check_power:en"
+ ],
+ "retrieval_ms": 1502,
+ "closed_book": {
+  "claims": [
+   "The issue is likely a faulty fan regulator.",
+   "The internal resistors or TRIAC inside the regulator may have shorted."
+  ],
+  "error": null,
+  "ms": 5842
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "If a ceiling fan works only at full speed or the speed never changes, the speed regulator is likely faulty.",
+    "sources": [
+     "kb:ceiling_fan:procedure:check_regulator:en",
+     "kb:ceiling_fan:cause:regulator_faulty:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6737
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "If a ceiling fan works only at full speed or the speed never changes, the speed regulator is likely faulty.",
+    "sources": [
+     "kb:ceiling_fan:procedure:check_regulator:en",
+     "kb:ceiling_fan:cause:regulator_faulty:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7977
+ }
+}

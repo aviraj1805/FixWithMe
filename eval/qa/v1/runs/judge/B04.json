@@ -1,0 +1,30 @@
+{
+ "id": "B04",
+ "labels": {
+  "A fuse protects household appliances by breaking the electrical circuit during a short circuit.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It contains a thin wire that melts when excessive current flows through it.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "This melting action stops the flow of electricity and prevents electrical fires.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A fuse melts when a short circuit forms due to a damaged live wire contacting a metal case connected to ground.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A fuse acts as an automatic means of removing power from a faulty system during conditions like short circuits.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

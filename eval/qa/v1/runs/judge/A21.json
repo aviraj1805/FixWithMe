@@ -1,0 +1,35 @@
+{
+ "id": "A21",
+ "labels": {
+  "Place both earbuds into the charging case.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Forget the device name in your phone's Bluetooth settings.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Press and hold the case button or touch sensors for about 10 seconds until the indicator light flashes.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Take the earbuds out and pair them with your phone again.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "To reset and re-pair earbuds, put both in the case, check they sit on the pins, and close the lid for 10 seconds, then forget them in your phone's Bluetooth settings and take both out at the same time to pair again.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "If one side still does not work, perform a factory reset by holding the touch buttons for about 15 seconds.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

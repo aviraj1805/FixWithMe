@@ -1,0 +1,80 @@
+{
+ "id": "A15",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1373727844:0",
+  "wiki:en:1373727844:5",
+  "wiki:en:1373727844:11",
+  "wiki:en:1373727844:6",
+  "wiki:en:1373727844:9"
+ ],
+ "retrieval_ms": 3610,
+ "closed_book": {
+  "claims": [
+   "An RCD or residual current device protects against electric shock.",
+   "It automatically cuts off electricity when it detects a current leak.",
+   "It helps prevent electrical fires in households.",
+   "It monitors the balance of electrical current in live and neutral wires."
+  ],
+  "error": null,
+  "ms": 6314
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "A residual-current device interrupts an electrical circuit when the current passing through line and neutral conductors is not equal, indicating current leaking to ground.",
+    "sources": [
+     "wiki:en:1373727844:0"
+    ]
+   },
+   {
+    "text": "The purpose of a residual-current device is to reduce the severity of injury caused by an electric shock.",
+    "sources": [
+     "wiki:en:1373727844:0"
+    ]
+   },
+   {
+    "text": "A current imbalance causes a magnetic flux that activates a relay, forcing the contacts apart and cutting off the electricity supply to the appliance.",
+    "sources": [
+     "wiki:en:1373727844:11"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5868
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "A residual-current device interrupts an electrical circuit when the current passing through line and neutral conductors is not equal, indicating current leaking to ground.",
+    "sources": [
+     "wiki:en:1373727844:0"
+    ]
+   },
+   {
+    "text": "The purpose of a residual-current device is to reduce the severity of injury caused by an electric shock.",
+    "sources": [
+     "wiki:en:1373727844:0"
+    ]
+   },
+   {
+    "text": "A current imbalance causes a magnetic flux that activates a relay, forcing the contacts apart and cutting off the electricity supply to the appliance.",
+    "sources": [
+     "wiki:en:1373727844:11"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 9737
+ }
+}

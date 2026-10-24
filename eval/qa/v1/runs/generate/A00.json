@@ -1,0 +1,53 @@
+{
+ "id": "A00",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:cause:capacitor_weak:en",
+  "wiki:en:1357326269:0",
+  "wiki:en:1357326269:4",
+  "wiki:en:1357326269:6",
+  "kb:ceiling_fan:procedure:replace_capacitor:en"
+ ],
+ "retrieval_ms": 2021,
+ "closed_book": {
+  "claims": [
+   "Ceiling fans in India usually use a 2.5 microfarad capacitor.",
+   "Some larger ceiling fans may use a 3.15 microfarad capacitor.",
+   "Always check the rating printed on the old capacitor before replacing it."
+  ],
+  "error": null,
+  "ms": 5416
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Ceiling fans usually use a capacitor with a value of 1.5 to 4 microfarads.",
+    "sources": [
+     "kb:ceiling_fan:cause:capacitor_weak:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6700
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Ceiling fans usually use a capacitor with a value of 1.5 to 4 microfarads.",
+    "sources": [
+     "kb:ceiling_fan:cause:capacitor_weak:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8407
+ }
+}

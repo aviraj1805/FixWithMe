@@ -1,0 +1,53 @@
+{
+ "id": "A39",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:battery_toy:procedure:test_remote_ir:en",
+  "wiki:en:1367277923:0",
+  "kb:battery_toy:cause:contacts_corroded:en",
+  "wiki:en:1381386717:0",
+  "wiki:en:1379153667:7"
+ ],
+ "retrieval_ms": 704,
+ "closed_book": {
+  "claims": [
+   "Remove the batteries from the remote control immediately.",
+   "Dip a cotton bud in white vinegar or lemon juice and gently scrub the white powder.",
+   "Use a dry cloth to clean the contacts completely before inserting new batteries."
+  ],
+  "error": null,
+  "ms": 24605
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Corroded battery contacts in a toy or remote can be fixed by cleaning them.",
+    "sources": [
+     "kb:battery_toy:cause:contacts_corroded:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6262
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Corroded battery contacts in a toy or remote can be fixed by cleaning them.",
+    "sources": [
+     "kb:battery_toy:cause:contacts_corroded:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8063
+ }
+}

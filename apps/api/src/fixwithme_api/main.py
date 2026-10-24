@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from . import __version__, ask, diagnose, knowledge, safety
+from . import __version__, ask, diagnose, identify, knowledge, safety
 from .config import Settings, get_settings
 from .llm import build_llm, build_verifier
 from .outcomes import OutcomeStore
@@ -66,6 +66,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     app.include_router(diagnose.router)
     app.include_router(ask.router)
+    app.include_router(identify.router)
     return app
 
 

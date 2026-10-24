@@ -1,0 +1,45 @@
+{
+ "id": "A31",
+ "labels": {
+  "सबसे पहले पंखे की बिजली की आपूर्ति बंद कर दें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "पंखे के ऊपर लगे पुराने कैपेसिटर को सावधानी से बाहर निकालें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "नया कैपेसिटर उसी तरह सही कनेक्शन के साथ जोड़ें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "कनेक्शन करने के बाद पंखे को चलाकर जांच लें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "पंखे का कैपेसिटर बदलने के लिए सबसे पहले पंखा और उस कमरे का MCB बंद करें और लाइन टेस्टर से जांचें कि तारों में करंट नहीं है।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "सीढ़ी पर चढ़कर कैनोपी खोलें, कैपेसिटर के तारों की फोटो लें और इंसुलेटेड पेचकस से इसके टर्मिनल आपस में छुआकर इसे डिस्चार्ज करें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "पुराना कैपेसिटर हटाकर नया बिल्कुल उसी तरह जोड़ें और हर जोड़ पर टेप लगाएं।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "कवर बंद करके MCB चालू करें और हमेशा वही µF रेटिंग का कैपेसिटर लगाएं।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

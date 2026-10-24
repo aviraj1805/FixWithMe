@@ -111,6 +111,13 @@ export function sendOutcome(body: {
   return request("/v1/outcomes", { method: "POST", body: JSON.stringify(body) });
 }
 
+export type Identified = { item: string | null; name: string; problem: string | null; text: string };
+
+/** Photo → item + visible problem. The photo is downscaled and EXIF-free (see media.ts). */
+export function identify(body: { image: string; mime: string; lang: Lang }): Promise<Identified> {
+  return request("/v1/identify", { method: "POST", body: JSON.stringify(body) });
+}
+
 /** Warm the API early: Render's free tier sleeps after 15 minutes and takes ~1 minute to wake. */
 export function wakeApi(): void {
   fetch(`${API_URL}/health`, { cache: "no-store" }).catch(() => {});

@@ -1,0 +1,53 @@
+{
+ "id": "B00",
+ "gate": {
+  "hazard": "battery_swollen",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1381519558:3",
+  "wiki:en:1381519558:2",
+  "wiki:en:1381519558:15",
+  "wiki:en:1381519558:4",
+  "wiki:en:1381519558:0"
+ ],
+ "retrieval_ms": 2209,
+ "closed_book": {
+  "claims": [
+   "Lithium-ion batteries swell due to internal gas buildup from overcharging or overheating.",
+   "Physical damage or manufacturing defects can also cause these batteries to fail.",
+   "Internal short circuits can lead to thermal runaway, resulting in fire."
+  ],
+  "error": null,
+  "ms": 4206
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Lithium-ion batteries can be a fire or explosion hazard because they contain flammable electrolytes.",
+    "sources": [
+     "wiki:en:1381519558:3"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5523
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Lithium-ion batteries can be a fire or explosion hazard because they contain flammable electrolytes.",
+    "sources": [
+     "wiki:en:1381519558:3"
+    ]
+   }
+  ],
+  "verdicts": [
+   "unchecked"
+  ],
+  "verified": false,
+  "error": "all LLM providers failed: gemini/gemma-4-26b-a4b-it, gemini/gemini-3.1-flash-lite",
+  "ms": 24365
+ }
+}

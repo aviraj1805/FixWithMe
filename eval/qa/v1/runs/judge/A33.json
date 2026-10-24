@@ -1,0 +1,35 @@
+{
+ "id": "A33",
+ "labels": {
+  "अपने ईयरबड्स को चार्जिंग केस में रखें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "केस का ढक्कन बंद करें और कुछ सेकंड प्रतीक्षा करें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "केस पर दिए गए सेटअप बटन को लगभग 10 से 15 सेकंड तक दबाकर रखें।": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "इंडिकेटर लाइट के ब्लिंक होने पर रीसेट पूरा हो जाता है।": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "दोनों ईयरबड केस में रखें और ढक्कन 10 सेकंड बंद रखें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "फ़ोन की ब्लूटूथ सेटिंग में ईयरबड्स को फॉरगेट करें और दोनों को एक साथ निकालकर फिर से पेयर करें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

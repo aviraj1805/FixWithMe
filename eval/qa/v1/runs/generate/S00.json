@@ -1,0 +1,33 @@
+{
+ "id": "S00",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:procedure:check_power:en",
+  "kb:ceiling_fan:procedure:check_power:hi",
+  "kb:ceiling_fan:procedure:replace_capacitor:hi",
+  "wiki:en:1375123855:14"
+ ],
+ "retrieval_ms": 751,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 6328
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5222
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5222
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "U07",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:cause:overload_tripped:en",
+  "wiki:en:1381386717:10",
+  "kb:extension_board:cause:board_switch_faulty:en",
+  "wiki:en:1371255798:11",
+  "kb:extension_board:procedure:reset_overload:en"
+ ],
+ "retrieval_ms": 1524,
+ "closed_book": {
+  "claims": [
+   "Error code E4 in many washing machines typically indicates a water drainage issue.",
+   "Check if the drain hose is kinked, clogged, or positioned too high.",
+   "Inspect the drain pump filter for trapped lint, coins, or debris and clean it if necessary."
+  ],
+  "error": null,
+  "ms": 6338
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 16582
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 16582
+ }
+}

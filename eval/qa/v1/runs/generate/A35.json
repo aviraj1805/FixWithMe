@@ -1,0 +1,67 @@
+{
+ "id": "A35",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:battery_toy:procedure:test_remote_ir:hi",
+  "kb:battery_toy:cause:remote_faulty:hi",
+  "wiki:hi:6198875:0",
+  "kb:battery_toy:procedure:clear_jam:hi",
+  "kb:battery_toy:cause:batteries_dead:hi"
+ ],
+ "retrieval_ms": 824,
+ "closed_book": {
+  "claims": [
+   "अपने फोन का कैमरा खोलें।",
+   "रिमोट के आगे वाले हिस्से को कैमरे के सामने रखें।",
+   "रिमोट का कोई भी बटन दबाएं।",
+   "यदि कैमरे की स्क्रीन पर नीली या बैंगनी रोशनी चमके, तो रिमोट सही काम कर रहा है।"
+  ],
+  "error": null,
+  "ms": 4977
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "फ़ोन का कैमरा खोलें और रिमोट का आगे का हिस्सा लेंस की ओर करें और एक बटन दबाकर रखें।",
+    "sources": [
+     "kb:battery_toy:procedure:test_remote_ir:hi"
+    ]
+   },
+   {
+    "text": "स्क्रीन पर रोशनी दिखे तो रिमोट ठीक है।",
+    "sources": [
+     "kb:battery_toy:procedure:test_remote_ir:hi"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5642
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "फ़ोन का कैमरा खोलें और रिमोट का आगे का हिस्सा लेंस की ओर करें और एक बटन दबाकर रखें।",
+    "sources": [
+     "kb:battery_toy:procedure:test_remote_ir:hi"
+    ]
+   },
+   {
+    "text": "स्क्रीन पर रोशनी दिखे तो रिमोट ठीक है।",
+    "sources": [
+     "kb:battery_toy:procedure:test_remote_ir:hi"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7039
+ }
+}

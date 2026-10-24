@@ -1,0 +1,80 @@
+{
+ "id": "A25",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:battery_toy:procedure:test_remote_ir:en",
+  "kb:battery_toy:cause:contacts_corroded:en",
+  "wiki:en:1371763524:1",
+  "kb:battery_toy:procedure:clean_corrosion:en",
+  "wiki:en:1379153667:11"
+ ],
+ "retrieval_ms": 760,
+ "closed_book": {
+  "claims": [
+   "Remove the batteries from the TV remote.",
+   "Dip a cotton swab in white vinegar or lemon juice to gently scrub the corrosion.",
+   "Use a small brush or sandpaper to clean remaining residue.",
+   "Ensure the compartment is completely dry before inserting new batteries."
+  ],
+  "error": null,
+  "ms": 5405
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "To clean battery corrosion, first take the batteries out, put on gloves and glasses, and spread newspaper.",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:en"
+    ]
+   },
+   {
+    "text": "Dab vinegar or lemon juice on the crust with a cotton swab, wait a minute, and then wipe it off.",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:en"
+    ]
+   },
+   {
+    "text": "Scrub stubborn spots with an old toothbrush, wipe with rubbing alcohol, and let it dry completely before fitting fresh batteries.",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6319
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "To clean battery corrosion, first take the batteries out, put on gloves and glasses, and spread newspaper.",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:en"
+    ]
+   },
+   {
+    "text": "Dab vinegar or lemon juice on the crust with a cotton swab, wait a minute, and then wipe it off.",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:en"
+    ]
+   },
+   {
+    "text": "Scrub stubborn spots with an old toothbrush, wipe with rubbing alcohol, and let it dry completely before fitting fresh batteries.",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8681
+ }
+}

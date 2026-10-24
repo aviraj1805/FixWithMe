@@ -1,0 +1,35 @@
+{
+ "id": "A27",
+ "labels": {
+  "Old alkaline batteries leak potassium hydroxide, which is a caustic and alkaline chemical.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "This leaked substance can cause skin irritation and eye damage.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It can also corrode metals and damage household surfaces.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "Always wear gloves when cleaning up battery leaks.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Old alkaline batteries can leak potassium hydroxide, which is a caustic agent capable of causing skin, eye, and respiratory irritation.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "When an alkaline battery is spent or reaches the end of its shelf life, internal pressure causes the casing to split and release substances including manganese oxide, zinc oxide, potassium hydroxide, zinc hydroxide, and manganese hydroxide.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

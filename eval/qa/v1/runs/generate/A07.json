@@ -1,0 +1,49 @@
+{
+ "id": "A07",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:check_regulator:en",
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:cause:regulator_faulty:en",
+  "kb:ceiling_fan:procedure:check_power:en",
+  "kb:ceiling_fan:cause:capacitor_weak:en"
+ ],
+ "retrieval_ms": 1350,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 5511
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Replacing a ceiling fan regulator involves opening the switchboard, so you should ask an electrician.",
+    "sources": [
+     "kb:ceiling_fan:procedure:check_regulator:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6554
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Replacing a ceiling fan regulator involves opening the switchboard, so you should ask an electrician.",
+    "sources": [
+     "kb:ceiling_fan:procedure:check_regulator:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8092
+ }
+}

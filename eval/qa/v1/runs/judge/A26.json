@@ -1,0 +1,30 @@
+{
+ "id": "A26",
+ "labels": {
+  "Open the camera app on your smartphone.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Point the tip of the TV remote directly at the phone camera lens.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Press any button on the remote while looking at the phone screen.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "If you see a flashing light or purple glow on the screen, the remote is sending a signal.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "You can check if a remote is sending a signal by opening your phone camera, pointing the front of the remote at the lens, and pressing a button to look for a light on the screen.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

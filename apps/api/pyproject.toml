@@ -1,6 +1,6 @@
 [project]
 name = "fixwithme-api"
-version = "0.5.0"
+version = "0.6.0"
 description = "Fix with Me backend: diagnosis orchestration, safety gate, retrieval and commerce APIs"
 requires-python = ">=3.12"
 dependencies = [

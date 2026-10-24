@@ -1,0 +1,35 @@
+{
+ "id": "A35",
+ "labels": {
+  "अपने फोन का कैमरा खोलें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "रिमोट के आगे वाले हिस्से को कैमरे के सामने रखें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "रिमोट का कोई भी बटन दबाएं।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "यदि कैमरे की स्क्रीन पर नीली या बैंगनी रोशनी चमके, तो रिमोट सही काम कर रहा है।": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "फ़ोन का कैमरा खोलें और रिमोट का आगे का हिस्सा लेंस की ओर करें और एक बटन दबाकर रखें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "स्क्रीन पर रोशनी दिखे तो रिमोट ठीक है।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

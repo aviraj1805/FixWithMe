@@ -1,0 +1,37 @@
+{
+ "id": "A34",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:reset_overload:hi",
+  "kb:extension_board:procedure:replace_board:hi",
+  "kb:extension_board:cause:overload_tripped:hi",
+  "kb:extension_board:cause:cord_damaged:hi",
+  "kb:extension_board:cause:board_switch_faulty:hi"
+ ],
+ "retrieval_ms": 1226,
+ "closed_book": {
+  "claims": [
+   "सबसे पहले एक्सटेंशन बोर्ड को मुख्य बिजली आपूर्ति से बंद करके अनप्लग करें।",
+   "ओवरलोड बटन या फ्यूज को ठीक करने के लिए किसी योग्य इलेक्ट्रीशियन की मदद लें।",
+   "खुद से खुले हुए हिस्सों या तारों को छूने से बचें।"
+  ],
+  "error": null,
+  "ms": 6422
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7691
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 7691
+ }
+}

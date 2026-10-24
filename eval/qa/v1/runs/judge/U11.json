@@ -1,0 +1,15 @@
+{
+ "id": "U11",
+ "labels": {
+  "ड्रेन पाइप में कचरा या ब्लॉकेज चेक करें।": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "ड्रेन पंप फिल्टर को साफ करें।": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

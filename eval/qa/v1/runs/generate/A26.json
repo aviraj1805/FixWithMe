@@ -1,0 +1,54 @@
+{
+ "id": "A26",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:battery_toy:procedure:test_remote_ir:en",
+  "wiki:en:1381386717:1",
+  "wiki:en:1381386717:3",
+  "wiki:en:1381386717:2",
+  "kb:battery_toy:cause:remote_faulty:en"
+ ],
+ "retrieval_ms": 1497,
+ "closed_book": {
+  "claims": [
+   "Open the camera app on your smartphone.",
+   "Point the tip of the TV remote directly at the phone camera lens.",
+   "Press any button on the remote while looking at the phone screen.",
+   "If you see a flashing light or purple glow on the screen, the remote is sending a signal."
+  ],
+  "error": null,
+  "ms": 4412
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "You can check if a remote is sending a signal by opening your phone camera, pointing the front of the remote at the lens, and pressing a button to look for a light on the screen.",
+    "sources": [
+     "kb:battery_toy:procedure:test_remote_ir:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6133
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "You can check if a remote is sending a signal by opening your phone camera, pointing the front of the remote at the lens, and pressing a button to look for a light on the screen.",
+    "sources": [
+     "kb:battery_toy:procedure:test_remote_ir:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7324
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "A09",
+ "labels": {
+  "Turn off the power supply to the ceiling fan before checking it.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A grinding noise and stiffness usually indicate worn-out ball bearings that need replacement.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "You can manually rotate the blades after turning off power to check for resistance.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Hire a local electrician to replace the faulty bearings safely.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Stiff or grinding bearings mean taking the fan down and replacing them.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "For stiff or worn bearings, you need a technician.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "id": "A31",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:replace_capacitor:hi",
+  "kb:ceiling_fan:cause:capacitor_weak:hi",
+  "kb:ceiling_fan:procedure:check_regulator:hi",
+  "kb:ceiling_fan:procedure:check_power:hi",
+  "kb:ceiling_fan:procedure:replace_capacitor:en"
+ ],
+ "retrieval_ms": 1860,
+ "closed_book": {
+  "claims": [
+   "सबसे पहले पंखे की बिजली की आपूर्ति बंद कर दें।",
+   "पंखे के ऊपर लगे पुराने कैपेसिटर को सावधानी से बाहर निकालें।",
+   "नया कैपेसिटर उसी तरह सही कनेक्शन के साथ जोड़ें।",
+   "कनेक्शन करने के बाद पंखे को चलाकर जांच लें।"
+  ],
+  "error": null,
+  "ms": 5282
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "पंखे का कैपेसिटर बदलने के लिए सबसे पहले पंखा और उस कमरे का MCB बंद करें और लाइन टेस्टर से जांचें कि तारों में करंट नहीं है।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   },
+   {
+    "text": "सीढ़ी पर चढ़कर कैनोपी खोलें, कैपेसिटर के तारों की फोटो लें और इंसुलेटेड पेचकस से इसके टर्मिनल आपस में छुआकर इसे डिस्चार्ज करें।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   },
+   {
+    "text": "पुराना कैपेसिटर हटाकर नया बिल्कुल उसी तरह जोड़ें और हर जोड़ पर टेप लगाएं।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   },
+   {
+    "text": "कवर बंद करके MCB चालू करें और हमेशा वही µF रेटिंग का कैपेसिटर लगाएं।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4506
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "पंखे का कैपेसिटर बदलने के लिए सबसे पहले पंखा और उस कमरे का MCB बंद करें और लाइन टेस्टर से जांचें कि तारों में करंट नहीं है।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   },
+   {
+    "text": "सीढ़ी पर चढ़कर कैनोपी खोलें, कैपेसिटर के तारों की फोटो लें और इंसुलेटेड पेचकस से इसके टर्मिनल आपस में छुआकर इसे डिस्चार्ज करें।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   },
+   {
+    "text": "पुराना कैपेसिटर हटाकर नया बिल्कुल उसी तरह जोड़ें और हर जोड़ पर टेप लगाएं।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   },
+   {
+    "text": "कवर बंद करके MCB चालू करें और हमेशा वही µF रेटिंग का कैपेसिटर लगाएं।",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:hi"
+    ]
+   }
+  ],
+  "verdicts": [
+   "unchecked",
+   "unchecked",
+   "unchecked",
+   "unchecked"
+  ],
+  "verified": false,
+  "error": "all LLM providers failed: gemini/gemma-4-26b-a4b-it, gemini/gemini-3.1-flash-lite",
+  "ms": 25272
+ }
+}

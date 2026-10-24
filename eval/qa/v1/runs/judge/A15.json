@@ -1,0 +1,40 @@
+{
+ "id": "A15",
+ "labels": {
+  "An RCD or residual current device protects against electric shock.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It automatically cuts off electricity when it detects a current leak.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It helps prevent electrical fires in households.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "It monitors the balance of electrical current in live and neutral wires.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A residual-current device interrupts an electrical circuit when the current passing through line and neutral conductors is not equal, indicating current leaking to ground.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The purpose of a residual-current device is to reduce the severity of injury caused by an electric shock.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A current imbalance causes a magnetic flux that activates a relay, forcing the contacts apart and cutting off the electricity supply to the appliance.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

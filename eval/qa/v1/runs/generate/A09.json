@@ -1,0 +1,71 @@
+{
+ "id": "A09",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:refer_bearing:en",
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:cause:capacitor_weak:en",
+  "kb:ceiling_fan:procedure:check_regulator:en",
+  "kb:ceiling_fan:cause:bearing_stiff:en"
+ ],
+ "retrieval_ms": 1424,
+ "closed_book": {
+  "claims": [
+   "Turn off the power supply to the ceiling fan before checking it.",
+   "A grinding noise and stiffness usually indicate worn-out ball bearings that need replacement.",
+   "You can manually rotate the blades after turning off power to check for resistance.",
+   "Hire a local electrician to replace the faulty bearings safely."
+  ],
+  "error": null,
+  "ms": 21972
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Stiff or grinding bearings mean taking the fan down and replacing them.",
+    "sources": [
+     "kb:ceiling_fan:procedure:refer_bearing:en",
+     "kb:ceiling_fan:cause:bearing_stiff:en"
+    ]
+   },
+   {
+    "text": "For stiff or worn bearings, you need a technician.",
+    "sources": [
+     "kb:ceiling_fan:procedure:refer_bearing:en",
+     "kb:ceiling_fan:cause:bearing_stiff:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7370
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Stiff or grinding bearings mean taking the fan down and replacing them.",
+    "sources": [
+     "kb:ceiling_fan:procedure:refer_bearing:en",
+     "kb:ceiling_fan:cause:bearing_stiff:en"
+    ]
+   },
+   {
+    "text": "For stiff or worn bearings, you need a technician.",
+    "sources": [
+     "kb:ceiling_fan:procedure:refer_bearing:en",
+     "kb:ceiling_fan:cause:bearing_stiff:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 9163
+ }
+}

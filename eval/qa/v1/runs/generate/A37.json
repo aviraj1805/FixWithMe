@@ -1,0 +1,79 @@
+{
+ "id": "A37",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:check_device:en",
+  "kb:headphones:cause:source_device:en",
+  "kb:headphones:procedure:reset_earbuds:en",
+  "kb:headphones:procedure:replace_headphones:en",
+  "wiki:en:1376232316:3"
+ ],
+ "retrieval_ms": 1071,
+ "closed_book": {
+  "claims": [
+   "Check if the earphone jack is fully inserted into the phone port.",
+   "Clean any dust or lint out of the phone's audio jack or charging port.",
+   "Test the earphones on another device to see if the issue is with the phone or the earphones."
+  ],
+  "error": null,
+  "ms": 5968
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Check if both sides work by trying the headphones on another phone or laptop.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   },
+   {
+    "text": "Check your phone's sound or accessibility settings to ensure the left-right balance is in the middle and mono audio is off.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   },
+   {
+    "text": "Restart your phone and try again.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6580
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Check if both sides work by trying the headphones on another phone or laptop.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   },
+   {
+    "text": "Check your phone's sound or accessibility settings to ensure the left-right balance is in the middle and mono audio is off.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   },
+   {
+    "text": "Restart your phone and try again.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7937
+ }
+}

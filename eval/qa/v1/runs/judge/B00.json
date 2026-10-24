@@ -1,0 +1,25 @@
+{
+ "id": "B00",
+ "labels": {
+  "Lithium-ion batteries swell due to internal gas buildup from overcharging or overheating.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Physical damage or manufacturing defects can also cause these batteries to fail.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Internal short circuits can lead to thermal runaway, resulting in fire.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Lithium-ion batteries can be a fire or explosion hazard because they contain flammable electrolytes.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

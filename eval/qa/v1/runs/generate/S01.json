@@ -1,0 +1,49 @@
+{
+ "id": "S01",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:check_power:en",
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:procedure:check_regulator:en",
+  "kb:ceiling_fan:cause:no_power:en",
+  "wiki:en:1378275539:4"
+ ],
+ "retrieval_ms": 1307,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 5760
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Check with a line tester that the fan wires are dead.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5419
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Check with a line tester that the fan wires are dead.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 6751
+ }
+}

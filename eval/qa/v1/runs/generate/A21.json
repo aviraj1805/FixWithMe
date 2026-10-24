@@ -1,0 +1,67 @@
+{
+ "id": "A21",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:reset_earbuds:en",
+  "kb:headphones:procedure:clean_contacts_charge:en",
+  "wiki:en:1376232316:13",
+  "wiki:en:1381579503:0",
+  "wiki:en:1381579503:10"
+ ],
+ "retrieval_ms": 993,
+ "closed_book": {
+  "claims": [
+   "Place both earbuds into the charging case.",
+   "Forget the device name in your phone's Bluetooth settings.",
+   "Press and hold the case button or touch sensors for about 10 seconds until the indicator light flashes.",
+   "Take the earbuds out and pair them with your phone again."
+  ],
+  "error": null,
+  "ms": 5242
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "To reset and re-pair earbuds, put both in the case, check they sit on the pins, and close the lid for 10 seconds, then forget them in your phone's Bluetooth settings and take both out at the same time to pair again.",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:en"
+    ]
+   },
+   {
+    "text": "If one side still does not work, perform a factory reset by holding the touch buttons for about 15 seconds.",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5868
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "To reset and re-pair earbuds, put both in the case, check they sit on the pins, and close the lid for 10 seconds, then forget them in your phone's Bluetooth settings and take both out at the same time to pair again.",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:en"
+    ]
+   },
+   {
+    "text": "If one side still does not work, perform a factory reset by holding the touch buttons for about 15 seconds.",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 14979
+ }
+}

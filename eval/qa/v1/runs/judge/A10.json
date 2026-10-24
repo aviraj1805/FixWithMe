@@ -1,0 +1,30 @@
+{
+ "id": "A10",
+ "labels": {
+  "Unplug all connected devices from the extension board immediately.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Wait a few minutes for the extension board to cool down.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "Press the overload reset button back in.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Plug in fewer devices to prevent overloading the board again.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Switch off and unplug everything from the board, then press the reset button once or switch the board off and on.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

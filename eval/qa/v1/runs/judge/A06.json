@@ -1,0 +1,20 @@
+{
+ "id": "A06",
+ "labels": {
+  "The issue is likely a faulty fan regulator.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The internal resistors or TRIAC inside the regulator may have shorted.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "If a ceiling fan works only at full speed or the speed never changes, the speed regulator is likely faulty.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

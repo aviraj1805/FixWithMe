@@ -1,0 +1,33 @@
+{
+ "id": "S05",
+ "gate": {
+  "hazard": "battery_swollen",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1381519558:13",
+  "kb:headphones:cause:not_charging:en",
+  "wiki:en:1381519558:11",
+  "kb:headphones:procedure:clean_contacts_charge:en",
+  "kb:headphones:procedure:clean_jack:en"
+ ],
+ "retrieval_ms": 1234,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 5136
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5221
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5221
+ }
+}

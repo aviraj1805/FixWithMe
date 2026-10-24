@@ -1,0 +1,25 @@
+{
+ "id": "A00",
+ "labels": {
+  "Ceiling fans in India usually use a 2.5 microfarad capacitor.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Some larger ceiling fans may use a 3.15 microfarad capacitor.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Always check the rating printed on the old capacitor before replacing it.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Ceiling fans usually use a capacitor with a value of 1.5 to 4 microfarads.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "id": "S08",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:check_wall_socket:en",
+  "kb:extension_board:procedure:replace_board:en",
+  "kb:headphones:procedure:check_device:en",
+  "kb:battery_toy:procedure:refer_electronics:en",
+  "kb:headphones:procedure:clean_jack:en"
+ ],
+ "retrieval_ms": 1076,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 6326
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": "all LLM providers failed: gemini/gemini-3.5-flash-lite",
+  "ms": 29708
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 29708
+ }
+}

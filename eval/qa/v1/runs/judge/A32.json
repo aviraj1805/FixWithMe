@@ -1,0 +1,40 @@
+{
+ "id": "A32",
+ "labels": {
+  "बैटरी निकालकर सफेद परत को साफ करने के लिए सिरके में डूबी हुई कॉटन बड का उपयोग करें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "हल्के हाथों से जंग और गंदगी को रगड़कर साफ करें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "सर्फेस को पूरी तरह सूखने के बाद ही नई बैटरी डालें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "बैटरी कॉन्टैक्ट की परत साफ़ करने के लिए सबसे पहले बैटरी निकालें और दस्ताने व चश्मा पहनें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "रुई की मदद से सिरका या नींबू का रस परत पर लगाएं और एक मिनट बाद पोंछ लें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "ज़िद्दी दाग़ हटाने के लिए पुराने टूथब्रश से रगड़ें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "अंत में रबिंग अल्कोहल से पोंछकर नई बैटरी लगाने से पहले उसे पूरी तरह सूखने दें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

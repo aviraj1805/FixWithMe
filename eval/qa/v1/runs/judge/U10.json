@@ -1,0 +1,20 @@
+{
+ "id": "U10",
+ "labels": {
+  "Your mixer grinder may stop halfway due to the overload protector tripping from too much load.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Allow the motor to cool down for a few minutes and press the reset button at the bottom.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Ensure the jar is not overloaded or the blades are not jammed by stuck food items.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

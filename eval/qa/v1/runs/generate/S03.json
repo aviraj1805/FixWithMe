@@ -1,0 +1,53 @@
+{
+ "id": "S03",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "wiki:en:1357326269:4",
+  "kb:ceiling_fan:cause:capacitor_weak:en",
+  "wiki:en:1357326269:0",
+  "wiki:en:1357326269:6"
+ ],
+ "retrieval_ms": 862,
+ "closed_book": {
+  "claims": [
+   "Never test a fan capacitor while the fan is switched on.",
+   "Live testing of capacitors exposes you to severe electric shock risks.",
+   "Always turn off the power supply and discharge the capacitor before inspecting it."
+  ],
+  "error": null,
+  "ms": 4477
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Never work on a fan with the power on.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5603
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Never work on a fan with the power on.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7130
+ }
+}

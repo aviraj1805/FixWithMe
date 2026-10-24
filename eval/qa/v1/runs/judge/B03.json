@@ -1,0 +1,25 @@
+{
+ "id": "B03",
+ "labels": {
+  "An overloaded extension cord carries more electrical current than its wire gauge is designed to handle.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "This excess current generates excessive heat due to electrical resistance.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The continuous high heat causes the plastic insulation and casing to melt.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Overloading can cause an extension cord to heat up to the point that its insulation either melts or carbonizes.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

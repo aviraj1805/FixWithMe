@@ -1,0 +1,20 @@
+{
+ "id": "A05",
+ "labels": {
+  "MFD stands for microfarads, which measures the electrical capacitance.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It indicates the energy storage capacity of the capacitor used in appliances like ceiling fans.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "Always replace a capacitor with one matching the exact MFD rating for safety and proper function.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "A17",
+ "labels": {
+  "Plug a working lamp or phone charger into the socket to test for power.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Check if the wall switch controlling the socket is turned on.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Look for any tripped circuit breakers in your main electrical panel.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "To check if a wall socket is working, plug a phone charger straight into it and switch it on.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

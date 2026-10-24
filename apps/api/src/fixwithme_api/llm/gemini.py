@@ -51,7 +51,17 @@ class GeminiProvider:
             # connection that hangs before the server can respond.
             resp = await asyncio.wait_for(
                 self._client.aio.models.generate_content(
-                    model=self.model, contents=request.prompt, config=config
+                    model=self.model,
+                    contents=[
+                        *(
+                            types.Part.from_bytes(data=data, mime_type=mime)
+                            for data, mime in request.images
+                        ),
+                        request.prompt,
+                    ]
+                    if request.images
+                    else request.prompt,
+                    config=config,
                 ),
                 timeout=self.timeout_s + 5,
             )

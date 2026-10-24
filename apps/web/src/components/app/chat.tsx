@@ -6,6 +6,7 @@ import { Icon } from "@/components/ui/icons";
 import { Badge, Chip, FixySays, PrimaryButton, TopBar } from "@/components/ui/parts";
 import { type Answer, type Answers, type AskResponse, type StepResponse, ask, step } from "@/lib/api";
 import { type Lang, t } from "@/lib/i18n";
+import { listen } from "@/lib/media";
 
 export type Msg =
   | { id: number; from: "user"; text: string }
@@ -31,6 +32,9 @@ export type Session = {
   causes: StepResponse["causes"];
   tier: StepResponse["tier"];
   mode: "diagnose" | "ask"; // after a diagnosis (or "Ask anyway"), typed text becomes a question
+  listenNow?: boolean; // opened with "Talk": start the mic once
+  photoPending?: boolean; // a photo is being identified
+  start?: { text: string; item: string | null }; // first message from a photo, sent once
 };
 
 type Body = {
@@ -75,6 +79,8 @@ export function Chat({
   const [lastBody, setLastBody] = useState<Body | null>(null);
   const [lastAsk, setLastAsk] = useState<AskBody | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
+  const [listening, setListening] = useState(false);
+  const stopRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -150,15 +156,45 @@ export function Chat({
     }
   }
 
-  function sendText(e: FormEvent) {
-    e.preventDefault();
-    const value = text.trim();
+  function sendText(e?: FormEvent, spoken?: string) {
+    e?.preventDefault();
+    const value = (spoken ?? text).trim();
     if (!value || pending) return;
     setText("");
     push({ id: newId(), from: "user", text: value });
     if (session.mode === "ask") void runAsk({ question: value, item: session.item, web: session.item === null });
     else void run({ text: value, answers: session.answers, item: session.item });
   }
+
+  function toggleMic() {
+    if (listening) {
+      stopRef.current?.();
+      return;
+    }
+    setListening(true);
+    stopRef.current = listen(
+      lang,
+      (spoken) => sendText(undefined, spoken),
+      () => setListening(false),
+    );
+  }
+
+  // Opened with "Talk": start listening once. From a photo: send its description once.
+  useEffect(() => {
+    if (session.listenNow) {
+      setSession((s) => ({ ...s, listenNow: false }));
+      // One-shot: the chat was opened with "Talk", so start the mic once on mount.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      toggleMic();
+    }
+    if (session.start) {
+      const { text: first, item } = session.start;
+      setSession((s) => ({ ...s, start: undefined }));
+      push({ id: newId(), from: "user", text: first });
+      void run({ text: first, answers: {}, item });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session.listenNow, session.start]);
 
   function askAnyway(m: Extract<Msg, { from: "fixy" }>) {
     const question = m.sourceText ?? session.messages.find((x) => x.from === "user")?.text;
@@ -277,6 +313,15 @@ export function Chat({
             </div>
           ),
         )}
+        {session.photoPending && (
+          <div className="flex items-end gap-2" role="status">
+            <Fixy mood="thinking" size={40} label="Fixy" />
+            <div className="rounded-[20px] rounded-bl-md bg-surface px-4 py-3 shadow-soft">
+              <p className="text-[15px]">{t("looking", lang)}</p>
+              <p className="mt-1 text-xs text-muted">{t("photoNote", lang)}</p>
+            </div>
+          </div>
+        )}
         {pending && (
           <div className="flex items-end gap-2" role="status" aria-label={t("thinking", lang)}>
             <Fixy mood="thinking" size={40} label="Fixy" />
@@ -307,7 +352,9 @@ export function Chat({
           onChange={(e) => setText(e.target.value)}
           maxLength={1000}
           placeholder={
-            session.messages.length <= 1
+            listening
+              ? t("listening", lang)
+              : session.messages.length <= 1
               ? t("placeholder", lang)
               : session.mode === "ask"
                 ? t("askFollowUp", lang)
@@ -316,6 +363,17 @@ export function Chat({
           aria-label={t("message", lang)}
           className="min-h-12 min-w-0 flex-1 rounded-full border border-line bg-surface px-5 text-[15px] outline-none focus:border-brand"
         />
+        <button
+          type="button"
+          onClick={toggleMic}
+          aria-label={listening ? t("listening", lang) : t("speak", lang)}
+          aria-pressed={listening}
+          className={`grid size-12 shrink-0 place-items-center rounded-full border ${
+            listening ? "animate-pulse border-brand bg-brand-subtle text-brand" : "border-line bg-surface"
+          }`}
+        >
+          <Icon name="mic" size={20} />
+        </button>
         <button
           type="submit"
           disabled={pending || !text.trim()}

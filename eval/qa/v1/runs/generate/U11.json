@@ -1,0 +1,36 @@
+{
+ "id": "U11",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:cause:board_switch_faulty:hi",
+  "wiki:hi:6580145:1",
+  "kb:battery_toy:cause:drive_jammed:hi",
+  "wiki:hi:4796400:1",
+  "kb:battery_toy:cause:batteries_dead:hi"
+ ],
+ "retrieval_ms": 1025,
+ "closed_book": {
+  "claims": [
+   "ड्रेन पाइप में कचरा या ब्लॉकेज चेक करें।",
+   "ड्रेन पंप फिल्टर को साफ करें।"
+  ],
+  "error": null,
+  "ms": 5250
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5578
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5578
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "U09",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1374902512:4",
+  "wiki:en:1378275539:3",
+  "wiki:en:1378275539:4",
+  "wiki:en:1381519558:13",
+  "wiki:en:1374902512:3"
+ ],
+ "retrieval_ms": 1228,
+ "closed_book": {
+  "claims": [
+   "Setting your inverter AC to 24 degrees Celsius is generally recommended as the most energy-efficient temperature.",
+   "Every degree lowered below 24 degrees increases power consumption by approximately six percent.",
+   "Using a ceiling fan along with your AC helps circulate cool air and allows you to set a higher temperature."
+  ],
+  "error": null,
+  "ms": 6518
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5959
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5959
+ }
+}

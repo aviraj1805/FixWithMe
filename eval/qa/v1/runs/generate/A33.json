@@ -1,0 +1,67 @@
+{
+ "id": "A33",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:reset_earbuds:hi",
+  "kb:headphones:cause:pairing_glitch:hi",
+  "kb:headphones:cause:not_charging:hi",
+  "kb:headphones:procedure:clean_contacts_charge:hi",
+  "kb:headphones:procedure:clean_jack:hi"
+ ],
+ "retrieval_ms": 1922,
+ "closed_book": {
+  "claims": [
+   "अपने ईयरबड्स को चार्जिंग केस में रखें।",
+   "केस का ढक्कन बंद करें और कुछ सेकंड प्रतीक्षा करें।",
+   "केस पर दिए गए सेटअप बटन को लगभग 10 से 15 सेकंड तक दबाकर रखें।",
+   "इंडिकेटर लाइट के ब्लिंक होने पर रीसेट पूरा हो जाता है।"
+  ],
+  "error": null,
+  "ms": 5140
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "दोनों ईयरबड केस में रखें और ढक्कन 10 सेकंड बंद रखें।",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:hi"
+    ]
+   },
+   {
+    "text": "फ़ोन की ब्लूटूथ सेटिंग में ईयरबड्स को फॉरगेट करें और दोनों को एक साथ निकालकर फिर से पेयर करें।",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:hi"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6050
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "दोनों ईयरबड केस में रखें और ढक्कन 10 सेकंड बंद रखें।",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:hi"
+    ]
+   },
+   {
+    "text": "फ़ोन की ब्लूटूथ सेटिंग में ईयरबड्स को फॉरगेट करें और दोनों को एक साथ निकालकर फिर से पेयर करें।",
+    "sources": [
+     "kb:headphones:procedure:reset_earbuds:hi"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7659
+ }
+}

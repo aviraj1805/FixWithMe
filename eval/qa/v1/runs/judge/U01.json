@@ -1,0 +1,20 @@
+{
+ "id": "U01",
+ "labels": {
+  "A standard ceiling fan capacitor typically costs between 30 and 70 rupees in Pune.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "You can buy them easily at local electrical repair and hardware shops.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Make sure to match the microfarad rating, usually 2.5 or 3.15 µF, with your old capacitor.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

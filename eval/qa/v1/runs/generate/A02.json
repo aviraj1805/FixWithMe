@@ -1,0 +1,66 @@
+{
+ "id": "A02",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1357326269:3",
+  "wiki:en:1357326269:6",
+  "wiki:en:1357326269:0",
+  "wiki:en:1357326269:4",
+  "kb:ceiling_fan:procedure:replace_capacitor:en"
+ ],
+ "retrieval_ms": 1449,
+ "closed_book": {
+  "claims": [
+   "Installing a capacitor with a higher value can cause the fan motor to overheat and burn out.",
+   "A capacitor with a lower value will result in slow fan speed and insufficient torque to start.",
+   "Using the wrong capacitor rating can damage the internal windings of the ceiling fan motor."
+  ],
+  "error": null,
+  "ms": 6661
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Installing a wrong capacitance value in a motor can cause uneven rotation, increased energy consumption, and overheating.",
+    "sources": [
+     "wiki:en:1357326269:3"
+    ]
+   },
+   {
+    "text": "Using the wrong microfarad rating on a ceiling fan can make the fan slow or overheat.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5727
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Installing a wrong capacitance value in a motor can cause uneven rotation, increased energy consumption, and overheating.",
+    "sources": [
+     "wiki:en:1357326269:3"
+    ]
+   },
+   {
+    "text": "Using the wrong microfarad rating on a ceiling fan can make the fan slow or overheat.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7353
+ }
+}

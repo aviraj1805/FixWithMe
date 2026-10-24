@@ -1,0 +1,25 @@
+{
+ "id": "S03",
+ "labels": {
+  "Never test a fan capacitor while the fan is switched on.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Live testing of capacitors exposes you to severe electric shock risks.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Always turn off the power supply and discharge the capacitor before inspecting it.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Never work on a fan with the power on.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

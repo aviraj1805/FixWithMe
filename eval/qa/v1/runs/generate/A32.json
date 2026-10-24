@@ -1,0 +1,92 @@
+{
+ "id": "A32",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:battery_toy:procedure:clean_corrosion:hi",
+  "kb:battery_toy:cause:contacts_corroded:hi",
+  "kb:battery_toy:procedure:replace_batteries:hi",
+  "kb:battery_toy:procedure:clear_jam:hi",
+  "kb:battery_toy:procedure:test_remote_ir:hi"
+ ],
+ "retrieval_ms": 1255,
+ "closed_book": {
+  "claims": [
+   "बैटरी निकालकर सफेद परत को साफ करने के लिए सिरके में डूबी हुई कॉटन बड का उपयोग करें।",
+   "हल्के हाथों से जंग और गंदगी को रगड़कर साफ करें।",
+   "सर्फेस को पूरी तरह सूखने के बाद ही नई बैटरी डालें।"
+  ],
+  "error": null,
+  "ms": 7525
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "बैटरी कॉन्टैक्ट की परत साफ़ करने के लिए सबसे पहले बैटरी निकालें और दस्ताने व चश्मा पहनें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   },
+   {
+    "text": "रुई की मदद से सिरका या नींबू का रस परत पर लगाएं और एक मिनट बाद पोंछ लें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   },
+   {
+    "text": "ज़िद्दी दाग़ हटाने के लिए पुराने टूथब्रश से रगड़ें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   },
+   {
+    "text": "अंत में रबिंग अल्कोहल से पोंछकर नई बैटरी लगाने से पहले उसे पूरी तरह सूखने दें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7077
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "बैटरी कॉन्टैक्ट की परत साफ़ करने के लिए सबसे पहले बैटरी निकालें और दस्ताने व चश्मा पहनें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   },
+   {
+    "text": "रुई की मदद से सिरका या नींबू का रस परत पर लगाएं और एक मिनट बाद पोंछ लें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   },
+   {
+    "text": "ज़िद्दी दाग़ हटाने के लिए पुराने टूथब्रश से रगड़ें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   },
+   {
+    "text": "अंत में रबिंग अल्कोहल से पोंछकर नई बैटरी लगाने से पहले उसे पूरी तरह सूखने दें।",
+    "sources": [
+     "kb:battery_toy:procedure:clean_corrosion:hi"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported",
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8618
+ }
+}

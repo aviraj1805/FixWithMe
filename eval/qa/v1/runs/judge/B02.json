@@ -1,0 +1,25 @@
+{
+ "id": "B02",
+ "labels": {
+  "Natural gas is naturally odorless in its pure form.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "An odorant called mercaptan is added for safety.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "This distinct smell helps people easily detect gas leaks.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "An unpleasant scent of mercaptans is added to natural gas to help people identify leaks.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

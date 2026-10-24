@@ -1,0 +1,37 @@
+{
+ "id": "U10",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1373727450:0",
+  "wiki:en:1381432836:11",
+  "kb:extension_board:cause:overload_tripped:en",
+  "wiki:en:1373727844:3",
+  "kb:extension_board:procedure:reset_overload:en"
+ ],
+ "retrieval_ms": 949,
+ "closed_book": {
+  "claims": [
+   "Your mixer grinder may stop halfway due to the overload protector tripping from too much load.",
+   "Allow the motor to cool down for a few minutes and press the reset button at the bottom.",
+   "Ensure the jar is not overloaded or the blades are not jammed by stuck food items."
+  ],
+  "error": null,
+  "ms": 6607
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5939
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5939
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "U06",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1373727844:8",
+  "wiki:en:1379153667:11",
+  "wiki:en:1381365577:6",
+  "kb:ceiling_fan:procedure:refer_bearing:en",
+  "wiki:en:1380213788:9"
+ ],
+ "retrieval_ms": 1429,
+ "closed_book": {
+  "claims": [
+   "Service your RO water purifier every 3 to 6 months to ensure water safety.",
+   "Replace sediment and carbon filters at least once every six months.",
+   "Change the RO membrane every year or depending on your water TDS levels."
+  ],
+  "error": null,
+  "ms": 6375
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5074
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5074
+ }
+}

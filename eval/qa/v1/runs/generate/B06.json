@@ -1,0 +1,66 @@
+{
+ "id": "B06",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1371763524:2",
+  "wiki:en:1379153667:10",
+  "wiki:en:1379153667:13",
+  "wiki:en:1379153667:0",
+  "wiki:en:1379153667:15"
+ ],
+ "retrieval_ms": 1145,
+ "closed_book": {
+  "claims": [
+   "Potassium hydroxide is a strong alkali that can cause severe chemical burns upon skin contact.",
+   "Exposure to the eyes can lead to permanent damage or blindness.",
+   "Inhalation of its dust or mist can irritate the respiratory tract."
+  ],
+  "error": null,
+  "ms": 4582
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Potassium hydroxide is a caustic agent that can cause respiratory, eye and skin irritation.",
+    "sources": [
+     "wiki:en:1379153667:10"
+    ]
+   },
+   {
+    "text": "Eye protection and rubber gloves should be worn because the potassium hydroxide electrolyte is caustic.",
+    "sources": [
+     "wiki:en:1371763524:2"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 9852
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Potassium hydroxide is a caustic agent that can cause respiratory, eye and skin irritation.",
+    "sources": [
+     "wiki:en:1379153667:10"
+    ]
+   },
+   {
+    "text": "Eye protection and rubber gloves should be worn because the potassium hydroxide electrolyte is caustic.",
+    "sources": [
+     "wiki:en:1371763524:2"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 11717
+ }
+}

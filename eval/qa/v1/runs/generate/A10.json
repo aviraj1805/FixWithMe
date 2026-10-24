@@ -1,0 +1,54 @@
+{
+ "id": "A10",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:reset_overload:en",
+  "kb:extension_board:procedure:replace_board:en",
+  "kb:extension_board:cause:overload_tripped:en",
+  "wiki:en:1374902512:13",
+  "kb:extension_board:cause:board_switch_faulty:en"
+ ],
+ "retrieval_ms": 1094,
+ "closed_book": {
+  "claims": [
+   "Unplug all connected devices from the extension board immediately.",
+   "Wait a few minutes for the extension board to cool down.",
+   "Press the overload reset button back in.",
+   "Plug in fewer devices to prevent overloading the board again."
+  ],
+  "error": null,
+  "ms": 14670
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Switch off and unplug everything from the board, then press the reset button once or switch the board off and on.",
+    "sources": [
+     "kb:extension_board:procedure:reset_overload:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5939
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Switch off and unplug everything from the board, then press the reset button once or switch the board off and on.",
+    "sources": [
+     "kb:extension_board:procedure:reset_overload:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 9693
+ }
+}

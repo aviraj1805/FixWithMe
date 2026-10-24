@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { type Answers, type Procedure, type StepResponse, getProcedure, sendOutcome, wakeApi } from "@/lib/api";
+import { type Answers, type Procedure, type StepResponse, getProcedure, identify, sendOutcome, wakeApi } from "@/lib/api";
+import { preparePhoto } from "@/lib/media";
 import { type Lang, t } from "@/lib/i18n";
 import { Chat, type Session, newId } from "./chat";
 import { Guide } from "./guide";
@@ -42,9 +43,27 @@ export function FixApp() {
   const setSession = useCallback((update: (s: Session) => Session) => setSessionState(update), []);
   const goHome = useCallback(() => setView({ name: "home" }), []);
 
-  function startChat() {
-    setSessionState(freshSession(lang));
+  function startChat(listenNow = false) {
+    setSessionState({ ...freshSession(lang), listenNow });
     setView({ name: "chat" });
+  }
+
+  async function startFromPhoto(file: File) {
+    const s = freshSession(lang);
+    const userMsg = { id: newId(), from: "user" as const, text: t("photo", lang) };
+    setSessionState({ ...s, messages: [...s.messages, userMsg], photoPending: true });
+    setView({ name: "chat" });
+    try {
+      const photo = await preparePhoto(file);
+      const found = await identify({ image: photo.base64, mime: photo.mime, lang });
+      setSessionState((cur) => ({ ...cur, photoPending: false, start: { text: found.text, item: found.item } }));
+    } catch {
+      setSessionState((cur) => ({
+        ...cur,
+        photoPending: false,
+        messages: [...cur.messages, { id: newId(), from: "fixy", text: t("photoFailed", lang), kind: "intro" }],
+      }));
+    }
   }
 
   async function finish(item: string, procedureId: string, diagnosis: Diagnosis | null, resolved: boolean | null) {
@@ -73,7 +92,13 @@ export function FixApp() {
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col">
       {view.name === "welcome" && <Welcome lang={lang} onDone={goHome} />}
       {view.name === "home" && (
-        <Home lang={lang} onLang={() => setLang((l) => (l === "en" ? "hi" : "en"))} onType={startChat} />
+        <Home
+          lang={lang}
+          onLang={() => setLang((l) => (l === "en" ? "hi" : "en"))}
+          onType={() => startChat()}
+          onTalk={() => startChat(true)}
+          onPhoto={(file) => void startFromPhoto(file)}
+        />
       )}
       {view.name === "chat" && (
         <div className="flex h-dvh flex-col">
@@ -102,7 +127,7 @@ export function FixApp() {
       )}
       {view.name === "stop" && <Stop lang={lang} stop={view.stop} onBack={goHome} />}
       {view.name === "done" && (
-        <Done lang={lang} resolved={view.resolved} tip={view.tip} nextCause={nextCause} onRestart={startChat} />
+        <Done lang={lang} resolved={view.resolved} tip={view.tip} nextCause={nextCause} onRestart={() => startChat()} />
       )}
     </main>
   );

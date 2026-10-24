@@ -1,0 +1,49 @@
+{
+ "id": "A24",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1376232316:9",
+  "wiki:en:1376232316:4",
+  "wiki:en:1376232316:8",
+  "wiki:en:1376232316:3",
+  "wiki:hi:6473744:3"
+ ],
+ "retrieval_ms": 1920,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 4357
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "The 3.5 mm size was originally designed in the 1950s as a two-conductor connector for earpieces on transistor radios.",
+    "sources": [
+     "wiki:en:1376232316:8"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6138
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "The 3.5 mm size was originally designed in the 1950s as a two-conductor connector for earpieces on transistor radios.",
+    "sources": [
+     "wiki:en:1376232316:8"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7604
+ }
+}

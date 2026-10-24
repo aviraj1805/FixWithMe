@@ -1,0 +1,55 @@
+{
+ "id": "A14",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1381432836:10",
+  "wiki:en:1381432836:0",
+  "wiki:en:1381432836:11",
+  "wiki:en:1381432836:4",
+  "wiki:en:1381432836:9"
+ ],
+ "retrieval_ms": 5002,
+ "closed_book": {
+  "claims": [
+   "Do not run extension cords under carpets or rugs.",
+   "This traps heat and can cause an electrical fire.",
+   "Keep cords visible and in open areas to prevent overheating."
+  ],
+  "error": null,
+  "ms": 6883
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Extension cords should never be covered with a rug or carpet because this can create a serious fire hazard.",
+    "sources": [
+     "wiki:en:1381432836:10",
+     "wiki:en:1381432836:11"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7224
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Extension cords should never be covered with a rug or carpet because this can create a serious fire hazard.",
+    "sources": [
+     "wiki:en:1381432836:10",
+     "wiki:en:1381432836:11"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 8975
+ }
+}

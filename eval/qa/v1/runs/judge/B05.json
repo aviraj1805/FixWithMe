@@ -1,0 +1,20 @@
+{
+ "id": "B05",
+ "labels": {
+  "A capacitor stores electrical energy in an electrostatic field even after the power supply is disconnected.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It retains this charge until it is safely discharged through a load or a resistor.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Touching the terminals of a charged capacitor can complete the circuit through your body, causing a shock.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

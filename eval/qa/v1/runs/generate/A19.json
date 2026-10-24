@@ -1,0 +1,67 @@
+{
+ "id": "A19",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:clean_jack:en",
+  "kb:headphones:procedure:check_device:en",
+  "wiki:en:1376232316:3",
+  "kb:headphones:cause:jack_dirty:en",
+  "wiki:en:1376232316:0"
+ ],
+ "retrieval_ms": 5921,
+ "closed_book": {
+  "claims": [
+   "Turn off your phone before attempting to clean the headphone jack.",
+   "Use a wooden toothpick or a soft, dry interdental brush to gently scoop out the lint.",
+   "Do not use metal objects like needles or pins, as they can damage the internal contacts.",
+   "Avoid inserting compressed air into the jack, as it can push debris deeper inside."
+  ],
+  "error": null,
+  "ms": 6557
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Switch the phone off and use a light to spot lint in the port.",
+    "sources": [
+     "kb:headphones:procedure:clean_jack:en"
+    ]
+   },
+   {
+    "text": "Gently loosen the lint with a wooden or plastic toothpick while avoiding metal tools.",
+    "sources": [
+     "kb:headphones:procedure:clean_jack:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5944
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Switch the phone off and use a light to spot lint in the port.",
+    "sources": [
+     "kb:headphones:procedure:clean_jack:en"
+    ]
+   },
+   {
+    "text": "Gently loosen the lint with a wooden or plastic toothpick while avoiding metal tools.",
+    "sources": [
+     "kb:headphones:procedure:clean_jack:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7568
+ }
+}

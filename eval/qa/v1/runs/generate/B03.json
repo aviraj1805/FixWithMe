@@ -1,0 +1,53 @@
+{
+ "id": "B03",
+ "gate": {
+  "hazard": "fire_smoke",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1381432836:8",
+  "wiki:en:1381432836:1",
+  "wiki:en:1381432836:10",
+  "wiki:en:1381432836:11",
+  "wiki:en:1381432836:13"
+ ],
+ "retrieval_ms": 3904,
+ "closed_book": {
+  "claims": [
+   "An overloaded extension cord carries more electrical current than its wire gauge is designed to handle.",
+   "This excess current generates excessive heat due to electrical resistance.",
+   "The continuous high heat causes the plastic insulation and casing to melt."
+  ],
+  "error": null,
+  "ms": 5411
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Overloading can cause an extension cord to heat up to the point that its insulation either melts or carbonizes.",
+    "sources": [
+     "wiki:en:1381432836:8"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4103
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Overloading can cause an extension cord to heat up to the point that its insulation either melts or carbonizes.",
+    "sources": [
+     "wiki:en:1381432836:8"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 5534
+ }
+}

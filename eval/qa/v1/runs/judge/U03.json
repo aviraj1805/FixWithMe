@@ -1,0 +1,20 @@
+{
+ "id": "U03",
+ "labels": {
+  "A technician typically charges between 150 to 300 Indian Rupees as labor charges for replacing ceiling fan bearings.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The cost of new bearings usually ranges from 50 to 150 Indian Rupees depending on the fan brand.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Total repair costs generally range between 200 and 450 Indian Rupees including parts and labor.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

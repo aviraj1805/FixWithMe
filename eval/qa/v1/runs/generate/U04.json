@@ -1,0 +1,33 @@
+{
+ "id": "U04",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:clean_contacts_charge:en",
+  "wiki:en:1381519558:0",
+  "kb:headphones:procedure:reset_earbuds:en",
+  "kb:headphones:procedure:replace_headphones:en",
+  "kb:headphones:cause:not_charging:en"
+ ],
+ "retrieval_ms": 788,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 5668
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4699
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 4699
+ }
+}

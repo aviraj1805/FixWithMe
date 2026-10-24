@@ -1,0 +1,40 @@
+{
+ "id": "A30",
+ "labels": {
+  "Turn off and invert the toy car to access the wheels.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Use a pair of tweezers or a small needle to carefully pull out the tangled hair.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Use small scissors to cut the hair if it is wrapped tightly around the axle.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Spin the wheels manually to ensure they move freely after removing the hair.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Switch off the toy car and take the batteries out.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Pull hair, thread or carpet fluff off the wheels and axles using tweezers.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Turn the wheels by hand to ensure they move freely before fitting the batteries back.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "U08",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1371763524:0",
+  "kb:battery_toy:procedure:clean_corrosion:en",
+  "wiki:en:1356624256:0",
+  "kb:battery_toy:procedure:clean_corrosion:hi",
+  "wiki:hi:4796400:3"
+ ],
+ "retrieval_ms": 1036,
+ "closed_book": {
+  "claims": [
+   "Fill the kettle with equal parts water and white vinegar.",
+   "Boil the mixture and let it sit for one hour.",
+   "Empty the kettle and rinse thoroughly with clean water."
+  ],
+  "error": null,
+  "ms": 5958
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5608
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5608
+ }
+}

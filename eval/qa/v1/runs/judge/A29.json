@@ -1,0 +1,25 @@
+{
+ "id": "A29",
+ "labels": {
+  "The letters CR indicate that the battery is a lithium manganese dioxide coin cell.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The first two digits, 20, represent the diameter of the battery in millimeters.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The last two digits, 32, represent the thickness of the battery in tenths of a millimeter.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "In the CR2032 battery name, the numbers indicate a 20 mm diameter and a 3.2 mm height.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

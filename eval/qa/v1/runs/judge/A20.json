@@ -1,0 +1,25 @@
+{
+ "id": "A20",
+ "labels": {
+  "Plug the earphones into a device and gently bend the cable at various points starting from the jack to the earbuds.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Listen for any crackling sounds or audio returning in one ear to identify the exact spot of the internal break.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Check the areas near the audio jack and the earbud stems, as these are the most common points of stress and damage.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "To find where the cable is broken, play music and bend the cable along its length to locate the spot where the sound cuts out.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

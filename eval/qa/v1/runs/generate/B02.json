@@ -1,0 +1,53 @@
+{
+ "id": "B02",
+ "gate": {
+  "hazard": "gas",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1343577037:1",
+  "wiki:en:1343577037:0",
+  "wiki:en:1343577037:12",
+  "wiki:en:1343577037:3",
+  "wiki:en:1343577037:4"
+ ],
+ "retrieval_ms": 1277,
+ "closed_book": {
+  "claims": [
+   "Natural gas is naturally odorless in its pure form.",
+   "An odorant called mercaptan is added for safety.",
+   "This distinct smell helps people easily detect gas leaks."
+  ],
+  "error": null,
+  "ms": 5263
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "An unpleasant scent of mercaptans is added to natural gas to help people identify leaks.",
+    "sources": [
+     "wiki:en:1343577037:1"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6399
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "An unpleasant scent of mercaptans is added to natural gas to help people identify leaks.",
+    "sources": [
+     "wiki:en:1343577037:1"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7713
+ }
+}

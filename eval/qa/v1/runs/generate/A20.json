@@ -1,0 +1,53 @@
+{
+ "id": "A20",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:cable_replace:en",
+  "kb:headphones:cause:cable_break:en",
+  "wiki:en:1379041038:5",
+  "wiki:en:1379041038:4",
+  "wiki:en:1379041038:7"
+ ],
+ "retrieval_ms": 1376,
+ "closed_book": {
+  "claims": [
+   "Plug the earphones into a device and gently bend the cable at various points starting from the jack to the earbuds.",
+   "Listen for any crackling sounds or audio returning in one ear to identify the exact spot of the internal break.",
+   "Check the areas near the audio jack and the earbud stems, as these are the most common points of stress and damage."
+  ],
+  "error": null,
+  "ms": 6040
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "To find where the cable is broken, play music and bend the cable along its length to locate the spot where the sound cuts out.",
+    "sources": [
+     "kb:headphones:procedure:cable_replace:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7532
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "To find where the cable is broken, play music and bend the cable along its length to locate the spot where the sound cuts out.",
+    "sources": [
+     "kb:headphones:procedure:cable_replace:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 9004
+ }
+}

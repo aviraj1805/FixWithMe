@@ -1,0 +1,30 @@
+{
+ "id": "A02",
+ "labels": {
+  "Installing a capacitor with a higher value can cause the fan motor to overheat and burn out.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A capacitor with a lower value will result in slow fan speed and insufficient torque to start.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Using the wrong capacitor rating can damage the internal windings of the ceiling fan motor.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Installing a wrong capacitance value in a motor can cause uneven rotation, increased energy consumption, and overheating.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Using the wrong microfarad rating on a ceiling fan can make the fan slow or overheat.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

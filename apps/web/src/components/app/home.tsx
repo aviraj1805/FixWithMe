@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Fixy } from "@/components/fixy/fixy";
 import { Icon, type IconName } from "@/components/ui/icons";
 import { Bubble } from "@/components/ui/parts";
 import { type Lang, type StringKey, t } from "@/lib/i18n";
+import { speechSupported } from "@/lib/media";
 
 export function Welcome({ lang, onDone }: { lang: Lang; onDone: () => void }) {
   useEffect(() => {
@@ -64,12 +65,17 @@ export function Home({
   lang,
   onLang,
   onType,
+  onTalk,
+  onPhoto,
 }: {
   lang: Lang;
   onLang: () => void;
   onType: () => void;
+  onTalk: () => void;
+  onPhoto: (file: File) => void;
 }) {
   const [notice, setNotice] = useState<StringKey | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!notice) return;
@@ -99,8 +105,24 @@ export function Home({
         <Fixy mood="wave" size={190} className="relative" />
       </div>
       <div className="flex items-start justify-center gap-8 pb-14">
-        <RoundAction icon="mic" label={t("talk", lang)} onClick={() => setNotice("voiceSoon")} />
-        <RoundAction icon="camera" label={t("scan", lang)} big onClick={() => setNotice("cameraSoon")} />
+        <RoundAction
+          icon="mic"
+          label={t("talk", lang)}
+          onClick={() => (speechSupported() ? onTalk() : setNotice("voiceUnsupported"))}
+        />
+        <RoundAction icon="camera" label={t("scan", lang)} big onClick={() => fileRef.current?.click()} />
+        <input
+          ref={fileRef}
+          type="file"
+          accept="image/*"
+          capture="environment"
+          className="hidden"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            e.target.value = "";
+            if (file) onPhoto(file);
+          }}
+        />
         <RoundAction icon="keyboard" label={t("type", lang)} onClick={onType} />
       </div>
     </div>

@@ -1,0 +1,10 @@
+{
+ "id": "S01",
+ "labels": {
+  "Check with a line tester that the fan wires are dead.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

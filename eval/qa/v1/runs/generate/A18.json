@@ -1,0 +1,53 @@
+{
+ "id": "A18",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:check_device:en",
+  "kb:headphones:procedure:reset_earbuds:en",
+  "kb:headphones:cause:source_device:en",
+  "kb:headphones:procedure:replace_headphones:en",
+  "wiki:en:1376232316:13"
+ ],
+ "retrieval_ms": 1761,
+ "closed_book": {
+  "claims": [
+   "Check the audio balance settings in your phone's accessibility menu to ensure sound is centered.",
+   "Unplug and reconnect the earphones to clear any temporary glitches in the audio jack or Bluetooth connection.",
+   "Test the earphones on another device to confirm if the issue is with the phone settings or the hardware."
+  ],
+  "error": null,
+  "ms": 5244
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Check your phone's sound or accessibility settings to ensure the left-right balance is in the middle and mono audio is off.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5914
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Check your phone's sound or accessibility settings to ensure the left-right balance is in the middle and mono audio is off.",
+    "sources": [
+     "kb:headphones:procedure:check_device:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7259
+ }
+}

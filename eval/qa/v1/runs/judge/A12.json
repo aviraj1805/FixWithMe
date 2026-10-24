@@ -1,0 +1,20 @@
+{
+ "id": "A12",
+ "labels": {
+  "Replace a damaged extension board instead of repairing it to ensure safety against short circuits.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Extension boards are inexpensive to buy new, making replacement a safer and more practical choice in Indian households.": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "A damaged or faulty extension board should not be repaired and must be replaced.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "A34",
+ "labels": {
+  "सबसे पहले एक्सटेंशन बोर्ड को मुख्य बिजली आपूर्ति से बंद करके अनप्लग करें।": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "ओवरलोड बटन या फ्यूज को ठीक करने के लिए किसी योग्य इलेक्ट्रीशियन की मदद लें।": {
+   "support": "not_in_sources",
+   "relevant": false,
+   "unsafe": false
+  },
+  "खुद से खुले हुए हिस्सों या तारों को छूने से बचें।": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "A28",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1379153667:8",
+  "wiki:en:1379153667:15",
+  "wiki:en:1379153667:13",
+  "wiki:en:1379153667:0",
+  "wiki:en:1371763524:2"
+ ],
+ "retrieval_ms": 2225,
+ "closed_book": {
+  "claims": [
+   "Normal alkaline batteries are designed for single use and cannot be recharged.",
+   "Attempting to recharge alkaline batteries can cause them to leak, overheat, or rupture.",
+   "Always use rechargeable batteries like NiMH if you need to recharge them."
+  ],
+  "error": null,
+  "ms": 6622
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Attempts to recharge standard alkaline batteries may cause rupture, or the leaking of hazardous liquids that corrode the equipment.",
+    "sources": [
+     "wiki:en:1379153667:8"
+    ]
+   },
+   {
+    "text": "It is reported that standard alkaline batteries can often be recharged a few times, but with reduced capacity after each charge.",
+    "sources": [
+     "wiki:en:1379153667:8"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6217
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Attempts to recharge standard alkaline batteries may cause rupture, or the leaking of hazardous liquids that corrode the equipment.",
+    "sources": [
+     "wiki:en:1379153667:8"
+    ]
+   },
+   {
+    "text": "It is reported that standard alkaline batteries can often be recharged a few times, but with reduced capacity after each charge.",
+    "sources": [
+     "wiki:en:1379153667:8"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7807
+ }
+}

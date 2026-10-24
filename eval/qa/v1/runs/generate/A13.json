@@ -1,0 +1,79 @@
+{
+ "id": "A13",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1381432836:8",
+  "wiki:en:1381432836:13",
+  "wiki:en:1381432836:1",
+  "wiki:en:1381432836:10",
+  "wiki:en:1381432836:5"
+ ],
+ "retrieval_ms": 739,
+ "closed_book": {
+  "claims": [
+   "Overloading extension cords by plugging in too many high-wattage appliances generates excessive heat.",
+   "Using damaged or frayed cords can cause electrical sparks and short circuits.",
+   "Running extension cords under rugs or carpets traps heat and prevents it from dissipating safely."
+  ],
+  "error": null,
+  "ms": 6358
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "A large proportion of structure fires are caused by extension cords that are either damaged or overloaded.",
+    "sources": [
+     "wiki:en:1381432836:8"
+    ]
+   },
+   {
+    "text": "Overloading causes an extension cord to heat up until its insulation melts or carbonizes.",
+    "sources": [
+     "wiki:en:1381432836:8"
+    ]
+   },
+   {
+    "text": "Covering an extension cord with a rug or carpet can produce a serious fire hazard.",
+    "sources": [
+     "wiki:en:1381432836:10"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7645
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "A large proportion of structure fires are caused by extension cords that are either damaged or overloaded.",
+    "sources": [
+     "wiki:en:1381432836:8"
+    ]
+   },
+   {
+    "text": "Overloading causes an extension cord to heat up until its insulation melts or carbonizes.",
+    "sources": [
+     "wiki:en:1381432836:8"
+    ]
+   },
+   {
+    "text": "Covering an extension cord with a rug or carpet can produce a serious fire hazard.",
+    "sources": [
+     "wiki:en:1381432836:10"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 10105
+ }
+}

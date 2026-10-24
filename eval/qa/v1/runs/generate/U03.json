@@ -1,0 +1,37 @@
+{
+ "id": "U03",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:refer_bearing:en",
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:cause:bearing_stiff:en",
+  "kb:ceiling_fan:cause:capacitor_weak:en",
+  "kb:ceiling_fan:procedure:refer_winding:en"
+ ],
+ "retrieval_ms": 1338,
+ "closed_book": {
+  "claims": [
+   "A technician typically charges between 150 to 300 Indian Rupees as labor charges for replacing ceiling fan bearings.",
+   "The cost of new bearings usually ranges from 50 to 150 Indian Rupees depending on the fan brand.",
+   "Total repair costs generally range between 200 and 450 Indian Rupees including parts and labor."
+  ],
+  "error": null,
+  "ms": 5819
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4090
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 4090
+ }
+}

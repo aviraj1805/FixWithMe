@@ -1,0 +1,36 @@
+{
+ "id": "U02",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1378275539:4",
+  "wiki:en:1378275539:0",
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "kb:ceiling_fan:procedure:check_power:en",
+  "wiki:en:1378275539:8"
+ ],
+ "retrieval_ms": 1442,
+ "closed_book": {
+  "claims": [
+   "The Crompton Hill Briz ceiling fan typically has a wattage of around 70 to 75 watts.",
+   "Exact wattage can slightly vary depending on the specific sweep size and model year."
+  ],
+  "error": null,
+  "ms": 6338
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4501
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 4501
+ }
+}

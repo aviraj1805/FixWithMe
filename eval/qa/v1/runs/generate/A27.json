@@ -1,0 +1,67 @@
+{
+ "id": "A27",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1371763524:2",
+  "wiki:en:1379153667:13",
+  "wiki:en:1379153667:10",
+  "wiki:en:1379153667:0",
+  "wiki:en:1379153667:15"
+ ],
+ "retrieval_ms": 1269,
+ "closed_book": {
+  "claims": [
+   "Old alkaline batteries leak potassium hydroxide, which is a caustic and alkaline chemical.",
+   "This leaked substance can cause skin irritation and eye damage.",
+   "It can also corrode metals and damage household surfaces.",
+   "Always wear gloves when cleaning up battery leaks."
+  ],
+  "error": null,
+  "ms": 9003
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Old alkaline batteries can leak potassium hydroxide, which is a caustic agent capable of causing skin, eye, and respiratory irritation.",
+    "sources": [
+     "wiki:en:1379153667:10"
+    ]
+   },
+   {
+    "text": "When an alkaline battery is spent or reaches the end of its shelf life, internal pressure causes the casing to split and release substances including manganese oxide, zinc oxide, potassium hydroxide, zinc hydroxide, and manganese hydroxide.",
+    "sources": [
+     "wiki:en:1371763524:2"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 7000
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Old alkaline batteries can leak potassium hydroxide, which is a caustic agent capable of causing skin, eye, and respiratory irritation.",
+    "sources": [
+     "wiki:en:1379153667:10"
+    ]
+   },
+   {
+    "text": "When an alkaline battery is spent or reaches the end of its shelf life, internal pressure causes the casing to split and release substances including manganese oxide, zinc oxide, potassium hydroxide, zinc hydroxide, and manganese hydroxide.",
+    "sources": [
+     "wiki:en:1371763524:2"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 9652
+ }
+}

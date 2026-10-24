@@ -1,0 +1,33 @@
+{
+ "id": "S04",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1381262947:1",
+  "wiki:en:1381262947:7",
+  "wiki:en:1381262947:6",
+  "wiki:en:1381262947:9",
+  "wiki:en:1381262947:10"
+ ],
+ "retrieval_ms": 1041,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 5518
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5099
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5099
+ }
+}

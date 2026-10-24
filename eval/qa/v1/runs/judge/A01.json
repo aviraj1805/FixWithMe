@@ -1,0 +1,25 @@
+{
+ "id": "A01",
+ "labels": {
+  "A ceiling fan capacitor can store a dangerous electrical charge even after the power is turned off.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Touching the terminals without discharging it can cause a severe electric shock.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Safely discharging the capacitor prevents accidental injury during repair.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "You should discharge a fan capacitor because it can hold a charge even when the power is turned off.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

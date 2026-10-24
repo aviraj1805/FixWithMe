@@ -1,0 +1,68 @@
+{
+ "id": "A38",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:extension_board:procedure:replace_board:en",
+  "kb:extension_board:procedure:reset_overload:en",
+  "kb:extension_board:cause:board_switch_faulty:en",
+  "kb:extension_board:cause:cord_damaged:en",
+  "kb:extension_board:cause:overload_tripped:en"
+ ],
+ "retrieval_ms": 989,
+ "closed_book": {
+  "claims": [
+   "Check if the wall socket or board has power using another device.",
+   "Reset the circuit breaker or replace the fuse if it has tripped.",
+   "Avoid plugging high-wattage heaters into standard low-capacity boards."
+  ],
+  "error": null,
+  "ms": 4809
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "If the extension board overload breaker tripped, switch off and unplug everything from the board, then press the reset button once or switch the board off and on.",
+    "sources": [
+     "kb:extension_board:procedure:reset_overload:en",
+     "kb:extension_board:cause:overload_tripped:en"
+    ]
+   },
+   {
+    "text": "Plug devices back one at a time and avoid running a heater, iron, and kettle together.",
+    "sources": [
+     "kb:extension_board:procedure:reset_overload:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6242
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "If the extension board overload breaker tripped, switch off and unplug everything from the board, then press the reset button once or switch the board off and on.",
+    "sources": [
+     "kb:extension_board:procedure:reset_overload:en",
+     "kb:extension_board:cause:overload_tripped:en"
+    ]
+   },
+   {
+    "text": "Plug devices back one at a time and avoid running a heater, iron, and kettle together.",
+    "sources": [
+     "kb:extension_board:procedure:reset_overload:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7839
+ }
+}

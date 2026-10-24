@@ -1,0 +1,20 @@
+{
+ "id": "B07",
+ "labels": {
+  "An RCD typically cuts power within 10 to 40 milliseconds when current leakage is detected.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "This rapid response time helps prevent severe electric shocks and potential fatalities.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "RCDs should operate within 25-40 milliseconds with leakage currents greater than 30 mA.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

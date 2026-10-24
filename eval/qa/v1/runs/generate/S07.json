@@ -1,0 +1,33 @@
+{
+ "id": "S07",
+ "gate": {
+  "hazard": "gas",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1381220314:4",
+  "wiki:en:1381220314:5",
+  "wiki:en:1381220314:7",
+  "wiki:en:1381220314:0",
+  "wiki:en:1381220314:1"
+ ],
+ "retrieval_ms": 1202,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 5653
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6478
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 6478
+ }
+}

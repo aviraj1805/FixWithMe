@@ -1,0 +1,66 @@
+{
+ "id": "B04",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1373727450:1",
+  "wiki:en:1381589912:11",
+  "wiki:en:1381589912:10",
+  "wiki:en:1373727450:3",
+  "wiki:en:1373727450:2"
+ ],
+ "retrieval_ms": 1222,
+ "closed_book": {
+  "claims": [
+   "A fuse protects household appliances by breaking the electrical circuit during a short circuit.",
+   "It contains a thin wire that melts when excessive current flows through it.",
+   "This melting action stops the flow of electricity and prevents electrical fires."
+  ],
+  "error": null,
+  "ms": 5536
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "A fuse melts when a short circuit forms due to a damaged live wire contacting a metal case connected to ground.",
+    "sources": [
+     "wiki:en:1373727450:1"
+    ]
+   },
+   {
+    "text": "A fuse acts as an automatic means of removing power from a faulty system during conditions like short circuits.",
+    "sources": [
+     "wiki:en:1373727450:1"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5532
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "A fuse melts when a short circuit forms due to a damaged live wire contacting a metal case connected to ground.",
+    "sources": [
+     "wiki:en:1373727450:1"
+    ]
+   },
+   {
+    "text": "A fuse acts as an automatic means of removing power from a faulty system during conditions like short circuits.",
+    "sources": [
+     "wiki:en:1373727450:1"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 6845
+ }
+}

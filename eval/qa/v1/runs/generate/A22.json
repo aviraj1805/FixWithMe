@@ -1,0 +1,80 @@
+{
+ "id": "A22",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:headphones:procedure:clean_contacts_charge:en",
+  "kb:headphones:cause:not_charging:en",
+  "kb:headphones:procedure:reset_earbuds:en",
+  "wiki:en:1379041038:15",
+  "wiki:en:1381519558:14"
+ ],
+ "retrieval_ms": 1629,
+ "closed_book": {
+  "claims": [
+   "Clean the charging contacts on the earbud and inside the case using a cotton swab and a little rubbing alcohol.",
+   "Ensure the charging case is sufficiently charged by plugging it into a working power source.",
+   "Check for any debris or dirt obstructing the charging port of the case.",
+   "Reset the earbuds according to the manufacturer instructions if cleaning does not work."
+  ],
+  "error": null,
+  "ms": 5754
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Clean the gold pins on the earbuds and in the case with isopropyl alcohol on a swab.",
+    "sources": [
+     "kb:headphones:procedure:clean_contacts_charge:en"
+    ]
+   },
+   {
+    "text": "Brush the speaker mesh gently with a dry toothbrush.",
+    "sources": [
+     "kb:headphones:procedure:clean_contacts_charge:en"
+    ]
+   },
+   {
+    "text": "Put both earbuds in the case and charge it from a wall socket for about 2 hours.",
+    "sources": [
+     "kb:headphones:procedure:clean_contacts_charge:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5148
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Clean the gold pins on the earbuds and in the case with isopropyl alcohol on a swab.",
+    "sources": [
+     "kb:headphones:procedure:clean_contacts_charge:en"
+    ]
+   },
+   {
+    "text": "Brush the speaker mesh gently with a dry toothbrush.",
+    "sources": [
+     "kb:headphones:procedure:clean_contacts_charge:en"
+    ]
+   },
+   {
+    "text": "Put both earbuds in the case and charge it from a wall socket for about 2 hours.",
+    "sources": [
+     "kb:headphones:procedure:clean_contacts_charge:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported",
+   "supported",
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 7212
+ }
+}

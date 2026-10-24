@@ -1,0 +1,33 @@
+{
+ "id": "S06",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1381220314:0",
+  "wiki:en:1343577037:0",
+  "wiki:en:1381220314:4",
+  "wiki:en:1343577037:1",
+  "wiki:en:1381220314:2"
+ ],
+ "retrieval_ms": 797,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 4195
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6141
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 6141
+ }
+}

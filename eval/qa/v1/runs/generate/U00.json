@@ -1,0 +1,36 @@
+{
+ "id": "U00",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1378275539:0",
+  "kb:ceiling_fan:procedure:check_power:en",
+  "kb:ceiling_fan:procedure:check_regulator:en",
+  "wiki:en:1378275539:13",
+  "wiki:en:1378275539:11"
+ ],
+ "retrieval_ms": 1449,
+ "closed_book": {
+  "claims": [
+   "Havells ceiling fans typically come with a 2-year manufacturing warranty.",
+   "You can check the specific warranty details on the product warranty card or invoice."
+  ],
+  "error": null,
+  "ms": 6064
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5913
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5913
+ }
+}

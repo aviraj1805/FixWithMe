@@ -1,0 +1,20 @@
+{
+ "id": "A36",
+ "labels": {
+  "Standard ceiling fans in India typically use a 2.5 microfarad (uF) to 3.15 microfarad (uF) capacitor.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Always switch off the power supply before replacing a fan capacitor.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Ensure the replacement capacitor matches the exact rating specified by the fan manufacturer.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

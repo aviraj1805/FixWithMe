@@ -1,0 +1,25 @@
+{
+ "id": "A03",
+ "labels": {
+  "A weak capacitor can cause the motor to hum and fail to start.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "It may lead to the motor overheating during operation.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The motor might run at a significantly lower speed than normal.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Over many years of use the capacitance of a capacitor can drop, which is known as a weak capacitor and may result in the motor failing to start or to run at full power.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

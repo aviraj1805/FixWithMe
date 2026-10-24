@@ -1,0 +1,54 @@
+{
+ "id": "B01",
+ "gate": {
+  "hazard": "shock",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1356624256:0",
+  "wiki:en:1356624256:10",
+  "wiki:en:1356624256:11",
+  "wiki:en:1356624256:12",
+  "wiki:en:1373727844:3"
+ ],
+ "retrieval_ms": 1127,
+ "closed_book": {
+  "claims": [
+   "The let-go threshold is the maximum current at which a person can muscularly release an electrical conductor.",
+   "For alternating current, this threshold is typically around 10 to 16 milliamperes for most adults.",
+   "Exceeding this limit causes involuntary muscle contractions, preventing the person from letting go of the live wire.",
+   "Never touch live wires or attempt electrical repairs without proper safety precautions and expertise."
+  ],
+  "error": null,
+  "ms": 7869
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "At around 10 mA, AC current passing through the arm can cause powerful muscle contractions where the victim cannot voluntarily control muscles and cannot release an electrified object, known as the let go threshold.",
+    "sources": [
+     "wiki:en:1356624256:10"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 4154
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "At around 10 mA, AC current passing through the arm can cause powerful muscle contractions where the victim cannot voluntarily control muscles and cannot release an electrified object, known as the let go threshold.",
+    "sources": [
+     "wiki:en:1356624256:10"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 6022
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "A16",
+ "labels": {
+  "A fuse contains a thin wire that melts when excessive electric current passes through it.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "When the wire melts, it breaks the circuit and stops the flow of electricity.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "This protects household appliances from damage caused by power surges or short circuits.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "A fuse is an automatic means of removing power from a faulty system by melting when excess current or a short circuit occurs.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "The speed at which a fuse blows depends on the amount of current flowing through it and the material it is made of.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

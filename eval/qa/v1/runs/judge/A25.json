@@ -1,0 +1,40 @@
+{
+ "id": "A25",
+ "labels": {
+  "Remove the batteries from the TV remote.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Dip a cotton swab in white vinegar or lemon juice to gently scrub the corrosion.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Use a small brush or sandpaper to clean remaining residue.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Ensure the compartment is completely dry before inserting new batteries.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "To clean battery corrosion, first take the batteries out, put on gloves and glasses, and spread newspaper.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Dab vinegar or lemon juice on the crust with a cotton swab, wait a minute, and then wipe it off.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Scrub stubborn spots with an old toothbrush, wipe with rubbing alcohol, and let it dry completely before fitting fresh batteries.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "id": "A01",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:ceiling_fan:procedure:replace_capacitor:en",
+  "wiki:en:1357326269:6",
+  "wiki:en:1357326269:0",
+  "wiki:en:1357326269:4",
+  "kb:ceiling_fan:cause:capacitor_weak:en"
+ ],
+ "retrieval_ms": 1146,
+ "closed_book": {
+  "claims": [
+   "A ceiling fan capacitor can store a dangerous electrical charge even after the power is turned off.",
+   "Touching the terminals without discharging it can cause a severe electric shock.",
+   "Safely discharging the capacitor prevents accidental injury during repair."
+  ],
+  "error": null,
+  "ms": 5632
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "You should discharge a fan capacitor because it can hold a charge even when the power is turned off.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 9647
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "You should discharge a fan capacitor because it can hold a charge even when the power is turned off.",
+    "sources": [
+     "kb:ceiling_fan:procedure:replace_capacitor:en"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 10910
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "A18",
+ "labels": {
+  "Check the audio balance settings in your phone's accessibility menu to ensure sound is centered.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Unplug and reconnect the earphones to clear any temporary glitches in the audio jack or Bluetooth connection.": {
+   "support": "not_in_sources",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Test the earphones on another device to confirm if the issue is with the phone settings or the hardware.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Check your phone's sound or accessibility settings to ensure the left-right balance is in the middle and mono audio is off.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

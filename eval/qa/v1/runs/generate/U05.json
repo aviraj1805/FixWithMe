@@ -1,0 +1,37 @@
+{
+ "id": "U05",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "kb:battery_toy:procedure:test_remote_ir:en",
+  "wiki:en:1381386717:1",
+  "wiki:en:1367277923:10",
+  "wiki:en:1367277923:0",
+  "wiki:en:1381386717:0"
+ ],
+ "retrieval_ms": 1130,
+ "closed_book": {
+  "claims": [
+   "Sony Bravia TV remotes typically use standard AAA batteries.",
+   "Open the battery compartment on the back of the remote to check the required size.",
+   "Insert two AAA batteries matching the positive and negative terminals correctly."
+  ],
+  "error": null,
+  "ms": 5491
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 6601
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 6601
+ }
+}

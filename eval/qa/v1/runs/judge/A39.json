@@ -1,0 +1,25 @@
+{
+ "id": "A39",
+ "labels": {
+  "Remove the batteries from the remote control immediately.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Dip a cotton bud in white vinegar or lemon juice and gently scrub the white powder.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Use a dry cloth to clean the contacts completely before inserting new batteries.": {
+   "support": "contradicted",
+   "relevant": true,
+   "unsafe": false
+  },
+  "Corroded battery contacts in a toy or remote can be fixed by cleaning them.": {
+   "support": "supported",
+   "relevant": true,
+   "unsafe": false
+  }
+ }
+}

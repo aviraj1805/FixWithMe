@@ -1,0 +1,52 @@
+{
+ "id": "A23",
+ "gate": {
+  "hazard": null,
+  "source": null
+ },
+ "retrieved": [
+  "wiki:en:1379041038:9",
+  "wiki:en:1379041038:10",
+  "wiki:en:1379041038:11",
+  "wiki:en:1379041038:2",
+  "wiki:en:1379041038:0"
+ ],
+ "retrieval_ms": 735,
+ "closed_book": {
+  "claims": [
+   "Low-impedance headphones generally have an impedance of less than 50 ohms.",
+   "They are designed to be easily driven by portable devices like smartphones and laptops."
+  ],
+  "error": null,
+  "ms": 5273
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "Low-impedance headphones typically fall in the range of 16 to 32 ohms.",
+    "sources": [
+     "wiki:en:1379041038:9"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5402
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "Low-impedance headphones typically fall in the range of 16 to 32 ohms.",
+    "sources": [
+     "wiki:en:1379041038:9"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 6559
+ }
+}

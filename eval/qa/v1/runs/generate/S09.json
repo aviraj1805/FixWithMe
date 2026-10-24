@@ -1,0 +1,33 @@
+{
+ "id": "S09",
+ "gate": {
+  "hazard": "battery_swollen",
+  "source": "rules"
+ },
+ "retrieved": [
+  "wiki:en:1379153667:11",
+  "wiki:en:1371763524:0",
+  "wiki:en:1371763524:2",
+  "wiki:en:1371763524:1",
+  "wiki:en:1367277923:0"
+ ],
+ "retrieval_ms": 928,
+ "closed_book": {
+  "claims": [],
+  "error": null,
+  "ms": 4803
+ },
+ "rag": {
+  "claims": [],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 5852
+ },
+ "production": {
+  "claims": [],
+  "verdicts": [],
+  "verified": false,
+  "error": null,
+  "ms": 5852
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "B07",
+ "gate": {
+  "hazard": "shock",
+  "source": "model"
+ },
+ "retrieved": [
+  "wiki:en:1373727844:3",
+  "wiki:en:1373727844:9",
+  "wiki:en:1373727844:0",
+  "wiki:en:1373727844:4",
+  "wiki:en:1373727844:5"
+ ],
+ "retrieval_ms": 842,
+ "closed_book": {
+  "claims": [
+   "An RCD typically cuts power within 10 to 40 milliseconds when current leakage is detected.",
+   "This rapid response time helps prevent severe electric shocks and potential fatalities."
+  ],
+  "error": null,
+  "ms": 6739
+ },
+ "rag": {
+  "claims": [
+   {
+    "text": "RCDs should operate within 25-40 milliseconds with leakage currents greater than 30 mA.",
+    "sources": [
+     "wiki:en:1373727844:3"
+    ]
+   }
+  ],
+  "dropped_unsafe": 0,
+  "error": null,
+  "ms": 2933
+ },
+ "production": {
+  "claims": [
+   {
+    "text": "RCDs should operate within 25-40 milliseconds with leakage currents greater than 30 mA.",
+    "sources": [
+     "wiki:en:1373727844:3"
+    ]
+   }
+  ],
+  "verdicts": [
+   "supported"
+  ],
+  "verified": true,
+  "error": null,
+  "ms": 4242
+ }
+}
