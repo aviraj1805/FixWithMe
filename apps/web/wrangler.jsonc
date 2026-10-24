@@ -1,0 +1,11 @@
+// Cloudflare Workers static-assets deploy for the Next.js static export (`pnpm build` → ./out).
+// Static asset requests are free on the Workers free plan; there is no server code here.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fixwithme",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
