@@ -2,15 +2,15 @@
 
 Figma file: [Fix with Me — Design System & Prototype](https://www.figma.com/design/aq3OJwtmk5r6PMIlp8XMKD)
 
-To tap through the screens, open the **Prototype** page and press **Present**. The flow starts on **01 Home**.
+To tap through the screens, open the **Prototype** page and press **Present**. The flow starts on **00 Welcome**, where Fixy waves and says hi, then moves on to Home by itself after 1.8 s.
 
 ## What's in the file
 
 | Page | Contents |
 |---|---|
 | Foundations | Colour swatches and the type ramp, all bound to variables |
-| Components | 31 Lucide icons (ISC licence), Button (5 styles × 2 sizes), Icon Button, Tier Badge, Chip, Status Bar, App Bar, Tab Bar, Cause Row, Offer Card |
-| Prototype | 7 linked screens at 390×844: Home, Live camera, Diagnosis, Guide, STOP, Parts, Cart |
+| Components | **Fixy the robot** (7 moods), 32 Lucide icons (ISC licence), Button (5 styles × 2 sizes), Icon Button, Tier Badge, Chip, Status Bar, App Bar, Tab Bar, Cause Row, Offer Card |
+| Prototype | 8 minimal, linked screens at 390×844: Welcome, Home, Camera, Chat, Guide, STOP, Parts, Cart |
 
 **Tokens (Figma variables):**
 - `Primitives`: 43 raw colours.
@@ -22,15 +22,34 @@ Every variable carries web code syntax (e.g. `var(--color-brand-primary)`), so C
 
 **Type:** Inter for Latin text, Noto Sans Devanagari for Hindi (`Body/Hindi`, 16/26).
 
+## Fixy, the robot companion
+
+The robot is the centre of the UI. It is a component set, `Robot · Fixy`, with these moods:
+
+| Mood | Used on | Animation in Present mode |
+|---|---|---|
+| Wave A / Wave B | Welcome, Home | Loops between the two every 0.35 s with Smart Animate, so the arm waves |
+| Idle / Blink | Camera, chat avatar, Guide, Parts | Blinks every ~2.6 s |
+| Thinking | While the engine works (not drawn yet) | None |
+| Worried | STOP | None |
+| Cheer | Cart; also for "Repair verified" | None |
+
+Each arm sits in a pivot frame at the shoulder, so Smart Animate rotates it naturally. Sizes are set with `rescale()`: ~1.2–1.5 for heroes, ~0.25–0.3 for the chat avatar.
+
+**UI rules after the simplification pass:**
+- Show one short line per screen, with Fixy saying it.
+- Home has no category grid and no tab bar: just Fixy and Scan (the big button), Talk and Type, plus History and the language toggle.
+- Trust signals stay but shrink to badges ("Label read", "Likely: capacitor · 72%", "Fits", "Stock unknown").
+
 ## Prototype links
 
 ```
-Home ─ Scan with camera ─▶ Live camera ─ Looks right ─▶ Diagnosis
-Home ─ Send ──────────────────────────────────────────▶ Diagnosis
-Home ─ Continue your repair ─▶ Guide
-Diagnosis ─ "Yes, it turns freely" ─▶ Guide ─ Next step ─▶ Parts ─ View cart ─▶ Cart
-Diagnosis ─ composer ("Try: I smell burning") ─▶ STOP ─ go back ─▶ Diagnosis
-Back buttons return to the previous screen; Camera ✕ returns to Home.
+Welcome ─(after 1.8 s)─▶ Home
+Home ─ Scan ─▶ Camera ─ shutter ─▶ Chat          Camera ✕ ─▶ Home
+Home ─ Talk / Type ─▶ Chat
+Chat ─ "Yes" ─▶ Guide ─ Next ─▶ Parts ─ Cart (1) ─▶ Cart
+Chat ─ message box (demo of "I smell burning") ─▶ STOP ─ Go back ─▶ Chat
+Back buttons: Chat→Home, Guide→Chat, Parts→Guide, Cart→Parts
 ```
 
 ## Figma free-plan constraints we hit
@@ -42,7 +61,7 @@ Back buttons return to the previous screen; Camera ✕ returns to Home.
 ## Known gaps in the prototype
 
 - The camera feed and step illustrations are placeholders (an icon on a tinted panel); real illustrations come later.
-- The Diagnosis cause rows were detached from the `Cause Row` component, because Figma doesn't allow resizing a bar inside a component instance. In code, the bar width is simply the probability.
+- The full cause list (`Cause Row`) is now collapsed into one "Likely" badge in the chat. Tapping it should open the full ranked list; that sheet is not drawn yet.
 - The Tier Badge variants share one default label. Always set the `Label` property; labelled examples sit on the Components page.
 - Prices, product names and model numbers on the screens are illustrative copy, not real listings.
 - Only the light theme is drawn.
