@@ -1,0 +1,18 @@
+# Render Blueprint for the API (free plan: sleeps after 15 min idle, ~1 min cold start).
+services:
+  - type: web
+    name: fixwithme-api
+    runtime: docker
+    plan: free
+    rootDir: apps/api
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: FWM_ENV
+        value: prod
+      - key: FWM_LLM_CHAIN
+        value: '["gemini"]'
+      - key: FWM_CORS_ORIGINS
+        sync: false # set to the Cloudflare Pages URL, e.g. ["https://fixwithme.pages.dev"]
+      - key: FWM_GEMINI_API_KEY
+        sync: false

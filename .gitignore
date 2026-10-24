@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+
+# Node (app-level ignores live in apps/web/.gitignore)
+node_modules/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# ML artifacts and datasets: tracked via model cards / download scripts, not git
+ml/data/
+ml/runs/
+ml/artifacts/
+osm/data/
+ingest/raw/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

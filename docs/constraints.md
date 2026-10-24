@@ -1,0 +1,15 @@
+# Platform constraints log
+
+R0 checks from [blueprint.md](blueprint.md). Re-verify these whenever a provider changes its terms.
+
+| Item | Finding | Checked | Source | Impact |
+|---|---|---|---|---|
+| Cloudflare Pages free: commercial use | Allowed. The terms have no commercial or personal-use restriction. Free services must not collect credit-card data (§2.2.1(h)), and Cloudflare may end free service at its discretion (§2.6) | 2026-10-24 | [cloudflare.com/terms](https://www.cloudflare.com/terms/) | OK for affiliate handoff, because payment happens on the retailer. Never collect card details on the free plan |
+| Cloudflare Pages free: limits | 500 builds a month, 20,000 files, 25 MiB per asset | 2026-10-24 | [Pages limits](https://developers.cloudflare.com/pages/platform/limits) | Keep ONNX/Tesseract model files under 25 MiB each, or host them elsewhere |
+| Render free web service | 512 MB RAM, 0.1 CPU. Sleeps after 15 min idle, ~1 min cold start, 750 h a month, ephemeral disk | 2026-10-24 | [Render compute plans](https://render.com/docs/compute-plans), [Render free](https://render.com/docs/free) | Keep the API lean. FT-2 verifier inference at 0.1 CPU is likely too slow, so run it in the browser or use an LLM judge until a paid plan |
+| Vercel Hobby | Non-commercial only; affiliate-driven sites count as commercial | 2026-10-24 | [Vercel fair use](https://vercel.com/docs/limits/fair-use-guidelines) | Not used |
+| Gemini free tier: per-model limits | Shown only in AI Studio | **Pending: needs your API key** | [AI Studio rate limits](https://aistudio.google.com/rate-limit) | Fill in RPM/TPM/RPD for each model in `FWM_GEMINI_MODELS` |
+| Gemini free tier: data terms | Don't send personal data. Inputs may be human-reviewed and used for product improvement. Users must be 18+ | 2026-10-24 | [Gemini API terms](https://ai.google.dev/gemini-api/terms) | PII scrubber, image privacy filter, consent and 18+ gate (blueprint §8) |
+| Gemini model ids | The key lists 60 models, including `gemini-3.8-flash`, `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`, `gemini-embedding-2`, `gemma-4-26b-a4b-it` | 2026-10-24 | `client.models.list()` | Defaults: `gemini-3.5-flash-lite` → `gemini-3.1-flash-lite` |
+| Gemini free-tier latency | `gemini-3.5-flash-lite`: ~1.1–1.3 s per short call, including JSON mode. `gemini-3.8-flash`: 41–153 s per call, and 90 s+ even at `thinkingLevel: low` (`minimal` isn't supported on it) | 2026-10-24 | Measured from this machine | Flash-Lite is the default. 3.8 Flash is too slow for interactive use on the free tier; re-measure before using it for offline or eval jobs |
+| Gemini request deadline | Minimum 10 s. A shorter deadline returns 400; expiry returns 504 `DEADLINE_EXCEEDED` | 2026-10-24 | Observed | `GeminiProvider` enforces a 10 s floor; a 504 falls through to the next provider |
