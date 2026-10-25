@@ -55,7 +55,7 @@ export type AskResponse = {
   say: string;
   claims: { text: string; sources: string[] }[];
   sources: { id: string; title: string; url: string | null; license: string; source_type: string }[];
-  tier: "curated" | "sourced" | "web" | null;
+  tier: "curated" | "sourced" | "web" | "general" | null;
   guides: { item: string; procedure_id: string; safety_level: number }[];
   caution: string | null;
   verified: boolean;
@@ -129,6 +129,20 @@ export type Identified = { item: string | null; name: string; problem: string | 
 /** Photo → item + visible problem. The photo is downscaled and EXIF-free (see media.ts). */
 export function identify(body: { image: string; mime: string; lang: Lang }): Promise<Identified> {
   return request("/v1/identify", { method: "POST", body: JSON.stringify(body) });
+}
+
+export type StepHelp = { state: "reply" | "stop"; say: string; stop: StepResponse["stop"] };
+
+/** The user is stuck on one guide step: answer from that guide, by text and/or photo. */
+export function stepHelp(body: {
+  item: string;
+  procedure_id: string;
+  step: number;
+  question: string;
+  image?: string;
+  lang: Lang;
+}): Promise<StepHelp> {
+  return request("/v1/step-help", { method: "POST", body: JSON.stringify(body) });
 }
 
 /** Warm the API early: Render's free tier sleeps after 15 minutes and takes ~1 minute to wake. */

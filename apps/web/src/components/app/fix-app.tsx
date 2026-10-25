@@ -31,6 +31,7 @@ export function FixApp() {
   const [lang, setLang] = useState<Lang>("en");
   const [view, setView] = useState<View>({ name: "welcome" });
   const [session, setSessionState] = useState<Session>(() => freshSession("en"));
+  const [voice, setVoice] = useState(false); // Fixy speaks replies and listens back
 
   useEffect(() => {
     wakeApi();
@@ -43,8 +44,9 @@ export function FixApp() {
   const setSession = useCallback((update: (s: Session) => Session) => setSessionState(update), []);
   const goHome = useCallback(() => setView({ name: "home" }), []);
 
-  function startChat(listenNow = false) {
-    setSessionState({ ...freshSession(lang), listenNow });
+  function startChat(withVoice = false) {
+    if (withVoice) setVoice(true);
+    setSessionState(freshSession(lang));
     setView({ name: "chat" });
   }
 
@@ -113,6 +115,8 @@ export function FixApp() {
               setView({ name: "guide", item: session.item, procedureId: diagnosis.procedure_id, diagnosis })
             }
             onOpenGuide={(item, procedureId) => setView({ name: "guide", item, procedureId, diagnosis: null })}
+            voice={voice}
+            onVoice={setVoice}
           />
         </div>
       )}
@@ -123,6 +127,9 @@ export function FixApp() {
           procedureId={view.procedureId}
           onBack={() => setView({ name: "chat" })}
           onDone={(resolved) => void finish(view.item, view.procedureId, view.diagnosis, resolved)}
+          onStop={(stop) => setView({ name: "stop", stop })}
+          voice={voice}
+          onVoice={setVoice}
         />
       )}
       {view.name === "stop" && <Stop lang={lang} stop={view.stop} onBack={goHome} />}

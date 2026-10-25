@@ -8,6 +8,7 @@ returned search suggestions, so their HTML is passed through to the client.
 """
 
 import asyncio
+import json
 import logging
 import re
 from dataclasses import dataclass, field
@@ -20,15 +21,19 @@ log = logging.getLogger(__name__)
 
 # Gemma rejects a system instruction together with the search tool (500), so the rules go in the
 # prompt itself.
-_PROMPT = """You help people in India with simple checks on a broken household item.
+_PROMPT = """You help people in India fix anything at home: appliances, furniture, doors, taps,
+gadgets, vehicles' simple parts and more.
 First search the web for this exact problem, then answer only from what the search found.
 Rules:
-- Give at most 4 bullet points, each one short sentence. No headings, no intro, no closing line.
-- Only suggest checks a non-expert can do safely: with the item switched off and unplugged, from
-  the outside, without opening any mains-powered casing.
+- Give 3 to 5 numbered steps in the order to do them, easiest first. Each step is one short,
+  plain sentence that starts with an action word. No headings, no intro, no closing line.
+- If it uses electricity, the first step is to switch it off and unplug it.
+- Only suggest what a non-expert can do safely from the outside, without opening any
+  mains-powered casing.
 - Never suggest opening appliances, working on wiring, gas, refrigerant, or a swollen battery.
-  If the problem needs that, say a technician should check it.
-- Write in {lang_name}.
+  If the problem needs that, make the last step: a technician should check it.
+- Write in the same language and script as the problem below (English, Hindi in Devanagari, or
+  Hinglish in Latin letters). If unclear, use {lang_name}.
 
 Problem: {question}"""
 
@@ -155,3 +160,41 @@ class WebAnswerer:
                 dropped_ungrounded=ungrounded,
             )
         return None
+
+
+_GENERAL_SYSTEM = (
+    "You help people in India fix anything at home. Give 3 to 5 numbered steps in the order to "
+    "do them, easiest first; each is one short, plain sentence that starts with an action word. "
+    "If it uses electricity, the first step is to switch it off and unplug it. Only suggest what "
+    "a non-expert can do safely from the outside. Never suggest opening appliances, working on "
+    "wiring, gas, refrigerant, or a swollen battery; if needed, the last step is: a technician "
+    "should check it. Write in the same language and script as the problem (English, Hindi in "
+    "Devanagari, or Hinglish in Latin letters); if unclear, use {lang_name}."
+)
+
+
+async def general_answer(llm, question: str, lang: Lang) -> list[str]:
+    """Fallback when web search fails: general safe steps from the model, without sources."""
+    from .llm import LLMRequest
+
+    schema = {
+        "type": "object",
+        "properties": {"steps": {"type": "array", "items": {"type": "string"}, "maxItems": 5}},
+        "required": ["steps"],
+    }
+    try:
+        res = await llm.generate(
+            LLMRequest(
+                prompt=f"Problem: {scrub(question)}",
+                system=_GENERAL_SYSTEM.format(
+                    lang_name="Hindi (Devanagari)" if lang == "hi" else "English"
+                ),
+                json_schema=schema,
+                max_output_tokens=500,
+            )
+        )
+        steps = [_clean(str(s)) for s in json.loads(res.text).get("steps") or []]
+    except Exception as exc:
+        log.warning("general answer failed: %s", exc)
+        return []
+    return [s for s in steps if s and not above_level_1(s)]

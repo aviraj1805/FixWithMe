@@ -45,14 +45,20 @@ class Settings(BaseSettings):
     # Flash-Lite (checked 2026-10-24). Empty list disables it.
     web_models: list[str] = Field(default_factory=lambda: ["gemma-4-26b-a4b-it"])
 
+    # Fixy's voice (Gemini TTS, free on 2026-10-25). The browser voice is the fallback.
+    tts_models: list[str] = Field(
+        default_factory=lambda: ["gemini-3.8-flash-lite-tts", "gemini-3.1-flash-tts-preview"]
+    )
+    tts_voice: str = "Despina"  # warm, smooth female voice
+
     # Retrieval: "supabase" (pgvector + PGroonga RPC), "local" (in-memory from corpus files), "off".
     retrieval: Literal["supabase", "local", "off"] = "supabase"
     retrieval_corpus: str | None = None  # local backend: ingest/corpus.jsonl
     retrieval_embeddings: str | None = None  # local backend: ingest/raw/embeddings.json
 
     # Per-IP limits on POST /v1/* (protects the shared free Gemini quota). 0 disables.
-    rate_per_minute: int = 20
-    rate_per_day: int = 300
+    rate_per_minute: int = 40  # voice mode adds one /v1/speak call per reply
+    rate_per_day: int = 600
 
     # Supabase PostgREST for anonymous outcomes. The publishable key only allows inserts (RLS).
     supabase_url: str | None = None

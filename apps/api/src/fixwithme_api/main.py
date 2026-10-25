@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from . import __version__, ask, diagnose, identify, knowledge, safety
+from . import __version__, ask, diagnose, identify, knowledge, safety, speak, stephelp
 from .config import Settings, get_settings
 from .llm import build_llm, build_verifier
 from .outcomes import OutcomeStore
@@ -40,6 +40,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if settings.gemini_api_key and settings.web_models and "gemini" in settings.llm_chain
         else None
     )
+    app.state.speaker = (
+        speak.Speaker(settings.gemini_api_key, settings.tts_models, settings.tts_voice)
+        if settings.gemini_api_key and settings.tts_models and "gemini" in settings.llm_chain
+        else None
+    )
     app.state.outcomes = OutcomeStore(settings)
     for product in knowledge.available():  # fail fast on an invalid knowledge file
         for q in knowledge.load(product).questions:
@@ -72,6 +77,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(diagnose.router)
     app.include_router(ask.router)
     app.include_router(identify.router)
+    app.include_router(speak.router)
+    app.include_router(stephelp.router)
     return app
 
 

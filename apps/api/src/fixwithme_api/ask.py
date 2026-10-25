@@ -9,6 +9,7 @@ from . import knowledge, safety
 from .answer import answer
 from .diagnose import ConfirmOut, StopOut
 from .knowledge import Lang
+from .web import general_answer
 
 router = APIRouter(prefix="/v1")
 
@@ -48,7 +49,7 @@ class AskResponse(BaseModel):
     say: str
     claims: list[ClaimOut] = []
     sources: list[SourceOut] = []
-    tier: Literal["curated", "sourced", "web"] | None = None
+    tier: Literal["curated", "sourced", "web", "general"] | None = None
     guides: list[GuideOut] = []  # full step-by-step guides behind the cited curated passages
     caution: str | None = None
     verified: bool = False
@@ -72,8 +73,14 @@ _CAUTION = {
 
 
 _WEB_CAUTION = {
-    "en": "AI suggestion from a web search, not checked by us. Unplug the item before any check.",
-    "hi": "वेब सर्च से AI का सुझाव, हमने जांचा नहीं है। कोई भी जांच से पहले प्लग निकाल दें।",
+    "en": "General tips from a web search, not checked by us. If it uses power, unplug it first.",
+    "hi": "वेब सर्च से सामान्य सुझाव, हमने जांचे नहीं हैं। बिजली से चलता है तो पहले प्लग निकालें।",
+}
+
+
+_GENERAL_CAUTION = {
+    "en": "General tips from AI, not checked by us. If it uses power, unplug it first.",
+    "hi": "AI के सामान्य सुझाव, हमने जांचे नहीं हैं। बिजली से चलता है तो पहले प्लग निकालें।",
 }
 
 
@@ -116,8 +123,8 @@ async def ask(req: AskRequest, request: Request) -> AskResponse:
     result = await answer(
         req.question, state.retriever, state.llm, state.verifier, req.item, req.lang
     )
-    if result.state == "abstain" and req.web and req.item is None and state.web is not None:
-        web = await state.web.answer(req.question, req.lang)
+    if result.state == "abstain" and req.web and req.item is None:
+        web = await state.web.answer(req.question, req.lang) if state.web else None
         if web and web.claims:
             return AskResponse(
                 state="answer",
@@ -135,6 +142,15 @@ async def ask(req: AskRequest, request: Request) -> AskResponse:
                 caution=_WEB_CAUTION[req.lang],
                 dropped_unsafe=web.dropped_unsafe,
                 search_html=web.search_html,
+            )
+        steps = await general_answer(state.llm, req.question, req.lang) if state.llm else []
+        if steps:
+            return AskResponse(
+                state="answer",
+                say=" ".join(steps),
+                claims=[ClaimOut(text=t, sources=[]) for t in steps],
+                tier="general",
+                caution=_GENERAL_CAUTION[req.lang],
             )
     if result.state == "abstain":
         return AskResponse(

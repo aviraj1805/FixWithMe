@@ -397,3 +397,20 @@ def test_rate_limit_returns_429():
     codes = [c.post("/v1/ask", json={"question": "fan hum"}).status_code for _ in range(3)]
     assert codes[:2] == [200, 200] and codes[2] == 429
     assert c.get("/health").status_code == 200  # GETs are not limited
+
+
+def test_general_tips_when_web_search_fails(retriever):
+    # The drafter abstains on the corpus, web search returns nothing, then general steps are used.
+    client = make_client(
+        retriever,
+        {
+            "can_answer": False,
+            "claims": [],
+            "steps": ["Tighten the hinge screws.", "Open the motor casing and rewire it."],
+        },
+        [],
+    )
+    client.app.state.web = FakeWeb(None)
+    out = ask(client, question="my door is not closing properly", web=True)
+    assert out["state"] == "answer" and out["tier"] == "general" and out["sources"] == []
+    assert [c["text"] for c in out["claims"]] == ["Tighten the hinge screws."]  # level 2+ dropped

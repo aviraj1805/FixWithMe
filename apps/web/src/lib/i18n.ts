@@ -95,6 +95,29 @@ const STRINGS = {
     hi: "अभी बहुत सवाल आ रहे हैं! एक मिनट बाद फिर कोशिश करें।",
   },
   privacy: { en: "Privacy & terms", hi: "गोपनीयता और शर्तें" },
+  stuck: { en: "I'm stuck", hi: "समझ नहीं आया" },
+  askStep: { en: "Ask about this step", hi: "इस स्टेप के बारे में पूछें" },
+  stuckHint: {
+    en: "Type, talk, or send a photo of what you see.",
+    hi: "लिखें, बोलें, या जो दिख रहा है उसकी फ़ोटो भेजें।",
+  },
+  readAloud: { en: "Read aloud", hi: "पढ़कर सुनाएं" },
+  voiceOn: { en: "Voice on", hi: "आवाज़ चालू" },
+  voiceOff: { en: "Voice off", hi: "आवाज़ बंद" },
+  sendPhoto: { en: "Send a photo", hi: "फ़ोटो भेजें" },
+  sayNext: {
+    en: "Say \"next\", \"repeat\", or ask a question.",
+    hi: "\"आगे\", \"दोबारा\" बोलें, या सवाल पूछें।",
+  },
+  tryThese: { en: "Try these steps", hi: "ये स्टेप आज़माएं" },
+  fixedIt: { en: "Fixed it!", hi: "ठीक हो गया!" },
+  stillBroken: { en: "Still not working", hi: "अभी भी खराब है" },
+  greatJob: { en: "Great job! Glad it's working again.", hi: "शाबाश! अच्छा हुआ कि फिर से चल रहा है।" },
+  nextOptions: {
+    en: "Sorry! Send me a photo or tell me more, and I'll look again. Or get a repair shop to check it.",
+    hi: "माफ़ कीजिए! फ़ोटो भेजें या और बताएं, मैं फिर देखूंगी। या किसी रिपेयर दुकान से जांच करवाएं।",
+  },
+  generalTips: { en: "General tips", hi: "सामान्य सुझाव" },
   language: { en: "Switch to Hindi", hi: "Switch to English" },
 } as const;
 
