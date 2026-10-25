@@ -1,5 +1,7 @@
 """Fixy's voice: Gemini text-to-speech with a warm female voice. Returns WAV audio.
 
+Only the words to say are sent: a style instruction in the text gets read out loud.
+
 The browser falls back to its own speech synthesis whenever this fails (quota, outage)."""
 
 import asyncio
@@ -15,11 +17,6 @@ from .knowledge import Lang
 
 log = logging.getLogger(__name__)
 router = APIRouter(prefix="/v1")
-
-_STYLE = {
-    "en": "Say this in a warm, friendly, cheerful voice, like a helpful young woman from India:",
-    "hi": "इसे गर्मजोशी भरी, दोस्ताना और खुशमिज़ाज आवाज़ में बोलिए:",
-}
 
 
 class SpeakRequest(BaseModel):
@@ -59,7 +56,7 @@ class Speaker:
             try:
                 resp = await asyncio.wait_for(
                     self._client.aio.models.generate_content(
-                        model=model, contents=f"{_STYLE[lang]} {text}", config=config
+                        model=model, contents=text, config=config
                     ),
                     timeout=self.timeout_s + 5,
                 )

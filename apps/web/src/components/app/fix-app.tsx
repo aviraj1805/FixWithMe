@@ -117,6 +117,7 @@ export function FixApp() {
             onOpenGuide={(item, procedureId) => setView({ name: "guide", item, procedureId, diagnosis: null })}
             voice={voice}
             onVoice={setVoice}
+            onLang={setLang}
           />
         </div>
       )}
@@ -130,6 +131,7 @@ export function FixApp() {
           onStop={(stop) => setView({ name: "stop", stop })}
           voice={voice}
           onVoice={setVoice}
+          onLang={setLang}
         />
       )}
       {view.name === "stop" && <Stop lang={lang} stop={view.stop} onBack={goHome} />}

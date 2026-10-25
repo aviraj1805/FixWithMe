@@ -123,6 +123,24 @@ const STRINGS = {
 
 export type StringKey = keyof typeof STRINGS;
 
+// Common Hindi words typed in Latin letters (Hinglish). Ambiguous English words like "me" and
+// "to" are left out.
+const HINGLISH =
+  /\b(hai|hain|nahi|nahin|nhi|nai|kya|kaise|kyu|kyon|kyun|mera|meri|mere|hamara|kar|kr|karu|karun|karna|raha|rha|rahi|rhi|rahe|gaya|gya|gayi|gyi|ka|ki|ke|ko|se|mein|aur|bhi|chal|chalta|chalti|kaam|kam|batao|bata|thik|theek|abhi|pankha|bijli|toh|jal|band|wala|wali|ab|jaldi|accha|acha|haan)\b/gi;
+const ENGLISH =
+  /\b(the|is|it|my|not|does|doesn't|won't|isn't|what|how|why|and|with|when|working|can|i|stopped|broken|this)\b/gi;
+
+/** The language a message is written in: Hindi script or Hinglish → "hi", clear English → "en",
+ * too short or mixed to tell → null (keep the current language). */
+export function detectLang(text: string): Lang | null {
+  if (/[\u0900-\u097F]/.test(text)) return "hi";
+  const hi = text.match(HINGLISH)?.length ?? 0;
+  const en = text.match(ENGLISH)?.length ?? 0;
+  if (hi >= 2 && hi > en) return "hi";
+  if (en >= 2 && hi === 0) return "en";
+  return null;
+}
+
 export function t(key: StringKey, lang: Lang): string {
   return STRINGS[key][lang];
 }

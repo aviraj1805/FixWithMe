@@ -5,7 +5,7 @@ import { Fixy } from "@/components/fixy/fixy";
 import { Icon } from "@/components/ui/icons";
 import { Badge, Chip, FixySays, LinkChip, PrimaryButton, TopBar } from "@/components/ui/parts";
 import { type Answer, type Answers, ApiError, type AskResponse, type StepResponse, ask, identify, mapsSearch, step } from "@/lib/api";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, detectLang, t } from "@/lib/i18n";
 import { listen, preparePhoto, speechSupported } from "@/lib/media";
 import { speak, stopSpeaking, voiceCommand } from "@/lib/voice";
 
@@ -38,6 +38,7 @@ export type Session = {
 };
 
 type Body = {
+  lang?: Lang; // reply language when it differs from the UI's (the user switched language)
   text?: string;
   answers: Answers;
   item: string | null;
@@ -46,6 +47,7 @@ type Body = {
 };
 
 type AskBody = {
+  lang?: Lang;
   question: string;
   item: string | null;
   web?: boolean; // unsupported item: allow a web-grounded suggestion
@@ -66,6 +68,7 @@ export function Chat({
   onOpenGuide,
   voice,
   onVoice,
+  onLang,
 }: {
   lang: Lang;
   session: Session;
@@ -76,6 +79,7 @@ export function Chat({
   onOpenGuide: (item: string, procedureId: string) => void;
   voice: boolean;
   onVoice: (on: boolean) => void;
+  onLang: (lang: Lang) => void;
 }) {
   const [text, setText] = useState("");
   const [pending, setPending] = useState(false);
@@ -100,7 +104,7 @@ export function Chat({
     const slowTimer = setTimeout(() => setSlow(t("wakingUp", lang)), 4000);
     let follow: AskBody | null = null;
     try {
-      const r = await step({ ...body, lang });
+      const r = await step({ ...body, lang: body.lang ?? lang });
       setSession((s) => ({
         ...s,
         answers: r.answers,
@@ -148,7 +152,7 @@ export function Chat({
     setLastAsk(body);
     const slowTimer = setTimeout(() => setSlow(t(body.web ? "searchingWeb" : "wakingUp", lang)), 4000);
     try {
-      const r = await ask({ ...body, lang });
+      const r = await ask({ ...body, lang: body.lang ?? lang });
       if (r.state === "stop") {
         if (r.stop) onStop(r.stop);
         return;
@@ -179,8 +183,12 @@ export function Chat({
     if (!value || pending) return;
     setText("");
     push({ id: newId(), from: "user", text: value });
-    if (session.mode === "ask") void runAsk({ question: value, item: session.item, web: session.item === null });
-    else void run({ text: value, answers: session.answers, item: session.item });
+    // Reply in the language the user just used, and switch the app to it.
+    const replyLang = detectLang(value) ?? lang;
+    if (replyLang !== lang) onLang(replyLang);
+    if (session.mode === "ask")
+      void runAsk({ question: value, item: session.item, web: session.item === null, lang: replyLang });
+    else void run({ text: value, answers: session.answers, item: session.item, lang: replyLang });
   }
 
   // What the user said: a yes/no answer to the open question, or a new message.

@@ -8,7 +8,7 @@ import { type Procedure, type SourceRef, type StepResponse, getProcedure, mapsSe
 import { listen, preparePhoto, speechSupported } from "@/lib/media";
 import { speak, stopSpeaking, voiceCommand } from "@/lib/voice";
 import { StepVisual } from "./step-visual";
-import { type Lang, t } from "@/lib/i18n";
+import { type Lang, detectLang, t } from "@/lib/i18n";
 
 function Sources({ sources, lang }: { sources: SourceRef[]; lang: Lang }) {
   if (!sources.length) return null;
@@ -80,6 +80,7 @@ export function Guide({
   onStop,
   voice,
   onVoice,
+  onLang,
 }: {
   lang: Lang;
   item: string;
@@ -89,6 +90,7 @@ export function Guide({
   onStop: (stop: NonNullable<StepResponse["stop"]>) => void;
   voice: boolean;
   onVoice: (on: boolean) => void;
+  onLang: (lang: Lang) => void;
 }) {
   const [proc, setProc] = useState<Procedure | null>(null);
   const [failed, setFailed] = useState(false);
@@ -121,15 +123,17 @@ export function Guide({
     setStuck(true);
     setHelpBusy(true);
     setHelp((h) => [...h, { from: "user", text: question || t("photo", lang) }]);
+    const replyLang = (question && detectLang(question)) || lang;
+    if (replyLang !== lang) onLang(replyLang); // the guide reloads in that language too
     try {
-      const r = await stepHelp({ item, procedure_id: procedureId, step: Math.max(page, 0), question, image, lang });
+      const r = await stepHelp({ item, procedure_id: procedureId, step: Math.max(page, 0), question, image, lang: replyLang });
       if (r.state === "stop" && r.stop) {
         stopSpeaking();
         onStop(r.stop);
         return;
       }
       setHelp((h) => [...h, { from: "fixy", text: r.say }]);
-      if (voice) void speak(r.say, lang).then(() => startListening());
+      if (voice) void speak(r.say, replyLang).then(() => startListening());
     } catch {
       setHelp((h) => [...h, { from: "fixy", text: t("offline", lang) }]);
     } finally {
